@@ -1,10 +1,8 @@
 ---
 layout: post
-title: Kotlin Tips - A series of posts of useful tips
-categories: [Miscellaneous, Kotlin]
+title: Kotlin Tips, Comparing two Strings
+categories: [Tips, Kotlin]
 ---
-
-## Comparing two Strings, 
 
 Something a colleague from work told me: 
 

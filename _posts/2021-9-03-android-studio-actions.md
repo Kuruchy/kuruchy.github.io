@@ -4,7 +4,7 @@ title: Android Studio Tips
 categories: [Tips, Android Studio]
 ---
 
-## Custom Action in Android Studio
+### Custom Action in Android Studio
 
 One cool Feature I’ve recently found, is the possibility to add custom action buttons to almost anywhere in the Android Studio toolbars.
 
