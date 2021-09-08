@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Kotlin Tips - A series of posts of useful tips
-categories: [Android Studio]
+title: Android Studio Tips
+categories: [Tips, Android Studio]
 ---
 
 ## Custom Action in Android Studio
