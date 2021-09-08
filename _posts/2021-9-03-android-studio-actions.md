@@ -9,7 +9,7 @@ One cool Feature I’ve recently found, is the possibility to add custom action 
 
 In my case, and I know most Android Developers could relate, I am hitting the infamous **Invalidate Caches & Restart** a couple of times a day. So as a way to make it happen faster (saving one mouse click, yeah!) I added a button to my Navigation Bar Toolbar.
 
-To see what can be edited / added, you need to go to `Preferences/Appearance & Behavior/Menus and Toolbars`.
+To see what can be edited / added, you need to go to `Preferences → Appearance & Behavior → Menus and Toolbars`.
 
 
 ![Menus and Toolbars](/images/Android_Studio_Actions_01.png)
