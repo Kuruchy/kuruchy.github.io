@@ -15,13 +15,8 @@ And adjusting the Scheme to your needs. In the image I used the following colors
 
 ```
 Assert: 9C27B0
-
 Debug: 2196F3
-
 Error: F44336
-
 Info: 4CAF50
-
 Verbose: default
-
 Warning: FFC107
