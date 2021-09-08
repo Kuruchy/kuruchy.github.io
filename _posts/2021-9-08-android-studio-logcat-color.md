@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom Action in Android Studio
+title: Custom Colors in Logcat
 categories: [Tips, Android Studio]
 excerpt: Do you want your plain Logcat to be able to show different colors for each message type? I will show you how easy it is!
 ---
