@@ -20,3 +20,4 @@ Error: F44336
 Info: 4CAF50
 Verbose: default
 Warning: FFC107
+```
