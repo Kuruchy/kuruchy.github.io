@@ -13,7 +13,7 @@ We can add new colors to the Logcat messages by going to:
 
 And adjusting the Scheme to your needs. In the image I used the following colors:
 
-```
+```properties
 Assert: 9C27B0
 Debug: 2196F3
 Error: F44336
