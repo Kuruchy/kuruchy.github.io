@@ -12,7 +12,7 @@ In my case, and I know most Android Developers could relate, I am hitting the in
 To see what can be edited / added, you need to go to `Preferences → Appearance & Behavior → Menus and Toolbars`.
 
 
-![Menus and Toolbars](/images/Android_Studio_Actions_01.png)
+![Menus and Toolbars](../images/Android_Studio_Actions_01.png)
 
 We can add actions to a lot of places, making our life easier.
 
@@ -20,12 +20,12 @@ To create a button and add an action, we click on the `+` icon and we will get t
 
 If we choose the `Add Action`, we would get the following popup to choose the action we want.
 
-![Menus and Toolbars](/images/Android_Studio_Actions_02.png)
+![Menus and Toolbars](../images/Android_Studio_Actions_02.png)
 
 You could also select a custom Icon for that action. I've chosen a “Fingers Crossed”.
 
-![Menus and Toolbars](/images/Android_Studio_Actions_03.png)
+![Menus and Toolbars](../images/Android_Studio_Actions_03.png)
 
 And that’s it! You now have an Action that **Invalidate Caches & Restart**
 
-![Menus and Toolbars](/images/Android_Studio_Actions_04.png)
+![Menus and Toolbars](../images/Android_Studio_Actions_04.png)

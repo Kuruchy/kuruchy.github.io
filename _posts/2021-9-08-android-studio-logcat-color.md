@@ -9,7 +9,7 @@ We can add new colors to the Logcat messages by going to:
 
 `Preferences → Editor → Color Scheme → Andoid Logcat`
 
-![Locat Colors](/images/Android_Studio_Logcat_01.png)
+![Locat Colors](../images/Android_Studio_Logcat_01.png)
 
 And adjusting the Scheme to your needs. In the image I used the following colors:
 

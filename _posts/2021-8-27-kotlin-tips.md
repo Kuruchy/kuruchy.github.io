@@ -9,6 +9,6 @@ excerpt: This the first post in a series, that will be called Kotlin Tips, which
 When we compare two strings, we could want to compare them `case-sensitive` or `ignoring case`.
 Let's see how we could improve the latter. 
 
-![Tip](/images/gifs/comparing_two_strings.gif)
+![Tip](../images/gifs/comparing_two_strings.gif)
 
 Kotlin provides us with an easier way to do the comparison ignoring the case. Instead of altering the strings into f.e. `lowercase`, we could use the parameter `ignoreCase` in the `.equals` method.
