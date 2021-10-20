@@ -12,5 +12,5 @@ Almost two years have past and a lot has changed since then. But I am happy to b
 
 The next three days will be packed with ton of amazing talks by top speakers. You could see more info in the [droidcon page.](https://www.berlin.droidcon.com/)
 
-I will add an entry for each Day, where a will talk about all the talks I assist, what are my thoughts on them, and why I choose to go for those talks and not other ones.
+I will add an entry for each Day, where a will talk about all the talks I like the most.
 
