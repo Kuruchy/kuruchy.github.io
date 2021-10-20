@@ -5,6 +5,8 @@ categories: [Droidcon, Conference, Android]
 excerpt: All the day one talks were fascinating, but these are the ones I most liked.
 ---
 
+![](../images/DroidConDay1.jpg)
+
 ## Why Projects Succeed: Lessons Learned from the Android OS by Chet Haase
 
 I really enjoy each talk given by [Chet](https://twitter.com/chethaase), the [podcast](http://androidbackstage.blogspot.com/) and his books, but is always nice to be able to see him in person. He emanates energy and good vibes.

@@ -8,6 +8,8 @@ excerpt: Do you want to know why Android succeeded and how? Join me on my review
 In 2004, there were two people who wanted to build software for cameras. But they couldn't get investors interested. But Google was interested on building something like that, but for phones.
 Today, there's a large team at Google that builds software for cameras. Sort of XD.
 
+![](../images/androids.jpg)
+
 In this book you will find all the reasons, according to the participants of the first years of Android Development, that led Android to succeed.
 
 I would say that my understanding of why android succeeded is because they had the right people working on it, all of them sharing the same idea and all of them working really hard on the same goal. Decisions being made and encapsulating the devs from the outside noise was also really important.
