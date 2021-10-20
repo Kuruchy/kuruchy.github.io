@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom Action in Android Studio
+title: Actions in Android Studio
 categories: [Tips, Android Studio]
 excerpt: Did you always wanted to add new buttons to Android Studio to perform some actions that are not there? I will show you how easy it is!
 ---

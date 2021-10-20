@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom Colors in Logcat
+title: Add Colors to Logcat
 categories: [Tips, Android Studio]
 excerpt: Do you want your plain Logcat to be able to show different colors for each message type? I will show you how easy it is!
 ---
