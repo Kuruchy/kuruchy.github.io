@@ -6,7 +6,7 @@ excerpt: Do you want to know why Android succeeded and how? Join me on my review
 ---
 
 In 2004, there were two people who wanted to build software for cameras. But they couldn't get investors interested. But Google was interested on building something like that, but for phones.
-Today, there's a large team at Google that builds software for cameras. Short of XD.
+Today, there's a large team at Google that builds software for cameras. Sort of XD.
 
 In this book you will find all the reasons, according to the participants of the first years of Android Development, that led Android to succeed.
 
