@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Droidcon Berlin
-categories: Miscellaneous
+categories: [Droidcon, Conference, Android]
 excerpt: I made it, I am back to conferences after the global pandemic. Last time I was in a Conference was in...
 ---
 
