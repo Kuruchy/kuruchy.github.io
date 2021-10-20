@@ -7,23 +7,25 @@ excerpt: All the day one talks were fascinating, but these are the ones I most l
 
 ![](../images/DroidConDay1.jpg)
 
-## Why Projects Succeed: Lessons Learned from the Android OS by Chet Haase
+# Why Projects Succeed 
+## Lessons Learned from the Android OS 
+### by Chet Haase
 
 I really enjoy each talk given by [Chet](https://twitter.com/chethaase), the [podcast](http://androidbackstage.blogspot.com/) and his books, but is always nice to be able to see him in person. He emanates energy and good vibes.
 
 The talk goes in the same direction of the book, (androids) but he summarizes it in less than 40 minutes. If you hadn't read it yet, do it. It is a fantastic book, and all the benefits go to charity!
 
-Here my [review](https://kuruchy.github.io/androids-review/) on the book. 
+I would say that my understanding of why android succeeded is because they had the right people working on it, all of them sharing the same idea and all of them working really hard on the same goal. Decisions being made and encapsulating the devs from the outside noise was also really important. But it is also important, like all the developers involved in the project said, {% include pullquote.html quote="Be at the right time in the right place." %}
 
-{% include pullquote.html quote="Be at the right time in the right place." %}
+Here my [review](https://kuruchy.github.io/androids-review/) on the book.
 
-I would say that my understanding of why android succeeded is because they had the right people working on it, all of them sharing the same idea and all of them working really hard on the same goal. Decisions being made and encapsulating the devs from the outside noise was also really important.
-
-## KMP for Mobile Developers by Enrique López Mañas
+## KMP for Mobile Developers 
+### by Enrique López Mañas
 
 An interesting talk about how KMP works for swift and how the iOS could profit from it. I am not an iOS developer, but I've developed an iOS App from scratch for my previous company, and since I love Kotlin and the idea of one day being able to have a multiplatform App built only in Kotlin, I decided to see how this looks for Swift.
 
-## Building a Production-Ready Chat SDK Using Jetpack Compose by Filip Babić & Márton Braun
+## Building a Production-Ready Chat SDK Using Jetpack Compose 
+### by Filip Babić & Márton Braun
 
 It was amazing to see a production ready SDK working with compose. My first encounter with compose was two years ago on the Kotlin Conf, in a workshop done by [Sean McQuillan](https://twitter.com/objcode). I was excited about it, but I must say it was too soon then. 
 
@@ -41,7 +43,9 @@ They provided some links for testing the code and play with the demos.
 
 Stay tuned for a post about it.
 
-## A Hitchhiker's Guide to Compose Compiler: Composers, Compiler Plugins, and Snapshots by Jossi Wolf & Amanda Hinchman-Dominguez
+# A Hitchhiker's Guide to Compose Compiler:
+## Composers, Compiler Plugins, and Snapshots 
+### by Jossi Wolf & Amanda Hinchman-Dominguez
 
 Really cool, advance, talk about how compose works under the hood. 
 
@@ -49,7 +53,8 @@ It is fascinating to see a full-room for a talk that takes a new API (Jetpack Co
 
 The most interesting part for me was to find out about the State capture in Compose. **Snapshots!!**
 
-# Becoming a mentor, why and how? by Florian Mierzejewski
+## Becoming a mentor, why and how?
+### by Florian Mierzejewski
 
 Really cool talk about how to mentor a mentee, when this mentee is a junior developer. Really happy to see that what I am already doing as part of my job, is the same other companies, and other people more expert in mentoring, are doing.
 
