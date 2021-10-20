@@ -15,16 +15,16 @@ I really enjoy each talk given by [Chet](https://twitter.com/chethaase), the [po
 
 The talk goes in the same direction of the book, (androids) but he summarizes it in less than 40 minutes. If you hadn't read it yet, do it. It is a fantastic book, and all the benefits go to charity!
 
-I would say that my understanding of why android succeeded is because they had the right people working on it, all of them sharing the same idea and all of them working really hard on the same goal. Decisions being made and encapsulating the devs from the outside noise was also really important. But it is also important, like all the developers involved in the project said, {% include pullquote.html quote="Be at the right time in the right place." %}
+I would say that my understanding of why android succeeded is because they had the right people working on it, all of them sharing the same idea and all of them working really hard on the same goal. Also {% include pullquote.html quote="Be at the right time in the right place" %}. Decisions being made and encapsulating the devs from the outside noise was also really important.
 
 Here my [review](https://kuruchy.github.io/androids-review/) on the book.
 
-## KMP for Mobile Developers 
+# KMP for Mobile Developers 
 ### by Enrique López Mañas
 
 An interesting talk about how KMP works for swift and how the iOS could profit from it. I am not an iOS developer, but I've developed an iOS App from scratch for my previous company, and since I love Kotlin and the idea of one day being able to have a multiplatform App built only in Kotlin, I decided to see how this looks for Swift.
 
-## Building a Production-Ready Chat SDK Using Jetpack Compose 
+# Building a Production-Ready Chat SDK Using Jetpack Compose 
 ### by Filip Babić & Márton Braun
 
 It was amazing to see a production ready SDK working with compose. My first encounter with compose was two years ago on the Kotlin Conf, in a workshop done by [Sean McQuillan](https://twitter.com/objcode). I was excited about it, but I must say it was too soon then. 
@@ -53,7 +53,7 @@ It is fascinating to see a full-room for a talk that takes a new API (Jetpack Co
 
 The most interesting part for me was to find out about the State capture in Compose. **Snapshots!!**
 
-## Becoming a mentor, why and how?
+# Becoming a mentor, why and how?
 ### by Florian Mierzejewski
 
 Really cool talk about how to mentor a mentee, when this mentee is a junior developer. Really happy to see that what I am already doing as part of my job, is the same other companies, and other people more expert in mentoring, are doing.
