@@ -15,7 +15,7 @@ I really enjoy each talk given by [Chet](https://twitter.com/chethaase), the [po
 
 The talk goes in the same direction of the book, (androids) but he summarizes it in less than 40 minutes. If you hadn't read it yet, do it. It is a fantastic book, and all the benefits go to charity!
 
-I would say that my understanding of why android succeeded is because they had the right people working on it, all of them sharing the same idea and all of them working really hard on the same goal. Also {% include pullquote.html quote="Be at the right time in the right place" %}. Decisions being made and encapsulating the devs from the outside noise was also really important.
+I would say that my understanding of why android succeeded is because they had the right people working on it, all of them sharing the same idea and all of them working really hard on the same goal. Decisions being made and encapsulating the devs from the outside noise was also really important. But it is also important, like all the developers involved in the project said, _**"Be at the right time in the right place."**_
 
 Here my [review](https://kuruchy.github.io/androids-review/) on the book.
 
