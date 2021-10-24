@@ -14,6 +14,6 @@ The next three days will be packed with tons of amazing talks by top speakers. Y
 
 I will add an entry for each Day, where a will talk about all the talks I like the most.
 
-## Update
+### Reviews
 - Day One [Post](https://kuruchy.github.io/droidcon-berlin-day-one/)
 - Day Two & Three [Post](https://kuruchy.github.io/droidcon-berlin-day-two-and-three/)
