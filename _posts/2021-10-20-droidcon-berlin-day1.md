@@ -2,7 +2,7 @@
 layout: post
 title: Droidcon Berlin Day One
 categories: [Droidcon, Conference, Android]
-excerpt: All the day one talks were fascinating, but these are the ones I most liked.
+excerpt: All the day one talks were fascinating, but these are the ones I liked the most.
 ---
 
 Finally, the day arrived. One week before I had no plans to be in Berlin, nor to attend the event. But there I was, happy to be there on the first DroidCon after the pandemic.
