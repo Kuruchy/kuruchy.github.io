@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Droidcon Berlin Day 2 & 3
+title: Droidcon Berlin Day Two & Three
 categories: [Droidcon, Conference, Android]
 excerpt: Day two was great, and day three came full of surprises!
 ---
