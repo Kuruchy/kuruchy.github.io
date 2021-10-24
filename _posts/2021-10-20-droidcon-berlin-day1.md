@@ -1,9 +1,11 @@
 ---
 layout: post
-title: Droidcon Berlin Day 1
+title: Droidcon Berlin Day One
 categories: [Droidcon, Conference, Android]
 excerpt: All the day one talks were fascinating, but these are the ones I most liked.
 ---
+
+Finally, the day arrived. One week before I had no plans to be in Berlin, nor to attend the event. But there I was, happy to be there on the first DroidCon after the pandemic.
 
 ![](../images/DroidConDay1.jpg)
 
@@ -50,7 +52,7 @@ Stay tuned for a post about it.
 Really cool, advance, talk about how compose works under the hood. 
 
 It is fascinating to see a full-room for a talk that takes a new API (Jetpack Compose) that simplifies UI development in android, and tries to explain the viewers the complexity behind. We engineers really love to understand how things work.
-
+I would have given these two the opportunity to talk for 40 more minutes. They know a lot, and they explain everything so clear that you don't need to process it. Good job! 
 The most interesting part for me was to find out about the State capture in Compose. **Snapshots!!**
 
 # Becoming a mentor, why and how?
@@ -64,3 +66,6 @@ Really cool talk about how to mentor a mentee, when this mentee is a junior deve
 - Industry-wide lack of developers, worse at the senior level
 - Giving back to the community
 - Building long-lasting professional relationships
+
+# End of Day One
+The first day ended, like always with a Party and some Beers. Nice ending for a great day!
