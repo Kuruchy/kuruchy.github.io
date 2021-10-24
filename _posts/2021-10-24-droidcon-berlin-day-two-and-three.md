@@ -9,6 +9,10 @@ We were warned that, due to the speakers not being able to travel, some talks wo
 
 ![](../images/DroidConDay2.jpg)
 
+## Did you miss Day One review?
+Here you can read my review of [Day One](https://kuruchy.github.io/droidcon-berlin-day-one/)
+
+
 # Using Kotlin flow in MVVM
 ### by Fatih Girish
 

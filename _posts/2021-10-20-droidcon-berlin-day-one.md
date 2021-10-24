@@ -69,3 +69,6 @@ Really cool talk about how to mentor a mentee, when this mentee is a junior deve
 
 # End of Day One
 The first day ended, like always, with a Party and some Beers. Nice ending for a great day!
+
+## Continue to Day Two & Three
+Here you can continue reading my review of [Day Two & Three](https://kuruchy.github.io/droidcon-berlin-day-two-and-three/)
