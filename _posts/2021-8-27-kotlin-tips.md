@@ -11,4 +11,4 @@ Let's see how we could improve the latter.
 
 ![Tip](../images/gifs/comparing_two_strings.gif)
 
-Kotlin provides us with an easier way to do the comparison ignoring the case. Instead of altering the strings into f.e. `lowercase`, we could use the parameter `ignoreCase` in the `.equals` method.
+Kotlin provides us with an easier way to do the comparison, ignoring the case. Instead of altering the strings into f.e. `lowercase`, we could use the parameter `ignoreCase` in the `.equals` method.

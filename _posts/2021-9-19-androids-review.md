@@ -16,14 +16,14 @@ I would say that my understanding of why android succeeded is because they had t
 
 ### Interesting Facts
 
-Interesting fact, while developing the kernel (that will ship with G1) they did it in a way it actually seam to have 32Mb less memory, forcing the developers to work harder to fit all into a tighter budget.
+Interesting fact, while developing the kernel (that will ship with G1) they did it in a way it actually seems to have 32Mb less memory, forcing the developers to work harder to fit all into a tighter budget.
 
 Wake locks were added to the Android Linux Kernel by Arve to ensure the screen-off didn't mean completely-off
 
 
 
-### Favourite Quote
-You're telling me we have to have just as good battery life as the iPhone. We have this capability to run all theses apps in the background, the hardware  that we have has a bigger screen, we run background tasks, we were the first to do 3Gm and we also have a physically smaller battery.
+### Favorite Quote
+You're telling me we have to have just as good battery life as the iPhone. We have this capability to run all these apps in the background, the hardware  that we have has a bigger screen, we run background tasks, we were the first to do 3G, and we also have a physically smaller battery.
 
 ### Final note
 If you hate footnotes, avoid this book!

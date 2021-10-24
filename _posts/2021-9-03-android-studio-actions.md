@@ -2,10 +2,10 @@
 layout: post
 title: Actions in Android Studio
 categories: [Tips, Android Studio]
-excerpt: Did you always wanted to add new buttons to Android Studio to perform some actions that are not there? I will show you how easy it is!
+excerpt: Did you always want to add new buttons to Android Studio to perform some actions that are not there? I will show you how easy it is!
 ---
 
-One cool Feature I’ve recently found, is the possibility to add custom action buttons to almost anywhere in the Android Studio toolbars.
+One cool feature, I’ve recently found, is the possibility to add custom action buttons to almost anywhere in the Android Studio toolbars.
 
 In my case, and I know most Android Developers could relate, I am hitting the infamous **Invalidate Caches & Restart** a couple of times a day. So as a way to make it happen faster (saving one mouse click, yeah!) I added a button to my Navigation Bar Toolbar.
 
@@ -16,7 +16,7 @@ To see what can be edited / added, you need to go to `Preferences → Appearance
 
 We can add actions to a lot of places, making our life easier.
 
-To create a button and add an action, we click on the `+` icon and we will get the possibility to `Add Action` or `Add Separation`. 
+To create a button and add an action, we click on the `+` icon, and we will get the possibility to `Add Action` or `Add Separation`. 
 
 If we choose the `Add Action`, we would get the following popup to choose the action we want.
 

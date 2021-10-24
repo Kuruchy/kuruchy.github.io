@@ -39,12 +39,12 @@ Yoni gave us a huge boost of energy, making everyone pay attention to the talk. 
 ## Paparazzi 1.0
 ### by Joh Rodriguez
 
-I think every Android Developer knows the open source projects that Square and CashApp team have, at least the most important and common ones. In this talk John presented us, or should I say reintroduced us, to how the [Paparazzi](https://github.com/cashapp/paparazzi) works.
+I think every Android Developer knows the open-source projects that Square and CashApp team have, at least the most important and common ones. In this talk John presented us, or should I say reintroduced us, to how the [Paparazzi](https://github.com/cashapp/paparazzi) works.
 
 It is an Android library to render your application screens without a physical device or emulator.
 
 Stable version 1.0 is almost there, he wanted to give it to us as a surprise in the conference, but there were some tests failing ;)
-It was really interesting to see how they use this tool to test screens really fast without using emulators or devices.
+It was fascinating to see how they use this tool to test screens really fast without using emulators or devices.
 
 One thing that stood out to me was the possibility to add the images generated to git and then be able to see differences. Never thought about this, great idea!
 
@@ -89,7 +89,7 @@ I arrived in the fair room late, 8:50, or so I thought. I could tell the second 
 
 This day was full of surprises and for me, bad choices with talks, choosing two workshops I really wanted to attend, which were remote and on rooms without the possibility of charging the laptops...
 
-After the Kickoff any developer who wanted could pitch a talk to be presented that day. Amazing idea!
+After the Kickoff, any developer who wanted could pitch a talk to be presented that day. Amazing idea!
 
 # A Comedy Talk
 ### by Chet Haase
@@ -100,6 +100,6 @@ This was the big surprise of the day, not the only one though ;). Chet did use h
 ## Step 1 - Live coding
 ### by Richard Schattauer
 
-This talk was one of the community talks that were selected by us the attendees. It was cool to see a live coding on Compose. We had been seeing a lot of talks about it, but not a single one with a so in depth Live Coding. 
+This talk was one of the community talks that were selected by us, the attendees. It was cool to see a live coding on Compose. We had been seeing a lot of talks about it, but not a single one with so in depth Live Coding. 
 
 This one made me start migrating some of my projects to Compose. So thanks Richard!
