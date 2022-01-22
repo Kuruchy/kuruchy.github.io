@@ -5,6 +5,15 @@ from datetime import date
 
 backupPath = 'notion-backup/Blog 7e48afb2d0bc41f6b6410db61b13b82b'
 
+customHeader = """
+---
+layout: post
+title: My Notion Automation
+categories: [Automation]
+excerpt: Demo!
+---
+"""
+
 def FindMarkdownFile():
     notionMarkDownFile=''
     os.chdir(backupPath)
@@ -19,28 +28,24 @@ def ModifiedMarkDownFile():
     notionMarkDownFile=FindMarkdownFile()
 
     fileName = notionMarkDownFile.split('[')[0][:-1]
-    year, month, day = re.findall('\[.*?\]', notionMarkDownFile)[0].replace('[', '')[:-1].split('-')
-
-    currentTimeStr=date(int(year), int(month), int(day)).isoformat()
-
-    #Front Matter
-    frontMatter='---\ntitle: "{}"\ndate: {} 00:00:00 +0900\n---\n'.format(fileName,currentTimeStr)
+    date = re.findall('\[.*?\]', notionMarkDownFile)[0]
+    date = date.replace('[', '')[:-1]
 
     #New File Name
-    newMarkdownFileName="{}-{}.md".format(currentTimeStr,fileName)
+    newMarkdownFileName="{}-{}.md".format(date,fileName)
 
     #Add Header
     with open(newMarkdownFileName,'w') as f:
-        f.write(frontMatter)
+        f.write(customHeader)
 
     #Rename file
     os.rename(notionMarkDownFile, newMarkdownFileName)
 
     #Move Resouces
-    shutil.move(newMarkdownFileName, '../../_posts/')
+    shutil.move(newMarkdownFileName, '../../_posts/{}'.format(newMarkdownFileName))
 
     #Remove md file
-    shutil.rmtree('notion-backup')
+    shutil.rmtree('../../notion-backup')
 
 if __name__ == '__main__':
     ModifiedMarkDownFile()
