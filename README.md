@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="/images/reverie-text.png" alt="Kuruchy Blog" width="200"/>
+  <img src="/images/logo.jpg" alt="Kuruchy Blog" width="200"/>
   <br>
 </h1>
 
