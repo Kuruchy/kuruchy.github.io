@@ -2,7 +2,7 @@ name: Export my notion workspace
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Call the export every day at midnight
+    #- cron: "0 0 * * *"  # Call the export every day at midnight
   workflow_dispatch: {}
 
 jobs:
@@ -25,3 +25,11 @@ jobs:
       - name: run Convert Backup
         run: |
           python bin/convertBackup.py
+      - name: Commit report
+        run: |
+          git config --global user.name 'Your Name'
+          git config --global user.email 'your-username@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git checkout "${GITHUB_REF:11}"
+          git commit -am "Automated report"
+          git push
