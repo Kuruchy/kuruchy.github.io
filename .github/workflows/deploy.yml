@@ -25,11 +25,10 @@ jobs:
       - name: run Convert Backup
         run: |
           python bin/convertBackup.py
-      - name: Commit report
-        run: |
-          git config --global user.name 'Your Name'
-          git config --global user.email 'your-username@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-          git checkout "${GITHUB_REF:11}"
-          git commit -am "Automated report"
-          git push
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v8
+        with:
+          author_name: Bruno Retolaza
+          author_email: bruno.retolaza@gmail.com
+          message: 'Update Posts'
+          add: "['_posts', 'notion-backup']"
