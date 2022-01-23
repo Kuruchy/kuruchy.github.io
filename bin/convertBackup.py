@@ -62,7 +62,7 @@ def ModifiedMarkDownFile():
                 rows = f.readlines()[1:]
             with open(notionMarkDownFile, 'w') as f:
                 for row in rows:
-                    f.write(rows)
+                    f.write(row)
                 
             #Rename file
             os.rename(notionMarkDownFile, newMarkdownFileName)
