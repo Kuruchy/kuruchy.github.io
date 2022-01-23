@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="images/logo.png" width="180">
+</p>
 <h1 align="center">Repo for kuruchy.github.io</h1>
 
 <p align="center">
@@ -10,6 +13,6 @@
   <a href="https://github.com/Kuruchy/kuruchy.github.io/actions/workflows/pages/pages-build-deployment">
     <img alt="Pages build" src="https://github.com/Kuruchy/kuruchy.github.io/actions/workflows/pages/pages-build-deployment/badge.svg"/>
   </a>
-</p>
+
 
 My personla Blog using Reverie is a [Jekyll](https://jekyllrb.com/)-powered theme which is simple and opinionated.
