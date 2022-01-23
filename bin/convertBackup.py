@@ -3,8 +3,6 @@ import re
 import shutil
 from datetime import date
 
-backupPath = 'notion-backup/Blog%207e48afb2d0bc41f6b6410db61b13b82b'
-
 customHeader = """
 ---
 layout: post
@@ -17,7 +15,8 @@ excerpt: {}
 def ModifiedMarkDownFile():
 
     #Loop each file
-    os.chdir(backupPath)
+    blog = [filename for filename in os.listdir('.') if filename.startswith("Blog") & !filename.endswith(".md")]
+    os.chdir('notion-backup/{}'.format(blog))
     for file in os.listdir():
         if file.endswith('.md'):
             notionMarkDownFile = file
