@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: My Blog by Notion
