@@ -8,41 +8,59 @@ backupPath = 'notion-backup/Blog 7e48afb2d0bc41f6b6410db61b13b82b'
 customHeader = """
 ---
 layout: post
-title: My Notion Automation
-categories: [Automation]
-excerpt: Demo!
+title: {}
+categories: {}
+excerpt: {}
 ---
 """
 
-def FindMarkdownFile():
-    notionMarkDownFile=''
+def ModifiedMarkDownFile():
+
+    #Loop each file
     os.chdir(backupPath)
     for f in os.listdir():
         if f.endswith('.md'):
             notionMarkDownFile = f
-            break
-    return notionMarkDownFile
 
-def ModifiedMarkDownFile():
-    #Read Notion Markdown
-    notionMarkDownFile=FindMarkdownFile()
+            #Read Front
+            lines = []
+            with open(notionMarkDownFile, 'r') as f:
+                lines = f.readlines()
 
-    fileName = notionMarkDownFile.split('[')[0][:-1]
-    date = re.findall('\[.*?\]', notionMarkDownFile)[0]
-    date = date.replace('[', '')[:-1]
+            data = lines[4].split('|')
+            data = data[1:-1]
 
-    #New File Name
-    newMarkdownFileName="{}-{}.md".format(date,fileName)
+            title = data[0]
+            title = title[1:-1]
 
-    #Add Header
-    with open(newMarkdownFileName,'w') as f:
-        f.write(customHeader)
+            categories = data[1]
+            categories = categories[1:-1]
 
-    #Rename file
-    os.rename(notionMarkDownFile, newMarkdownFileName)
+            excerpt = data[2]
+            excerpt = excerpt[1:-1]
 
-    #Move Resouces
-    shutil.move(newMarkdownFileName, '../../_posts/{}'.format(newMarkdownFileName))
+            date = data[3]
+            date = date[1:-1]
+
+            #New File Name
+            fileName = title.replace(' ', '_').lower()
+            newMarkdownFileName="{}-{}.md".format(date, fileName)
+
+            #Clean Header
+            notionMarkDownFolder = notionMarkDownFile.replace('.md','').replace(' ', '%20')
+            newHeader = customHeader.format(title, categories, excerpt)
+            with open(notionMarkDownFile, 'w') as f:
+                f.write(newHeader)
+                for number, line in enumerate(lines[5:]):
+                    if line.startswith('!['):
+                        line = line.replace(notionMarkDownFolder, 'images')
+                    f.write(line)
+
+            #Rename file
+            os.rename(notionMarkDownFile, newMarkdownFileName)
+
+            #Move Resouces
+            shutil.move(newMarkdownFileName, '../../_posts/{}'.format(newMarkdownFileName))
 
     #Remove md file
     shutil.rmtree('../../notion-backup')
