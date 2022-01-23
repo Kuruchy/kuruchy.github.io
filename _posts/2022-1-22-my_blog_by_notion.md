@@ -1,8 +1,10 @@
-# My Blog by Notion
 
-| title | categories | excerpt | date |
-| --- | --- | --- | --- |
-| My Blog by Notion | [Automation] | This is the first try of an automation series. | 2022-1-22 |
+---
+layout: post
+title: My Blog by Notion
+categories: [Automation]
+excerpt: This is the first try of an automation series.
+---
 
 If this post reaches my blog, this means the automatization with Github Actions and Notion works!
 

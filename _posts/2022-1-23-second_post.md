@@ -1,8 +1,10 @@
-# Second Post
 
-| title | categories | excerpt | date |
-| --- | --- | --- | --- |
-| Second Post | [Automation] | This is the second try of an automation series. | 2022-1-23 |
+---
+layout: post
+title: Second Post
+categories: [Automation]
+excerpt: This is the second try of an automation series.
+---
 
 This is the second try.
 
@@ -21,4 +23,4 @@ fun MyComposable() {
 }
 ```
 
-![2.png](Second%20Post%20efc4856636334b0a826ced6b61199553/2.png)
+![2.png](images/2.png)
