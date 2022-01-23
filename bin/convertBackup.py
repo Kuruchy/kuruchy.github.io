@@ -56,6 +56,13 @@ def ModifiedMarkDownFile():
                         line = line.replace(notionMarkDownFolder, 'images')
                     f.write(line)
 
+            #Deleting First Line
+            rows = []
+            with open(notionMarkDownFile, "r") as f:
+                rows = f.readlines()[1:]
+            with open(notionMarkDownFile, 'w') as f:
+                f.write(rows)
+                
             #Rename file
             os.rename(notionMarkDownFile, newMarkdownFileName)
 
