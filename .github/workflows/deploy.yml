@@ -32,4 +32,4 @@ jobs:
           author_email: bruno.retolaza@gmail.com
           message: 'Update Posts'
           add: "['_posts', 'notion-backup']"
-          pull: '--rebase'
+          pull: '--autostash'
