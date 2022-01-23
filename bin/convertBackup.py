@@ -18,9 +18,9 @@ def ModifiedMarkDownFile():
 
     #Loop each file
     os.chdir(backupPath)
-    for f in os.listdir():
-        if f.endswith('.md'):
-            notionMarkDownFile = f
+    for file in os.listdir():
+        if file.endswith('.md'):
+            notionMarkDownFile = file
 
             #Read Front
             lines = []
@@ -47,7 +47,8 @@ def ModifiedMarkDownFile():
             newMarkdownFileName="{}-{}.md".format(date, fileName)
 
             #Clean Header
-            notionMarkDownFolder = notionMarkDownFile.replace('.md','').replace(' ', '%20')
+            imagesOrigen = notionMarkDownFile.replace('.md','')
+            notionMarkDownFolder = imagesOrigen.replace(' ', '%20')
             newHeader = customHeader.format(title, categories, excerpt)
             with open(notionMarkDownFile, 'w') as f:
                 f.write(newHeader)
@@ -61,6 +62,10 @@ def ModifiedMarkDownFile():
 
             #Move Resouces
             shutil.move(newMarkdownFileName, '../../_posts/{}'.format(newMarkdownFileName))
+            allImages = os.listdir(imagesOrigen)
+
+            for image in allImages:
+                shutil.move(imagesOrigen + '/' + image, '../../images/' + image)
 
     #Remove md file
     shutil.rmtree('../../notion-backup')
