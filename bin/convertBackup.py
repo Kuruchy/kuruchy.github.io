@@ -74,8 +74,8 @@ def ModifiedMarkDownFile():
                 for image in allImages:
                     shutil.move(imagesOrigen + '/' + image, '../../images/' + image)
 
-    #Remove md file
-    shutil.rmtree('../../notion-backup')
+    #Remove backup Folder
+    #shutil.rmtree('../../notion-backup')
 
 if __name__ == '__main__':
     ModifiedMarkDownFile()
