@@ -3,7 +3,7 @@ import re
 import shutil
 from datetime import date
 
-backupPath = 'notion-backup/Blog 7e48afb2d0bc41f6b6410db61b13b82b'
+backupPath = 'notion-backup/Blog%207e48afb2d0bc41f6b6410db61b13b82b'
 
 customHeader = """
 ---
