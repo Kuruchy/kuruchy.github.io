@@ -15,8 +15,8 @@ excerpt: {}
 def ModifiedMarkDownFile():
 
     #Loop each file
-    blog = [filename for filename in os.listdir('.') if filename.startswith("Blog") & !filename.endswith(".md")]
-    os.chdir('notion-backup/{}'.format(blog))
+    blog = [filename for filename in os.listdir('notion-backup') if filename.startswith("Blog") and filename.endswith(".md")][0]
+    os.chdir('notion-backup/{}'.format(blog.replace('.md','')))
     for file in os.listdir():
         if file.endswith('.md'):
             notionMarkDownFile = file
@@ -61,10 +61,10 @@ def ModifiedMarkDownFile():
 
             #Move Resouces
             shutil.move(newMarkdownFileName, '../../_posts/{}'.format(newMarkdownFileName))
-            allImages = os.listdir(imagesOrigen)
-
-            for image in allImages:
-                shutil.move(imagesOrigen + '/' + image, '../../images/' + image)
+            if os.path.isdir(imagesOrigen):
+                allImages = os.listdir(imagesOrigen)
+                for image in allImages:
+                    shutil.move(imagesOrigen + '/' + image, '../../images/' + image)
 
     #Remove md file
     shutil.rmtree('../../notion-backup')
