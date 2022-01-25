@@ -141,8 +141,6 @@ But it may change in the future.
 
 ## Final thoughts
 
-![Untitled](images/Untitled.png)
-
 I spent I couple of days figuring this out, so I really hope this speeds up my writing process and lets me write more thoughts and ideas, and therefore made them to be out there for anyone to profit and learn. 
 
 ## Thanks
