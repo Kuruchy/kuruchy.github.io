@@ -2,7 +2,7 @@
 layout: post
 title: My Blog Automation with Notion
 categories: [Automation, GitHub, Notion]
-excerpt: If this post reaches my blog, this means the automatization with Github Actions and Notion works!
+excerpt: If this post reaches my blog, this means the automation with GitHub Actions and Notion works!
 ---
 
 Lately I have been using [Notion](https://www.notion.so/) for almost any task that needs me to write something, and every new day I use it for something new. I started writing small Kanban Boards for ideas I had, but starting to see the potential of having a ***single source of true*** for all my data.
@@ -62,7 +62,27 @@ Basically Jekyll uses markdown files as the source for building the posts, so si
 
 For the conversion and the addition of the header, I built myself a small script in python. It can be found in my [Repo](https://github.com/Kuruchy/kuruchy.github.io/blob/master/bin/convertBackup.py).
 
-For the header, we need to add this to the beginning of each Notion Page and done!
+But it looks like this:
+
+```python
+def ModifiedMarkDownFile():
+    #Loop each file
+    os.chdir('notion-backup/{}'.format(blogFile.replace('.md','')))
+    for file in os.listdir():
+        if not(file.endswith('.md')): continue
+        imagesOrigen = file.replace('.md','')
+        notionMarkDownFile = file
+        newMarkdownFileName = ProcessPostHeader(notionMarkDownFile, imagesOrigen)
+        DeleteFirstLineOfFile(notionMarkDownFile)
+        RenameFile(notionMarkDownFile, newMarkdownFileName)
+        MoveResources(newMarkdownFileName, imagesOrigen)
+
+    RemoveBackUpFiles()
+```
+
+If you have suggestion on how to improve the script, fire an Issue!
+
+For the header, we need to add this at the beginning of each Notion Page, to extract the data we need. and done!
 
 | title | categories | excerpt | date |
 | --- | --- | --- | --- |
@@ -127,4 +147,9 @@ I spent I couple of days figuring this out, so I really hope this speeds up my w
 
 ## Thanks
 
-Big thanks to RyoniCho which has a [Github](https://github.com/RyoniCho/NotionToGithubPage) project that inspired me!
+Big thanks to the following developers/engineers that inspired me!
+
+- [Ryoni Cho](https://github.com/RyoniCho)
+- [Eunchan Cho](https://github.com/echo724/notion2md)
+- [Guillaume Gelin](https://github.com/ramnes/notion-sdk-py)
+- [Jaime Alexander](https://github.com/jamalex/notion-py)
