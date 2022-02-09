@@ -1,8 +1,9 @@
-# Androids Book Review
-
-| title | categories | excerpt | date |
-| --- | --- | --- | --- |
-| Androids Book Review | [Book Review, Android] | Do you want to know why Android succeeded and how? Join me on my review of Androids - The Team That Built the Android Operating System. | 2021-9-19 |
+---
+layout: post
+title: Androids Book Review
+categories: [Book Review, Android]
+excerpt: Do you want to know why Android succeeded and how? Join me on my review of Androids - The Team That Built the Android Operating System.
+---
 
 In 2004, there were two people who wanted to build software for cameras. But they couldn't get investors interested. But Google was interested on building something like that, but for phones. Today, there's a large team at Google that builds software for cameras. Sort of XD.
 

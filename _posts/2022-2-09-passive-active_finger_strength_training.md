@@ -1,8 +1,9 @@
-# Passive-active Finger Strength Training
-
-| title | categories | excerpt | date |
-| --- | --- | --- | --- |
-| Passive-active Finger Strength Training | [Climbing, Training] | Finger strength is a complex topic in climbing. Is also the hardest to improve. I bing here my latest training! | 2022-2-09 |
+---
+layout: post
+title: Passive-active Finger Strength Training
+categories: [Climbing, Training]
+excerpt: Finger strength is a complex topic in climbing. Is also the hardest to improve. I bing here my latest training!
+---
 
 ![from Unsplash by Damir Spanic ](https://images.unsplash.com/photo-1589458928476-47a493a030b5?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb)
 

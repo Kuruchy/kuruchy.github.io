@@ -1,8 +1,9 @@
-# Droidcon Berlin 2021
-
-| title | categories | excerpt | date |
-| --- | --- | --- | --- |
-| Droidcon Berlin | [Droidcon, Conference, Android] | I made it, I am back to conferences after the global pandemic. Last time I was in a Conference was in... | 2021-10-19 |
+---
+layout: post
+title: Droidcon Berlin
+categories: [Droidcon, Conference, Android]
+excerpt: I made it, I am back to conferences after the global pandemic. Last time I was in a Conference was in...
+---
 
 I made it, I am back to conferences after the global pandemic. Last time I was in a Conference was in Copenhagen, December 2019, for the Kotlin Conf. Almost two years have past and a lot has changed since then. But I am happy to be back on track!
 

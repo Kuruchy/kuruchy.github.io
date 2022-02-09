@@ -1,8 +1,9 @@
-# Android Studio Logcat Color
-
-| title | categories | excerpt | date |
-| --- | --- | --- | --- |
-| Add Colors to Logcat | [Tips, Android Studio] | Do you want your plain Logcat to be able to show different colors for each message type? I will show you how easy it is! | 2021-9-08 |
+---
+layout: post
+title: Add Colors to Logcat
+categories: [Tips, Android Studio]
+excerpt: Do you want your plain Logcat to be able to show different colors for each message type? I will show you how easy it is!
+---
 
 We can add new colors to the Logcat messages by going to:
 `Preferences → Editor → Color Scheme → Andoid Logcat`

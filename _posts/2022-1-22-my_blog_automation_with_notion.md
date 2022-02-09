@@ -15,7 +15,7 @@ Now I use it to keep track of the following:
 - A short-time goals list and a long-term goals one.
 - A big page where I write down parts of interesting and complex topics I want to learn by revisiting them often.
 
-Then one day I realized that using Notion is much more flexible than any other Markdown editor I’ve used before, and because of that write more with it than in any of my past tries of writing my blog.
+Then, one day I realized that using Notion was much more flexible than any other Markdown editor I've used before (because it is more than a Markdown editor!), and that wrote more with it than in any of my past tries of writing my blog.
 
 So why don't use Notion to help me to write my blog?
 

@@ -1,8 +1,9 @@
-# New Blog
-
-| title | categories | excerpt | date |
-| --- | --- | --- | --- |
-| Welcome to my Blog | [Miscellaneous] | I always had this idea in mind writing down my experiences, tips, ideas and so on in a personal Blog. I have tried once in the past, unsuccessfully, to create a blog where I wrote about tech in general. But I think I did not succeed because the topic was too broad. Or in other words, not so specific, which in the end made me try to create a post about things I did not like. | 2021-8-20 |
+---
+layout: post
+title: Welcome to my Blog
+categories: [Miscellaneous]
+excerpt: I always had this idea in mind writing down my experiences, tips, ideas and so on in a personal Blog. I have tried once in the past, unsuccessfully, to create a blog where I wrote about tech in general. But I think I did not succeed because the topic was too broad. Or in other words, not so specific, which in the end made me try to create a post about things I did not like.
+---
 
 I always had this idea in mind writing down my experiences, tips, ideas and so on in a personal Blog. I have tried once in the past, unsuccessfully, to create a blog where I wrote about tech in general. But I think I did not succeed because the topic was too broad. Or in other words, not so specific, which in the end made me try to create a post about things I did not like.
 

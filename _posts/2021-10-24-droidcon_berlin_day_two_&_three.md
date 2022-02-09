@@ -1,8 +1,9 @@
-# Droidcon Berlin 2021 Day Two
-
-| title | categories | excerpt | date |
-| --- | --- | --- | --- |
-| Droidcon Berlin Day Two & Three | [Droidcon, Conference, Android] | Day two was great, and day three came full of surprises! | 2021-10-24 |
+---
+layout: post
+title: Droidcon Berlin Day Two & Three
+categories: [Droidcon, Conference, Android]
+excerpt: Day two was great, and day three came full of surprises!
+---
 
 We were warned that, due to the speakers not being able to travel, some talks would be remote. I attended some of them on the second and the third day. I must say the experience was far from ideal. Laggy, with audio problems, and so on; which prevented us from enjoy the talks.
 
