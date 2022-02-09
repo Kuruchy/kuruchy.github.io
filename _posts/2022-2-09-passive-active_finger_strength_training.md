@@ -2,18 +2,16 @@
 layout: post
 title: Passive-active Finger Strength Training
 categories: [Climbing, Training]
-excerpt: Finger strength is a complex topic in climbing. Is also the hardest to improve. I bing here my latest training!
+excerpt: Finger strength is a complex topic in climbing. It is also the hardest to improve. I bring here my latest training!
 ---
 
-![from Unsplash by Damir Spanic ](https://images.unsplash.com/photo-1589458928476-47a493a030b5?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb)
-
-from Unsplash by Damir Spanic 
-
-In climbing, one could split the skills one need into three well-defined pillars. **Mental, Physical, Attitude.** One may argue that these three are not equally important, that the physicality is way more important than the other two. That’s far from the truth. You don’t need to blind trust me on this one, I am not a climbing expert, neither a doctor nor coach. But I have read a lot of resources about this topic, written by eminences in the field. And all of them talk about these different components that build you as a climber.
+In climbing, we could split the skills one need into three well-defined pillars. **Mental, Physical & Attitude.** One may argue that these three are not equally important, that the physicality is way more important than the other two. That’s far from the truth. You don’t need to blind trust me on this one, I am not a climbing expert, neither a doctor nor coach. But I have read a lot of resources about this topic, written by eminences in the field. And all of them talk about these different components that build you as a climber, and all of them refer to the three pillars as equally important.
 
 Each of these three pillars could also be split into different components that can be tackled individually to train them, and improve our overall climbing performance. Some of them can be tackled easily than others. For example, for some, being able to climb every day could be easy, they are surrounded by a community of climbers, or even they have a climbing gym right on the corner! But for others, having the time to train three days a week could be a big challenge.
 
 I will try to talk about all the pillars in coming posts, but today I want to focus on a component inside the **Physic pillar.** Finger Strength.
+
+![https://images.unsplash.com/photo-1589458928476-47a493a030b5?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb](https://images.unsplash.com/photo-1589458928476-47a493a030b5?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb)
 
 Finger strength is a complex topic in climbing. It is also the hardest to improve of the four components of the **Physic pillar,** (Endurance, Movement, Finger Strength and Body). Of course, there are elements in the Body component that we can not even change! Like our height.
 
@@ -33,9 +31,7 @@ Due to my job, I normally train in the evenings. I have been climbing for 4 year
 
 I currently go to the gym three days a week. I only do boulder, but I try that one of the days is focused on endurance, trying to do longer routes, or do problems up, down, up and down. Not only that, but I also do twice a week flexibility and antagonist trainings at home. And then once a week, finger training on the BeastMaker 2000.
 
-![by Beastmaker](http://cdn.shopify.com/s/files/1/0107/6442/products/2000-Series-Feb2015-Small_1200x1200.jpg?v=1614607648)
-
-by Beastmaker
+![http://cdn.shopify.com/s/files/1/0107/6442/products/2000-Series-Feb2015-Small_1200x1200.jpg?v=1614607648](http://cdn.shopify.com/s/files/1/0107/6442/products/2000-Series-Feb2015-Small_1200x1200.jpg?v=1614607648)
 
 ## **Passive-active Training Plan**
 
