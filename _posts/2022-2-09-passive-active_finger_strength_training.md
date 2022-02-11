@@ -19,7 +19,7 @@ Finger strength is a complex topic in climbing. It is also the hardest component
 
 As a side note, there are elements in the Body component that we can not even change! Like our height, or our wingspan.
 
-# **Goal**
+## **Goal**
 
 I wanted to create some training plan for me, one that could improve my finger strength but also help to recover the ligaments and tendons in my fingers along the way. Could this be done at the same time?
 
@@ -31,21 +31,21 @@ I have a job that makes me sit from six to eight hours daily, so compared with s
 
 Due to my job, I normally train in the evenings. I have been climbing for 4 years now, and I have improved a lot, but I’ve reached the 7a/7a+ (V7) plateau. That is why I need this finger strength improvement.
 
-# **My Current Training**
+## **My Current Training**
 
 I currently go to the gym three days a week. I only do boulder, but I try that one of the days is focused on endurance, trying to do longer routes, or do problems up, down, up and down. Not only that, but I also do twice a week flexibility and antagonist trainings at home. And then once a week, finger training on the BeastMaker 2000.
 
 ![http://cdn.shopify.com/s/files/1/0107/6442/products/2000-Series-Feb2015-Small_1200x1200.jpg?v=1614607648](http://cdn.shopify.com/s/files/1/0107/6442/products/2000-Series-Feb2015-Small_1200x1200.jpg?v=1614607648)
 
-# **Passive-active Training Plan**
+## **Passive-active Training Plan**
 
 I have decided to add, once a day, a ten minutes finger routine. I call it passive-active, because it is more a warm up than a training. I start by doing finger extensions, for one minute, then I do hangs on the BeastMaker, with my feet on the ground to control the weight. I warm each joint and finger, and I do different grips and pockets.
 
-# **⚠️** Hic Sunt Dracones
+## **⚠️** Hic Sunt Dracones
 
 Beware that this training may be dangerous if you have some sort of pulley injury, it doesn't matter if it is only a strain. I don’t see someone doing fingerboard training with a partial tear or a full rupture...
 
-# **Results**
+## **Results**
 
 I have being doing this for three weeks now, and I can tell I have improved on my finger strength, so I will keep doing this training. But what has surprised me a lot, is that the light pain I had on my middle finger’s middle joint (PIP) is gone.
 
