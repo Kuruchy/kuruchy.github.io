@@ -103,9 +103,6 @@ So the binding now looks like:
 private var binding: FragmentBinding by autoCleaned()
 ```
 
-<aside>
-👨‍💻 Full code in this gist →
+## 👨‍💻 Full code in this gist
 
 [Auto Cleaned Value delegate](https://gist.github.com/Kuruchy/270fe8f0ba6e1937ec9c291912eb8d7e)
-
-</aside>
