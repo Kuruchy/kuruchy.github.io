@@ -1,8 +1,9 @@
-# Auto Clean View Binding
-
-| title | categories | excerpt | date |
-| --- | --- | --- | --- |
-| Auto Clean View Binding | [Adnroid, Kotlin] | I bring to you a solution to automatically clean  the binding reference without using boilerplate. | 2022-4-14 |
+---
+layout: post
+title: Auto Clean View Binding
+categories: [Adnroid, Kotlin]
+excerpt: I bring to you a solution to automatically clean  the binding reference without using boilerplate.
+---
 
 ![https://images.unsplash.com/photo-1534350752840-1b1b71b4b4fe?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb](https://images.unsplash.com/photo-1534350752840-1b1b71b4b4fe?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb)
 
