@@ -2,8 +2,7 @@
 
 | title | categories | excerpt | date |
 | --- | --- | --- | --- |
-| My German Journey | [Engineering] | One of the things I keep telling me over and over again, is how lucky I am. But then I remember all the long conversations I had with my friends —my wife included— about how one should define Luck
- and what role it plays in our lives. | 2022-5-03 |
+| My German Journey | [Engineering] | One of the things I keep telling me over and over again, is how lucky I am. But then I remember all the long conversations I had with my friends —my wife included— about how one should define Luck and what role it plays in our lives. | 2022-5-03 |
 
 One of the things I keep telling me over and over again, is how lucky I am. But then I remember all the long conversations I had with my friends —my wife included— about how one should define `Luck` and what role it plays in our lives.
 
