@@ -1,8 +1,9 @@
-# My German Journey
-
-| title | categories | excerpt | date |
-| --- | --- | --- | --- |
-| My German Journey | [Engineering] | Today I want to share a bit of light of what my last 6 and 1/2 years have been, living and working in Germany.  | 2022-5-03 |
+---
+layout: post
+title: My German Journey
+categories: [Engineering]
+excerpt: Today I want to share a bit of light of what my last 6 and 1/2 years have been, living and working in Germany. 
+---
 
 One of the things I keep telling me over and over again, is how lucky I am. But then I remember all the long conversations I had with my friends —my wife included— about how one should define `Luck` and what role it plays in our lives.
 
