@@ -2,7 +2,7 @@
 layout: post
 title: My German Journey
 categories: [Engineering]
-excerpt: Today I want to share a bit of light of what my last 6 and 1/2 years have been, living and working in Germany. 
+excerpt: One of the things I keep telling me over and over again, is how lucky I am. What impact had in my german adventure?
 ---
 
 One of the things I keep telling me over and over again, is how lucky I am. But then I remember all the long conversations I had with my friends —my wife included— about how one should define `Luck` and what role it plays in our lives.
@@ -17,14 +17,12 @@ If I only had to take one lesson learned on my experience abroad, it would be ex
 
 So what is the role Luck pays in all of this? I think the best way to put it is:
 
-<aside>
-🍀 Everybody needs luck, but the role it plays in the long run is so small that we might as well ignore it in our quest for self-improvement, because, regardless of how unlucky you were, there’s always something you could have done to put yourself in a different position to begin with.
+> Everybody needs luck 🍀, but the role it plays in the long run is so small that we might as well ignore it in our quest for self-improvement, because, regardless of how unlucky you were, there’s always something you could have done to put yourself in a different position to begin with.
+> 
 
-</aside>
+## The Spanish NPP
 
-## I was an established simulation engineer before moving to Germany
-
-Before moving to Germany I was working at Tecnatom *–a company that, among other things, creates and maintains simulators for NPP (nuclear power plants)–* developing and maintaining the software for the Spanish's nuclear power plant’s replicas.
+Before moving to Germany I was a well established simulation engineer working at Tecnatom *–a company that, among other things, creates and maintains simulators for NPP (nuclear power plants)–* developing and maintaining the software for the Spanish's nuclear power plant’s replicas. 
 
  
 
