@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuruchy | Portfolio, Blog & Store</title>
+    <title>Kuruchy | AI & Mobile Dev</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
+    <canvas id="bg-animation"></canvas>
+
     <nav class="navbar">
-        <div class="logo">Kuruchy.</div>
+        <div class="logo">Kuruchy<span class="blink">_</span></div>
         <ul class="nav-links">
             <li><a href="#home">Inicio</a></li>
             <li><a href="#portfolio">Proyectos</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#store">Tienda</a></li>
-            <li><a href="#contact" class="btn-contact">Contacto</a></li>
+            <li><a href="#blog">Artículos (MD)</a></li>
+            <li><a href="#donate" class="btn-donate">Donar <i class="fab fa-paypal"></i></a></li>
         </ul>
         <div class="burger">
             <i class="fas fa-bars"></i>
@@ -25,94 +27,82 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Hola, soy <span class="accent">Kuruchy</span></h1>
-            <p>Desarrollador, Creador de Contenido & Entusiasta de la Tecnología.</p>
-            <a href="#portfolio" class="btn-primary">Ver mi trabajo</a>
+            <div class="badge-ai">AI ENGINEER & MOBILE DEV</div>
+            <h1>Construyendo el <span class="text-gradient">Futuro Inteligente</span></h1>
+            <p>Especialista en Arquitecturas de Inteligencia Artificial y Desarrollo de Apps Multiplataforma de alto rendimiento.</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn-primary">Ver Portfolio</a>
+                <a href="https://github.com/kuruchy" target="_blank" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+            </div>
         </div>
     </section>
 
     <section id="portfolio" class="container">
-        <h2>Mis Proyectos</h2>
+        <h2>Experiencia & Proyectos</h2>
         <div class="grid-3">
-            <div class="card">
-                <div class="card-img" style="background-color: #333;"></div>
+            <div class="card glass">
+                <div class="card-header">
+                    <i class="fas fa-brain icon-tech"></i>
+                    <span>TensorFlow / Python</span>
+                </div>
                 <div class="card-content">
-                    <h3>App de Finanzas</h3>
-                    <p>Una aplicación web para gestionar gastos personales.</p>
-                    <a href="#">Ver Demo &rarr;</a>
+                    <h3>AI Vision System</h3>
+                    <p>Sistema de visión por computador para detección de objetos en tiempo real optimizado para edge devices.</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-img" style="background-color: #444;"></div>
+            <div class="card glass">
+                <div class="card-header">
+                    <i class="fas fa-mobile-alt icon-tech"></i>
+                    <span>Flutter / React Native</span>
+                </div>
                 <div class="card-content">
-                    <h3>Diseño 3D</h3>
-                    <p>Colección de renders y modelos 3D en Blender.</p>
-                    <a href="#">Ver Galería &rarr;</a>
+                    <h3>EcoWallet App</h3>
+                    <p>Aplicación multiplataforma (iOS/Android) de finanzas con predicción de gastos basada en ML.</p>
                 </div>
             </div>
-             <div class="card">
-                <div class="card-img" style="background-color: #555;"></div>
+             <div class="card glass">
+                <div class="card-header">
+                    <i class="fas fa-robot icon-tech"></i>
+                    <span>OpenAI API / Node.js</span>
+                </div>
                 <div class="card-content">
-                    <h3>Bot de Discord</h3>
-                    <p>Automatización de servidores con Node.js.</p>
-                    <a href="#">Ver Código &rarr;</a>
+                    <h3>Asistente Cognitivo</h3>
+                    <p>Chatbot contextual integrado en WhatsApp para gestión de tareas automatizadas.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    
-
-    <section id="blog" class="container bg-alt">
-        <h2>Artículos Recientes</h2>
-        <div class="blog-list">
-            <article class="blog-item">
-                <span class="date">20 Nov 2024</span>
-                <h3>Cómo configurar GitHub Pages desde cero</h3>
-                <p>Una guía paso a paso para alojar tu sitio estático gratis...</p>
-                <a href="#" class="read-more">Leer más</a>
-            </article>
-            <article class="blog-item">
-                <span class="date">15 Nov 2024</span>
-                <h3>Mis herramientas de desarrollo favoritas en 2025</h3>
-                <p>El software y hardware que utilizo en mi día a día...</p>
-                <a href="#" class="read-more">Leer más</a>
-            </article>
+    <section id="blog" class="container">
+        <h2>Últimos Artículos</h2>
+        <p class="subtitle">Renderizados directamente desde archivos .md</p>
+        
+        <div id="markdown-viewer" class="glass blog-container">
+            <p>Cargando artículo destacado...</p>
         </div>
     </section>
 
-    <section id="store" class="container">
-        <h2>Store</h2>
-        <p class="subtitle">Productos digitales y merch.</p>
-        <div class="grid-3">
-            <div class="product-card">
-                <div class="badge">Digital</div>
-                <h3>Pack de Iconos</h3>
-                <p class="price">5.00€</p>
-                <button class="btn-buy">Comprar</button>
-            </div>
-            <div class="product-card">
-                <div class="badge">Físico</div>
-                <h3>Camiseta Oficial</h3>
-                <p class="price">25.00€</p>
-                <button class="btn-buy">Comprar</button>
-            </div>
-             <div class="product-card">
-                <div class="badge">Servicio</div>
-                <h3>Asesoría 1h</h3>
-                <p class="price">50.00€</p>
-                <button class="btn-buy">Reservar</button>
+    <section id="donate" class="container">
+        <div class="donation-box glass">
+            <h2>Apoya mi trabajo</h2>
+            <p>Si mi contenido o herramientas te han sido útiles, una donación me ayuda a seguir creando Open Source.</p>
+            
+            <form action="https://www.paypal.com/donate" method="post" target="_top">
+                <input type="hidden" name="business" value="tu-email-paypal@ejemplo.com" />
+                <input type="hidden" name="currency_code" value="EUR" />
+                <button type="submit" class="btn-paypal">
+                    <i class="fab fa-paypal"></i> Donar con PayPal
+                </button>
+            </form>
+            
+            <div class="store-link">
+                <p>O visita mi <a href="#store" class="accent-link">Store de Recursos Digitales</a></p>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <p>&copy; 2025 Kuruchy. Hecho con código puro.</p>
+        <p>&copy; 2025 Kuruchy. Powered by Neural Networks & Coffee.</p>
     </footer>
 
     <script src="script.js"></script>
