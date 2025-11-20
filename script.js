@@ -1,37 +1,62 @@
 // 1. CONFIGURACIÓN DEL BLOG MARKDOWN
-// Sistema de selección de artículos
-const articleSelect = document.getElementById('article-select');
-const markdownViewer = document.getElementById('markdown-viewer');
+// Cargar automáticamente los últimos 5 artículos
+const articlesContainer = document.getElementById('articles-container');
 
-function loadArticle(filename) {
-    if (!filename) {
-        markdownViewer.innerHTML = '<p style="text-align: center; color: #666;">Selecciona un artículo para ver su contenido...</p>';
-        return;
-    }
+// Lista de artículos (ordenados del más reciente al más antiguo)
+const articles = [
+    { filename: 'articles/ai.md', title: 'Inteligencia Artificial' },
+    { filename: 'articles/poker-drills-ranges.md', title: 'Poker Drills y Rangos' },
+    { filename: 'articles/compose-multiplatform.md', title: 'Compose Multiplatform' }
+];
 
-    markdownViewer.innerHTML = '<p style="text-align: center; color: #666;">Cargando artículo...</p>';
+// Limitar a los últimos 5 artículos
+const latestArticles = articles.slice(0, 5);
 
-    fetch(filename)
+function loadArticle(article) {
+    return fetch(article.filename)
         .then(response => {
-            if (!response.ok) throw new Error(`No se encontró el archivo ${filename}`);
+            if (!response.ok) throw new Error(`No se encontró el archivo ${article.filename}`);
             return response.text();
         })
         .then(text => {
             // Convertir MD a HTML usando marked.js
-            markdownViewer.innerHTML = marked.parse(text);
+            const htmlContent = marked.parse(text);
+            return { ...article, content: htmlContent };
         })
         .catch(error => {
-            markdownViewer.innerHTML = 
-                `<p style="color: #ff6b6b; text-align: center;">Error al cargar el artículo: ${error.message}<br>
-                <small>Verifica que el archivo ${filename} exista en el servidor.</small></p>`;
+            console.error(`Error al cargar ${article.filename}:`, error);
+            return { ...article, content: `<p style="color: #ff6b6b;">Error al cargar el artículo.</p>` };
         });
 }
 
-// Event listener para el selector de artículos
-if (articleSelect) {
-    articleSelect.addEventListener('change', (e) => {
-        loadArticle(e.target.value);
-    });
+// Cargar todos los artículos
+function loadAllArticles() {
+    if (!articlesContainer) return;
+
+    const loadPromises = latestArticles.map(article => loadArticle(article));
+    
+    Promise.all(loadPromises)
+        .then(loadedArticles => {
+            articlesContainer.innerHTML = '';
+            
+            loadedArticles.forEach((article, index) => {
+                const articleElement = document.createElement('div');
+                articleElement.className = 'glass blog-container article-item';
+                articleElement.innerHTML = article.content;
+                articlesContainer.appendChild(articleElement);
+            });
+        })
+        .catch(error => {
+            articlesContainer.innerHTML = 
+                `<p style="color: #ff6b6b; text-align: center;">Error al cargar los artículos: ${error.message}</p>`;
+        });
+}
+
+// Cargar artículos cuando el DOM esté listo
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadAllArticles);
+} else {
+    loadAllArticles();
 }
 
 
