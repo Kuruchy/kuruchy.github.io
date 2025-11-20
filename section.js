@@ -1,30 +1,5 @@
-// 1. CONFIGURACIÓN DEL BLOG MARKDOWN
-// Cargar automáticamente los últimos 5 artículos
-const articlesContainer = document.getElementById('articles-container');
-
-// Lista de artículos (ordenados del más reciente al más antiguo)
-const articles = [
-    { 
-        filename: 'articles/ai.md', 
-        title: 'Inteligencia Artificial',
-        description: 'La Inteligencia Artificial ha dejado de ser ciencia ficción. Desde ChatGPT hasta Midjourney, las herramientas de IA están transformando cómo trabajamos, creamos y pensamos.',
-        icon: 'fas fa-brain'
-    },
-    { 
-        filename: 'articles/poker-drills-ranges.md', 
-        title: 'Poker Drills y Rangos',
-        description: 'Los drills de poker son ejercicios estructurados que mejoran tu toma de decisiones bajo presión. Aprende a construir rangos y calcular equity.',
-        icon: 'fas fa-dice'
-    },
-    { 
-        filename: 'articles/compose-multiplatform.md', 
-        title: 'Compose Multiplatform',
-        description: 'El framework de JetBrains que permite compartir código de UI entre Android, iOS, Desktop y Web usando Kotlin.',
-        icon: 'fas fa-mobile-alt'
-    }
-];
-
-// Datos de secciones para las páginas de detalle
+// Script para cargar secciones en section.html
+// Datos de secciones (mismo que en script.js)
 const sections = {
     'ai-vision-system': {
         title: 'AI Vision System',
@@ -193,90 +168,65 @@ const sections = {
     }
 };
 
-// Función para mostrar artículos como cards
-function displayArticleCards() {
-    if (!articlesContainer) return;
-
-    articlesContainer.innerHTML = '';
+// Cargar sección basada en parámetro URL
+function loadSectionFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const sectionId = urlParams.get('id');
     
-    articles.forEach((article) => {
-        const cardElement = document.createElement('div');
-        cardElement.className = 'card glass clickable-card';
-        cardElement.setAttribute('data-type', 'article');
-        cardElement.setAttribute('data-id', article.filename);
-        
-        cardElement.innerHTML = `
+    console.log('Parámetro id de URL:', sectionId);
+    console.log('Secciones disponibles:', Object.keys(sections));
+    
+    if (!sectionId) {
+        document.getElementById('section-content').innerHTML = 
+            '<p style="color: #ff6b6b;">No se especificó ninguna sección.</p>';
+        return;
+    }
+
+    const section = sections[sectionId];
+    if (!section) {
+        document.getElementById('section-content').innerHTML = 
+            `<div style="color: #ff6b6b;">
+                <p>Sección no encontrada.</p>
+                <p style="font-size: 0.9em;">Buscada: ${sectionId}</p>
+                <p style="font-size: 0.9em;">Disponibles: ${Object.keys(sections).join(', ')}</p>
+            </div>`;
+        return;
+    }
+    
+    console.log('Sección encontrada:', section);
+    
+    // Mostrar el contenido de la sección
+    const sectionHTML = `
+        <div class="section-header">
             <div class="card-header">
-                <i class="${article.icon} icon-tech"></i>
-                <span>Artículo</span>
+                <i class="${section.icon} icon-tech"></i>
+                <span>${section.tech}</span>
             </div>
-            <div class="card-content">
-                <h3>${article.title}</h3>
-                <p>${article.description}</p>
-            </div>
-        `;
-        
-        cardElement.addEventListener('click', () => {
-            // Navegar a la página del artículo
-            window.location.href = `article.html?file=${encodeURIComponent(article.filename)}`;
-        });
-        
-        articlesContainer.appendChild(cardElement);
-    });
+        </div>
+        <div class="article-content">${section.content}</div>
+    `;
+    
+    document.getElementById('section-content').innerHTML = sectionHTML;
+    document.title = `${section.title} | Kuruchy`;
 }
 
-// Inicializar
+// Función para volver atrás
+function goBackFromSection() {
+    // Redirigir a la página principal
+    window.location.href = 'index.html';
+}
+
+// Hacer la función global para que funcione desde el onclick
+window.goBackFromSection = goBackFromSection;
+
+// Inicializar cuando el DOM esté listo
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        displayArticleCards();
-    });
+    document.addEventListener('DOMContentLoaded', loadSectionFromURL);
 } else {
-    displayArticleCards();
+    loadSectionFromURL();
 }
 
-// Hacer las cards de secciones clickables
-document.addEventListener('DOMContentLoaded', () => {
-    // Portfolio cards
-    const portfolioCards = document.querySelectorAll('#portfolio .card');
-    portfolioCards.forEach((card, index) => {
-        const sectionIds = ['ai-vision-system', 'ecowallet-app', 'asistente-cognitivo'];
-        if (sectionIds[index]) {
-            card.classList.add('clickable-card');
-            card.addEventListener('click', () => {
-                // Navegar a la página de la sección
-                window.location.href = `section.html?id=${sectionIds[index]}`;
-            });
-        }
-    });
-
-    // Investment cards
-    const investmentCards = document.querySelectorAll('#investments .card');
-    investmentCards.forEach((card, index) => {
-        const sectionIds = ['estrategias-trading', 'portfolio-digital', 'analisis-fundamental'];
-        if (sectionIds[index]) {
-            card.classList.add('clickable-card');
-            card.addEventListener('click', () => {
-                // Navegar a la página de la sección
-                window.location.href = `section.html?id=${sectionIds[index]}`;
-            });
-        }
-    });
-
-    // Poker cards
-    const pokerCards = document.querySelectorAll('#poker .card');
-    pokerCards.forEach((card, index) => {
-        const sectionIds = ['entrenamiento-diario', 'range-construction', 'game-theory'];
-        if (sectionIds[index]) {
-            card.classList.add('clickable-card');
-            card.addEventListener('click', () => {
-                // Navegar a la página de la sección
-                window.location.href = `section.html?id=${sectionIds[index]}`;
-            });
-        }
-    });
-});
-
-// 2. ANIMACIÓN DE FONDO (Red Neuronal / Constelación)
+// ANIMACIÓN DE FONDO (mismo código que index.html)
 const canvas = document.getElementById('bg-animation');
 const ctx = canvas.getContext('2d');
 
@@ -285,25 +235,22 @@ canvas.height = window.innerHeight;
 
 let particlesArray;
 
-// Manejo del redimensionamiento
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     init();
 });
 
-// Crear partículas
 class Particle {
     constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.directionX = (Math.random() * 0.4) - 0.2; // Movimiento lento
+        this.directionX = (Math.random() * 0.4) - 0.2;
         this.directionY = (Math.random() * 0.4) - 0.2;
         this.size = Math.random() * 2;
-        this.color = '#a855f7'; // Color base (morado)
+        this.color = '#a855f7';
     }
     update() {
-        // Rebotar en bordes
         if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
         if (this.y > canvas.height || this.y < 0) this.directionY = -this.directionY;
         
@@ -321,7 +268,7 @@ class Particle {
 
 function init() {
     particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 15000; // Densidad
+    let numberOfParticles = (canvas.height * canvas.width) / 15000;
     for (let i = 0; i < numberOfParticles; i++) {
         particlesArray.push(new Particle());
     }
@@ -337,7 +284,6 @@ function animate() {
     connect();
 }
 
-// Dibujar líneas entre partículas cercanas (Efecto Red Neuronal)
 function connect() {
     let opacityValue = 1;
     for (let a = 0; a < particlesArray.length; a++) {
@@ -347,7 +293,7 @@ function connect() {
             
             if (distance < (canvas.width/7) * (canvas.height/7)) {
                 opacityValue = 1 - (distance / 20000);
-                ctx.strokeStyle = 'rgba(168, 85, 247,' + opacityValue + ')'; // Líneas moradas
+                ctx.strokeStyle = 'rgba(168, 85, 247,' + opacityValue + ')';
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -361,18 +307,21 @@ function connect() {
 init();
 animate();
 
-// 3. MENÚ MÓVIL (Igual que antes)
+// MENÚ MÓVIL
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
-burger.addEventListener('click', () => {
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    if(nav.style.display === 'flex') {
-        nav.style.flexDirection = 'column';
-        nav.style.position = 'absolute';
-        nav.style.top = '70px';
-        nav.style.right = '0';
-        nav.style.background = 'rgba(5,5,17,0.95)';
-        nav.style.width = '100%';
-        nav.style.padding = '2rem';
-    }
-});
+if (burger && nav) {
+    burger.addEventListener('click', () => {
+        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        if(nav.style.display === 'flex') {
+            nav.style.flexDirection = 'column';
+            nav.style.position = 'absolute';
+            nav.style.top = '70px';
+            nav.style.right = '0';
+            nav.style.background = 'rgba(5,5,17,0.95)';
+            nav.style.width = '100%';
+            nav.style.padding = '2rem';
+        }
+    });
+}
+
