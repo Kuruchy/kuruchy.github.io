@@ -1,17 +1,201 @@
 // 1. CONFIGURACIÓN DEL BLOG MARKDOWN
 // Cargar automáticamente los últimos 5 artículos
 const articlesContainer = document.getElementById('articles-container');
+const articleViewContainer = document.getElementById('article-view-container');
+const mainContent = document.getElementById('main-content');
 
 // Lista de artículos (ordenados del más reciente al más antiguo)
 const articles = [
-    { filename: 'articles/ai.md', title: 'Inteligencia Artificial' },
-    { filename: 'articles/poker-drills-ranges.md', title: 'Poker Drills y Rangos' },
-    { filename: 'articles/compose-multiplatform.md', title: 'Compose Multiplatform' }
+    { 
+        filename: 'articles/ai.md', 
+        title: 'Inteligencia Artificial',
+        description: 'La Inteligencia Artificial ha dejado de ser ciencia ficción. Desde ChatGPT hasta Midjourney, las herramientas de IA están transformando cómo trabajamos, creamos y pensamos.',
+        icon: 'fas fa-brain'
+    },
+    { 
+        filename: 'articles/poker-drills-ranges.md', 
+        title: 'Poker Drills y Rangos',
+        description: 'Los drills de poker son ejercicios estructurados que mejoran tu toma de decisiones bajo presión. Aprende a construir rangos y calcular equity.',
+        icon: 'fas fa-dice'
+    },
+    { 
+        filename: 'articles/compose-multiplatform.md', 
+        title: 'Compose Multiplatform',
+        description: 'El framework de JetBrains que permite compartir código de UI entre Android, iOS, Desktop y Web usando Kotlin.',
+        icon: 'fas fa-mobile-alt'
+    }
 ];
 
-// Limitar a los últimos 5 artículos
-const latestArticles = articles.slice(0, 5);
+// Datos de secciones para las páginas de detalle
+const sections = {
+    'ai-vision-system': {
+        title: 'AI Vision System',
+        icon: 'fas fa-brain',
+        tech: 'TensorFlow / Python',
+        content: `
+            <h2>AI Vision System</h2>
+            <p>Sistema de visión por computador para detección de objetos en tiempo real optimizado para edge devices.</p>
+            <h3>Características Principales</h3>
+            <ul>
+                <li>Detección de objetos en tiempo real</li>
+                <li>Optimizado para dispositivos edge</li>
+                <li>Baja latencia y alto rendimiento</li>
+                <li>Modelos TensorFlow Lite para móviles</li>
+            </ul>
+            <h3>Tecnologías Utilizadas</h3>
+            <ul>
+                <li>TensorFlow 2.x</li>
+                <li>OpenCV para procesamiento de imágenes</li>
+                <li>Python para backend</li>
+                <li>TensorFlow Lite para deployment</li>
+            </ul>
+        `
+    },
+    'ecowallet-app': {
+        title: 'EcoWallet App',
+        icon: 'fas fa-mobile-alt',
+        tech: 'Flutter / React Native',
+        content: `
+            <h2>EcoWallet App</h2>
+            <p>Aplicación multiplataforma (iOS/Android) de finanzas con predicción de gastos basada en ML.</p>
+            <h3>Características Principales</h3>
+            <ul>
+                <li>Gestión de finanzas personales</li>
+                <li>Predicción de gastos con Machine Learning</li>
+                <li>Interfaz multiplataforma</li>
+                <li>Sincronización en la nube</li>
+            </ul>
+            <h3>Tecnologías Utilizadas</h3>
+            <ul>
+                <li>Flutter / React Native</li>
+                <li>TensorFlow.js para predicciones</li>
+                <li>Firebase para backend</li>
+                <li>GraphQL para APIs</li>
+            </ul>
+        `
+    },
+    'asistente-cognitivo': {
+        title: 'Asistente Cognitivo',
+        icon: 'fas fa-robot',
+        tech: 'OpenAI API / Node.js',
+        content: `
+            <h2>Asistente Cognitivo</h2>
+            <p>Chatbot contextual integrado en WhatsApp para gestión de tareas automatizadas.</p>
+            <h3>Características Principales</h3>
+            <ul>
+                <li>Integración con WhatsApp Business API</li>
+                <li>Gestión automática de tareas</li>
+                <li>Respuestas contextuales inteligentes</li>
+                <li>Procesamiento de lenguaje natural</li>
+            </ul>
+            <h3>Tecnologías Utilizadas</h3>
+            <ul>
+                <li>OpenAI GPT-4 API</li>
+                <li>Node.js y Express</li>
+                <li>WhatsApp Business API</li>
+                <li>MongoDB para almacenamiento</li>
+            </ul>
+        `
+    },
+    'estrategias-trading': {
+        title: 'Estrategias de Trading',
+        icon: 'fas fa-chart-line',
+        tech: 'Análisis Técnico',
+        content: `
+            <h2>Estrategias de Trading</h2>
+            <p>Análisis de tendencias, indicadores técnicos y gestión de riesgo en mercados financieros.</p>
+            <h3>Enfoque</h3>
+            <ul>
+                <li>Análisis técnico avanzado</li>
+                <li>Indicadores personalizados</li>
+                <li>Gestión de riesgo estricta</li>
+                <li>Backtesting de estrategias</li>
+            </ul>
+        `
+    },
+    'portfolio-digital': {
+        title: 'Portfolio Digital',
+        icon: 'fas fa-coins',
+        tech: 'Criptomonedas',
+        content: `
+            <h2>Portfolio Digital</h2>
+            <p>Seguimiento de inversiones en criptoactivos y análisis de proyectos blockchain.</p>
+            <h3>Enfoque</h3>
+            <ul>
+                <li>Análisis fundamental de proyectos</li>
+                <li>Seguimiento de portfolio</li>
+                <li>Análisis de tendencias del mercado</li>
+                <li>Gestión de riesgo en cripto</li>
+            </ul>
+        `
+    },
+    'analisis-fundamental': {
+        title: 'Análisis Fundamental',
+        icon: 'fas fa-building',
+        tech: 'Acciones',
+        content: `
+            <h2>Análisis Fundamental</h2>
+            <p>Evaluación de empresas, ratios financieros y estrategias de inversión a largo plazo.</p>
+            <h3>Enfoque</h3>
+            <ul>
+                <li>Análisis de estados financieros</li>
+                <li>Evaluación de ratios clave</li>
+                <li>Análisis de la industria</li>
+                <li>Estrategias value investing</li>
+            </ul>
+        `
+    },
+    'entrenamiento-diario': {
+        title: 'Entrenamiento Diario',
+        icon: 'fas fa-dice',
+        tech: 'Drills & Práctica',
+        content: `
+            <h2>Entrenamiento Diario</h2>
+            <p>Ejercicios de cálculo de odds, análisis de rangos y toma de decisiones en situaciones complejas.</p>
+            <h3>Enfoque</h3>
+            <ul>
+                <li>Drills de cálculo de odds</li>
+                <li>Análisis de rangos</li>
+                <li>Decisiones en situaciones complejas</li>
+                <li>Práctica estructurada</li>
+            </ul>
+        `
+    },
+    'range-construction': {
+        title: 'Range Construction',
+        icon: 'fas fa-table',
+        tech: 'Análisis de Rangos',
+        content: `
+            <h2>Range Construction</h2>
+            <p>Construcción y análisis de rangos de manos según posición, stack y dinámica de mesa.</p>
+            <h3>Enfoque</h3>
+            <ul>
+                <li>Construcción de rangos por posición</li>
+                <li>Análisis según stack depth</li>
+                <li>Dinámica de mesa</li>
+                <li>GTO y estrategias explotativas</li>
+            </ul>
+        `
+    },
+    'game-theory': {
+        title: 'Game Theory',
+        icon: 'fas fa-brain',
+        tech: 'Estrategia Avanzada',
+        content: `
+            <h2>Game Theory</h2>
+            <p>Aplicación de teoría de juegos, equilibrio de Nash y estrategias GTO en poker moderno.</p>
+            <h3>Enfoque</h3>
+            <ul>
+                <li>Teoría de juegos aplicada</li>
+                <li>Equilibrio de Nash</li>
+                <li>Estrategias GTO</li>
+                <li>Análisis con solvers</li>
+            </ul>
+        `
+    }
+};
 
+// Función para cargar un artículo completo
 function loadArticle(article) {
     return fetch(article.filename)
         .then(response => {
@@ -19,7 +203,6 @@ function loadArticle(article) {
             return response.text();
         })
         .then(text => {
-            // Convertir MD a HTML usando marked.js
             const htmlContent = marked.parse(text);
             return { ...article, content: htmlContent };
         })
@@ -29,36 +212,158 @@ function loadArticle(article) {
         });
 }
 
-// Cargar todos los artículos
-function loadAllArticles() {
+// Función para mostrar artículos como cards
+function displayArticleCards() {
     if (!articlesContainer) return;
 
-    const loadPromises = latestArticles.map(article => loadArticle(article));
+    articlesContainer.innerHTML = '';
     
-    Promise.all(loadPromises)
-        .then(loadedArticles => {
-            articlesContainer.innerHTML = '';
-            
-            loadedArticles.forEach((article, index) => {
-                const articleElement = document.createElement('div');
-                articleElement.className = 'glass blog-container article-item';
-                articleElement.innerHTML = article.content;
-                articlesContainer.appendChild(articleElement);
-            });
-        })
-        .catch(error => {
-            articlesContainer.innerHTML = 
-                `<p style="color: #ff6b6b; text-align: center;">Error al cargar los artículos: ${error.message}</p>`;
+    articles.forEach((article) => {
+        const cardElement = document.createElement('div');
+        cardElement.className = 'card glass clickable-card';
+        cardElement.setAttribute('data-type', 'article');
+        cardElement.setAttribute('data-id', article.filename);
+        
+        cardElement.innerHTML = `
+            <div class="card-header">
+                <i class="${article.icon} icon-tech"></i>
+                <span>Artículo</span>
+            </div>
+            <div class="card-content">
+                <h3>${article.title}</h3>
+                <p>${article.description}</p>
+            </div>
+        `;
+        
+        cardElement.addEventListener('click', () => {
+            showArticle(article.filename);
         });
+        
+        articlesContainer.appendChild(cardElement);
+    });
 }
 
-// Cargar artículos cuando el DOM esté listo
+// Función para mostrar un artículo completo
+function showArticle(articleFilename) {
+    const article = articles.find(a => a.filename === articleFilename);
+    if (!article) return;
+
+    loadArticle(article).then(loadedArticle => {
+        if (mainContent) mainContent.style.display = 'none';
+        if (articleViewContainer) {
+            articleViewContainer.style.display = 'block';
+            articleViewContainer.innerHTML = `
+                <div class="article-view glass">
+                    <button class="btn-back" onclick="goBack()">
+                        <i class="fas fa-arrow-left"></i> Volver
+                    </button>
+                    <div class="article-content">${loadedArticle.content}</div>
+                </div>
+            `;
+        }
+        window.scrollTo(0, 0);
+        window.location.hash = `article/${articleFilename}`;
+    });
+}
+
+// Función para mostrar una sección
+function showSection(sectionId) {
+    const section = sections[sectionId];
+    if (!section) return;
+
+    if (mainContent) mainContent.style.display = 'none';
+    if (articleViewContainer) {
+        articleViewContainer.style.display = 'block';
+        articleViewContainer.innerHTML = `
+            <div class="article-view glass">
+                <button class="btn-back" onclick="goBack()">
+                    <i class="fas fa-arrow-left"></i> Volver
+                </button>
+                <div class="section-header">
+                    <div class="card-header">
+                        <i class="${section.icon} icon-tech"></i>
+                        <span>${section.tech}</span>
+                    </div>
+                </div>
+                <div class="article-content">${section.content}</div>
+            </div>
+        `;
+    }
+    window.scrollTo(0, 0);
+    window.location.hash = `section/${sectionId}`;
+}
+
+// Función para volver atrás
+function goBack() {
+    if (mainContent) mainContent.style.display = 'block';
+    if (articleViewContainer) {
+        articleViewContainer.style.display = 'none';
+        articleViewContainer.innerHTML = '';
+    }
+    window.location.hash = '';
+}
+
+// Manejar routing con hash
+function handleRouting() {
+    const hash = window.location.hash.substring(1);
+    
+    if (hash.startsWith('article/')) {
+        const articleFilename = hash.replace('article/', '');
+        showArticle(articleFilename);
+    } else if (hash.startsWith('section/')) {
+        const sectionId = hash.replace('section/', '');
+        showSection(sectionId);
+    } else {
+        goBack();
+    }
+}
+
+// Inicializar
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadAllArticles);
+    document.addEventListener('DOMContentLoaded', () => {
+        displayArticleCards();
+        handleRouting();
+    });
 } else {
-    loadAllArticles();
+    displayArticleCards();
+    handleRouting();
 }
 
+// Escuchar cambios en el hash
+window.addEventListener('hashchange', handleRouting);
+
+// Hacer las cards de secciones clickables
+document.addEventListener('DOMContentLoaded', () => {
+    // Portfolio cards
+    const portfolioCards = document.querySelectorAll('#portfolio .card');
+    portfolioCards.forEach((card, index) => {
+        const sectionIds = ['ai-vision-system', 'ecowallet-app', 'asistente-cognitivo'];
+        if (sectionIds[index]) {
+            card.classList.add('clickable-card');
+            card.addEventListener('click', () => showSection(sectionIds[index]));
+        }
+    });
+
+    // Investment cards
+    const investmentCards = document.querySelectorAll('#investments .card');
+    investmentCards.forEach((card, index) => {
+        const sectionIds = ['estrategias-trading', 'portfolio-digital', 'analisis-fundamental'];
+        if (sectionIds[index]) {
+            card.classList.add('clickable-card');
+            card.addEventListener('click', () => showSection(sectionIds[index]));
+        }
+    });
+
+    // Poker cards
+    const pokerCards = document.querySelectorAll('#poker .card');
+    pokerCards.forEach((card, index) => {
+        const sectionIds = ['entrenamiento-diario', 'range-construction', 'game-theory'];
+        if (sectionIds[index]) {
+            card.classList.add('clickable-card');
+            card.addEventListener('click', () => showSection(sectionIds[index]));
+        }
+    });
+});
 
 // 2. ANIMACIÓN DE FONDO (Red Neuronal / Constelación)
 const canvas = document.getElementById('bg-animation');
