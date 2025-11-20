@@ -6,8 +6,7 @@ const sections = {
         icon: 'fas fa-brain',
         tech: 'TensorFlow / Python',
         content: `
-            <h2>AI Vision System</h2>
-            <p>Sistema de visión por computador para detección de objetos en tiempo real optimizado para edge devices.</p>
+            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Sistema de visión por computador para detección de objetos en tiempo real optimizado para edge devices.</p>
             <h3>Características Principales</h3>
             <ul>
                 <li>Detección de objetos en tiempo real</li>
@@ -29,8 +28,7 @@ const sections = {
         icon: 'fas fa-mobile-alt',
         tech: 'Flutter / React Native',
         content: `
-            <h2>EcoWallet App</h2>
-            <p>Aplicación multiplataforma (iOS/Android) de finanzas con predicción de gastos basada en ML.</p>
+            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Aplicación multiplataforma (iOS/Android) de finanzas con predicción de gastos basada en ML.</p>
             <h3>Características Principales</h3>
             <ul>
                 <li>Gestión de finanzas personales</li>
@@ -52,8 +50,7 @@ const sections = {
         icon: 'fas fa-robot',
         tech: 'OpenAI API / Node.js',
         content: `
-            <h2>Asistente Cognitivo</h2>
-            <p>Chatbot contextual integrado en WhatsApp para gestión de tareas automatizadas.</p>
+            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Chatbot contextual integrado en WhatsApp para gestión de tareas automatizadas.</p>
             <h3>Características Principales</h3>
             <ul>
                 <li>Integración con WhatsApp Business API</li>
@@ -75,8 +72,7 @@ const sections = {
         icon: 'fas fa-chart-line',
         tech: 'Análisis Técnico',
         content: `
-            <h2>Estrategias de Trading</h2>
-            <p>Análisis de tendencias, indicadores técnicos y gestión de riesgo en mercados financieros.</p>
+            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Análisis de tendencias, indicadores técnicos y gestión de riesgo en mercados financieros.</p>
             <h3>Enfoque</h3>
             <ul>
                 <li>Análisis técnico avanzado</li>
@@ -91,8 +87,7 @@ const sections = {
         icon: 'fas fa-coins',
         tech: 'Criptomonedas',
         content: `
-            <h2>Portfolio Digital</h2>
-            <p>Seguimiento de inversiones en criptoactivos y análisis de proyectos blockchain.</p>
+            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Seguimiento de inversiones en criptoactivos y análisis de proyectos blockchain.</p>
             <h3>Enfoque</h3>
             <ul>
                 <li>Análisis fundamental de proyectos</li>
@@ -107,8 +102,7 @@ const sections = {
         icon: 'fas fa-building',
         tech: 'Acciones',
         content: `
-            <h2>Análisis Fundamental</h2>
-            <p>Evaluación de empresas, ratios financieros y estrategias de inversión a largo plazo.</p>
+            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Evaluación de empresas, ratios financieros y estrategias de inversión a largo plazo.</p>
             <h3>Enfoque</h3>
             <ul>
                 <li>Análisis de estados financieros</li>
@@ -123,8 +117,7 @@ const sections = {
         icon: 'fas fa-dice',
         tech: 'Drills & Práctica',
         content: `
-            <h2>Entrenamiento Diario</h2>
-            <p>Ejercicios de cálculo de odds, análisis de rangos y toma de decisiones en situaciones complejas.</p>
+            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Ejercicios de cálculo de odds, análisis de rangos y toma de decisiones en situaciones complejas.</p>
             <h3>Enfoque</h3>
             <ul>
                 <li>Drills de cálculo de odds</li>
@@ -139,8 +132,7 @@ const sections = {
         icon: 'fas fa-table',
         tech: 'Análisis de Rangos',
         content: `
-            <h2>Range Construction</h2>
-            <p>Construcción y análisis de rangos de manos según posición, stack y dinámica de mesa.</p>
+            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Construcción y análisis de rangos de manos según posición, stack y dinámica de mesa.</p>
             <h3>Enfoque</h3>
             <ul>
                 <li>Construcción de rangos por posición</li>
@@ -155,8 +147,7 @@ const sections = {
         icon: 'fas fa-brain',
         tech: 'Estrategia Avanzada',
         content: `
-            <h2>Game Theory</h2>
-            <p>Aplicación de teoría de juegos, equilibrio de Nash y estrategias GTO en poker moderno.</p>
+            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Aplicación de teoría de juegos, equilibrio de Nash y estrategias GTO en poker moderno.</p>
             <h3>Enfoque</h3>
             <ul>
                 <li>Teoría de juegos aplicada</li>
@@ -198,9 +189,12 @@ function loadSectionFromURL() {
     // Mostrar el contenido de la sección
     const sectionHTML = `
         <div class="section-header">
-            <div class="card-header">
-                <i class="${section.icon} icon-tech"></i>
-                <span>${section.tech}</span>
+            <h1 style="font-size: 3rem; font-weight: 800; background: linear-gradient(to right, var(--accent-secondary), var(--accent-primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; line-height: 1.2;">
+                ${section.title}
+            </h1>
+            <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem; opacity: 0.7;">
+                <i class="${section.icon}" style="font-size: 1.5rem; color: var(--accent-primary);"></i>
+                <span style="color: #94a3b8; font-size: 0.95rem;">${section.tech}</span>
             </div>
         </div>
         <div class="article-content">${section.content}</div>

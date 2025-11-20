@@ -79,7 +79,20 @@ function loadArticleFromURL() {
 
     loadArticle(article)
         .then(loadedArticle => {
-            document.getElementById('article-content').innerHTML = loadedArticle.content;
+            // Crear un header atractivo para el artículo
+            const articleHTML = `
+                <div class="article-header">
+                    <h1>${loadedArticle.title}</h1>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem; opacity: 0.7;">
+                        <i class="${loadedArticle.icon}" style="font-size: 1.5rem; color: var(--accent-primary);"></i>
+                        <span style="color: #94a3b8; font-size: 0.95rem;">Artículo</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    ${loadedArticle.content}
+                </div>
+            `;
+            document.getElementById('article-content').innerHTML = articleHTML;
             document.title = `${loadedArticle.title} | Kuruchy`;
         })
         .catch(error => {
