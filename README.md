@@ -1,52 +1,53 @@
-# ![Header Animation](header.svg)
-
 <div align="center">
+  <a href="https://kuruchy.github.io">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=35&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&width=600&lines=Hello,+I'm+Bruno+Retolaza;Senior+Mobile+Engineer;KMP+CMP+Enthusiast;AI-Powered+Solutions" alt="Typing SVG" />
+  </a>
 
-  # Hola, soy Kuruchy 👋
+  <h3 align="center">🚀 Mobile Architect & AI Engineer</h3>
   
-  **AI Engineer & Mobile Developer**
-  
-  [![Website](https://img.shields.io/badge/Website-Live_Demo-06b6d4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://kuruchy.github.io/)
-  [![Paypal](https://img.shields.io/badge/PayPal-Donate-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/donate/?business=TU_EMAIL)
-  
-  <p>
-    Explorando los límites entre la <strong>Inteligencia Artificial</strong> y la <strong>Experiencia de Usuario Móvil</strong>.
-    <br>
-    Este repositorio aloja mi portfolio personal, blog y tienda digital.
+  <p align="center">
+     Crafting scalable systems with <strong>Kotlin Multiplatform</strong> & <strong>Jetpack Compose</strong>. <br>
+     Integrating <strong>Generative AI</strong> into mobile ecosystems.
   </p>
+
+  <br>
+
+  <div align="center">
+    <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" />
+    <img src="https://img.shields.io/badge/Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white" />
+    <img src="https://img.shields.io/badge/KMP-Multiplatform-orange?style=for-the-badge&logo=kotlin&logoColor=white" />
+    <img src="https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white" />
+  </div>
 
 </div>
 
----
+<br>
 
-## 🚀 Sobre el Proyecto
+### ⚡ Engineering Focus
 
-Esta web es una **Single Page Application (SPA)** moderna, construida sin frameworks pesados para garantizar el máximo rendimiento.
+* 🔭 **Architecture:** Building unified logic for Android & iOS using **KMP**.
+* 🧠 **AI Integration:** Implementing on-device ML and LLM interactions.
+* 🎨 **UI/UX:** Creating fluid, reactive interfaces with **Compose**.
+* 🧗 **Offline:** When I'm not coding, I'm analyzing climbing beta or studying with GTO Wizard.
 
-### Características Principales:
-* **🧠 Diseño AI-Themed:** Interfaz inmersiva con fondo de partículas (Canvas API) simulando una red neuronal.
-* **💎 Glassmorphism UI:** Estética de cristal moderna utilizando CSS3 backdrop-filters.
-* **📱 Mobile First:** Totalmente responsiva para dispositivos móviles.
-* **📝 Blog en Markdown:** Sistema dinámico que renderiza artículos directamente desde archivos `.md` usando `marked.js`.
-* **💳 Integración de Pagos:** Botones directos para donaciones y venta de productos digitales.
+<br>
 
----
+<div align="center">
+  <img src="https://github.com/Kuruchy/Kuruchy/blob/output/github-contribution-grid-snake.svg" alt="snake animation" width="100%" />
+</div>
 
-## 🛠️ Stack Tecnológico
+<br>
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Markdown](https://img.shields.io/badge/Markdown-000000?style=flat&logo=markdown&logoColor=white)
+<div align="center">
+  
+  <a href="https://kuruchy.github.io" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-WEB-06b6d4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website"/>
+  </a>
+  <a href="https://www.linkedin.com/in/bruno-retolaza/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="https://github.com/kuruchy" target="_blank">
+    <img src="https://img.shields.io/badge/Github-Sponsor-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white" alt="Sponsor"/>
+  </a>
 
----
-
-## 📂 Estructura del Repositorio
-
-```bash
-kuruchy.github.io/
-├── index.html      # Estructura principal (SPA)
-├── style.css       # Estilos (Variables, Grid, Glassmorphism)
-├── script.js       # Lógica (Canvas AI, Router MD, Navbar)
-├── articulo.md     # Archivo fuente para el artículo destacado
-└── header.svg      # Animación para este README
+</div>
