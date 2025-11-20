@@ -1,21 +1,38 @@
 // 1. CONFIGURACIÓN DEL BLOG MARKDOWN
-// Sube un archivo llamado 'articulo.md' a la misma carpeta que este index.html
-const markdownFile = 'articulo.md'; 
+// Sistema de selección de artículos
+const articleSelect = document.getElementById('article-select');
+const markdownViewer = document.getElementById('markdown-viewer');
 
-fetch(markdownFile)
-    .then(response => {
-        if (!response.ok) throw new Error("No se encontró el archivo articulo.md");
-        return response.text();
-    })
-    .then(text => {
-        // Convertir MD a HTML usando marked.js
-        document.getElementById('markdown-viewer').innerHTML = marked.parse(text);
-    })
-    .catch(error => {
-        document.getElementById('markdown-viewer').innerHTML = 
-            `<p style="color: #666;">Actualmente no hay artículos destacados o no se encontró 'articulo.md'.<br>
-            <small>Sube un archivo .md para verlo aquí.</small></p>`;
+function loadArticle(filename) {
+    if (!filename) {
+        markdownViewer.innerHTML = '<p style="text-align: center; color: #666;">Selecciona un artículo para ver su contenido...</p>';
+        return;
+    }
+
+    markdownViewer.innerHTML = '<p style="text-align: center; color: #666;">Cargando artículo...</p>';
+
+    fetch(filename)
+        .then(response => {
+            if (!response.ok) throw new Error(`No se encontró el archivo ${filename}`);
+            return response.text();
+        })
+        .then(text => {
+            // Convertir MD a HTML usando marked.js
+            markdownViewer.innerHTML = marked.parse(text);
+        })
+        .catch(error => {
+            markdownViewer.innerHTML = 
+                `<p style="color: #ff6b6b; text-align: center;">Error al cargar el artículo: ${error.message}<br>
+                <small>Verifica que el archivo ${filename} exista en el servidor.</small></p>`;
+        });
+}
+
+// Event listener para el selector de artículos
+if (articleSelect) {
+    articleSelect.addEventListener('change', (e) => {
+        loadArticle(e.target.value);
     });
+}
 
 
 // 2. ANIMACIÓN DE FONDO (Red Neuronal / Constelación)
