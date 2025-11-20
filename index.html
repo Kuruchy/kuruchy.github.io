@@ -17,6 +17,8 @@
         <ul class="nav-links">
             <li><a href="#home">Inicio</a></li>
             <li><a href="#portfolio">Proyectos</a></li>
+            <li><a href="#investments">Inversiones</a></li>
+            <li><a href="#poker">Poker</a></li>
             <li><a href="#blog">Artículos (MD)</a></li>
             <li><a href="#donate" class="btn-donate">Donar <i class="fab fa-paypal"></i></a></li>
         </ul>
@@ -73,12 +75,98 @@
         </div>
     </section>
 
+    <section id="investments" class="container">
+        <h2>Inversiones</h2>
+        <p class="subtitle">Estrategias, análisis y seguimiento de inversiones</p>
+        
+        <div class="grid-3">
+            <div class="card glass">
+                <div class="card-header">
+                    <i class="fas fa-chart-line icon-tech"></i>
+                    <span>Análisis Técnico</span>
+                </div>
+                <div class="card-content">
+                    <h3>Estrategias de Trading</h3>
+                    <p>Análisis de tendencias, indicadores técnicos y gestión de riesgo en mercados financieros.</p>
+                </div>
+            </div>
+            <div class="card glass">
+                <div class="card-header">
+                    <i class="fas fa-coins icon-tech"></i>
+                    <span>Criptomonedas</span>
+                </div>
+                <div class="card-content">
+                    <h3>Portfolio Digital</h3>
+                    <p>Seguimiento de inversiones en criptoactivos y análisis de proyectos blockchain.</p>
+                </div>
+            </div>
+            <div class="card glass">
+                <div class="card-header">
+                    <i class="fas fa-building icon-tech"></i>
+                    <span>Acciones</span>
+                </div>
+                <div class="card-content">
+                    <h3>Análisis Fundamental</h3>
+                    <p>Evaluación de empresas, ratios financieros y estrategias de inversión a largo plazo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="poker" class="container">
+        <h2>Poker</h2>
+        <p class="subtitle">Estrategia, drills y análisis de rangos</p>
+        
+        <div class="grid-3">
+            <div class="card glass">
+                <div class="card-header">
+                    <i class="fas fa-dice icon-tech"></i>
+                    <span>Drills & Práctica</span>
+                </div>
+                <div class="card-content">
+                    <h3>Entrenamiento Diario</h3>
+                    <p>Ejercicios de cálculo de odds, análisis de rangos y toma de decisiones en situaciones complejas.</p>
+                </div>
+            </div>
+            <div class="card glass">
+                <div class="card-header">
+                    <i class="fas fa-table icon-tech"></i>
+                    <span>Análisis de Rangos</span>
+                </div>
+                <div class="card-content">
+                    <h3>Range Construction</h3>
+                    <p>Construcción y análisis de rangos de manos según posición, stack y dinámica de mesa.</p>
+                </div>
+            </div>
+            <div class="card glass">
+                <div class="card-header">
+                    <i class="fas fa-brain icon-tech"></i>
+                    <span>Estrategia Avanzada</span>
+                </div>
+                <div class="card-content">
+                    <h3>Game Theory</h3>
+                    <p>Aplicación de teoría de juegos, equilibrio de Nash y estrategias GTO en poker moderno.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="blog" class="container">
         <h2>Últimos Artículos</h2>
         <p class="subtitle">Renderizados directamente desde archivos .md</p>
         
+        <div class="article-selector glass" style="margin-bottom: 2rem; padding: 1.5rem;">
+            <label for="article-select" style="display: block; margin-bottom: 1rem; color: var(--accent-secondary);">Selecciona un artículo:</label>
+            <select id="article-select" style="width: 100%; padding: 0.75rem; background: rgba(255,255,255,0.1); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-color); font-size: 1rem;">
+                <option value="">-- Selecciona un artículo --</option>
+                <option value="articles/compose-multiplatform.md">Compose Multiplatform</option>
+                <option value="articles/poker-drills-ranges.md">Poker Drills y Rangos</option>
+                <option value="articles/ai.md">Inteligencia Artificial</option>
+            </select>
+        </div>
+        
         <div id="markdown-viewer" class="glass blog-container">
-            <p>Cargando artículo destacado...</p>
+            <p style="text-align: center; color: #666;">Selecciona un artículo para ver su contenido...</p>
         </div>
     </section>
 
