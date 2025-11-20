@@ -24,172 +24,61 @@ const articles = [
     }
 ];
 
-// Datos de secciones para las páginas de detalle
+// Datos de secciones para las páginas de detalle (metadatos - el contenido está en archivos Markdown)
 const sections = {
     'ai-vision-system': {
         title: 'AI Vision System',
         icon: 'fas fa-brain',
         tech: 'TensorFlow / Python',
-        content: `
-            <h2>AI Vision System</h2>
-            <p>Sistema de visión por computador para detección de objetos en tiempo real optimizado para edge devices.</p>
-            <h3>Características Principales</h3>
-            <ul>
-                <li>Detección de objetos en tiempo real</li>
-                <li>Optimizado para dispositivos edge</li>
-                <li>Baja latencia y alto rendimiento</li>
-                <li>Modelos TensorFlow Lite para móviles</li>
-            </ul>
-            <h3>Tecnologías Utilizadas</h3>
-            <ul>
-                <li>TensorFlow 2.x</li>
-                <li>OpenCV para procesamiento de imágenes</li>
-                <li>Python para backend</li>
-                <li>TensorFlow Lite para deployment</li>
-            </ul>
-        `
+        filename: 'sections/ai-vision-system.md'
     },
     'ecowallet-app': {
         title: 'EcoWallet App',
         icon: 'fas fa-mobile-alt',
         tech: 'Flutter / React Native',
-        content: `
-            <h2>EcoWallet App</h2>
-            <p>Aplicación multiplataforma (iOS/Android) de finanzas con predicción de gastos basada en ML.</p>
-            <h3>Características Principales</h3>
-            <ul>
-                <li>Gestión de finanzas personales</li>
-                <li>Predicción de gastos con Machine Learning</li>
-                <li>Interfaz multiplataforma</li>
-                <li>Sincronización en la nube</li>
-            </ul>
-            <h3>Tecnologías Utilizadas</h3>
-            <ul>
-                <li>Flutter / React Native</li>
-                <li>TensorFlow.js para predicciones</li>
-                <li>Firebase para backend</li>
-                <li>GraphQL para APIs</li>
-            </ul>
-        `
+        filename: 'sections/ecowallet-app.md'
     },
     'asistente-cognitivo': {
         title: 'Asistente Cognitivo',
         icon: 'fas fa-robot',
         tech: 'OpenAI API / Node.js',
-        content: `
-            <h2>Asistente Cognitivo</h2>
-            <p>Chatbot contextual integrado en WhatsApp para gestión de tareas automatizadas.</p>
-            <h3>Características Principales</h3>
-            <ul>
-                <li>Integración con WhatsApp Business API</li>
-                <li>Gestión automática de tareas</li>
-                <li>Respuestas contextuales inteligentes</li>
-                <li>Procesamiento de lenguaje natural</li>
-            </ul>
-            <h3>Tecnologías Utilizadas</h3>
-            <ul>
-                <li>OpenAI GPT-4 API</li>
-                <li>Node.js y Express</li>
-                <li>WhatsApp Business API</li>
-                <li>MongoDB para almacenamiento</li>
-            </ul>
-        `
+        filename: 'sections/asistente-cognitivo.md'
     },
     'estrategias-trading': {
         title: 'Estrategias de Trading',
         icon: 'fas fa-chart-line',
         tech: 'Análisis Técnico',
-        content: `
-            <h2>Estrategias de Trading</h2>
-            <p>Análisis de tendencias, indicadores técnicos y gestión de riesgo en mercados financieros.</p>
-            <h3>Enfoque</h3>
-            <ul>
-                <li>Análisis técnico avanzado</li>
-                <li>Indicadores personalizados</li>
-                <li>Gestión de riesgo estricta</li>
-                <li>Backtesting de estrategias</li>
-            </ul>
-        `
+        filename: 'sections/estrategias-trading.md'
     },
     'portfolio-digital': {
         title: 'Portfolio Digital',
         icon: 'fas fa-coins',
         tech: 'Criptomonedas',
-        content: `
-            <h2>Portfolio Digital</h2>
-            <p>Seguimiento de inversiones en criptoactivos y análisis de proyectos blockchain.</p>
-            <h3>Enfoque</h3>
-            <ul>
-                <li>Análisis fundamental de proyectos</li>
-                <li>Seguimiento de portfolio</li>
-                <li>Análisis de tendencias del mercado</li>
-                <li>Gestión de riesgo en cripto</li>
-            </ul>
-        `
+        filename: 'sections/portfolio-digital.md'
     },
     'analisis-fundamental': {
         title: 'Análisis Fundamental',
         icon: 'fas fa-building',
         tech: 'Acciones',
-        content: `
-            <h2>Análisis Fundamental</h2>
-            <p>Evaluación de empresas, ratios financieros y estrategias de inversión a largo plazo.</p>
-            <h3>Enfoque</h3>
-            <ul>
-                <li>Análisis de estados financieros</li>
-                <li>Evaluación de ratios clave</li>
-                <li>Análisis de la industria</li>
-                <li>Estrategias value investing</li>
-            </ul>
-        `
+        filename: 'sections/analisis-fundamental.md'
     },
     'entrenamiento-diario': {
         title: 'Entrenamiento Diario',
         icon: 'fas fa-dice',
         tech: 'Drills & Práctica',
-        content: `
-            <h2>Entrenamiento Diario</h2>
-            <p>Ejercicios de cálculo de odds, análisis de rangos y toma de decisiones en situaciones complejas.</p>
-            <h3>Enfoque</h3>
-            <ul>
-                <li>Drills de cálculo de odds</li>
-                <li>Análisis de rangos</li>
-                <li>Decisiones en situaciones complejas</li>
-                <li>Práctica estructurada</li>
-            </ul>
-        `
+        filename: 'sections/entrenamiento-diario.md'
     },
     'range-construction': {
         title: 'Range Construction',
         icon: 'fas fa-table',
         tech: 'Análisis de Rangos',
-        content: `
-            <h2>Range Construction</h2>
-            <p>Construcción y análisis de rangos de manos según posición, stack y dinámica de mesa.</p>
-            <h3>Enfoque</h3>
-            <ul>
-                <li>Construcción de rangos por posición</li>
-                <li>Análisis según stack depth</li>
-                <li>Dinámica de mesa</li>
-                <li>GTO y estrategias explotativas</li>
-            </ul>
-        `
+        filename: 'sections/range-construction.md'
     },
     'game-theory': {
         title: 'Game Theory',
         icon: 'fas fa-brain',
         tech: 'Estrategia Avanzada',
-        content: `
-            <h2>Game Theory</h2>
-            <p>Aplicación de teoría de juegos, equilibrio de Nash y estrategias GTO en poker moderno.</p>
-            <h3>Enfoque</h3>
-            <ul>
-                <li>Teoría de juegos aplicada</li>
-                <li>Equilibrio de Nash</li>
-                <li>Estrategias GTO</li>
-                <li>Análisis con solvers</li>
-            </ul>
-        `
+        filename: 'sections/game-theory.md'
     }
 };
 
