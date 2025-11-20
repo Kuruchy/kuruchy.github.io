@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículo | Kuruchy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+    <canvas id="bg-animation"></canvas>
+
+    <nav class="navbar">
+        <div class="logo">Kuruchy<span class="blink">_</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Inicio</a></li>
+            <li><a href="index.html#portfolio">Proyectos</a></li>
+            <li><a href="index.html#investments">Inversiones</a></li>
+            <li><a href="index.html#poker">Poker</a></li>
+            <li><a href="index.html#blog">Artículos</a></li>
+            <li><a href="index.html#donate" class="btn-donate">Donar <i class="fab fa-paypal"></i></a></li>
+        </ul>
+        <div class="burger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="container" style="padding-top: 8rem;">
+        <div id="article-view-container">
+            <div class="article-view glass">
+                <button class="btn-back" onclick="goBackFromArticle()">
+                    <i class="fas fa-arrow-left"></i> Volver
+                </button>
+                <div id="article-content" style="text-align: center; color: #666;">
+                    Cargando artículo...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kuruchy. Powered by Neural Networks & Coffee.</p>
+    </footer>
+
+    <script src="article.js"></script>
+</body>
+</html>
+

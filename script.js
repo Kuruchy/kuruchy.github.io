@@ -195,23 +195,6 @@ const sections = {
     }
 };
 
-// Función para cargar un artículo completo
-function loadArticle(article) {
-    return fetch(article.filename)
-        .then(response => {
-            if (!response.ok) throw new Error(`No se encontró el archivo ${article.filename}`);
-            return response.text();
-        })
-        .then(text => {
-            const htmlContent = marked.parse(text);
-            return { ...article, content: htmlContent };
-        })
-        .catch(error => {
-            console.error(`Error al cargar ${article.filename}:`, error);
-            return { ...article, content: `<p style="color: #ff6b6b;">Error al cargar el artículo.</p>` };
-        });
-}
-
 // Función para mostrar artículos como cards
 function displayArticleCards() {
     if (!articlesContainer) return;
@@ -236,33 +219,11 @@ function displayArticleCards() {
         `;
         
         cardElement.addEventListener('click', () => {
-            showArticle(article.filename);
+            // Navegar a la página del artículo
+            window.location.href = `article.html?file=${encodeURIComponent(article.filename)}`;
         });
         
         articlesContainer.appendChild(cardElement);
-    });
-}
-
-// Función para mostrar un artículo completo
-function showArticle(articleFilename) {
-    const article = articles.find(a => a.filename === articleFilename);
-    if (!article) return;
-
-    loadArticle(article).then(loadedArticle => {
-        if (mainContent) mainContent.style.display = 'none';
-        if (articleViewContainer) {
-            articleViewContainer.style.display = 'block';
-            articleViewContainer.innerHTML = `
-                <div class="article-view glass">
-                    <button class="btn-back" onclick="goBack()">
-                        <i class="fas fa-arrow-left"></i> Volver
-                    </button>
-                    <div class="article-content">${loadedArticle.content}</div>
-                </div>
-            `;
-        }
-        window.scrollTo(0, 0);
-        window.location.hash = `article/${articleFilename}`;
     });
 }
 
@@ -293,7 +254,7 @@ function showSection(sectionId) {
     window.location.hash = `section/${sectionId}`;
 }
 
-// Función para volver atrás
+// Función para volver atrás (solo para secciones ahora)
 function goBack() {
     if (mainContent) mainContent.style.display = 'block';
     if (articleViewContainer) {
@@ -301,20 +262,24 @@ function goBack() {
         articleViewContainer.innerHTML = '';
     }
     window.location.hash = '';
+    window.scrollTo(0, 0);
 }
 
-// Manejar routing con hash
+// Manejar routing con hash - solo para secciones, no para navegación normal
 function handleRouting() {
     const hash = window.location.hash.substring(1);
     
-    if (hash.startsWith('article/')) {
-        const articleFilename = hash.replace('article/', '');
-        showArticle(articleFilename);
-    } else if (hash.startsWith('section/')) {
+    // Solo manejar hashes de secciones, ignorar navegación normal (#home, #portfolio, etc.)
+    if (hash.startsWith('section/')) {
         const sectionId = hash.replace('section/', '');
         showSection(sectionId);
-    } else {
-        goBack();
+    } else if (hash === '' || hash === 'home' || hash === 'portfolio' || hash === 'investments' || hash === 'poker' || hash === 'blog' || hash === 'donate') {
+        // Si es un hash de navegación normal, asegurarse de que el contenido principal esté visible
+        if (mainContent) mainContent.style.display = 'block';
+        if (articleViewContainer) {
+            articleViewContainer.style.display = 'none';
+            articleViewContainer.innerHTML = '';
+        }
     }
 }
 
@@ -322,15 +287,36 @@ function handleRouting() {
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         displayArticleCards();
-        handleRouting();
+        // Solo manejar routing si hay un hash de sección
+        const hash = window.location.hash.substring(1);
+        if (hash.startsWith('section/')) {
+            handleRouting();
+        }
     });
 } else {
     displayArticleCards();
-    handleRouting();
+    // Solo manejar routing si hay un hash de sección
+    const hash = window.location.hash.substring(1);
+    if (hash.startsWith('section/')) {
+        handleRouting();
+    }
 }
 
-// Escuchar cambios en el hash
-window.addEventListener('hashchange', handleRouting);
+// Escuchar cambios en el hash - solo para secciones
+window.addEventListener('hashchange', () => {
+    const hash = window.location.hash.substring(1);
+    // Solo procesar si es un hash de sección, dejar que los demás hashes funcionen normalmente
+    if (hash.startsWith('section/')) {
+        handleRouting();
+    } else {
+        // Para hashes de navegación normal, asegurar que el contenido principal esté visible
+        if (mainContent) mainContent.style.display = 'block';
+        if (articleViewContainer) {
+            articleViewContainer.style.display = 'none';
+            articleViewContainer.innerHTML = '';
+        }
+    }
+});
 
 // Hacer las cards de secciones clickables
 document.addEventListener('DOMContentLoaded', () => {
