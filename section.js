@@ -1,163 +1,86 @@
 // Script para cargar secciones en section.html
-// Datos de secciones (mismo que en script.js)
+// Metadatos de secciones (icono y tecnología)
 const sections = {
     'ai-vision-system': {
         title: 'AI Vision System',
         icon: 'fas fa-brain',
         tech: 'TensorFlow / Python',
-        content: `
-            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Sistema de visión por computador para detección de objetos en tiempo real optimizado para edge devices.</p>
-            <h3>Características Principales</h3>
-            <ul>
-                <li>Detección de objetos en tiempo real</li>
-                <li>Optimizado para dispositivos edge</li>
-                <li>Baja latencia y alto rendimiento</li>
-                <li>Modelos TensorFlow Lite para móviles</li>
-            </ul>
-            <h3>Tecnologías Utilizadas</h3>
-            <ul>
-                <li>TensorFlow 2.x</li>
-                <li>OpenCV para procesamiento de imágenes</li>
-                <li>Python para backend</li>
-                <li>TensorFlow Lite para deployment</li>
-            </ul>
-        `
+        filename: 'sections/ai-vision-system.md'
     },
     'ecowallet-app': {
         title: 'EcoWallet App',
         icon: 'fas fa-mobile-alt',
         tech: 'Flutter / React Native',
-        content: `
-            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Aplicación multiplataforma (iOS/Android) de finanzas con predicción de gastos basada en ML.</p>
-            <h3>Características Principales</h3>
-            <ul>
-                <li>Gestión de finanzas personales</li>
-                <li>Predicción de gastos con Machine Learning</li>
-                <li>Interfaz multiplataforma</li>
-                <li>Sincronización en la nube</li>
-            </ul>
-            <h3>Tecnologías Utilizadas</h3>
-            <ul>
-                <li>Flutter / React Native</li>
-                <li>TensorFlow.js para predicciones</li>
-                <li>Firebase para backend</li>
-                <li>GraphQL para APIs</li>
-            </ul>
-        `
+        filename: 'sections/ecowallet-app.md'
     },
     'asistente-cognitivo': {
         title: 'Asistente Cognitivo',
         icon: 'fas fa-robot',
         tech: 'OpenAI API / Node.js',
-        content: `
-            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Chatbot contextual integrado en WhatsApp para gestión de tareas automatizadas.</p>
-            <h3>Características Principales</h3>
-            <ul>
-                <li>Integración con WhatsApp Business API</li>
-                <li>Gestión automática de tareas</li>
-                <li>Respuestas contextuales inteligentes</li>
-                <li>Procesamiento de lenguaje natural</li>
-            </ul>
-            <h3>Tecnologías Utilizadas</h3>
-            <ul>
-                <li>OpenAI GPT-4 API</li>
-                <li>Node.js y Express</li>
-                <li>WhatsApp Business API</li>
-                <li>MongoDB para almacenamiento</li>
-            </ul>
-        `
+        filename: 'sections/asistente-cognitivo.md'
     },
     'estrategias-trading': {
         title: 'Estrategias de Trading',
         icon: 'fas fa-chart-line',
         tech: 'Análisis Técnico',
-        content: `
-            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Análisis de tendencias, indicadores técnicos y gestión de riesgo en mercados financieros.</p>
-            <h3>Enfoque</h3>
-            <ul>
-                <li>Análisis técnico avanzado</li>
-                <li>Indicadores personalizados</li>
-                <li>Gestión de riesgo estricta</li>
-                <li>Backtesting de estrategias</li>
-            </ul>
-        `
+        filename: 'sections/estrategias-trading.md'
     },
     'portfolio-digital': {
         title: 'Portfolio Digital',
         icon: 'fas fa-coins',
         tech: 'Criptomonedas',
-        content: `
-            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Seguimiento de inversiones en criptoactivos y análisis de proyectos blockchain.</p>
-            <h3>Enfoque</h3>
-            <ul>
-                <li>Análisis fundamental de proyectos</li>
-                <li>Seguimiento de portfolio</li>
-                <li>Análisis de tendencias del mercado</li>
-                <li>Gestión de riesgo en cripto</li>
-            </ul>
-        `
+        filename: 'sections/portfolio-digital.md'
     },
     'analisis-fundamental': {
         title: 'Análisis Fundamental',
         icon: 'fas fa-building',
         tech: 'Acciones',
-        content: `
-            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Evaluación de empresas, ratios financieros y estrategias de inversión a largo plazo.</p>
-            <h3>Enfoque</h3>
-            <ul>
-                <li>Análisis de estados financieros</li>
-                <li>Evaluación de ratios clave</li>
-                <li>Análisis de la industria</li>
-                <li>Estrategias value investing</li>
-            </ul>
-        `
+        filename: 'sections/analisis-fundamental.md'
     },
     'entrenamiento-diario': {
         title: 'Entrenamiento Diario',
         icon: 'fas fa-dice',
         tech: 'Drills & Práctica',
-        content: `
-            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Ejercicios de cálculo de odds, análisis de rangos y toma de decisiones en situaciones complejas.</p>
-            <h3>Enfoque</h3>
-            <ul>
-                <li>Drills de cálculo de odds</li>
-                <li>Análisis de rangos</li>
-                <li>Decisiones en situaciones complejas</li>
-                <li>Práctica estructurada</li>
-            </ul>
-        `
+        filename: 'sections/entrenamiento-diario.md'
     },
     'range-construction': {
         title: 'Range Construction',
         icon: 'fas fa-table',
         tech: 'Análisis de Rangos',
-        content: `
-            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Construcción y análisis de rangos de manos según posición, stack y dinámica de mesa.</p>
-            <h3>Enfoque</h3>
-            <ul>
-                <li>Construcción de rangos por posición</li>
-                <li>Análisis según stack depth</li>
-                <li>Dinámica de mesa</li>
-                <li>GTO y estrategias explotativas</li>
-            </ul>
-        `
+        filename: 'sections/range-construction.md'
     },
     'game-theory': {
         title: 'Game Theory',
         icon: 'fas fa-brain',
         tech: 'Estrategia Avanzada',
-        content: `
-            <p style="font-size: 1.15rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.8;">Aplicación de teoría de juegos, equilibrio de Nash y estrategias GTO en poker moderno.</p>
-            <h3>Enfoque</h3>
-            <ul>
-                <li>Teoría de juegos aplicada</li>
-                <li>Equilibrio de Nash</li>
-                <li>Estrategias GTO</li>
-                <li>Análisis con solvers</li>
-            </ul>
-        `
+        filename: 'sections/game-theory.md'
     }
 };
+
+// Función para cargar el contenido de una sección desde Markdown
+function loadSectionContent(section) {
+    const filePath = section.filename;
+    
+    return fetch(filePath)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
+            }
+            return response.text();
+        })
+        .then(text => {
+            if (!text || text.trim() === '') {
+                throw new Error('El archivo está vacío');
+            }
+            const htmlContent = marked.parse(text);
+            return { ...section, content: htmlContent };
+        })
+        .catch(error => {
+            console.error(`Error al cargar ${section.filename}:`, error);
+            console.error('Ruta intentada:', filePath);
+            throw error;
+        });
+}
 
 // Cargar sección basada en parámetro URL
 function loadSectionFromURL() {
@@ -185,23 +108,54 @@ function loadSectionFromURL() {
     }
     
     console.log('Sección encontrada:', section);
-    
-    // Mostrar el contenido de la sección
-    const sectionHTML = `
-        <div class="section-header">
-            <h1 style="font-size: 3rem; font-weight: 800; background: linear-gradient(to right, var(--accent-secondary), var(--accent-primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; line-height: 1.2;">
-                ${section.title}
-            </h1>
-            <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem; opacity: 0.7;">
-                <i class="${section.icon}" style="font-size: 1.5rem; color: var(--accent-primary);"></i>
-                <span style="color: #94a3b8; font-size: 0.95rem;">${section.tech}</span>
-            </div>
-        </div>
-        <div class="article-content">${section.content}</div>
-    `;
-    
-    document.getElementById('section-content').innerHTML = sectionHTML;
-    document.title = `${section.title} | Kuruchy`;
+
+    loadSectionContent(section)
+        .then(loadedSection => {
+            // Mostrar el contenido de la sección
+            const sectionHTML = `
+                <div class="section-header">
+                    <h1 style="font-size: 3rem; font-weight: 800; background: linear-gradient(to right, var(--accent-secondary), var(--accent-primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; line-height: 1.2;">
+                        ${loadedSection.title}
+                    </h1>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem; opacity: 0.7;">
+                        <i class="${loadedSection.icon}" style="font-size: 1.5rem; color: var(--accent-primary);"></i>
+                        <span style="color: #94a3b8; font-size: 0.95rem;">${loadedSection.tech}</span>
+                    </div>
+                </div>
+                <div class="article-content">${loadedSection.content}</div>
+            `;
+            
+            document.getElementById('section-content').innerHTML = sectionHTML;
+            document.title = `${loadedSection.title} | Kuruchy`;
+        })
+        .catch(error => {
+            console.error('Error completo:', error);
+            const errorMsg = error.message || 'Error desconocido';
+            const isFileProtocol = window.location.protocol === 'file:';
+            
+            let helpText = '';
+            if (isFileProtocol) {
+                helpText = `
+                    <p style="font-size: 0.9em; margin-top: 1rem; color: #ffd700;">
+                        <strong>⚠️ Estás abriendo el archivo directamente desde el sistema de archivos.</strong><br>
+                        Los navegadores bloquean las peticiones fetch() con el protocolo file:// por seguridad.<br>
+                        <strong>Solución:</strong> Usa un servidor local. Ejemplos:<br>
+                        • Python: <code>python3 -m http.server 8000</code><br>
+                        • Node.js: <code>npx http-server</code><br>
+                        • VS Code: Instala la extensión "Live Server"
+                    </p>
+                `;
+            }
+            
+            document.getElementById('section-content').innerHTML = 
+                `<div style="color: #ff6b6b;">
+                    <p><strong>Error al cargar la sección</strong></p>
+                    <p>${errorMsg}</p>
+                    <p style="font-size: 0.9em; margin-top: 1rem;">Archivo: ${section.filename}</p>
+                    <p style="font-size: 0.9em;">Protocolo: ${window.location.protocol}</p>
+                    ${helpText}
+                </div>`;
+        });
 }
 
 // Función para volver atrás
