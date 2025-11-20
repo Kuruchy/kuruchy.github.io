@@ -1,49 +1,120 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuruchy | Portfolio, Blog & Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-    <article class="post">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        <h1>{{ post.title }}</h1>
-
-        <div>
-          <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
+    <nav class="navbar">
+        <div class="logo">Kuruchy.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#portfolio">Proyectos</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#store">Tienda</a></li>
+            <li><a href="#contact" class="btn-contact">Contacto</a></li>
+        </ul>
+        <div class="burger">
+            <i class="fas fa-bars"></i>
         </div>
-      </a>
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+    </nav>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hola, soy <span class="accent">Kuruchy</span></h1>
+            <p>Desarrollador, Creador de Contenido & Entusiasta de la Tecnología.</p>
+            <a href="#portfolio" class="btn-primary">Ver mi trabajo</a>
+        </div>
+    </section>
 
-  <!-- pagination -->
-  {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-    {% else %}
-      <span>&laquo; Prev</span>
-    {% endif %}
+    <section id="portfolio" class="container">
+        <h2>Mis Proyectos</h2>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-img" style="background-color: #333;"></div>
+                <div class="card-content">
+                    <h3>App de Finanzas</h3>
+                    <p>Una aplicación web para gestionar gastos personales.</p>
+                    <a href="#">Ver Demo &rarr;</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-color: #444;"></div>
+                <div class="card-content">
+                    <h3>Diseño 3D</h3>
+                    <p>Colección de renders y modelos 3D en Blender.</p>
+                    <a href="#">Ver Galería &rarr;</a>
+                </div>
+            </div>
+             <div class="card">
+                <div class="card-img" style="background-color: #555;"></div>
+                <div class="card-content">
+                    <h3>Bot de Discord</h3>
+                    <p>Automatización de servidores con Node.js.</p>
+                    <a href="#">Ver Código &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <span class="webjeda">{{ page }}</span>
-      {% elsif page == 1 %}
-        <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-      {% else %}
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
+    
 
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% else %}
-      <span>Next &raquo;</span>
-    {% endif %}
-  </div>
-  {% endif %}
-</div>
+    <section id="blog" class="container bg-alt">
+        <h2>Artículos Recientes</h2>
+        <div class="blog-list">
+            <article class="blog-item">
+                <span class="date">20 Nov 2024</span>
+                <h3>Cómo configurar GitHub Pages desde cero</h3>
+                <p>Una guía paso a paso para alojar tu sitio estático gratis...</p>
+                <a href="#" class="read-more">Leer más</a>
+            </article>
+            <article class="blog-item">
+                <span class="date">15 Nov 2024</span>
+                <h3>Mis herramientas de desarrollo favoritas en 2025</h3>
+                <p>El software y hardware que utilizo en mi día a día...</p>
+                <a href="#" class="read-more">Leer más</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="store" class="container">
+        <h2>Store</h2>
+        <p class="subtitle">Productos digitales y merch.</p>
+        <div class="grid-3">
+            <div class="product-card">
+                <div class="badge">Digital</div>
+                <h3>Pack de Iconos</h3>
+                <p class="price">5.00€</p>
+                <button class="btn-buy">Comprar</button>
+            </div>
+            <div class="product-card">
+                <div class="badge">Físico</div>
+                <h3>Camiseta Oficial</h3>
+                <p class="price">25.00€</p>
+                <button class="btn-buy">Comprar</button>
+            </div>
+             <div class="product-card">
+                <div class="badge">Servicio</div>
+                <h3>Asesoría 1h</h3>
+                <p class="price">50.00€</p>
+                <button class="btn-buy">Reservar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2025 Kuruchy. Hecho con código puro.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
