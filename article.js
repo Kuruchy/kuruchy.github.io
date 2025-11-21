@@ -94,6 +94,9 @@ function loadArticleFromURL() {
             `;
             document.getElementById('article-content').innerHTML = articleHTML;
             document.title = `${loadedArticle.title} | Kuruchy`;
+            
+            // Cargar comentarios de Giscus después de renderizar el Markdown
+            loadComments();
         })
         .catch(error => {
             console.error('Error completo:', error);
@@ -123,6 +126,38 @@ function loadArticleFromURL() {
                     ${helpText}
                 </div>`;
         });
+}
+
+// Función para cargar comentarios de Giscus
+function loadComments() {
+    const commentsSection = document.getElementById('comments-section');
+    if (!commentsSection) return;
+    
+    // Limpiar cualquier script previo de Giscus
+    const existingScript = document.querySelector('script[src="https://giscus.app/client.js"]');
+    if (existingScript) {
+        existingScript.remove();
+    }
+    
+    // Crear el script de Giscus dinámicamente
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', 'kuruchy/kuruchy.github.io');
+    script.setAttribute('data-repo-id', 'R_kgDOGPIhoQ');
+    script.setAttribute('data-category', 'General');
+    script.setAttribute('data-category-id', 'DIC_kwDOGPIhoc4CyDKy');
+    script.setAttribute('data-mapping', 'pathname');
+    script.setAttribute('data-strict', '0');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'bottom');
+    script.setAttribute('data-theme', 'preferred_color_scheme');
+    script.setAttribute('data-lang', 'es');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
+    
+    // Añadir el script al contenedor de comentarios
+    commentsSection.appendChild(script);
 }
 
 // Función para volver atrás
