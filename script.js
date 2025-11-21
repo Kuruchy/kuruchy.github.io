@@ -172,16 +172,66 @@ function typeText(element, text, speed = 30, callback) {
     }, speed);
 }
 
+function parseKeypoints(summary) {
+    // Intentar detectar keypoints por diferentes formatos
+    // 1. Números seguidos de punto o guión: "1. punto", "2- punto", etc.
+    // 2. Guiones: "- punto"
+    // 3. Asteriscos: "* punto"
+    // 4. Separados por saltos de línea
+    
+    const patterns = [
+        /(\d+)[\.\-]\s*(.+?)(?=\d+[\.\-]|$)/g,  // Números con punto o guión
+        /[-•]\s*(.+?)(?=[-•]|$)/g,              // Guiones o bullets
+        /\*\s*(.+?)(?=\*|$)/g,                  // Asteriscos
+    ];
+    
+    let keypoints = [];
+    
+    // Intentar con números
+    const numberedMatch = summary.match(/(\d+)[\.\-]\s*(.+?)(?=\d+[\.\-]|$)/g);
+    if (numberedMatch && numberedMatch.length >= 2) {
+        keypoints = numberedMatch.map(kp => kp.replace(/^\d+[\.\-]\s*/, '').trim());
+        return keypoints;
+    }
+    
+    // Intentar con guiones o bullets
+    const bulletMatch = summary.match(/[-•]\s*(.+?)(?=[-•]|$)/g);
+    if (bulletMatch && bulletMatch.length >= 2) {
+        keypoints = bulletMatch.map(kp => kp.replace(/^[-•]\s*/, '').trim());
+        return keypoints;
+    }
+    
+    // Intentar dividir por saltos de línea
+    const lines = summary.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+    if (lines.length >= 2) {
+        // Si hay líneas que empiezan con números, guiones, etc., usarlas
+        const formattedLines = lines.filter(l => /^[\d\-•*]/.test(l));
+        if (formattedLines.length >= 2) {
+            keypoints = formattedLines.map(l => l.replace(/^[\d\-•*.\s]+/, '').trim());
+            return keypoints;
+        }
+        // Si no, usar todas las líneas
+        return lines;
+    }
+    
+    // Si no se detectan keypoints, dividir por puntos y comas
+    const sentences = summary.split(/[.;]/).map(s => s.trim()).filter(s => s.length > 10);
+    if (sentences.length >= 2) {
+        return sentences;
+    }
+    
+    // Fallback: devolver el texto completo
+    return [summary];
+}
+
 function renderAICurator(news, container) {
     container.innerHTML = '';
     container.className = 'ai-curator-content';
     
-    // Crear contenedor para las noticias
     const newsContainer = document.createElement('div');
     newsContainer.className = 'ai-news-list';
     container.appendChild(newsContainer);
     
-    // Mostrar cada noticia con efecto typing
     news.forEach((item, index) => {
         const newsItem = document.createElement('div');
         newsItem.className = 'ai-news-item';
@@ -197,12 +247,12 @@ function renderAICurator(news, container) {
         titleWrapper.appendChild(titleNumber);
         titleWrapper.appendChild(titleText);
         
-        // Resumen
+        // Resumen con keypoints
         const summaryWrapper = document.createElement('div');
         summaryWrapper.className = 'ai-news-summary';
-        const summaryText = document.createElement('span');
-        summaryText.className = 'ai-news-summary-text';
-        summaryWrapper.appendChild(summaryText);
+        const keypointsList = document.createElement('ul');
+        keypointsList.className = 'ai-keypoints-list';
+        summaryWrapper.appendChild(keypointsList);
         
         // Link
         const linkWrapper = document.createElement('div');
@@ -219,21 +269,40 @@ function renderAICurator(news, container) {
         newsItem.appendChild(linkWrapper);
         newsContainer.appendChild(newsItem);
         
+        // Parsear keypoints
+        const keypoints = parseKeypoints(item.summary);
+        
         // Efecto typing secuencial
         setTimeout(() => {
             // Typing del título
             typeText(titleText, item.title, 20, () => {
                 setTimeout(() => {
-                    // Typing del resumen
-                    typeText(summaryText, item.summary, 15, () => {
-                        // Mostrar link después del resumen
-                        setTimeout(() => {
-                            linkWrapper.style.opacity = '1';
-                        }, 200);
-                    });
+                    // Typing de cada keypoint
+                    let keypointIndex = 0;
+                    const typeNextKeypoint = () => {
+                        if (keypointIndex < keypoints.length) {
+                            const li = document.createElement('li');
+                            li.className = 'ai-keypoint-item';
+                            const keypointText = document.createElement('span');
+                            keypointText.className = 'ai-keypoint-text';
+                            li.appendChild(keypointText);
+                            keypointsList.appendChild(li);
+                            
+                            typeText(keypointText, keypoints[keypointIndex], 10, () => {
+                                keypointIndex++;
+                                setTimeout(typeNextKeypoint, 200);
+                            });
+                        } else {
+                            // Mostrar link después de todos los keypoints
+                            setTimeout(() => {
+                                linkWrapper.style.opacity = '1';
+                            }, 300);
+                        }
+                    };
+                    typeNextKeypoint();
                 }, 300);
             });
-        }, index * 1500); // Delay entre noticias
+        }, index * 2000); // Aumentado el delay para keypoints más largos
     });
 }
 
