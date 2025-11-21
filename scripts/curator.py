@@ -61,49 +61,73 @@ def process_with_openai(stories):
     
     system_prompt = (
         "Eres un Ingeniero de Software Senior cínico y experto. "
-        "Resume estas 5 noticias en 1 frase corta e impactante cada una, "
+        "Resume estas noticias de HackerNews en 1 frase corta e impactante cada una, "
         "con un tono técnico pero sarcástico. "
-        "Devuélvelo en formato JSON puro con esta estructura exacta: "
-        '[{"title": "...", "summary": "...", "link": "..."}, ...]'
+        "IMPORTANTE: Devuélvelo SOLO en formato JSON válido, sin markdown, sin explicaciones, sin texto adicional. "
+        "Estructura exacta: [{\"title\": \"título original\", \"summary\": \"resumen cínico\", \"link\": \"url\"}, ...]"
     )
     
-    user_prompt = f"Noticias de HackerNews:\n{stories_text}"
+    user_prompt = f"Noticias de HackerNews:\n{stories_text}\n\nDevuelve SOLO el array JSON con los resúmenes, sin texto adicional:"
     
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini",  # Modelo más económico
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
             ],
             temperature=0.8,
-            max_tokens=500
+            max_tokens=800
         )
         
         content = response.choices[0].message.content.strip()
+        print(f"Respuesta de OpenAI (primeros 200 chars): {content[:200]}")
         
         # Limpiar el contenido si viene con markdown code blocks
         if content.startswith("```json"):
             content = content[7:]
-        if content.startswith("```"):
+        elif content.startswith("```"):
             content = content[3:]
         if content.endswith("```"):
             content = content[:-3]
         content = content.strip()
         
-        # Parsear JSON
-        summaries = json.loads(content)
+        # Intentar parsear como JSON object primero
+        try:
+            parsed = json.loads(content)
+            # Si es un objeto con una clave, extraer el array
+            if isinstance(parsed, dict):
+                # Buscar la clave que contiene el array
+                for key in parsed:
+                    if isinstance(parsed[key], list):
+                        summaries = parsed[key]
+                        break
+                else:
+                    # Si no hay array, intentar construir desde el objeto
+                    summaries = [parsed] if parsed else []
+            else:
+                summaries = parsed
+        except json.JSONDecodeError:
+            # Si falla, intentar extraer JSON del texto
+            import re
+            json_match = re.search(r'\[.*\]', content, re.DOTALL)
+            if json_match:
+                summaries = json.loads(json_match.group())
+            else:
+                raise ValueError("No se pudo encontrar JSON válido en la respuesta")
         
-        # Asegurar que tenemos el formato correcto
+        # Validar y construir resultado
         result = []
         for i, story in enumerate(stories):
-            if i < len(summaries):
+            if i < len(summaries) and isinstance(summaries[i], dict):
+                summary_data = summaries[i]
                 result.append({
-                    "title": summaries[i].get("title", story["title"]),
-                    "summary": summaries[i].get("summary", ""),
-                    "link": summaries[i].get("link", story["url"])
+                    "title": summary_data.get("title", story["title"]),
+                    "summary": summary_data.get("summary", "Resumen no disponible"),
+                    "link": summary_data.get("link", story["url"])
                 })
             else:
+                # Si no hay resumen, generar uno básico
                 result.append({
                     "title": story["title"],
                     "summary": "Resumen no disponible",
@@ -113,28 +137,16 @@ def process_with_openai(stories):
         return result
         
     except json.JSONDecodeError as e:
-        print(f"Error parseando JSON de OpenAI: {e}")
+        print(f"❌ Error parseando JSON de OpenAI: {e}")
         print(f"Contenido recibido: {content}")
-        # Fallback: devolver las historias sin resumen
-        return [
-            {
-                "title": story["title"],
-                "summary": "Error procesando con IA",
-                "link": story["url"]
-            }
-            for story in stories
-        ]
+        import traceback
+        traceback.print_exc()
+        raise
     except Exception as e:
-        print(f"Error procesando con OpenAI: {e}")
-        # Fallback: devolver las historias sin resumen
-        return [
-            {
-                "title": story["title"],
-                "summary": "Error procesando con IA",
-                "link": story["url"]
-            }
-            for story in stories
-        ]
+        print(f"❌ Error procesando con OpenAI: {e}")
+        import traceback
+        traceback.print_exc()
+        raise
 
 def main():
     """Función principal"""
@@ -164,13 +176,16 @@ def main():
     print("🧠 Procesando con OpenAI...")
     try:
         processed_stories = process_with_openai(stories)
+        print(f"✅ Procesadas {len(processed_stories)} noticias con éxito")
     except Exception as e:
         print(f"❌ Error procesando con OpenAI: {e}")
+        import traceback
+        traceback.print_exc()
         # Fallback: guardar historias sin resumen
         processed_stories = [
             {
                 "title": story["title"],
-                "summary": "Resumen no disponible",
+                "summary": f"Error: {str(e)[:50]}",
                 "link": story["url"]
             }
             for story in stories
