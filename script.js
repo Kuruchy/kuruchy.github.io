@@ -239,18 +239,8 @@ function renderAICurator(news, container) {
 
 // Hacer las cards de secciones clickables
 document.addEventListener('DOMContentLoaded', () => {
-    // Portfolio cards
-    const portfolioCards = document.querySelectorAll('#portfolio .card');
-    portfolioCards.forEach((card, index) => {
-        const sectionIds = ['ai-vision-system', 'ecowallet-app', 'asistente-cognitivo'];
-        if (sectionIds[index]) {
-            card.classList.add('clickable-card');
-            card.addEventListener('click', () => {
-                // Navegar a la página de la sección
-                window.location.href = `section.html?id=${sectionIds[index]}`;
-            });
-        }
-    });
+    // Portfolio cards - Solo AI Curator ahora, no necesita ser clickable
+    // Las otras cards fueron eliminadas
 
     // Investment cards
     const investmentCards = document.querySelectorAll('#investments .card');
