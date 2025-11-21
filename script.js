@@ -119,10 +119,12 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         displayArticleCards();
         loadAICurator();
+        loadPokerPuzzle();
     });
 } else {
     displayArticleCards();
     loadAICurator();
+    loadPokerPuzzle();
 }
 
 // 4. AI TECH CURATOR - Cargar y mostrar noticias
@@ -304,6 +306,225 @@ function renderAICurator(news, container) {
             });
         }, index * 2000); // Aumentado el delay para keypoints más largos
     });
+}
+
+// 5. DAILY POKER PUZZLE - Cargar y mostrar puzzle del día
+function loadPokerPuzzle() {
+    const puzzleContainer = document.getElementById('poker-puzzle-container');
+    if (!puzzleContainer) return;
+
+    fetch('data/daily_poker.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            renderPokerPuzzle(data, puzzleContainer);
+        })
+        .catch(error => {
+            console.error('Error loading Poker Puzzle:', error);
+            puzzleContainer.innerHTML = `
+                <div class="card glass">
+                    <div class="card-content" style="text-align: center; padding: 3rem;">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem; display: block; color: #ff6b6b;"></i>
+                        <p style="color: #94a3b8;">No hay puzzle disponible aún. El primer puzzle se generará mañana.</p>
+                    </div>
+                </div>
+            `;
+        });
+}
+
+function getCardSymbol(card) {
+    // card format: "Ah", "Ks", "Qd", "Jc"
+    const suit = card[1].toLowerCase();
+    const rank = card[0].toUpperCase();
+    
+    const suitSymbols = {
+        'h': '♥',
+        'd': '♦',
+        's': '♠',
+        'c': '♣'
+    };
+    
+    return {
+        rank: rank === 'A' ? 'A' : rank === 'K' ? 'K' : rank === 'Q' ? 'Q' : rank === 'J' ? 'J' : rank === 'T' ? '10' : rank,
+        suit: suitSymbols[suit] || suit,
+        color: (suit === 'h' || suit === 'd') ? 'red' : 'black'
+    };
+}
+
+function renderPokerPuzzle(puzzle, container) {
+    container.innerHTML = '';
+    
+    const puzzleCard = document.createElement('div');
+    puzzleCard.className = 'card glass poker-puzzle-card';
+    
+    // Header con título
+    const header = document.createElement('div');
+    header.className = 'poker-puzzle-header';
+    header.innerHTML = `
+        <div class="poker-puzzle-title">
+            <i class="fas fa-spade" style="color: var(--accent-primary);"></i>
+            <h3>${puzzle.title}</h3>
+        </div>
+        <div class="poker-puzzle-date">${puzzle.id.replace('poker-', '')}</div>
+    `;
+    
+    // Historia/Acción previa
+    const historySection = document.createElement('div');
+    historySection.className = 'poker-puzzle-history';
+    historySection.innerHTML = `
+        <h4><i class="fas fa-history"></i> Acción Previa</h4>
+        <p>${puzzle.history}</p>
+    `;
+    
+    // Mesa de poker
+    const tableSection = document.createElement('div');
+    tableSection.className = 'poker-puzzle-table';
+    
+    // Board
+    const boardSection = document.createElement('div');
+    boardSection.className = 'poker-board';
+    if (puzzle.board && puzzle.board.length > 0) {
+        boardSection.innerHTML = '<h4>Board</h4>';
+        const boardCards = document.createElement('div');
+        boardCards.className = 'poker-cards board-cards';
+        puzzle.board.forEach(card => {
+            const cardSymbol = getCardSymbol(card);
+            const cardElement = document.createElement('div');
+            cardElement.className = `poker-card ${cardSymbol.color}`;
+            cardElement.innerHTML = `
+                <span class="card-rank">${cardSymbol.rank}</span>
+                <span class="card-suit">${cardSymbol.suit}</span>
+            `;
+            boardCards.appendChild(cardElement);
+        });
+        boardSection.appendChild(boardCards);
+    }
+    
+    // Hero Cards
+    const heroSection = document.createElement('div');
+    heroSection.className = 'poker-hero';
+    heroSection.innerHTML = '<h4>Hero Cards</h4>';
+    const heroCards = document.createElement('div');
+    heroCards.className = 'poker-cards hero-cards';
+    puzzle.hero_cards.forEach(card => {
+        const cardSymbol = getCardSymbol(card);
+        const cardElement = document.createElement('div');
+        cardElement.className = `poker-card ${cardSymbol.color}`;
+        cardElement.innerHTML = `
+            <span class="card-rank">${cardSymbol.rank}</span>
+            <span class="card-suit">${cardSymbol.suit}</span>
+        `;
+        heroCards.appendChild(cardElement);
+    });
+    heroSection.appendChild(heroCards);
+    
+    tableSection.appendChild(boardSection);
+    tableSection.appendChild(heroSection);
+    
+    // Información del bote y acción
+    const infoSection = document.createElement('div');
+    infoSection.className = 'poker-puzzle-info';
+    infoSection.innerHTML = `
+        <div class="poker-info-item">
+            <i class="fas fa-coins"></i>
+            <span><strong>Pot:</strong> ${puzzle.pot_size}</span>
+        </div>
+        <div class="poker-info-item">
+            <i class="fas fa-user-ninja"></i>
+            <span><strong>Villain:</strong> ${puzzle.villain_action}</span>
+        </div>
+    `;
+    
+    // Botón para mostrar solución
+    const solutionButton = document.createElement('button');
+    solutionButton.className = 'btn-show-solution';
+    solutionButton.innerHTML = '<i class="fas fa-lightbulb"></i> Mostrar Solución GTO';
+    solutionButton.addEventListener('click', () => {
+        const solutionDiv = puzzleCard.querySelector('.poker-solution');
+        if (solutionDiv) {
+            solutionDiv.style.display = solutionDiv.style.display === 'none' ? 'block' : 'none';
+            solutionButton.innerHTML = solutionDiv.style.display === 'none' 
+                ? '<i class="fas fa-lightbulb"></i> Mostrar Solución GTO'
+                : '<i class="fas fa-eye-slash"></i> Ocultar Solución';
+        }
+    });
+    
+    // Solución (oculta inicialmente)
+    const solutionSection = document.createElement('div');
+    solutionSection.className = 'poker-solution';
+    solutionSection.style.display = 'none';
+    solutionSection.innerHTML = `
+        <h4><i class="fas fa-brain"></i> Solución GTO</h4>
+        <p>${puzzle.solution}</p>
+    `;
+    
+    // Comentarios Giscus
+    const commentsSection = document.createElement('div');
+    commentsSection.id = 'poker-puzzle-comments';
+    commentsSection.className = 'poker-puzzle-comments';
+    
+    // Construir el card completo
+    puzzleCard.appendChild(header);
+    puzzleCard.appendChild(historySection);
+    puzzleCard.appendChild(tableSection);
+    puzzleCard.appendChild(infoSection);
+    puzzleCard.appendChild(solutionButton);
+    puzzleCard.appendChild(solutionSection);
+    puzzleCard.appendChild(commentsSection);
+    
+    container.appendChild(puzzleCard);
+    
+    // Cargar comentarios de Giscus con el ID del puzzle como term
+    setTimeout(() => {
+        loadPokerPuzzleComments(puzzle.id);
+    }, 500);
+}
+
+function loadPokerPuzzleComments(puzzleId) {
+    const commentsSection = document.getElementById('poker-puzzle-comments');
+    if (!commentsSection) return;
+    
+    // Limpiar cualquier script previo de Giscus
+    const existingScript = document.querySelector('script[src="https://giscus.app/client.js"][data-term]');
+    if (existingScript) {
+        existingScript.remove();
+    }
+    
+    // Limpiar el contenedor antes de añadir el nuevo script
+    commentsSection.innerHTML = '';
+    
+    // Crear el script de Giscus dinámicamente con data-term
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', 'kuruchy/kuruchy.github.io');
+    script.setAttribute('data-repo-id', 'R_kgDOGPIhoQ');
+    script.setAttribute('data-category', 'General');
+    script.setAttribute('data-category-id', 'DIC_kwDOGPIhoc4CyDKy');
+    script.setAttribute('data-mapping', 'specific');
+    script.setAttribute('data-term', puzzleId); // Usar el ID del puzzle como term
+    script.setAttribute('data-strict', '0');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'bottom');
+    script.setAttribute('data-theme', 'preferred_color_scheme');
+    script.setAttribute('data-lang', 'es');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
+    
+    // Manejar errores de carga
+    script.onerror = function() {
+        commentsSection.innerHTML = '<p style="text-align: center; color: #94a3b8; padding: 1rem 0;">Error al cargar los comentarios.</p>';
+        console.error('Error al cargar el script de Giscus');
+    };
+    
+    // Añadir el script al contenedor de comentarios
+    commentsSection.appendChild(script);
+    
+    console.log(`Giscus script añadido para puzzle: ${puzzleId}`);
 }
 
 // Hacer las cards de secciones clickables

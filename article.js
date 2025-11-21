@@ -98,7 +98,9 @@ function loadArticleFromURL() {
             // Cargar comentarios de Giscus después de renderizar el Markdown
             // Usar un pequeño delay para asegurar que el DOM esté completamente renderizado
             setTimeout(() => {
-                loadComments();
+                // Usar el nombre del archivo como term para comentarios únicos por artículo
+                const articleId = loadedArticle.filename.replace(/[^a-zA-Z0-9]/g, '-');
+                loadComments(articleId);
             }, 100);
         })
         .catch(error => {
@@ -132,7 +134,8 @@ function loadArticleFromURL() {
 }
 
 // Función para cargar comentarios de Giscus
-function loadComments() {
+// term: ID único para identificar el hilo de comentarios (opcional, si no se proporciona usa pathname)
+function loadComments(term = null) {
     const commentsSection = document.getElementById('comments-section');
     if (!commentsSection) {
         console.error('No se encontró el contenedor #comments-section');
@@ -158,7 +161,16 @@ function loadComments() {
     script.setAttribute('data-repo-id', 'R_kgDOGPIhoQ');
     script.setAttribute('data-category', 'General');
     script.setAttribute('data-category-id', 'DIC_kwDOGPIhoc4CyDKy');
-    script.setAttribute('data-mapping', 'pathname');
+    
+    // Si se proporciona un term, usar data-term con mapping 'specific'
+    // Si no, usar pathname como antes
+    if (term) {
+        script.setAttribute('data-mapping', 'specific');
+        script.setAttribute('data-term', term);
+    } else {
+        script.setAttribute('data-mapping', 'pathname');
+    }
+    
     script.setAttribute('data-strict', '0');
     script.setAttribute('data-reactions-enabled', '1');
     script.setAttribute('data-emit-metadata', '0');
@@ -177,7 +189,7 @@ function loadComments() {
     // Añadir el script al contenedor de comentarios
     commentsSection.appendChild(script);
     
-    console.log('Giscus script añadido al contenedor');
+    console.log(`Giscus script añadido al contenedor${term ? ` con term: ${term}` : ' usando pathname'}`);
 }
 
 // Función para volver atrás

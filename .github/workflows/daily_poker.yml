@@ -1,0 +1,55 @@
+name: Daily Poker Puzzle
+
+on:
+  schedule:
+    # Ejecutar todos los días a las 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Permite ejecución manual
+
+permissions:
+  contents: write
+
+jobs:
+  generate-poker-puzzle:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install requests openai
+      
+      - name: Run Poker Puzzle Generator
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python scripts/generate_poker_hand.py
+      
+      - name: Check for changes
+        id: verify-changed-files
+        run: |
+          if [ -n "$(git status --porcelain data/daily_poker.json)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit and push changes
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/daily_poker.json
+          git commit -m "🎴 Daily Poker Puzzle: Actualización diaria [skip ci]"
+          git push
+
