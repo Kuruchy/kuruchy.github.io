@@ -138,93 +138,103 @@ function loadAICurator() {
             return response.json();
         })
         .then(data => {
-            renderAICurator(data, curatorContent);
+            // Verificar si hay datos válidos (no el ejemplo)
+            if (data && Array.isArray(data) && data.length > 0) {
+                // Verificar si es el ejemplo o datos reales
+                const isExample = data[0].title === "Example News Title" || 
+                                 data[0].link === "https://example.com";
+                if (!isExample) {
+                    renderAICurator(data, curatorContent);
+                } else {
+                    curatorContent.innerHTML = '<p class="typing-indicator">Esperando primera actualización del AI Curator...<span class="blink">_</span></p>';
+                }
+            } else {
+                curatorContent.innerHTML = '<p class="typing-indicator">No hay noticias disponibles aún<span class="blink">_</span></p>';
+            }
         })
         .catch(error => {
             console.error('Error loading AI Curator:', error);
-            curatorContent.innerHTML = `
-                <div class="terminal-line">
-                    <span class="terminal-prompt">$</span>
-                    <span class="terminal-text">Connecting to neural net...</span>
-                    <span class="terminal-cursor">█</span>
-                </div>
-                <div class="terminal-line">
-                    <span class="terminal-error">⚠️  Neural net offline. Check back later.</span>
-                </div>
-            `;
+            curatorContent.innerHTML = '<p class="typing-indicator">Neural net offline. Check back later<span class="blink">_</span></p>';
         });
+}
+
+function typeText(element, text, speed = 30, callback) {
+    let i = 0;
+    element.textContent = '';
+    const typeInterval = setInterval(() => {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+        } else {
+            clearInterval(typeInterval);
+            if (callback) callback();
+        }
+    }, speed);
 }
 
 function renderAICurator(news, container) {
     container.innerHTML = '';
+    container.className = 'ai-curator-content';
     
-    // Header line
-    const headerLine = document.createElement('div');
-    headerLine.className = 'terminal-line';
-    headerLine.innerHTML = `
-        <span class="terminal-prompt">$</span>
-        <span class="terminal-text">curl -X GET https://hackernews.ai/top-5</span>
-        <span class="terminal-cursor">█</span>
-    `;
-    container.appendChild(headerLine);
+    // Crear contenedor para las noticias
+    const newsContainer = document.createElement('div');
+    newsContainer.className = 'ai-news-list';
+    container.appendChild(newsContainer);
     
-    // Loading simulation
-    setTimeout(() => {
-        const loadingLine = document.createElement('div');
-        loadingLine.className = 'terminal-line';
-        loadingLine.innerHTML = `
-            <span class="terminal-success">✓ Connected to HackerNews API</span>
-        `;
-        container.appendChild(loadingLine);
+    // Mostrar cada noticia con efecto typing
+    news.forEach((item, index) => {
+        const newsItem = document.createElement('div');
+        newsItem.className = 'ai-news-item';
         
+        // Título con número
+        const titleWrapper = document.createElement('div');
+        titleWrapper.className = 'ai-news-title';
+        const titleNumber = document.createElement('span');
+        titleNumber.className = 'ai-news-number';
+        titleNumber.textContent = `[${index + 1}] `;
+        const titleText = document.createElement('span');
+        titleText.className = 'ai-news-title-text';
+        titleWrapper.appendChild(titleNumber);
+        titleWrapper.appendChild(titleText);
+        
+        // Resumen
+        const summaryWrapper = document.createElement('div');
+        summaryWrapper.className = 'ai-news-summary';
+        const summaryText = document.createElement('span');
+        summaryText.className = 'ai-news-summary-text';
+        summaryWrapper.appendChild(summaryText);
+        
+        // Link
+        const linkWrapper = document.createElement('div');
+        linkWrapper.className = 'ai-news-link-wrapper';
+        const linkElement = document.createElement('a');
+        linkElement.href = item.link;
+        linkElement.target = '_blank';
+        linkElement.className = 'ai-news-link';
+        linkElement.textContent = '→ Leer más';
+        linkWrapper.appendChild(linkElement);
+        
+        newsItem.appendChild(titleWrapper);
+        newsItem.appendChild(summaryWrapper);
+        newsItem.appendChild(linkWrapper);
+        newsContainer.appendChild(newsItem);
+        
+        // Efecto typing secuencial
         setTimeout(() => {
-            const processingLine = document.createElement('div');
-            processingLine.className = 'terminal-line';
-            processingLine.innerHTML = `
-                <span class="terminal-success">✓ Processing with GPT-4...</span>
-            `;
-            container.appendChild(processingLine);
-            
-            setTimeout(() => {
-                // News items
-                news.forEach((item, index) => {
-                    setTimeout(() => {
-                        const newsItem = document.createElement('div');
-                        newsItem.className = 'terminal-news-item';
-                        newsItem.innerHTML = `
-                            <div class="terminal-line">
-                                <span class="terminal-prompt">[${index + 1}]</span>
-                                <span class="terminal-text">${item.title}</span>
-                            </div>
-                            <div class="terminal-line terminal-summary">
-                                <span class="terminal-comment">//</span>
-                                <span class="terminal-text">${item.summary}</span>
-                            </div>
-                            <div class="terminal-line">
-                                <span class="terminal-link" onclick="window.open('${item.link}', '_blank')">
-                                    → ${item.link}
-                                </span>
-                            </div>
-                        `;
-                        container.appendChild(newsItem);
-                        
-                        // Add cursor to last item
-                        if (index === news.length - 1) {
-                            setTimeout(() => {
-                                const cursorLine = document.createElement('div');
-                                cursorLine.className = 'terminal-line';
-                                cursorLine.innerHTML = `
-                                    <span class="terminal-prompt">$</span>
-                                    <span class="terminal-cursor">█</span>
-                                `;
-                                container.appendChild(cursorLine);
-                            }, 300);
-                        }
-                    }, index * 200);
-                });
-            }, 500);
-        }, 500);
-    }, 500);
+            // Typing del título
+            typeText(titleText, item.title, 20, () => {
+                setTimeout(() => {
+                    // Typing del resumen
+                    typeText(summaryText, item.summary, 15, () => {
+                        // Mostrar link después del resumen
+                        setTimeout(() => {
+                            linkWrapper.style.opacity = '1';
+                        }, 200);
+                    });
+                }, 300);
+            });
+        }, index * 1500); // Delay entre noticias
+    });
 }
 
 // Hacer las cards de secciones clickables
