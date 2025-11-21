@@ -96,7 +96,10 @@ function loadArticleFromURL() {
             document.title = `${loadedArticle.title} | Kuruchy`;
             
             // Cargar comentarios de Giscus después de renderizar el Markdown
-            loadComments();
+            // Usar un pequeño delay para asegurar que el DOM esté completamente renderizado
+            setTimeout(() => {
+                loadComments();
+            }, 100);
         })
         .catch(error => {
             console.error('Error completo:', error);
@@ -131,13 +134,22 @@ function loadArticleFromURL() {
 // Función para cargar comentarios de Giscus
 function loadComments() {
     const commentsSection = document.getElementById('comments-section');
-    if (!commentsSection) return;
+    if (!commentsSection) {
+        console.error('No se encontró el contenedor #comments-section');
+        return;
+    }
     
     // Limpiar cualquier script previo de Giscus
     const existingScript = document.querySelector('script[src="https://giscus.app/client.js"]');
     if (existingScript) {
         existingScript.remove();
     }
+    
+    // Limpiar el contenedor antes de añadir el nuevo script
+    commentsSection.innerHTML = '';
+    
+    // Añadir un mensaje de carga temporal
+    commentsSection.innerHTML = '<p style="text-align: center; color: #94a3b8; padding: 2rem 0;">Cargando comentarios...</p>';
     
     // Crear el script de Giscus dinámicamente
     const script = document.createElement('script');
@@ -156,8 +168,16 @@ function loadComments() {
     script.setAttribute('crossorigin', 'anonymous');
     script.async = true;
     
+    // Manejar errores de carga
+    script.onerror = function() {
+        commentsSection.innerHTML = '<p style="text-align: center; color: #ff6b6b; padding: 2rem 0;">Error al cargar los comentarios. Por favor, recarga la página.</p>';
+        console.error('Error al cargar el script de Giscus');
+    };
+    
     // Añadir el script al contenedor de comentarios
     commentsSection.appendChild(script);
+    
+    console.log('Giscus script añadido al contenedor');
 }
 
 // Función para volver atrás
