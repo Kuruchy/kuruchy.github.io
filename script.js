@@ -118,9 +118,113 @@ function displayArticleCards() {
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         displayArticleCards();
+        loadAICurator();
     });
 } else {
     displayArticleCards();
+    loadAICurator();
+}
+
+// 4. AI TECH CURATOR - Cargar y mostrar noticias
+function loadAICurator() {
+    const curatorContent = document.getElementById('ai-curator-content');
+    if (!curatorContent) return;
+
+    fetch('data/ai-news.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            renderAICurator(data, curatorContent);
+        })
+        .catch(error => {
+            console.error('Error loading AI Curator:', error);
+            curatorContent.innerHTML = `
+                <div class="terminal-line">
+                    <span class="terminal-prompt">$</span>
+                    <span class="terminal-text">Connecting to neural net...</span>
+                    <span class="terminal-cursor">█</span>
+                </div>
+                <div class="terminal-line">
+                    <span class="terminal-error">⚠️  Neural net offline. Check back later.</span>
+                </div>
+            `;
+        });
+}
+
+function renderAICurator(news, container) {
+    container.innerHTML = '';
+    
+    // Header line
+    const headerLine = document.createElement('div');
+    headerLine.className = 'terminal-line';
+    headerLine.innerHTML = `
+        <span class="terminal-prompt">$</span>
+        <span class="terminal-text">curl -X GET https://hackernews.ai/top-5</span>
+        <span class="terminal-cursor">█</span>
+    `;
+    container.appendChild(headerLine);
+    
+    // Loading simulation
+    setTimeout(() => {
+        const loadingLine = document.createElement('div');
+        loadingLine.className = 'terminal-line';
+        loadingLine.innerHTML = `
+            <span class="terminal-success">✓ Connected to HackerNews API</span>
+        `;
+        container.appendChild(loadingLine);
+        
+        setTimeout(() => {
+            const processingLine = document.createElement('div');
+            processingLine.className = 'terminal-line';
+            processingLine.innerHTML = `
+                <span class="terminal-success">✓ Processing with GPT-4...</span>
+            `;
+            container.appendChild(processingLine);
+            
+            setTimeout(() => {
+                // News items
+                news.forEach((item, index) => {
+                    setTimeout(() => {
+                        const newsItem = document.createElement('div');
+                        newsItem.className = 'terminal-news-item';
+                        newsItem.innerHTML = `
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">[${index + 1}]</span>
+                                <span class="terminal-text">${item.title}</span>
+                            </div>
+                            <div class="terminal-line terminal-summary">
+                                <span class="terminal-comment">//</span>
+                                <span class="terminal-text">${item.summary}</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-link" onclick="window.open('${item.link}', '_blank')">
+                                    → ${item.link}
+                                </span>
+                            </div>
+                        `;
+                        container.appendChild(newsItem);
+                        
+                        // Add cursor to last item
+                        if (index === news.length - 1) {
+                            setTimeout(() => {
+                                const cursorLine = document.createElement('div');
+                                cursorLine.className = 'terminal-line';
+                                cursorLine.innerHTML = `
+                                    <span class="terminal-prompt">$</span>
+                                    <span class="terminal-cursor">█</span>
+                                `;
+                                container.appendChild(cursorLine);
+                            }, 300);
+                        }
+                    }, index * 200);
+                });
+            }, 500);
+        }, 500);
+    }, 500);
 }
 
 // Hacer las cards de secciones clickables
