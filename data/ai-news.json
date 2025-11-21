@@ -1,27 +1,27 @@
 [
   {
+    "title": "FAWK: LLMs can write a language interpreter",
+    "summary": "1. LLMs (porque claro, ahora son los que saben de todo) son capaces de generar un intérprete de lenguaje. 2. Se menciona la sorpresa de que una máquina pueda hacer esto, como si no estuviéramos en la era de la IA. 3. Ejemplos y pruebas de concepto incluidos, porque los humanos necesitamos ver la magia en acción. 4. Implicaciones para el futuro del desarrollo de software: ¿los programadores se quedarán sin trabajo o solo serán los nuevos asistentes digitales? 5. Al final, un recordatorio de que depende de nosotros entender lo que crean estas 'maravillosas' máquinas.",
+    "link": "https://martin.janiczek.cz/2025/11/21/fawk-llms-can-write-a-language-interpreter.html"
+  },
+  {
+    "title": "Show HN: Wealthfolio 2.0- Open source investment tracker. Now Mobile and Docker",
+    "summary": "1. Wealthfolio 2.0 llega como un seguimiento de inversiones de código abierto, porque a nadie le gusta pagar por las cosas. 2. Ahora también en móviles, porque claro, ¿quién no quiere hacer su seguimiento financiero en el baño? 3. Dockerizado, porque el futuro es contenerizar todo, incluso tus malas decisiones financieras. 4. Ideal para los que quieren sentirse inteligentes mientras ven cómo sus inversiones se desmoronan. 5. Una interfaz que promete ser fácil de usar, pero aún así probablemente te hará desear haber ido a la escuela de negocios.",
+    "link": "https://wealthfolio.app/?v=2.0"
+  },
+  {
     "title": "Olmo 3: Charting a path through the model flow to lead open-source AI",
-    "summary": "Porque todos sabemos que el futuro de la IA se encuentra en la creación de otro framework más que nadie usará.",
+    "summary": "1. Olmo 3 busca ser la brújula en el mundo del AI de código abierto, porque claramente no hay suficientes proyectos de este tipo. 2. Acentúa la importancia del flujo de modelos, como si los desarrolladores no estuvieran ya abrumados con tantas terminologías. 3. Presentación de nuevas características para facilitar la vida a los desarrolladores, aunque probablemente solo agregarán más confusión. 4. Un enfoque 'en colaboración', porque en el mundo del código abierto todos somos amigos, ¿no? 5. Promesas de un futuro brillante para la IA, que es lo mismo que decir que estamos a punto de entrar en la era de la desilusión.",
     "link": "https://allenai.org/blog/olmo3"
   },
   {
-    "title": "Building a Minimal Viable Armv7 Emulator from Scratch",
-    "summary": "¿Por qué usar uno existente cuando puedes reinventar la rueda y hacerla más cuadrada?",
-    "link": "https://xnacly.me/posts/2025/building-a-minimal-viable-armv7-emulator/"
-  },
-  {
-    "title": "It's hard to build an oscillator",
-    "summary": "Alerta de noticia: la física sigue siendo difícil, incluso para los ingenieros de software.",
-    "link": "https://lcamtuf.substack.com/p/its-hard-to-build-an-oscillator"
-  },
-  {
     "title": "Making a Small RPG",
-    "summary": "Porque los juegos complejos son demasiado mainstream, así que mejor hagamos uno que no pueda salir de su propia página web.",
+    "summary": "1. Iniciativa para crear un RPG pequeño, porque claro, el mundo necesita más juegos de rol pixelados. 2. Documentación del proceso, porque todos disfrutamos del dolor ajeno al ver cómo otros tropiezan. 3. Enfoque en la simplicidad y la diversión, porque la complejidad está sobrevalorada. 4. Promesas de que será un proyecto educativo, a pesar de que al final terminarás aprendiendo más sobre frustración que sobre programación. 5. Un recordatorio de que los sueños de ser el próximo gran desarrollador de juegos son solo eso: sueños.",
     "link": "https://jslegenddev.substack.com/p/making-a-small-rpg"
   },
   {
-    "title": "Scientists now know that bees can process time, a first in insects",
-    "summary": "Finalmente, ¡las abejas pueden planificar su próxima picadura con una precisión milimétrica!",
-    "link": "https://www.cnn.com/2025/11/12/science/bees-visual-stimulus-study-scli-intl"
+    "title": "Building a Minimal Viable Armv7 Emulator from Scratch",
+    "summary": "1. Proyecto para crear un emulador Armv7 desde cero, porque a nadie le gusta hacer las cosas fáciles. 2. Enfoque en lo 'mínimo viable', que por supuesto es un eufemismo para 'esperemos que funcione'. 3. Incluye detalles técnicos que probablemente solo interesen a un puñado de fanáticos del hardware y el software. 4. Un testimonio de que hay personas que encuentran placer en lo que otros consideran tortura. 5. Reflexiones finales sobre las imperfecciones del proyecto, porque incluso los emuladores tienen sus días difíciles.",
+    "link": "https://xnacly.me/posts/2025/building-a-minimal-viable-armv7-emulator/"
   }
 ]
