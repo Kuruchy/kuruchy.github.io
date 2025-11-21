@@ -488,6 +488,8 @@ footer {
     margin-top: 4rem;
     padding-top: 3rem;
     border-top: 2px solid var(--glass-border);
+    min-height: 200px;
+    width: 100%;
 }
 
 #comments-section .glass {
@@ -496,6 +498,13 @@ footer {
     border: 1px solid var(--glass-border);
     border-radius: 16px;
     padding: 2rem;
+}
+
+/* Estilos para el widget de Giscus */
+#comments-section .giscus,
+#comments-section .giscus-frame {
+    width: 100%;
+    min-height: 200px;
 }
 
 /* Mobile */
