@@ -1,0 +1,11 @@
+{
+  "id": "poker-2025-01-21",
+  "title": "Hero in BB facing River Jam",
+  "hero_cards": ["Ah", "Ks"],
+  "board": ["Kd", "Tc", "2s", "8h", "Qc"],
+  "pot_size": "120bb",
+  "villain_action": "All-in for 80bb",
+  "history": "BTN opens 2.5bb, Hero 3-bets to 8bb from BB, BTN calls. Flop: Kd Tc 2s. Hero bets 12bb, BTN calls. Turn: 8h. Hero checks, BTN bets 30bb, Hero calls. River: Qc. Hero checks, BTN jams all-in for 80bb.",
+  "solution": "Call. GTO sugiere hacer call porque Hero tiene suficiente equity (45%) contra el rango de all-in del Villain. El pot odds son 200bb:80bb (2.5:1), lo que requiere solo 28.5% de equity para ser rentable. Además, Hero bloquea algunos bluffs del Villain con el Ks y tiene un par de reyes con kicker alto, lo que le da una buena mano para hacer call en este spot."
+}
+

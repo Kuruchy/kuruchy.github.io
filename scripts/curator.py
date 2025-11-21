@@ -99,9 +99,10 @@ def process_with_openai(stories, max_retries=5, initial_delay=1):
         "Eres un Ingeniero de Software Senior cínico y experto. "
         "Analiza estas noticias de HackerNews y crea resúmenes con 3-5 keypoints técnicos y relevantes cada uno, "
         "con un tono técnico pero sarcástico. "
-        "Cada resumen debe ser conciso pero informativo, destacando los aspectos más importantes. "
+        "Cada keypoint debe estar en una línea separada, empezando con un guión (-). "
+        "Formato del resumen: '- Keypoint 1\\n- Keypoint 2\\n- Keypoint 3' "
         "Devuélvelo SOLO en formato JSON válido, sin markdown, sin explicaciones. "
-        "Estructura: [{\"title\": \"título original\", \"summary\": \"resumen con 3-5 keypoints\", \"link\": \"url\"}, ...]"
+        "Estructura: [{\"title\": \"título original\", \"summary\": \"resumen con keypoints separados por \\n\", \"link\": \"url\"}, ...]"
     )
     
     user_prompt = f"Noticias de HackerNews:\n{stories_text}\n\nDevuelve SOLO el array JSON:"
