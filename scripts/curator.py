@@ -7,7 +7,9 @@ Usa OpenAI API para generar resúmenes con personalidad técnica y cínica
 import os
 import json
 import requests
+import time
 from openai import OpenAI
+from openai import RateLimitError, APIError
 from pathlib import Path
 
 # Configuración
@@ -45,13 +47,13 @@ def get_story_details(story_id):
         print(f"Error obteniendo detalles de historia {story_id}: {e}")
         return None
 
-def process_with_openai(stories):
-    """Procesa las historias con OpenAI para generar resúmenes"""
+def process_with_openai(stories, max_retries=5, initial_delay=1):
+    """Procesa las historias con OpenAI para generar resúmenes con retry logic"""
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise ValueError("OPENAI_API_KEY no está configurada en las variables de entorno")
     
-    client = OpenAI(api_key=api_key)
+    client = OpenAI(api_key=api_key, max_retries=0)  # Manejar retries manualmente
     
     # Preparar el prompt con las noticias
     stories_text = "\n".join([
@@ -69,84 +71,149 @@ def process_with_openai(stories):
     
     user_prompt = f"Noticias de HackerNews:\n{stories_text}\n\nDevuelve SOLO el array JSON con los resúmenes, sin texto adicional:"
     
-    try:
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            temperature=0.8,
-            max_tokens=800
-        )
-        
-        content = response.choices[0].message.content.strip()
-        print(f"Respuesta de OpenAI (primeros 200 chars): {content[:200]}")
-        
-        # Limpiar el contenido si viene con markdown code blocks
-        if content.startswith("```json"):
-            content = content[7:]
-        elif content.startswith("```"):
-            content = content[3:]
-        if content.endswith("```"):
-            content = content[:-3]
-        content = content.strip()
-        
-        # Intentar parsear como JSON object primero
+    # Retry logic con backoff exponencial
+    delay = initial_delay
+    last_exception = None
+    
+    # Pequeño delay inicial para evitar rate limits si se ejecuta muy seguido
+    time.sleep(0.5)
+    
+    for attempt in range(max_retries):
         try:
-            parsed = json.loads(content)
-            # Si es un objeto con una clave, extraer el array
-            if isinstance(parsed, dict):
-                # Buscar la clave que contiene el array
-                for key in parsed:
-                    if isinstance(parsed[key], list):
-                        summaries = parsed[key]
-                        break
+            # Añadir delay antes del request (excepto el primero)
+            if attempt > 0:
+                print(f"⏳ Esperando {delay} segundos antes de reintentar (intento {attempt + 1}/{max_retries})...")
+                time.sleep(delay)
+                delay = min(delay * 2, 60)  # Backoff exponencial, máximo 60 segundos
+            
+            print(f"🔄 Intento {attempt + 1}/{max_retries} de procesamiento con OpenAI...")
+            
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                temperature=0.8,
+                max_tokens=600,  # Reducido para evitar límites
+                timeout=30.0  # Timeout de 30 segundos
+            )
+            
+            content = response.choices[0].message.content.strip()
+            print(f"Respuesta de OpenAI (primeros 200 chars): {content[:200]}")
+            
+            # Limpiar el contenido si viene con markdown code blocks
+            if content.startswith("```json"):
+                content = content[7:]
+            elif content.startswith("```"):
+                content = content[3:]
+            if content.endswith("```"):
+                content = content[:-3]
+            content = content.strip()
+            
+            # Intentar parsear como JSON object primero
+            try:
+                parsed = json.loads(content)
+                # Si es un objeto con una clave, extraer el array
+                if isinstance(parsed, dict):
+                    # Buscar la clave que contiene el array
+                    for key in parsed:
+                        if isinstance(parsed[key], list):
+                            summaries = parsed[key]
+                            break
+                    else:
+                        # Si no hay array, intentar construir desde el objeto
+                        summaries = [parsed] if parsed else []
                 else:
-                    # Si no hay array, intentar construir desde el objeto
-                    summaries = [parsed] if parsed else []
+                    summaries = parsed
+            except json.JSONDecodeError:
+                # Si falla, intentar extraer JSON del texto
+                import re
+                json_match = re.search(r'\[.*\]', content, re.DOTALL)
+                if json_match:
+                    summaries = json.loads(json_match.group())
+                else:
+                    raise ValueError("No se pudo encontrar JSON válido en la respuesta")
+            
+            # Validar y construir resultado
+            result = []
+            for i, story in enumerate(stories):
+                if i < len(summaries) and isinstance(summaries[i], dict):
+                    summary_data = summaries[i]
+                    result.append({
+                        "title": summary_data.get("title", story["title"]),
+                        "summary": summary_data.get("summary", "Resumen no disponible"),
+                        "link": summary_data.get("link", story["url"])
+                    })
+                else:
+                    # Si no hay resumen, generar uno básico
+                    result.append({
+                        "title": story["title"],
+                        "summary": "Resumen no disponible",
+                        "link": story["url"]
+                    })
+            
+            return result
+            
+        except RateLimitError as e:
+            last_exception = e
+            error_message = str(e)
+            print(f"⚠️  Rate limit alcanzado (intento {attempt + 1}/{max_retries}): {error_message}")
+            
+            # Intentar extraer el tiempo de espera del error
+            if "retry after" in error_message.lower():
+                try:
+                    import re
+                    retry_after = int(re.search(r'retry after (\d+)', error_message.lower()).group(1))
+                    delay = retry_after + 1
+                    print(f"⏳ Esperando {delay} segundos según el error...")
+                except:
+                    pass
+            
+            if attempt == max_retries - 1:
+                print(f"❌ Máximo de reintentos alcanzado. Error: {error_message}")
+                raise
+            
+        except APIError as e:
+            last_exception = e
+            error_message = str(e)
+            error_code = getattr(e, 'status_code', None)
+            
+            # Verificar si es un error 429 (rate limit)
+            if error_code == 429 or "429" in error_message or "rate limit" in error_message.lower():
+                print(f"⚠️  Error 429 - Rate limit (intento {attempt + 1}/{max_retries}): {error_message}")
+                if attempt == max_retries - 1:
+                    print(f"❌ Máximo de reintentos alcanzado.")
+                    raise
+                # Continuar con el siguiente intento
             else:
-                summaries = parsed
-        except json.JSONDecodeError:
-            # Si falla, intentar extraer JSON del texto
-            import re
-            json_match = re.search(r'\[.*\]', content, re.DOTALL)
-            if json_match:
-                summaries = json.loads(json_match.group())
-            else:
-                raise ValueError("No se pudo encontrar JSON válido en la respuesta")
-        
-        # Validar y construir resultado
-        result = []
-        for i, story in enumerate(stories):
-            if i < len(summaries) and isinstance(summaries[i], dict):
-                summary_data = summaries[i]
-                result.append({
-                    "title": summary_data.get("title", story["title"]),
-                    "summary": summary_data.get("summary", "Resumen no disponible"),
-                    "link": summary_data.get("link", story["url"])
-                })
-            else:
-                # Si no hay resumen, generar uno básico
-                result.append({
-                    "title": story["title"],
-                    "summary": "Resumen no disponible",
-                    "link": story["url"]
-                })
-        
-        return result
-        
-    except json.JSONDecodeError as e:
-        print(f"❌ Error parseando JSON de OpenAI: {e}")
-        print(f"Contenido recibido: {content}")
-        import traceback
-        traceback.print_exc()
-        raise
-    except Exception as e:
-        print(f"❌ Error procesando con OpenAI: {e}")
-        import traceback
-        traceback.print_exc()
-        raise
+                # Otro error de API, no reintentar
+                print(f"❌ Error de API: {error_message}")
+                raise
+                
+        except json.JSONDecodeError as e:
+            print(f"❌ Error parseando JSON de OpenAI: {e}")
+            print(f"Contenido recibido: {content[:500]}")
+            import traceback
+            traceback.print_exc()
+            raise
+            
+        except Exception as e:
+            last_exception = e
+            error_message = str(e)
+            print(f"⚠️  Error inesperado (intento {attempt + 1}/{max_retries}): {error_message}")
+            
+            if attempt == max_retries - 1:
+                print(f"❌ Máximo de reintentos alcanzado.")
+                import traceback
+                traceback.print_exc()
+                raise
+    
+    # Si llegamos aquí, todos los intentos fallaron
+    if last_exception:
+        raise last_exception
+    else:
+        raise Exception("Error desconocido en process_with_openai")
 
 def main():
     """Función principal"""
