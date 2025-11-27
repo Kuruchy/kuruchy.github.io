@@ -376,6 +376,7 @@ def find_child_pages(parent_page_id: str, client: Client) -> List[str]:
                     elif parent.get("type") == "database_id":
                         # If the parent page is a database, we might need to query it
                         # For now, we'll skip this case
+                        pass
         
     except Exception as e:
         print(f"⚠️  Warning: Error finding child pages: {e}")
