@@ -5,10 +5,82 @@ const articlesContainer = document.getElementById('articles-container');
 // Lista de artículos (ordenados del más reciente al más antiguo)
 const articles = [
     { 
-        filename: 'articles/poker-drills-ranges.md', 
-        title: 'Poker Drills y Análisis de Rangos: Mejora Tu Juego', 
-        description: 'Los drills de poker son ejercicios estructurados que mejoran tu toma de decisiones bajo presión...', 
-        icon: 'fas fa-dice'
+        filename: 'articles/new-era.md', 
+        title: 'New Era!', 
+        description: 'I am revamping my blog to include some of the new tools I’ve recently learned and new/forgotten hobbies.', 
+        icon: 'fas fa-file-alt'
+    },
+    { 
+        filename: 'articles/my-german-journey.md', 
+        title: 'My German Journey', 
+        description: 'One of the things I keep telling me over and over again, is how lucky I am...', 
+        icon: 'fas fa-file-alt'
+    },
+    { 
+        filename: 'articles/auto-clean-view-binding.md', 
+        title: 'Auto Clean View Binding', 
+        description: 'View Binding is the recommended way to access your views —in case you are still not using compose 😉— without using Kotlin synthetics, which you should have already stop using.', 
+        icon: 'fas fa-file-alt'
+    },
+    { 
+        filename: 'articles/passive-active-finger-strength-training.md', 
+        title: '**Passive-active Finger Strength Training**', 
+        description: 'In climbing, the skills needed could be split into three well-defined pillars...', 
+        icon: 'fas fa-brain'
+    },
+    { 
+        filename: 'articles/my-blog-automation-with-notion.md', 
+        title: 'My Blog Automation with Notion', 
+        description: 'Lately I have been using Notion for almost any task that needs me to write something, and every new day I use it for something new.', 
+        icon: 'fas fa-file-alt'
+    },
+    { 
+        filename: 'articles/droidcon-berlin-2021-day-two.md', 
+        title: 'Droidcon Berlin 2021 Day Two', 
+        description: 'We were warned that, due to the speakers not being able to travel, some talks would be remote. I attended some of them on the second and the third day.', 
+        icon: 'fas fa-file-alt'
+    },
+    { 
+        filename: 'articles/droidcon-berlin-2021-day-one.md', 
+        title: 'Droidcon Berlin 2021 Day One', 
+        description: 'Finally, the day arrived. One week before I had no plans to be in Berlin, nor to attend the event.', 
+        icon: 'fas fa-file-alt'
+    },
+    { 
+        filename: 'articles/droidcon-berlin-2021.md', 
+        title: 'Droidcon Berlin 2021', 
+        description: 'I made it, I am back to conferences after the global pandemic. Last time I was in a Conference was in Copenhagen, December 2019, for the Kotlin Conf.', 
+        icon: 'fas fa-file-alt'
+    },
+    { 
+        filename: 'articles/androids-book-review.md', 
+        title: 'Androids Book Review', 
+        description: 'In 2004, there were two people who wanted to build software for cameras. But they couldn\'t get investors interested.', 
+        icon: 'fas fa-mobile-alt'
+    },
+    { 
+        filename: 'articles/android-studio-logcat-color.md', 
+        title: 'Android Studio Logcat Color', 
+        description: 'We can add new colors to the Logcat messages by going to: Preferences → Editor → Color Scheme → Andoid Logcat And adjusting the Scheme to your needs.', 
+        icon: 'fas fa-mobile-alt'
+    },
+    { 
+        filename: 'articles/android-studio-actions.md', 
+        title: 'Android Studio Actions', 
+        description: 'One cool feature, I’ve recently found, is the possibility to add custom action buttons to almost anywhere in the Android Studio toolbars.', 
+        icon: 'fas fa-mobile-alt'
+    },
+    { 
+        filename: 'articles/new-blog.md', 
+        title: 'New Blog', 
+        description: 'I always had this idea in mind writing down my experiences, tips, ideas and so on in a personal Blog.', 
+        icon: 'fas fa-file-alt'
+    },
+    { 
+        filename: 'articles/ai.md', 
+        title: 'Inteligencia Artificial: El Presente y Futuro', 
+        description: 'La Inteligencia Artificial ha dejado de ser ciencia ficción. Desde ChatGPT hasta Midjourney, las herramientas de IA están transformando cómo trabajamos, creamos y pensamos...', 
+        icon: 'fas fa-brain'
     },
     { 
         filename: 'articles/compose-multiplatform.md', 
@@ -17,10 +89,10 @@ const articles = [
         icon: 'fas fa-mobile-alt'
     },
     { 
-        filename: 'articles/ai.md', 
-        title: 'Inteligencia Artificial: El Presente y Futuro', 
-        description: 'La Inteligencia Artificial ha dejado de ser ciencia ficción. Desde ChatGPT hasta Midjourney, las herramientas de IA están transformando cómo trabajamos, creamos y pensamos..', 
-        icon: 'fas fa-brain'
+        filename: 'articles/poker-drills-ranges.md', 
+        title: 'Poker Drills y Análisis de Rangos: Mejora Tu Juego', 
+        description: 'Los drills de poker son ejercicios estructurados que mejoran tu toma de decisiones bajo presión...', 
+        icon: 'fas fa-dice'
     }
 ]
 
