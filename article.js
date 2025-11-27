@@ -1,24 +1,24 @@
 // Script para cargar artículos en article.html
 const articles = [
     { 
-        filename: 'articles/ai.md', 
-        title: 'Inteligencia Artificial',
-        description: 'La Inteligencia Artificial ha dejado de ser ciencia ficción. Desde ChatGPT hasta Midjourney, las herramientas de IA están transformando cómo trabajamos, creamos y pensamos.',
-        icon: 'fas fa-brain'
-    },
-    { 
         filename: 'articles/poker-drills-ranges.md', 
-        title: 'Poker Drills y Rangos',
-        description: 'Los drills de poker son ejercicios estructurados que mejoran tu toma de decisiones bajo presión. Aprende a construir rangos y calcular equity.',
+        title: 'Poker Drills y Análisis de Rangos: Mejora Tu Juego', 
+        description: 'Los drills de poker son ejercicios estructurados que mejoran tu toma de decisiones bajo presión...', 
         icon: 'fas fa-dice'
     },
     { 
         filename: 'articles/compose-multiplatform.md', 
-        title: 'Compose Multiplatform',
-        description: 'El framework de JetBrains que permite compartir código de UI entre Android, iOS, Desktop y Web usando Kotlin.',
+        title: 'Compose Multiplatform: El Futuro del Desarrollo Móvil', 
+        description: 'Compose Multiplatform es el framework de JetBrains que permite compartir código de UI entre Android, iOS, Desktop y Web usando Kotlin.', 
         icon: 'fas fa-mobile-alt'
+    },
+    { 
+        filename: 'articles/ai.md', 
+        title: 'Inteligencia Artificial: El Presente y Futuro', 
+        description: 'La Inteligencia Artificial ha dejado de ser ciencia ficción. Desde ChatGPT hasta Midjourney, las herramientas de IA están transformando cómo trabajamos, creamos y pensamos..', 
+        icon: 'fas fa-brain'
     }
-];
+]
 
 // Función para cargar un artículo completo
 function loadArticle(article) {

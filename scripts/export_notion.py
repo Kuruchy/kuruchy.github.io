@@ -1,17 +1,23 @@
 #!/usr/bin/env python3
 """
-Notion Exporter - Exports Notion pages to Markdown using the official Notion API
+Notion Exporter - Exports Notion child pages to Markdown using the official Notion API
+Exports each child page of a parent page as individual Markdown files to the articles directory
 """
 
 import os
 import re
+import hashlib
+import requests
 from pathlib import Path
+from urllib.parse import urlparse, unquote
 from notion_client import Client
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Optional, Tuple
 
 # Configuration
-OUTPUT_DIR = Path(__file__).parent.parent / "notion-backup"
+OUTPUT_DIR = Path(__file__).parent.parent / "articles"
 OUTPUT_DIR.mkdir(exist_ok=True)
+IMAGES_DIR = Path(__file__).parent.parent / "images"
+IMAGES_DIR.mkdir(exist_ok=True)
 
 
 def get_notion_client() -> Client:
@@ -20,6 +26,68 @@ def get_notion_client() -> Client:
     if not notion_token:
         raise ValueError("NOTION_TOKEN environment variable is required")
     return Client(auth=notion_token)
+
+
+def download_image(image_url: str, notion_token: str) -> Optional[str]:
+    """Download an image from Notion and save it locally. Returns the local path relative to repo root."""
+    try:
+        # Generate a unique filename based on URL hash
+        url_hash = hashlib.md5(image_url.encode()).hexdigest()[:12]
+        
+        # Try to get file extension from URL
+        parsed_url = urlparse(image_url)
+        path = unquote(parsed_url.path)
+        ext = os.path.splitext(path)[1] or '.png'
+        
+        # Clean extension (remove query params if any)
+        ext = ext.split('?')[0]
+        if ext not in ['.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg']:
+            ext = '.png'
+        
+        filename = f"{url_hash}{ext}"
+        local_path = IMAGES_DIR / filename
+        
+        # Skip if already downloaded
+        if local_path.exists():
+            return f"images/{filename}"
+        
+        # Download the image
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        }
+        
+        # For Notion-hosted images, we need to use the internal API
+        if 'notion.so' in image_url or 'notion-static.com' in image_url:
+            # Notion images may require authentication via the API
+            # Try with the token in Authorization header first
+            if notion_token:
+                headers['Authorization'] = f'Bearer {notion_token}'
+            # Also try cookie-based auth as fallback
+            if notion_token:
+                headers['Cookie'] = f'token_v2={notion_token}'
+        
+        response = requests.get(image_url, headers=headers, timeout=30, stream=True, allow_redirects=True)
+        response.raise_for_status()
+        
+        # Check if we got an image
+        content_type = response.headers.get('content-type', '')
+        if not content_type.startswith('image/'):
+            # If not an image, might be a redirect or error page
+            print(f"  ⚠️  Warning: URL did not return an image (content-type: {content_type})")
+            return image_url
+        
+        # Save the image
+        with open(local_path, 'wb') as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                f.write(chunk)
+        
+        print(f"  📷 Downloaded image: {filename}")
+        return f"images/{filename}"
+        
+    except Exception as e:
+        print(f"  ⚠️  Warning: Could not download image {image_url}: {e}")
+        # Return original URL as fallback
+        return image_url
 
 
 def convert_rich_text_to_markdown(rich_text: List[Dict[str, Any]]) -> str:
@@ -49,7 +117,7 @@ def convert_rich_text_to_markdown(rich_text: List[Dict[str, Any]]) -> str:
     return result
 
 
-def convert_block_to_markdown(block: Dict[str, Any], client: Client, indent: int = 0) -> str:
+def convert_block_to_markdown(block: Dict[str, Any], client: Client, indent: int = 0, notion_token: str = "") -> str:
     """Convert a Notion block to Markdown"""
     block_type = block.get("type")
     if not block_type:
@@ -113,7 +181,13 @@ def convert_block_to_markdown(block: Dict[str, Any], client: Client, indent: int
                 image_url = block_data["external"].get("url", "")
             if image_url:
                 caption = convert_rich_text_to_markdown(block_data.get("caption", []))
-                content = f"{prefix}![{caption}]({image_url})\n\n"
+                # Download image and use local path
+                if notion_token:
+                    local_image_path = download_image(image_url, notion_token)
+                    content = f"{prefix}![{caption}]({local_image_path})\n\n"
+                else:
+                    # Fallback to original URL if no token
+                    content = f"{prefix}![{caption}]({image_url})\n\n"
         
         elif block_type == "bookmark":
             url = block_data.get("url", "")
@@ -132,7 +206,7 @@ def convert_block_to_markdown(block: Dict[str, Any], client: Client, indent: int
             if block_id:
                 children = client.blocks.children.list(block_id=block_id)
                 for child in children.get("results", []):
-                    child_content = convert_block_to_markdown(child, client, indent + 1 if block_type in ["toggle", "callout"] else indent)
+                    child_content = convert_block_to_markdown(child, client, indent + 1 if block_type in ["toggle", "callout"] else indent, notion_token)
                     content += child_content
                 
                 if block_type == "toggle":
@@ -145,23 +219,29 @@ def convert_block_to_markdown(block: Dict[str, Any], client: Client, indent: int
     return content
 
 
-def export_page_to_markdown(page_id: str, client: Client, output_path: Path) -> None:
-    """Export a Notion page to Markdown file"""
+def get_page_title(page: Dict[str, Any]) -> str:
+    """Extract title from a Notion page"""
+    # Try to get title from properties (for database pages)
+    properties = page.get("properties", {})
+    for prop_name, prop_data in properties.items():
+        if prop_data.get("type") == "title":
+            title_rich_text = prop_data.get("title", [])
+            title = convert_rich_text_to_markdown(title_rich_text).strip()
+            if title:
+                return title
+    
+    # Try to get title from page object (for regular pages)
+    # The title might be in the first heading block or in page properties
+    # For now, we'll use a fallback
+    return "Untitled"
+
+
+def export_page_to_markdown(page_id: str, client: Client, output_path: Path, notion_token: str = "") -> Optional[str]:
+    """Export a Notion page to Markdown file. Returns the filename if successful, None otherwise."""
     try:
         # Get page metadata
         page = client.pages.retrieve(page_id=page_id)
-        page_title = ""
-        
-        # Extract title from page properties
-        properties = page.get("properties", {})
-        for prop_name, prop_data in properties.items():
-            if prop_data.get("type") == "title":
-                title_rich_text = prop_data.get("title", [])
-                page_title = convert_rich_text_to_markdown(title_rich_text).strip()
-                break
-        
-        if not page_title:
-            page_title = "Untitled"
+        page_title = get_page_title(page)
         
         print(f"📄 Exporting: {page_title}")
         
@@ -183,13 +263,21 @@ def export_page_to_markdown(page_id: str, client: Client, output_path: Path) -> 
             cursor = response.get("next_cursor")
         
         # Convert blocks to markdown
-        markdown_content = f"# {page_title}\n\n"
+        # Don't add the title as H1 if the first block is already a heading
+        markdown_content = ""
+        if all_blocks and all_blocks[0].get("type") not in ["heading_1", "heading_2", "heading_3"]:
+            markdown_content = f"# {page_title}\n\n"
+        
         for block in all_blocks:
-            markdown_content += convert_block_to_markdown(block, client)
+            markdown_content += convert_block_to_markdown(block, client, notion_token=notion_token)
+        
+        # If we didn't add a title and there's no content, add it
+        if not markdown_content.strip():
+            markdown_content = f"# {page_title}\n\n"
         
         # Sanitize filename
         safe_filename = re.sub(r'[^\w\s-]', '', page_title).strip()
-        safe_filename = re.sub(r'[-\s]+', '-', safe_filename)
+        safe_filename = re.sub(r'[-\s]+', '-', safe_filename).lower()
         if not safe_filename:
             safe_filename = f"page-{page_id[:8]}"
         
@@ -200,40 +288,158 @@ def export_page_to_markdown(page_id: str, client: Client, output_path: Path) -> 
             f.write(markdown_content)
         
         print(f"✅ Exported to: {output_file}")
+        return f"{safe_filename}.md"
         
     except Exception as e:
         print(f"❌ Error exporting page {page_id}: {e}")
-        raise
+        import traceback
+        traceback.print_exc()
+        return None
+
+
+def find_child_pages(parent_page_id: str, client: Client) -> List[str]:
+    """Find all child pages of a parent page"""
+    child_page_ids = []
+    
+    try:
+        # Method 1: Look for child_page blocks in the parent page
+        print("🔍 Searching for child_page blocks...")
+        all_blocks = []
+        cursor = None
+        
+        while True:
+            if cursor:
+                response = client.blocks.children.list(block_id=parent_page_id, start_cursor=cursor)
+            else:
+                response = client.blocks.children.list(block_id=parent_page_id)
+            
+            blocks = response.get("results", [])
+            all_blocks.extend(blocks)
+            
+            if not response.get("has_more"):
+                break
+            cursor = response.get("next_cursor")
+        
+        # Look for child_page blocks
+        for block in all_blocks:
+            if block.get("type") == "child_page":
+                child_page_id = block.get("id")
+                if child_page_id:
+                    child_page_ids.append(child_page_id)
+                    # Get the page title for logging
+                    try:
+                        child_page = client.pages.retrieve(page_id=child_page_id)
+                        child_title = get_page_title(child_page)
+                        print(f"  ✓ Found child page: {child_title}")
+                    except:
+                        print(f"  ✓ Found child page: {child_page_id}")
+        
+        # Method 2: Search for all pages and check their parent
+        # This is useful if child pages aren't linked as blocks
+        if not child_page_ids:
+            print("🔍 Searching all pages for children...")
+            search_cursor = None
+            all_pages = []
+            
+            while True:
+                if search_cursor:
+                    search_response = client.search(
+                        filter={"property": "object", "value": "page"},
+                        page_size=100,
+                        start_cursor=search_cursor
+                    )
+                else:
+                    search_response = client.search(
+                        filter={"property": "object", "value": "page"},
+                        page_size=100
+                    )
+                
+                pages = search_response.get("results", [])
+                all_pages.extend(pages)
+                
+                if not search_response.get("has_more"):
+                    break
+                search_cursor = search_response.get("next_cursor")
+            
+            # Check each page to see if it's a child of the parent
+            for page in all_pages:
+                parent = page.get("parent")
+                if parent:
+                    # Check if parent is a page and matches our parent_page_id
+                    if parent.get("type") == "page_id" and parent.get("page_id") == parent_page_id:
+                        child_page_id = page.get("id")
+                        if child_page_id and child_page_id not in child_page_ids:
+                            child_page_ids.append(child_page_id)
+                            child_title = get_page_title(page)
+                            print(f"  ✓ Found child page: {child_title}")
+                    # Also check if parent is a database (in case pages are in a database)
+                    elif parent.get("type") == "database_id":
+                        # If the parent page is a database, we might need to query it
+                        # For now, we'll skip this case
+        
+    except Exception as e:
+        print(f"⚠️  Warning: Error finding child pages: {e}")
+        import traceback
+        traceback.print_exc()
+    
+    return child_page_ids
 
 
 def main():
     """Main function"""
-    print("📚 Notion Exporter starting...")
+    print("📚 Notion Blog Exporter starting...")
     
-    # Get page IDs from environment variable (comma-separated)
-    page_ids_str = os.getenv("PAGE_ID", "")
+    # Get page ID(s) from environment variable
+    page_ids_str = os.getenv("PAGE_ID", "").strip()
     if not page_ids_str:
-        raise ValueError("PAGE_ID environment variable is required (comma-separated page IDs)")
-    
-    page_ids = [pid.strip() for pid in page_ids_str.split(",") if pid.strip()]
-    
-    if not page_ids:
-        raise ValueError("No valid page IDs found in PAGE_ID")
-    
-    print(f"📋 Found {len(page_ids)} page(s) to export")
+        raise ValueError("PAGE_ID environment variable is required (parent Blog page ID or comma-separated child page IDs)")
     
     # Initialize Notion client
     client = get_notion_client()
+    notion_token = os.getenv("NOTION_TOKEN", "")
+    
+    # Check if multiple page IDs are provided (comma-separated)
+    page_ids_list = [pid.strip() for pid in page_ids_str.split(",") if pid.strip()]
+    
+    if len(page_ids_list) > 1:
+        # Multiple page IDs provided - export them directly
+        print(f"📋 Found {len(page_ids_list)} page ID(s) to export directly")
+        child_page_ids = page_ids_list
+    else:
+        # Single page ID - treat as parent and find children
+        parent_page_id = page_ids_list[0]
+        print(f"🔍 Finding child pages of parent page: {parent_page_id}")
+        
+        # Find all child pages
+        child_page_ids = find_child_pages(parent_page_id, client)
+        
+        if not child_page_ids:
+            print("⚠️  No child pages found.")
+            print("💡 Tip: If you want to export specific pages, provide comma-separated page IDs in PAGE_ID")
+            return
+    
+    if not child_page_ids:
+        print("❌ No pages found to export")
+        return
+    
+    print(f"\n📋 Exporting {len(child_page_ids)} page(s)...")
     
     # Export each page
-    for page_id in page_ids:
+    exported_files = []
+    for page_id in child_page_ids:
         try:
-            export_page_to_markdown(page_id, client, OUTPUT_DIR)
+            filename = export_page_to_markdown(page_id, client, OUTPUT_DIR, notion_token)
+            if filename:
+                exported_files.append(filename)
         except Exception as e:
             print(f"❌ Failed to export page {page_id}: {e}")
             continue
     
-    print(f"✅ Export complete! Files saved to: {OUTPUT_DIR}")
+    print(f"\n✅ Export complete! {len(exported_files)} file(s) saved to: {OUTPUT_DIR}")
+    if exported_files:
+        print(f"📝 Exported files:")
+        for filename in exported_files:
+            print(f"   - {filename}")
 
 
 if __name__ == "__main__":

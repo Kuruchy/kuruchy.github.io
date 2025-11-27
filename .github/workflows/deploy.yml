@@ -34,11 +34,15 @@ jobs:
         run: |
           python scripts/export_notion.py
       
+      - name: Generate article metadata
+        run: |
+          python scripts/generate_article_metadata.py
+      
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
           author_name: Bruno Retolaza
           author_email: bruno.retolaza@gmail.com
-          message: 'Update Notion Export'
-          add: "['notion-backup']"
+          message: 'Update articles from Notion'
+          add: "['articles', 'images', 'article.js', 'script.js']"
           pull: '--autostash'
