@@ -1,27 +1,27 @@
 [
   {
-    "title": "Mixpanel Security Breach",
-    "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://mixpanel.com/blog/sms-security-incident/"
+    "title": "Linux Kernel Explorer",
+    "summary": "Error: Error code: 429 - {'error': {'message': 'You excee",
+    "link": "https://reverser.dev/linux-kernel-explorer"
+  },
+  {
+    "title": "Ray Marching Soft Shadows in 2D",
+    "summary": "Error: Error code: 429 - {'error': {'message': 'You excee",
+    "link": "https://www.rykap.com/2020/09/23/distance-fields/"
   },
   {
     "title": "Penpot: The Open-Source Figma",
-    "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
+    "summary": "Error: Error code: 429 - {'error': {'message': 'You excee",
     "link": "https://github.com/penpot/penpot"
   },
   {
-    "title": "DIY NAS: 2026 Edition",
-    "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://blog.briancmoses.com/2025/11/diy-nas-2026-edition.html"
+    "title": "Interactive λ-Reduction",
+    "summary": "Error: Error code: 429 - {'error': {'message': 'You excee",
+    "link": "https://deltanets.org/"
   },
   {
     "title": "Voyager 1 is about to reach one light-day from Earth",
-    "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
+    "summary": "Error: Error code: 429 - {'error': {'message': 'You excee",
     "link": "https://scienceclock.com/voyager-1-is-about-to-reach-one-light-day-from-earth/"
-  },
-  {
-    "title": "Music eases surgery and speeds recovery, study finds",
-    "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.bbc.com/news/articles/c231dv9zpz3o"
   }
 ]
