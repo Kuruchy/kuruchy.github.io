@@ -14,27 +14,31 @@ jobs:
   export:
     runs-on: ubuntu-latest
     steps:
-      - uses: igor-kupczynski/notion-exporter@v1.0.2
-        with:
-          pages: ${{ secrets.PAGE_ID }}
-          output-dir: notion-backup
-          notion-token: ${{ secrets.NOTION_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: checkout repo content
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: setup python
+      
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.8
-      - name: run Convert Backup
+          python-version: '3.11'
+      
+      - name: Install dependencies
         run: |
-          python bin/convertBackup.py
+          pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Export Notion pages
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          PAGE_ID: ${{ secrets.PAGE_ID }}
+        run: |
+          python scripts/export_notion.py
+      
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
           author_name: Bruno Retolaza
           author_email: bruno.retolaza@gmail.com
-          message: 'Update Posts'
-          add: "['_posts', 'notion-backup']"
+          message: 'Update Notion Export'
+          add: "['notion-backup']"
           pull: '--autostash'
