@@ -6,13 +6,18 @@ Exports each child page of a parent page as individual Markdown files to the art
 
 import os
 import re
+import hashlib
+import requests
 from pathlib import Path
+from urllib.parse import urlparse, unquote
 from notion_client import Client
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any, Optional, Tuple
 
 # Configuration
 OUTPUT_DIR = Path(__file__).parent.parent / "articles"
 OUTPUT_DIR.mkdir(exist_ok=True)
+IMAGES_DIR = Path(__file__).parent.parent / "images"
+IMAGES_DIR.mkdir(exist_ok=True)
 
 
 def get_notion_client() -> Client:
@@ -21,6 +26,68 @@ def get_notion_client() -> Client:
     if not notion_token:
         raise ValueError("NOTION_TOKEN environment variable is required")
     return Client(auth=notion_token)
+
+
+def download_image(image_url: str, notion_token: str) -> Optional[str]:
+    """Download an image from Notion and save it locally. Returns the local path relative to repo root."""
+    try:
+        # Generate a unique filename based on URL hash
+        url_hash = hashlib.md5(image_url.encode()).hexdigest()[:12]
+        
+        # Try to get file extension from URL
+        parsed_url = urlparse(image_url)
+        path = unquote(parsed_url.path)
+        ext = os.path.splitext(path)[1] or '.png'
+        
+        # Clean extension (remove query params if any)
+        ext = ext.split('?')[0]
+        if ext not in ['.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg']:
+            ext = '.png'
+        
+        filename = f"{url_hash}{ext}"
+        local_path = IMAGES_DIR / filename
+        
+        # Skip if already downloaded
+        if local_path.exists():
+            return f"images/{filename}"
+        
+        # Download the image
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        }
+        
+        # For Notion-hosted images, we need to use the internal API
+        if 'notion.so' in image_url or 'notion-static.com' in image_url:
+            # Notion images may require authentication via the API
+            # Try with the token in Authorization header first
+            if notion_token:
+                headers['Authorization'] = f'Bearer {notion_token}'
+            # Also try cookie-based auth as fallback
+            if notion_token:
+                headers['Cookie'] = f'token_v2={notion_token}'
+        
+        response = requests.get(image_url, headers=headers, timeout=30, stream=True, allow_redirects=True)
+        response.raise_for_status()
+        
+        # Check if we got an image
+        content_type = response.headers.get('content-type', '')
+        if not content_type.startswith('image/'):
+            # If not an image, might be a redirect or error page
+            print(f"  ⚠️  Warning: URL did not return an image (content-type: {content_type})")
+            return image_url
+        
+        # Save the image
+        with open(local_path, 'wb') as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                f.write(chunk)
+        
+        print(f"  📷 Downloaded image: {filename}")
+        return f"images/{filename}"
+        
+    except Exception as e:
+        print(f"  ⚠️  Warning: Could not download image {image_url}: {e}")
+        # Return original URL as fallback
+        return image_url
 
 
 def convert_rich_text_to_markdown(rich_text: List[Dict[str, Any]]) -> str:
@@ -50,7 +117,7 @@ def convert_rich_text_to_markdown(rich_text: List[Dict[str, Any]]) -> str:
     return result
 
 
-def convert_block_to_markdown(block: Dict[str, Any], client: Client, indent: int = 0) -> str:
+def convert_block_to_markdown(block: Dict[str, Any], client: Client, indent: int = 0, notion_token: str = "") -> str:
     """Convert a Notion block to Markdown"""
     block_type = block.get("type")
     if not block_type:
@@ -114,7 +181,13 @@ def convert_block_to_markdown(block: Dict[str, Any], client: Client, indent: int
                 image_url = block_data["external"].get("url", "")
             if image_url:
                 caption = convert_rich_text_to_markdown(block_data.get("caption", []))
-                content = f"{prefix}![{caption}]({image_url})\n\n"
+                # Download image and use local path
+                if notion_token:
+                    local_image_path = download_image(image_url, notion_token)
+                    content = f"{prefix}![{caption}]({local_image_path})\n\n"
+                else:
+                    # Fallback to original URL if no token
+                    content = f"{prefix}![{caption}]({image_url})\n\n"
         
         elif block_type == "bookmark":
             url = block_data.get("url", "")
@@ -133,7 +206,7 @@ def convert_block_to_markdown(block: Dict[str, Any], client: Client, indent: int
             if block_id:
                 children = client.blocks.children.list(block_id=block_id)
                 for child in children.get("results", []):
-                    child_content = convert_block_to_markdown(child, client, indent + 1 if block_type in ["toggle", "callout"] else indent)
+                    child_content = convert_block_to_markdown(child, client, indent + 1 if block_type in ["toggle", "callout"] else indent, notion_token)
                     content += child_content
                 
                 if block_type == "toggle":
@@ -163,7 +236,7 @@ def get_page_title(page: Dict[str, Any]) -> str:
     return "Untitled"
 
 
-def export_page_to_markdown(page_id: str, client: Client, output_path: Path) -> Optional[str]:
+def export_page_to_markdown(page_id: str, client: Client, output_path: Path, notion_token: str = "") -> Optional[str]:
     """Export a Notion page to Markdown file. Returns the filename if successful, None otherwise."""
     try:
         # Get page metadata
@@ -196,7 +269,7 @@ def export_page_to_markdown(page_id: str, client: Client, output_path: Path) -> 
             markdown_content = f"# {page_title}\n\n"
         
         for block in all_blocks:
-            markdown_content += convert_block_to_markdown(block, client)
+            markdown_content += convert_block_to_markdown(block, client, notion_token=notion_token)
         
         # If we didn't add a title and there's no content, add it
         if not markdown_content.strip():
@@ -323,6 +396,7 @@ def main():
     
     # Initialize Notion client
     client = get_notion_client()
+    notion_token = os.getenv("NOTION_TOKEN", "")
     
     # Check if multiple page IDs are provided (comma-separated)
     page_ids_list = [pid.strip() for pid in page_ids_str.split(",") if pid.strip()]
@@ -354,7 +428,7 @@ def main():
     exported_files = []
     for page_id in child_page_ids:
         try:
-            filename = export_page_to_markdown(page_id, client, OUTPUT_DIR)
+            filename = export_page_to_markdown(page_id, client, OUTPUT_DIR, notion_token)
             if filename:
                 exported_files.append(filename)
         except Exception as e:
