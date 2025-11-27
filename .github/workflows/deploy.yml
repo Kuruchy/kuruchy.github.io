@@ -5,6 +5,11 @@ on:
     #- cron: "0 0 * * *"  # Call the export every day at midnight
   workflow_dispatch: {}
 
+# Explicit permissions following least privilege principle
+permissions:
+  contents: write  # Required for committing changes
+  actions: read    # Required for reading workflow status
+
 jobs:
   export:
     runs-on: ubuntu-latest
@@ -17,16 +22,16 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: checkout repo content
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: setup python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: 3.8
       - name: run Convert Backup
         run: |
           python bin/convertBackup.py
       - name: Commit changes
-        uses: EndBug/add-and-commit@v8
+        uses: EndBug/add-and-commit@v9
         with:
           author_name: Bruno Retolaza
           author_email: bruno.retolaza@gmail.com
