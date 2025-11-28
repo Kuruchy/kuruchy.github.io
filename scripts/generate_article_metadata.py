@@ -215,7 +215,7 @@ def get_category_icon(category: str) -> str:
 
 
 def scan_articles() -> List[Dict[str, str]]:
-    """Scan articles directory and extract metadata"""
+    """Scan articles directory and extract metadata - only process articles that exist in Notion metadata"""
     articles = []
     
     if not ARTICLES_DIR.exists():
@@ -225,7 +225,13 @@ def scan_articles() -> List[Dict[str, str]]:
     # Load Notion metadata if available
     notion_metadata = load_notion_metadata()
     
-    # Get all markdown files
+    # Only process markdown files that have corresponding Notion metadata
+    # This ensures we only include articles that were exported (i.e., Ready = true)
+    if not notion_metadata:
+        print("⚠️  No Notion metadata found. Only processing articles with metadata.")
+        return articles
+    
+    # Get all markdown files, but only process those in metadata
     md_files = sorted(ARTICLES_DIR.glob("*.md"), key=lambda p: p.stat().st_mtime, reverse=True)
     
     for md_file in md_files:
@@ -233,6 +239,16 @@ def scan_articles() -> List[Dict[str, str]]:
             # Check if we have Notion metadata for this file
             file_key = md_file.name
             notion_data = notion_metadata.get(file_key, {})
+            
+            # Skip articles that don't have Notion metadata (weren't exported)
+            if not notion_data:
+                print(f"  ⏭️  Skipping {md_file.name} (no Notion metadata - not exported)")
+                continue
+            
+            # Only include if ready is true
+            if not notion_data.get('ready', False):
+                print(f"  ⏭️  Skipping {md_file.name} (ready=false)")
+                continue
             
             # Use Title and Excerpt from Notion metadata
             title = notion_data.get('title')
@@ -279,6 +295,10 @@ def scan_articles() -> List[Dict[str, str]]:
             # Add published_date if available
             if notion_data.get('published_date'):
                 article['published_date'] = notion_data['published_date']
+            
+            # Add ready status (required for filtering)
+            if notion_data.get('ready') is not None:
+                article['ready'] = notion_data['ready']
             
             # Add other metadata fields that might be useful
             if notion_data.get('created_time'):
@@ -328,6 +348,9 @@ def generate_js_array(articles: List[Dict[str, str]]) -> str:
         if article.get('category'):
             lines.append(f", ")
             lines.append(f"        category: '{escape_js_string(article['category'])}'")
+        if article.get('ready') is not None:
+            lines.append(f", ")
+            lines.append(f"        ready: {str(article['ready']).lower()}")
         if article.get('published') is not None:
             lines.append(f", ")
             lines.append(f"        published: {str(article['published']).lower()}")

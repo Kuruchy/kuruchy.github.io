@@ -139,15 +139,14 @@ function getArticlesByCategory(category) {
 function getFeaturedArticles(category, limit = 3) {
     const categoryArticles = getArticlesByCategory(category);
     
-    // Filter to only published articles if published field exists
-    const publishedArticles = categoryArticles.filter(article => {
-        // If published field exists, only include if true
-        // If published field doesn't exist, include all (backward compatibility)
-        return article.published === undefined || article.published === true;
+    // Filter to only ready articles (Ready checkbox must be true)
+    const readyArticles = categoryArticles.filter(article => {
+        // Only include if ready field is true
+        return article.ready === true;
     });
     
     // Sort by published_date, last_edited_time, or created_time if available
-    const sorted = publishedArticles.sort((a, b) => {
+    const sorted = readyArticles.sort((a, b) => {
         const timeA = a.published_date || a.last_edited_time || a.created_time || '';
         const timeB = b.published_date || b.last_edited_time || b.created_time || '';
         return timeB.localeCompare(timeA); // Most recent first
@@ -161,15 +160,15 @@ function displayArticleCards() {
 
     articlesContainer.innerHTML = '';
     
-    // Filter to only published articles
-    const publishedArticles = articles.filter(article => {
-        // If published field exists, only include if true
-        // If published field doesn't exist, include all (backward compatibility)
-        return article.published === undefined || article.published === true;
+    // Filter to only ready articles (Ready checkbox must be true)
+    const readyArticles = articles.filter(article => {
+        // Only include if ready field is true
+        // If ready field doesn't exist, don't include (safety - only show explicitly ready articles)
+        return article.ready === true;
     });
     
     // Sort by published_date, last_edited_time, or created_time
-    const sortedArticles = publishedArticles.sort((a, b) => {
+    const sortedArticles = readyArticles.sort((a, b) => {
         const timeA = a.published_date || a.last_edited_time || a.created_time || '';
         const timeB = b.published_date || b.last_edited_time || b.created_time || '';
         return timeB.localeCompare(timeA); // Most recent first
