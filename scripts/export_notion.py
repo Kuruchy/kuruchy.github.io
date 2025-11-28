@@ -7,6 +7,7 @@ Exports each child page of a parent page as individual Markdown files to the art
 import os
 import re
 import json
+import json
 import hashlib
 import requests
 from pathlib import Path
@@ -14,12 +15,15 @@ from urllib.parse import urlparse, unquote
 from notion_client import Client
 from typing import Dict, List, Any, Optional, Tuple
 from datetime import datetime
+from datetime import datetime
 
 # Configuration
 OUTPUT_DIR = Path(__file__).parent.parent / "articles"
 OUTPUT_DIR.mkdir(exist_ok=True)
 IMAGES_DIR = Path(__file__).parent.parent / "images"
 IMAGES_DIR.mkdir(exist_ok=True)
+METADATA_FILE = Path(__file__).parent.parent / "data" / "articles_metadata.json"
+METADATA_FILE.parent.mkdir(exist_ok=True)
 METADATA_FILE = Path(__file__).parent.parent / "data" / "articles_metadata.json"
 METADATA_FILE.parent.mkdir(exist_ok=True)
 
@@ -334,12 +338,111 @@ def extract_page_metadata(page: Dict[str, Any]) -> Dict[str, Any]:
 
 def export_page_to_markdown(page_id: str, client: Client, output_path: Path, notion_token: str = "", extract_metadata: bool = False) -> Tuple[Optional[str], Optional[Dict[str, Any]]]:
     """Export a Notion page to Markdown file. Returns (filename, metadata) if successful, (None, None) otherwise."""
+def extract_property_value(prop_data: Dict[str, Any]) -> Any:
+    """Extract value from a Notion property"""
+    prop_type = prop_data.get("type")
+    
+    if prop_type == "title":
+        rich_text = prop_data.get("title", [])
+        return convert_rich_text_to_markdown(rich_text).strip()
+    elif prop_type == "rich_text":
+        rich_text = prop_data.get("rich_text", [])
+        return convert_rich_text_to_markdown(rich_text).strip()
+    elif prop_type == "select":
+        select = prop_data.get("select")
+        return select.get("name") if select else None
+    elif prop_type == "multi_select":
+        multi_select = prop_data.get("multi_select", [])
+        return [item.get("name") for item in multi_select]
+    elif prop_type == "date":
+        date_obj = prop_data.get("date")
+        if date_obj:
+            return date_obj.get("start")
+        return None
+    elif prop_type == "checkbox":
+        return prop_data.get("checkbox", False)
+    elif prop_type == "number":
+        return prop_data.get("number")
+    elif prop_type == "url":
+        return prop_data.get("url")
+    elif prop_type == "email":
+        return prop_data.get("email")
+    elif prop_type == "phone_number":
+        return prop_data.get("phone_number")
+    elif prop_type == "created_time":
+        return prop_data.get("created_time")
+    elif prop_type == "last_edited_time":
+        return prop_data.get("last_edited_time")
+    else:
+        return None
+
+
+def extract_page_metadata(page: Dict[str, Any]) -> Dict[str, Any]:
+    """Extract metadata from a Notion database page - specifically Title, Category, Published, Excerpt"""
+    metadata = {
+        "id": page.get("id"),
+        "created_time": page.get("created_time"),
+        "last_edited_time": page.get("last_edited_time"),
+    }
+    
+    # Extract all properties
+    properties = page.get("properties", {})
+    
+    # Extract Title (from title property)
+    for prop_name, prop_data in properties.items():
+        if prop_data.get("type") == "title":
+            title = extract_property_value(prop_data)
+            if title:
+                metadata["title"] = title
+            break
+    
+    # Extract specific fields: Category, Published, Excerpt
+    for prop_name, prop_data in properties.items():
+        prop_type = prop_data.get("type")
+        prop_lower = prop_name.lower()
+        
+        # Extract Category (can be select or multi_select)
+        if "category" in prop_lower and prop_type in ["select", "multi_select"]:
+            value = extract_property_value(prop_data)
+            if value:
+                metadata["category"] = value
+        
+        # Extract Published (checkbox or date)
+        elif "published" in prop_lower:
+            if prop_type == "checkbox":
+                metadata["published"] = extract_property_value(prop_data)
+            elif prop_type == "date":
+                date_value = extract_property_value(prop_data)
+                metadata["published"] = date_value is not None
+                if date_value:
+                    metadata["published_date"] = date_value
+        
+        # Extract Excerpt (rich_text or text)
+        elif "excerpt" in prop_lower and prop_type in ["rich_text", "text"]:
+            value = extract_property_value(prop_data)
+            if value:
+                metadata["excerpt"] = value
+    
+    # Fallback: if no title found, use get_page_title
+    if "title" not in metadata or not metadata["title"]:
+        metadata["title"] = get_page_title(page)
+    
+    return metadata
+
+
+def export_page_to_markdown(page_id: str, client: Client, output_path: Path, notion_token: str = "", extract_metadata: bool = False) -> Tuple[Optional[str], Optional[Dict[str, Any]]]:
+    """Export a Notion page to Markdown file. Returns (filename, metadata) if successful, (None, None) otherwise."""
     try:
         # Get page metadata
         page = client.pages.retrieve(page_id=page_id)
         page_title = get_page_title(page)
         
         print(f"📄 Exporting: {page_title}")
+        
+        # Extract metadata if requested
+        metadata = None
+        if extract_metadata:
+            metadata = extract_page_metadata(page)
         
         # Extract metadata if requested
         metadata = None
@@ -396,10 +499,17 @@ def export_page_to_markdown(page_id: str, client: Client, output_path: Path, not
         
         return f"{safe_filename}.md", metadata
         
+        # Add filename to metadata if available
+        if metadata:
+            metadata["filename"] = f"articles/{safe_filename}.md"
+        
+        return f"{safe_filename}.md", metadata
+        
     except Exception as e:
         print(f"❌ Error exporting page {page_id}: {e}")
         import traceback
         traceback.print_exc()
+        return None, None
         return None, None
 
 
@@ -548,6 +658,8 @@ def main():
     
     # Get database ID or page ID(s) from environment variable
     database_id = os.getenv("DATABASE_ID", "").strip()
+    # Get database ID or page ID(s) from environment variable
+    database_id = os.getenv("DATABASE_ID", "").strip()
     page_ids_str = os.getenv("PAGE_ID", "").strip()
     
     # Initialize Notion client
@@ -604,13 +716,21 @@ def main():
         raise ValueError("Either DATABASE_ID or PAGE_ID environment variable is required")
     
     if not page_ids_to_export:
+    if not page_ids_to_export:
         print("❌ No pages found to export")
         return
     
     print(f"\n📋 Exporting {len(page_ids_to_export)} page(s)...")
+    print(f"\n📋 Exporting {len(page_ids_to_export)} page(s)...")
     
     # Export each page
     exported_files = []
+    
+    # If we already have metadata (from database query), use it
+    # Otherwise, extract it during export
+    metadata_map = {meta.get("id"): meta for meta in all_metadata} if all_metadata else {}
+    
+    for page_id in page_ids_to_export:
     
     # If we already have metadata (from database query), use it
     # Otherwise, extract it during export
@@ -625,8 +745,21 @@ def main():
                 notion_token, 
                 extract_metadata=is_database and not metadata_map
             )
+            filename, export_metadata = export_page_to_markdown(
+                page_id, 
+                client, 
+                OUTPUT_DIR, 
+                notion_token, 
+                extract_metadata=is_database and not metadata_map
+            )
             if filename:
                 exported_files.append(filename)
+                # Use pre-extracted metadata if available, otherwise use export metadata
+                if page_id in metadata_map:
+                    metadata_map[page_id]["filename"] = filename
+                elif export_metadata:
+                    export_metadata["filename"] = filename
+                    metadata_map[page_id] = export_metadata
                 # Use pre-extracted metadata if available, otherwise use export metadata
                 if page_id in metadata_map:
                     metadata_map[page_id]["filename"] = filename
