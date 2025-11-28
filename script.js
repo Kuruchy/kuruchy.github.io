@@ -96,63 +96,64 @@ const articles = [
     }
 ]
 
-// Datos de secciones para las páginas de detalle (metadatos - el contenido está en archivos Markdown)
-const sections = {
-    'ai-vision-system': {
-        title: 'AI Vision System',
-        icon: 'fas fa-brain',
-        tech: 'TensorFlow / Python',
-        filename: 'sections/ai-vision-system.md'
-    },
-    'ecowallet-app': {
-        title: 'EcoWallet App',
-        icon: 'fas fa-mobile-alt',
-        tech: 'Flutter / React Native',
-        filename: 'sections/ecowallet-app.md'
-    },
-    'asistente-cognitivo': {
-        title: 'Asistente Cognitivo',
-        icon: 'fas fa-robot',
-        tech: 'OpenAI API / Node.js',
-        filename: 'sections/asistente-cognitivo.md'
-    },
-    'estrategias-trading': {
-        title: 'Estrategias de Trading',
-        icon: 'fas fa-chart-line',
-        tech: 'Análisis Técnico',
-        filename: 'sections/estrategias-trading.md'
-    },
-    'portfolio-digital': {
-        title: 'Portfolio Digital',
-        icon: 'fas fa-coins',
-        tech: 'Criptomonedas',
-        filename: 'sections/portfolio-digital.md'
-    },
-    'analisis-fundamental': {
-        title: 'Análisis Fundamental',
-        icon: 'fas fa-building',
-        tech: 'Acciones',
-        filename: 'sections/analisis-fundamental.md'
-    },
-    'entrenamiento-diario': {
-        title: 'Entrenamiento Diario',
-        icon: 'fas fa-dice',
-        tech: 'Drills & Práctica',
-        filename: 'sections/entrenamiento-diario.md'
-    },
-    'range-construction': {
-        title: 'Range Construction',
-        icon: 'fas fa-table',
-        tech: 'Análisis de Rangos',
-        filename: 'sections/range-construction.md'
-    },
-    'game-theory': {
-        title: 'Game Theory',
-        icon: 'fas fa-brain',
-        tech: 'Estrategia Avanzada',
-        filename: 'sections/game-theory.md'
-    }
-};
+// Helper function to get articles by category
+function getArticlesByCategory(category) {
+    const categoryLower = category.toLowerCase();
+    return articles.filter(article => {
+        const articleCategory = (article.category || '').toLowerCase();
+        
+        // Direct match
+        if (articleCategory === categoryLower || articleCategory.includes(categoryLower)) {
+            return true;
+        }
+        
+        // Special category mappings
+        if (categoryLower === 'ai' || categoryLower === 'artificial intelligence') {
+            return articleCategory.includes('ai') || 
+                   articleCategory.includes('artificial') || 
+                   articleCategory.includes('intelligence') ||
+                   articleCategory.includes('machine learning') ||
+                   articleCategory.includes('ml');
+        }
+        
+        if (categoryLower === 'poker') {
+            return articleCategory.includes('poker') || 
+                   articleCategory.includes('game theory') ||
+                   articleCategory.includes('gto');
+        }
+        
+        if (categoryLower === 'investing' || categoryLower === 'investment') {
+            return articleCategory.includes('invest') || 
+                   articleCategory.includes('trading') || 
+                   articleCategory.includes('finance') ||
+                   articleCategory.includes('stock') ||
+                   articleCategory.includes('crypto') ||
+                   articleCategory.includes('portfolio');
+        }
+        
+        return false;
+    });
+}
+
+// Get featured articles for each section (last 3)
+function getFeaturedArticles(category, limit = 3) {
+    const categoryArticles = getArticlesByCategory(category);
+    
+    // Filter to only published articles if published field exists
+    const publishedArticles = categoryArticles.filter(article => {
+        // If published field exists, only include if true
+        // If published field doesn't exist, include all (backward compatibility)
+        return article.published === undefined || article.published === true;
+    });
+    
+    // Sort by published_date, last_edited_time, or created_time if available
+    const sorted = publishedArticles.sort((a, b) => {
+        const timeA = a.published_date || a.last_edited_time || a.created_time || '';
+        const timeB = b.published_date || b.last_edited_time || b.created_time || '';
+        return timeB.localeCompare(timeA); // Most recent first
+    });
+    return sorted.slice(0, limit);
+}
 
 // Función para mostrar artículos como cards
 function displayArticleCards() {
@@ -160,7 +161,21 @@ function displayArticleCards() {
 
     articlesContainer.innerHTML = '';
     
-    articles.forEach((article) => {
+    // Filter to only published articles
+    const publishedArticles = articles.filter(article => {
+        // If published field exists, only include if true
+        // If published field doesn't exist, include all (backward compatibility)
+        return article.published === undefined || article.published === true;
+    });
+    
+    // Sort by published_date, last_edited_time, or created_time
+    const sortedArticles = publishedArticles.sort((a, b) => {
+        const timeA = a.published_date || a.last_edited_time || a.created_time || '';
+        const timeB = b.published_date || b.last_edited_time || b.created_time || '';
+        return timeB.localeCompare(timeA); // Most recent first
+    });
+    
+    sortedArticles.forEach((article) => {
         const cardElement = document.createElement('div');
         cardElement.className = 'card glass clickable-card';
         cardElement.setAttribute('data-type', 'article');
@@ -169,7 +184,7 @@ function displayArticleCards() {
         cardElement.innerHTML = `
             <div class="card-header">
                 <i class="${article.icon} icon-tech"></i>
-                <span>Artículo</span>
+                <span>${article.category || 'Artículo'}</span>
             </div>
             <div class="card-content">
                 <h3>${article.title}</h3>
@@ -599,36 +614,92 @@ function loadPokerPuzzleComments(puzzleId) {
     console.log(`Giscus script añadido para puzzle: ${puzzleId}`);
 }
 
-// Hacer las cards de secciones clickables
+// Render featured articles for a section
+function renderFeaturedArticles(sectionId, category, container) {
+    const featuredArticles = getFeaturedArticles(category, 3);
+    
+    if (featuredArticles.length === 0) {
+        // If no articles found, show placeholder
+        container.innerHTML = `
+            <div class="card glass">
+                <div class="card-content" style="text-align: center; padding: 2rem;">
+                    <p style="color: #94a3b8;">No hay artículos disponibles aún en esta categoría.</p>
+                </div>
+            </div>
+        `;
+        return;
+    }
+    
+    // Clear container and create grid
+    container.innerHTML = '';
+    featuredArticles.forEach((article) => {
+        const cardElement = document.createElement('div');
+        cardElement.className = 'card glass clickable-card';
+        cardElement.setAttribute('data-type', 'article');
+        cardElement.setAttribute('data-id', article.filename);
+        
+        cardElement.innerHTML = `
+            <div class="card-header">
+                <i class="${article.icon} icon-tech"></i>
+                <span>${article.category || 'Artículo'}</span>
+            </div>
+            <div class="card-content">
+                <h3>${article.title}</h3>
+                <p>${article.description}</p>
+            </div>
+        `;
+        
+        cardElement.addEventListener('click', () => {
+            window.location.href = `article.html?file=${encodeURIComponent(article.filename)}`;
+        });
+        
+        container.appendChild(cardElement);
+    });
+}
+
+// Initialize featured sections when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    // Portfolio cards - Solo AI Curator ahora, no necesita ser clickable
-    // Las otras cards fueron eliminadas
-
-    // Investment cards
-    const investmentCards = document.querySelectorAll('#investments .card');
-    investmentCards.forEach((card, index) => {
-        const sectionIds = ['estrategias-trading', 'portfolio-digital', 'analisis-fundamental'];
-        if (sectionIds[index]) {
-            card.classList.add('clickable-card');
-            card.addEventListener('click', () => {
-                // Navegar a la página de la sección
-                window.location.href = `section.html?id=${sectionIds[index]}`;
-            });
+    // Wait for articles to be loaded, then render featured sections
+    setTimeout(() => {
+        // Portfolio section - AI articles (after AI Curator)
+        const portfolioContainer = document.querySelector('#portfolio .grid-3');
+        if (portfolioContainer) {
+            const aiArticles = getFeaturedArticles('ai', 3);
+            if (aiArticles.length > 0) {
+                // Create a new section for AI articles
+                let aiSection = document.getElementById('ai-articles-section');
+                if (!aiSection) {
+                    aiSection = document.createElement('section');
+                    aiSection.id = 'ai-articles-section';
+                    aiSection.className = 'container';
+                    aiSection.innerHTML = `
+                        <h2>Artículos de IA</h2>
+                        <p class="subtitle">Últimos artículos sobre Inteligencia Artificial</p>
+                        <div id="ai-articles-container" class="grid-3"></div>
+                    `;
+                    // Insert after portfolio section
+                    const portfolioSection = document.getElementById('portfolio');
+                    portfolioSection.parentNode.insertBefore(aiSection, portfolioSection.nextSibling);
+                }
+                const aiContainer = document.getElementById('ai-articles-container');
+                if (aiContainer) {
+                    renderFeaturedArticles('portfolio', 'ai', aiContainer);
+                }
+            }
         }
-    });
 
-    // Poker cards
-    const pokerCards = document.querySelectorAll('#poker .card');
-    pokerCards.forEach((card, index) => {
-        const sectionIds = ['entrenamiento-diario', 'range-construction', 'game-theory'];
-        if (sectionIds[index]) {
-            card.classList.add('clickable-card');
-            card.addEventListener('click', () => {
-                // Navegar a la página de la sección
-                window.location.href = `section.html?id=${sectionIds[index]}`;
-            });
+        // Investment section
+        const investmentContainer = document.querySelector('#investments .grid-3');
+        if (investmentContainer) {
+            renderFeaturedArticles('investments', 'investing', investmentContainer);
         }
-    });
+
+        // Poker section
+        const pokerContainer = document.querySelector('#poker .grid-3');
+        if (pokerContainer) {
+            renderFeaturedArticles('poker', 'poker', pokerContainer);
+        }
+    }, 100);
 });
 
 // 2. ANIMACIÓN DE FONDO (Red Neuronal / Constelación)
