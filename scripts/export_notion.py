@@ -7,7 +7,6 @@ Exports each child page of a parent page as individual Markdown files to the art
 import os
 import re
 import json
-import json
 import hashlib
 import requests
 from pathlib import Path
@@ -15,15 +14,12 @@ from urllib.parse import urlparse, unquote
 from notion_client import Client
 from typing import Dict, List, Any, Optional, Tuple
 from datetime import datetime
-from datetime import datetime
 
 # Configuration
 OUTPUT_DIR = Path(__file__).parent.parent / "articles"
 OUTPUT_DIR.mkdir(exist_ok=True)
 IMAGES_DIR = Path(__file__).parent.parent / "images"
 IMAGES_DIR.mkdir(exist_ok=True)
-METADATA_FILE = Path(__file__).parent.parent / "data" / "articles_metadata.json"
-METADATA_FILE.parent.mkdir(exist_ok=True)
 METADATA_FILE = Path(__file__).parent.parent / "data" / "articles_metadata.json"
 METADATA_FILE.parent.mkdir(exist_ok=True)
 
@@ -728,45 +724,35 @@ def main():
         else:
             # Fall back to old behavior (child pages)
             print("⚠️  No database found, falling back to child pages method")
-    elif page_ids_str:
-        # Check if multiple page IDs are provided (comma-separated)
-        page_ids_list = [pid.strip() for pid in page_ids_str.split(",") if pid.strip()]
-        
-        if len(page_ids_list) > 1:
-            # Multiple page IDs provided - export them directly
-            print(f"📋 Found {len(page_ids_list)} page ID(s) to export directly")
-            page_ids_to_export = page_ids_list
-        else:
-            # Single page ID - treat as parent and find children
-            parent_page_id = page_ids_list[0]
-            print(f"🔍 Finding child pages of parent page: {parent_page_id}")
+            page_ids_list = [pid.strip() for pid in page_ids_str.split(",") if pid.strip()]
             
-            # Find all child pages
-            page_ids_to_export = find_child_pages(parent_page_id, client)
-            
-            if not page_ids_to_export:
-                print("⚠️  No child pages found.")
-                print("💡 Tip: If you want to export specific pages, provide comma-separated page IDs in PAGE_ID")
-                return
+            if len(page_ids_list) > 1:
+                # Multiple page IDs provided - export them directly
+                print(f"📋 Found {len(page_ids_list)} page ID(s) to export directly")
+                page_ids_to_export = page_ids_list
+            else:
+                # Single page ID - treat as parent and find children
+                parent_page_id = page_ids_list[0]
+                print(f"🔍 Finding child pages of parent page: {parent_page_id}")
+                
+                # Find all child pages
+                page_ids_to_export = find_child_pages(parent_page_id, client)
+                
+                if not page_ids_to_export:
+                    print("⚠️  No child pages found.")
+                    print("💡 Tip: If you want to export specific pages, provide comma-separated page IDs in PAGE_ID")
+                    return
     else:
         raise ValueError("Either DATABASE_ID or PAGE_ID environment variable is required")
     
-    if not page_ids_to_export:
     if not page_ids_to_export:
         print("❌ No pages found to export")
         return
     
     print(f"\n📋 Exporting {len(page_ids_to_export)} page(s)...")
-    print(f"\n📋 Exporting {len(page_ids_to_export)} page(s)...")
     
     # Export each page
     exported_files = []
-    
-    # If we already have metadata (from database query), use it
-    # Otherwise, extract it during export
-    metadata_map = {meta.get("id"): meta for meta in all_metadata} if all_metadata else {}
-    
-    for page_id in page_ids_to_export:
     
     # If we already have metadata (from database query), use it
     # Otherwise, extract it during export
@@ -781,21 +767,8 @@ def main():
                 notion_token, 
                 extract_metadata=is_database and not metadata_map
             )
-            filename, export_metadata = export_page_to_markdown(
-                page_id, 
-                client, 
-                OUTPUT_DIR, 
-                notion_token, 
-                extract_metadata=is_database and not metadata_map
-            )
             if filename:
                 exported_files.append(filename)
-                # Use pre-extracted metadata if available, otherwise use export metadata
-                if page_id in metadata_map:
-                    metadata_map[page_id]["filename"] = filename
-                elif export_metadata:
-                    export_metadata["filename"] = filename
-                    metadata_map[page_id] = export_metadata
                 # Use pre-extracted metadata if available, otherwise use export metadata
                 if page_id in metadata_map:
                     metadata_map[page_id]["filename"] = filename
