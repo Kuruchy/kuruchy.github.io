@@ -524,6 +524,24 @@ def query_database(database_id: str, client: Client) -> List[Dict[str, Any]]:
     return pages
 
 
+def clear_existing_articles(output_dir: Path):
+    """Remove all existing markdown files from the articles directory"""
+    if not output_dir.exists():
+        return
+    
+    md_files = list(output_dir.glob("*.md"))
+    if md_files:
+        print(f"🗑️  Removing {len(md_files)} existing article(s)...")
+        for md_file in md_files:
+            try:
+                md_file.unlink()
+                print(f"  ✓ Removed: {md_file.name}")
+            except Exception as e:
+                print(f"  ⚠️  Warning: Could not remove {md_file.name}: {e}")
+    else:
+        print("📁 No existing articles to remove")
+
+
 def main():
     """Main function"""
     print("📚 Notion Blog Exporter starting...")
@@ -544,6 +562,10 @@ def main():
     if database_id:
         is_database = True
         print(f"📊 Using Notion Database: {database_id}")
+        
+        # Clear existing articles first (to remove unpublished ones)
+        clear_existing_articles(OUTPUT_DIR)
+        
         pages = query_database(database_id, client)
         
         # Always filter by Published checkbox property - only export if Published is checked
@@ -618,14 +640,19 @@ def main():
     # Convert metadata map back to list
     all_metadata = list(metadata_map.values())
     
-    # Save metadata to JSON file if we have any
-    if all_metadata:
-        try:
-            with open(METADATA_FILE, "w", encoding="utf-8") as f:
+    # Save metadata to JSON file (only published articles)
+    # Clear existing metadata file and write only published articles
+    try:
+        with open(METADATA_FILE, "w", encoding="utf-8") as f:
+            if all_metadata:
                 json.dump(all_metadata, f, indent=2, ensure_ascii=False)
-            print(f"✅ Saved metadata to: {METADATA_FILE}")
-        except Exception as e:
-            print(f"⚠️  Warning: Could not save metadata: {e}")
+                print(f"✅ Saved metadata for {len(all_metadata)} published article(s) to: {METADATA_FILE}")
+            else:
+                # Write empty array if no published articles
+                json.dump([], f, indent=2)
+                print(f"✅ Cleared metadata file (no published articles)")
+    except Exception as e:
+        print(f"⚠️  Warning: Could not save metadata: {e}")
     
     print(f"\n✅ Export complete! {len(exported_files)} file(s) saved to: {OUTPUT_DIR}")
     if exported_files:
