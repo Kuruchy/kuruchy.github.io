@@ -313,15 +313,19 @@ def extract_page_metadata(page: Dict[str, Any]) -> Dict[str, Any]:
             if value:
                 metadata["category"] = value
         
-        # Extract Published (checkbox or date)
-        elif "published" in prop_lower:
-            if prop_type == "checkbox":
-                metadata["published"] = extract_property_value(prop_data)
-            elif prop_type == "date":
-                date_value = extract_property_value(prop_data)
-                metadata["published"] = date_value is not None
-                if date_value:
-                    metadata["published_date"] = date_value
+        # Extract Published (date property)
+        elif "published" in prop_lower and prop_type == "date":
+            date_value = extract_property_value(prop_data)
+            if date_value:
+                metadata["published_date"] = date_value
+                metadata["published"] = True  # Mark as published if date exists
+            else:
+                metadata["published"] = False
+        
+        # Extract Ready (checkbox property) - this controls whether to export
+        elif "ready" in prop_lower and prop_type == "checkbox":
+            checkbox_value = extract_property_value(prop_data)
+            metadata["ready"] = checkbox_value
         
         # Extract Excerpt (rich_text or text)
         elif "excerpt" in prop_lower and prop_type in ["rich_text", "text"]:
@@ -338,11 +342,80 @@ def extract_page_metadata(page: Dict[str, Any]) -> Dict[str, Any]:
 
 def export_page_to_markdown(page_id: str, client: Client, output_path: Path, notion_token: str = "", extract_metadata: bool = False) -> Tuple[Optional[str], Optional[Dict[str, Any]]]:
     """Export a Notion page to Markdown file. Returns (filename, metadata) if successful, (None, None) otherwise."""
-def extract_property_value(prop_data: Dict[str, Any]) -> Any:
-    """Extract value from a Notion property"""
-    prop_type = prop_data.get("type")
-    
-    if prop_type == "title":
+    try:
+        # Get page metadata
+        page = client.pages.retrieve(page_id=page_id)
+        page_title = get_page_title(page)
+        
+        print(f"📄 Exporting: {page_title}")
+        
+        # Extract metadata if requested
+        metadata = None
+        if extract_metadata:
+            metadata = extract_page_metadata(page)
+        
+        # Get all blocks
+        all_blocks = []
+        cursor = None
+        
+        while True:
+            if cursor:
+                response = client.blocks.children.list(block_id=page_id, start_cursor=cursor)
+            else:
+                response = client.blocks.children.list(block_id=page_id)
+            
+            blocks = response.get("results", [])
+            all_blocks.extend(blocks)
+            
+            if not response.get("has_more"):
+                break
+            cursor = response.get("next_cursor")
+        
+        # Convert blocks to markdown
+        # Don't add the title as H1 if the first block is already a heading
+        markdown_content = ""
+        if all_blocks and all_blocks[0].get("type") not in ["heading_1", "heading_2", "heading_3"]:
+            markdown_content = f"# {page_title}\n\n"
+        
+        for block in all_blocks:
+            markdown_content += convert_block_to_markdown(block, client, notion_token=notion_token)
+        
+        # If we didn't add a title and there's no content, add it
+        if not markdown_content.strip():
+            markdown_content = f"# {page_title}\n\n"
+        
+        # Sanitize filename
+        safe_filename = re.sub(r'[^\w\s-]', '', page_title).strip()
+        safe_filename = re.sub(r'[-\s]+', '-', safe_filename).lower()
+        if not safe_filename:
+            safe_filename = f"page-{page_id[:8]}"
+        
+        output_file = output_path / f"{safe_filename}.md"
+        
+        # Write to file
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(markdown_content)
+        
+        print(f"✅ Exported to: {output_file}")
+        
+        # Add filename to metadata if available
+        if metadata:
+            metadata["filename"] = f"articles/{safe_filename}.md"
+        
+        return f"{safe_filename}.md", metadata
+        
+    except Exception as e:
+        print(f"❌ Error exporting page {page_id}: {e}")
+        import traceback
+        traceback.print_exc()
+        return None, None
+
+
+# Remove duplicate/malformed code below
+def _remove_duplicate_code():
+    """This function should not exist - removing duplicate code"""
+    if False:  # This will never execute
+        if prop_type == "title":
         rich_text = prop_data.get("title", [])
         return convert_rich_text_to_markdown(rich_text).strip()
     elif prop_type == "rich_text":
@@ -407,15 +480,19 @@ def extract_page_metadata(page: Dict[str, Any]) -> Dict[str, Any]:
             if value:
                 metadata["category"] = value
         
-        # Extract Published (checkbox or date)
-        elif "published" in prop_lower:
-            if prop_type == "checkbox":
-                metadata["published"] = extract_property_value(prop_data)
-            elif prop_type == "date":
-                date_value = extract_property_value(prop_data)
-                metadata["published"] = date_value is not None
-                if date_value:
-                    metadata["published_date"] = date_value
+        # Extract Published (date property)
+        elif "published" in prop_lower and prop_type == "date":
+            date_value = extract_property_value(prop_data)
+            if date_value:
+                metadata["published_date"] = date_value
+                metadata["published"] = True  # Mark as published if date exists
+            else:
+                metadata["published"] = False
+        
+        # Extract Ready (checkbox property) - this controls whether to export
+        elif "ready" in prop_lower and prop_type == "checkbox":
+            checkbox_value = extract_property_value(prop_data)
+            metadata["ready"] = checkbox_value
         
         # Extract Excerpt (rich_text or text)
         elif "excerpt" in prop_lower and prop_type in ["rich_text", "text"]:
@@ -430,87 +507,6 @@ def extract_page_metadata(page: Dict[str, Any]) -> Dict[str, Any]:
     return metadata
 
 
-def export_page_to_markdown(page_id: str, client: Client, output_path: Path, notion_token: str = "", extract_metadata: bool = False) -> Tuple[Optional[str], Optional[Dict[str, Any]]]:
-    """Export a Notion page to Markdown file. Returns (filename, metadata) if successful, (None, None) otherwise."""
-    try:
-        # Get page metadata
-        page = client.pages.retrieve(page_id=page_id)
-        page_title = get_page_title(page)
-        
-        print(f"📄 Exporting: {page_title}")
-        
-        # Extract metadata if requested
-        metadata = None
-        if extract_metadata:
-            metadata = extract_page_metadata(page)
-        
-        # Extract metadata if requested
-        metadata = None
-        if extract_metadata:
-            metadata = extract_page_metadata(page)
-        
-        # Get all blocks
-        all_blocks = []
-        cursor = None
-        
-        while True:
-            if cursor:
-                response = client.blocks.children.list(block_id=page_id, start_cursor=cursor)
-            else:
-                response = client.blocks.children.list(block_id=page_id)
-            
-            blocks = response.get("results", [])
-            all_blocks.extend(blocks)
-            
-            if not response.get("has_more"):
-                break
-            cursor = response.get("next_cursor")
-        
-        # Convert blocks to markdown
-        # Don't add the title as H1 if the first block is already a heading
-        markdown_content = ""
-        if all_blocks and all_blocks[0].get("type") not in ["heading_1", "heading_2", "heading_3"]:
-            markdown_content = f"# {page_title}\n\n"
-        
-        for block in all_blocks:
-            markdown_content += convert_block_to_markdown(block, client, notion_token=notion_token)
-        
-        # If we didn't add a title and there's no content, add it
-        if not markdown_content.strip():
-            markdown_content = f"# {page_title}\n\n"
-        
-        # Sanitize filename
-        safe_filename = re.sub(r'[^\w\s-]', '', page_title).strip()
-        safe_filename = re.sub(r'[-\s]+', '-', safe_filename).lower()
-        if not safe_filename:
-            safe_filename = f"page-{page_id[:8]}"
-        
-        output_file = output_path / f"{safe_filename}.md"
-        
-        # Write to file
-        with open(output_file, "w", encoding="utf-8") as f:
-            f.write(markdown_content)
-        
-        print(f"✅ Exported to: {output_file}")
-        
-        # Add filename to metadata if available
-        if metadata:
-            metadata["filename"] = f"articles/{safe_filename}.md"
-        
-        return f"{safe_filename}.md", metadata
-        
-        # Add filename to metadata if available
-        if metadata:
-            metadata["filename"] = f"articles/{safe_filename}.md"
-        
-        return f"{safe_filename}.md", metadata
-        
-    except Exception as e:
-        print(f"❌ Error exporting page {page_id}: {e}")
-        import traceback
-        traceback.print_exc()
-        return None, None
-        return None, None
 
 
 def find_child_pages(parent_page_id: str, client: Client) -> List[str]:
@@ -680,18 +676,23 @@ def main():
         
         pages = query_database(database_id, client)
         
-        # Always filter by Published checkbox property - only export if Published is checked
-        print(f"🔍 Filtering for published articles only (Published checkbox = true)...")
+        # Always filter by Ready checkbox property - only export if Ready checkbox is checked
+        print(f"🔍 Filtering for ready articles only (Ready checkbox = true)...")
         for page in pages:
             metadata = extract_page_metadata(page)
-            # Only export if Published checkbox is checked (true)
-            if metadata.get("published", False):
+            # Check Ready checkbox - this is what controls export
+            is_ready = metadata.get("ready", False)
+            published_date = metadata.get("published_date", None)
+            
+            # Only export if Ready checkbox is checked (true)
+            if is_ready:
                 page_ids_to_export.append(metadata.get("id"))
                 all_metadata.append(metadata)
+                print(f"  ✓ Including: {metadata.get('title', 'Untitled')} (ready={is_ready}, published_date={published_date})")
             else:
-                print(f"  ⏭️  Skipping unpublished article: {metadata.get('title', 'Untitled')}")
+                print(f"  ⏭️  Skipping unready article: {metadata.get('title', 'Untitled')} (ready={is_ready})")
         
-        print(f"✓ Found {len(page_ids_to_export)} published article(s) to export")
+        print(f"✓ Found {len(page_ids_to_export)} ready article(s) to export")
     elif page_ids_str:
         # Check if multiple page IDs are provided (comma-separated)
         page_ids_list = [pid.strip() for pid in page_ids_str.split(",") if pid.strip()]
