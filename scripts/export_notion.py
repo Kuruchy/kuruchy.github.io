@@ -598,6 +598,42 @@ def find_child_pages(parent_page_id: str, client: Client) -> List[str]:
     return child_page_ids
 
 
+def find_database_in_page(page_id: str, client: Client) -> Optional[str]:
+    """Find a database block inside a page. Returns the database ID if found."""
+    try:
+        print(f"🔍 Searching for database in page: {page_id}")
+        all_blocks = []
+        cursor = None
+        
+        while True:
+            if cursor:
+                response = client.blocks.children.list(block_id=page_id, start_cursor=cursor)
+            else:
+                response = client.blocks.children.list(block_id=page_id)
+            
+            blocks = response.get("results", [])
+            all_blocks.extend(blocks)
+            
+            if not response.get("has_more"):
+                break
+            cursor = response.get("next_cursor")
+        
+        # Look for child_database blocks
+        for block in all_blocks:
+            if block.get("type") == "child_database":
+                database_id = block.get("id")
+                database_title = block.get("child_database", {}).get("title", "Untitled")
+                print(f"  ✓ Found database: {database_title} ({database_id})")
+                return database_id
+        
+        print("  ⚠️  No database found in page")
+        return None
+        
+    except Exception as e:
+        print(f"⚠️  Error searching for database in page: {e}")
+        return None
+
+
 def query_database(database_id: str, client: Client) -> List[Dict[str, Any]]:
     """Query a Notion database and return all pages"""
     pages = []
@@ -624,6 +660,10 @@ def query_database(database_id: str, client: Client) -> List[Dict[str, Any]]:
             
         except Exception as e:
             print(f"⚠️  Error querying database: {e}")
+            print(f"💡 Make sure:")
+            print(f"   1. The database ID is correct")
+            print(f"   2. The database is shared with your Notion integration")
+            print(f"   3. Your NOTION_TOKEN has access to the database")
             break
     
     print(f"✓ Found {len(pages)} page(s) in database")
@@ -652,8 +692,6 @@ def main():
     """Main function"""
     print("📚 Notion Blog Exporter starting...")
     
-    # Get database ID or page ID(s) from environment variable
-    database_id = os.getenv("DATABASE_ID", "").strip()
     # Get database ID or page ID(s) from environment variable
     database_id = os.getenv("DATABASE_ID", "").strip()
     page_ids_str = os.getenv("PAGE_ID", "").strip()
@@ -693,6 +731,42 @@ def main():
                 print(f"  ⏭️  Skipping unready article: {metadata.get('title', 'Untitled')} (ready={is_ready})")
         
         print(f"✓ Found {len(page_ids_to_export)} ready article(s) to export")
+    elif page_ids_str:
+        # If PAGE_ID is provided but no DATABASE_ID, try to find database in the page
+        parent_page_id = page_ids_str.split(",")[0].strip()
+        print(f"🔍 DATABASE_ID not provided, searching for database in page: {parent_page_id}")
+        found_database_id = find_database_in_page(parent_page_id, client)
+        
+        if found_database_id:
+            is_database = True
+            database_id = found_database_id
+            print(f"📊 Found and using database: {database_id}")
+            
+            # Clear existing articles first (to remove unpublished ones)
+            clear_existing_articles(OUTPUT_DIR)
+            
+            pages = query_database(database_id, client)
+            
+            # Always filter by Ready checkbox property - only export if Ready checkbox is checked
+            print(f"🔍 Filtering for ready articles only (Ready checkbox = true)...")
+            for page in pages:
+                metadata = extract_page_metadata(page)
+                # Check Ready checkbox - this is what controls export
+                is_ready = metadata.get("ready", False)
+                published_date = metadata.get("published_date", None)
+                
+                # Only export if Ready checkbox is checked (true)
+                if is_ready:
+                    page_ids_to_export.append(metadata.get("id"))
+                    all_metadata.append(metadata)
+                    print(f"  ✓ Including: {metadata.get('title', 'Untitled')} (ready={is_ready}, published_date={published_date})")
+                else:
+                    print(f"  ⏭️  Skipping unready article: {metadata.get('title', 'Untitled')} (ready={is_ready})")
+            
+            print(f"✓ Found {len(page_ids_to_export)} ready article(s) to export")
+        else:
+            # Fall back to old behavior (child pages)
+            print("⚠️  No database found, falling back to child pages method")
     elif page_ids_str:
         # Check if multiple page IDs are provided (comma-separated)
         page_ids_list = [pid.strip() for pid in page_ids_str.split(",") if pid.strip()]
