@@ -168,13 +168,8 @@ function displayArticleCards() {
     articlesContainer.innerHTML = '';
     
     // Si no hay artículos cargados, mostrar skeleton loaders
-    // Si no hay artículos cargados, mostrar skeleton loaders
     if (!articles || articles.length === 0) {
         articlesContainer.innerHTML = `
-            <div class="card glass skeleton-card" style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
-                <div class="skeleton skeleton-title"></div>
-                <div class="skeleton skeleton-line"></div>
-                <div class="skeleton skeleton-line short"></div>
             <div class="card glass skeleton-card" style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
                 <div class="skeleton skeleton-title"></div>
                 <div class="skeleton skeleton-line"></div>
@@ -206,17 +201,10 @@ function displayArticleCards() {
     }
     
     sortedArticles.forEach((article, index) => {
-    sortedArticles.forEach((article, index) => {
         const cardElement = document.createElement('div');
-        cardElement.className = 'card glass clickable-card article-item';
         cardElement.className = 'card glass clickable-card article-item';
         cardElement.setAttribute('data-type', 'article');
         cardElement.setAttribute('data-id', article.filename);
-        cardElement.style.animationDelay = `${index * 0.1}s`;
-        
-        const dateBadge = article.published_date || article.last_edited_time || article.created_time;
-        const dateFormatted = dateBadge ? formatDate(dateBadge) : '';
-        const readingTime = calculateReadingTime(article.description || '');
         cardElement.style.animationDelay = `${index * 0.1}s`;
         
         const dateBadge = article.published_date || article.last_edited_time || article.created_time;
@@ -229,7 +217,6 @@ function displayArticleCards() {
                 <span>${Array.isArray(article.category) ? article.category[0] : (article.category || 'Article')}</span>
             </div>
             <div class="card-content">
-                ${dateFormatted ? `<div class="article-date-badge">${dateFormatted}</div>` : ''}
                 ${dateFormatted ? `<div class="article-date-badge">${dateFormatted}</div>` : ''}
                 <h3>${article.title}</h3>
                 <p>${article.description}</p>
@@ -387,123 +374,6 @@ function setupMobileMenu() {
     }
 }
 
-// Navigation scroll indicators and active section tracking
-function setupNavigationScroll() {
-    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-    const sections = document.querySelectorAll('section[id]');
-    
-    function updateActiveNav() {
-        let current = '';
-        const scrollY = window.pageYOffset;
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.offsetHeight;
-            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    }
-    
-    window.addEventListener('scroll', updateActiveNav);
-    updateActiveNav();
-}
-
-// Navbar scroll behavior
-function setupNavbarScroll() {
-    const navbar = document.querySelector('.navbar');
-    let lastScroll = 0;
-    
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-        
-        lastScroll = currentScroll;
-    });
-}
-
-// Smooth scroll for anchor links
-function setupSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href === '#' || href === '#home') {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                return;
-            }
-            
-            const target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
-                const offsetTop = target.offsetTop - 80;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                const nav = document.querySelector('.nav-links');
-                if (nav && window.innerWidth <= 768) {
-                    nav.classList.remove('active');
-                }
-            }
-        });
-    });
-}
-
-// Back to top button
-function setupBackToTop() {
-    const backToTop = document.createElement('div');
-    backToTop.className = 'back-to-top';
-    backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    document.body.appendChild(backToTop);
-    
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
-        }
-    });
-}
-
-// Enhanced mobile menu
-function setupMobileMenu() {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    
-    if (burger && nav) {
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            burger.style.transform = nav.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!nav.contains(e.target) && !burger.contains(e.target)) {
-                nav.classList.remove('active');
-                burger.style.transform = 'rotate(0deg)';
-            }
-        });
-    }
-}
-
 // Inicializar cuando el DOM esté listo
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
@@ -514,21 +384,8 @@ if (document.readyState === 'loading') {
         setupBackToTop();
         setupMobileMenu();
     });
-    document.addEventListener('DOMContentLoaded', () => {
-        initialize();
-        setupNavigationScroll();
-        setupNavbarScroll();
-        setupSmoothScroll();
-        setupBackToTop();
-        setupMobileMenu();
-    });
 } else {
     initialize();
-    setupNavigationScroll();
-    setupNavbarScroll();
-    setupSmoothScroll();
-    setupBackToTop();
-    setupMobileMenu();
     setupNavigationScroll();
     setupNavbarScroll();
     setupSmoothScroll();
@@ -955,17 +812,10 @@ function renderFeaturedArticles(sectionId, category, container) {
     // Clear container and create grid
     container.innerHTML = '';
     featuredArticles.forEach((article, index) => {
-    featuredArticles.forEach((article, index) => {
         const cardElement = document.createElement('div');
-        cardElement.className = 'card glass clickable-card article-item';
         cardElement.className = 'card glass clickable-card article-item';
         cardElement.setAttribute('data-type', 'article');
         cardElement.setAttribute('data-id', article.filename);
-        cardElement.style.animationDelay = `${index * 0.1}s`;
-        
-        const dateBadge = article.published_date || article.last_edited_time || article.created_time;
-        const dateFormatted = dateBadge ? formatDate(dateBadge) : '';
-        const readingTime = calculateReadingTime(article.description || '');
         cardElement.style.animationDelay = `${index * 0.1}s`;
         
         const dateBadge = article.published_date || article.last_edited_time || article.created_time;
@@ -978,7 +828,6 @@ function renderFeaturedArticles(sectionId, category, container) {
                 <span>${Array.isArray(article.category) ? article.category[0] : (article.category || 'Article')}</span>
             </div>
             <div class="card-content">
-                ${dateFormatted ? `<div class="article-date-badge">${dateFormatted}</div>` : ''}
                 ${dateFormatted ? `<div class="article-date-badge">${dateFormatted}</div>` : ''}
                 <h3>${article.title}</h3>
                 <p>${article.description}</p>
@@ -1042,7 +891,6 @@ function updateFeaturedSections() {
     }
 }
 
-// 2. ANIMACIÓN DE FONDO (Red Neuronal / Constelación) - Enhanced
 // 2. ANIMACIÓN DE FONDO (Red Neuronal / Constelación) - Enhanced
 const canvas = document.getElementById('bg-animation');
 if (canvas) {

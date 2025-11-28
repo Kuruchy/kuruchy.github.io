@@ -8,9 +8,6 @@
   --glow-primary: rgba(234, 88, 12, 0.4);
   --glow-secondary: rgba(251, 191, 36, 0.4);
   --shadow-glow: 0 0 20px rgba(249, 115, 22, 0.3);
-  --glow-primary: rgba(234, 88, 12, 0.4);
-  --glow-secondary: rgba(251, 191, 36, 0.4);
-  --shadow-glow: 0 0 20px rgba(249, 115, 22, 0.3);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', system-ui, sans-serif; }
@@ -78,84 +75,15 @@ h2::after {
   font-size: 1.1rem;
   line-height: 1.6;
 }
-.container {
-  padding: 5rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  position: relative;
-}
-
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  background: linear-gradient(to right, var(--accent-secondary), var(--accent-primary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  position: relative;
-  padding-bottom: 1rem;
-  letter-spacing: -1px;
-  font-weight: 800;
-}
-
-h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--accent-secondary), var(--accent-primary), transparent);
-  animation: expandLine 1s ease-out;
-}
-
-@keyframes expandLine {
-  from {
-    width: 0;
-  }
-  to {
-    width: 80px;
-  }
-}
-
-.subtitle {
-  text-align: center;
-  margin-bottom: 3rem;
-  opacity: 0.7;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
 
 /* Estilo Cristal (Glassmorphism) */
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(10px) saturate(180%);
   -webkit-backdrop-filter: blur(10px) saturate(180%);
-  backdrop-filter: blur(10px) saturate(180%);
-  -webkit-backdrop-filter: blur(10px) saturate(180%);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
   padding: 2rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.glass::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: left 0.5s ease;
-}
-
-.glass:hover::before {
-  left: 100%;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -192,52 +120,7 @@ h2::after {
 .navbar.scrolled {
   background: linear-gradient(180deg, rgba(5, 5, 17, 0.98) 0%, rgba(5, 5, 17, 0.95) 100%);
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(180deg, rgba(5, 5, 17, 0.95) 0%, rgba(5, 5, 17, 0.85) 100%);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
 }
-
-.navbar.scrolled {
-  background: linear-gradient(180deg, rgba(5, 5, 17, 0.98) 0%, rgba(5, 5, 17, 0.95) 100%);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: 800;
-  letter-spacing: -1px;
-  background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 0 30px var(--glow-primary);
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.logo::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
-  transition: width 0.3s ease;
-}
-
-.logo:hover::after {
-  width: 100%;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 10px var(--glow-primary));
-}
-
 
 .logo {
   font-size: 1.8rem;
@@ -314,21 +197,6 @@ h2::after {
 
 .nav-links a.active {
   color: var(--accent-secondary);
-}
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  align-items: center;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
-  transition: all 0.3s ease;
-  position: relative;
-  padding: 0.5rem 0;
 }
 
 .nav-links a::before {
@@ -437,10 +305,6 @@ h2::after {
   }
 }
 
-  position: relative;
-  overflow: hidden;
-}
-
 .hero::before {
   content: '';
   position: absolute;
@@ -509,6 +373,7 @@ h2::after {
   letter-spacing: -2px;
 }
 
+.badge-ai {
   display: inline-block;
   padding: 0.5rem 1rem;
   border: 1px solid var(--accent-secondary);
@@ -571,6 +436,8 @@ h2::after {
   flex-wrap: wrap;
   animation: fadeInUp 1s ease-out 0.4s both;
 }
+
+.text-gradient {
   background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary), var(--accent-secondary));
   background-size: 200% auto;
   -webkit-background-clip: text;
