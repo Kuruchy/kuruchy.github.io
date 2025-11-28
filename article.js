@@ -84,7 +84,7 @@ function loadArticle(article) {
         })
         .then(text => {
             if (!text || text.trim() === '') {
-                throw new Error('El archivo está vacío');
+                throw new Error('The file is empty');
             }
             const htmlContent = marked.parse(text);
             return { ...article, content: htmlContent };
@@ -119,9 +119,9 @@ function loadArticleFromURL() {
         if (!article) {
             document.getElementById('article-content').innerHTML = 
                 `<div style="color: #ff6b6b;">
-                    <p>Artículo no encontrado.</p>
-                    <p style="font-size: 0.9em;">Buscado: ${decodedFile}</p>
-                    <p style="font-size: 0.9em;">Disponibles: ${articles.length > 0 ? articles.map(a => a.filename).join(', ') : 'Ninguno'}</p>
+                    <p>Article not found.</p>
+                    <p style="font-size: 0.9em;">Searched: ${decodedFile}</p>
+                    <p style="font-size: 0.9em;">Available: ${articles.length > 0 ? articles.map(a => a.filename).join(', ') : 'None'}</p>
                 </div>`;
             return;
         }
@@ -147,7 +147,7 @@ function loadArticleFromURL() {
                             <h1>${loadedArticle.title}</h1>
                             <div class="article-type-badge">
                                 <i class="${loadedArticle.icon}"></i>
-                                <span>Artículo</span>
+                                <span>Article</span>
                             </div>
                         </div>
                     </div>
@@ -194,7 +194,7 @@ function loadArticleFromURL() {
                 
                 document.getElementById('article-content').innerHTML = 
                     `<div style="color: #ff6b6b;">
-                        <p><strong>Error al cargar el artículo</strong></p>
+                        <p><strong>Error loading article</strong></p>
                         <p>${errorMsg}</p>
                         <p style="font-size: 0.9em; margin-top: 1rem;">Archivo: ${article.filename}</p>
                         <p style="font-size: 0.9em;">Protocolo: ${window.location.protocol}</p>
@@ -204,7 +204,7 @@ function loadArticleFromURL() {
     }).catch(error => {
         console.error('Error loading articles:', error);
         document.getElementById('article-content').innerHTML = 
-            '<div style="color: #ff6b6b;"><p>Error al cargar la lista de artículos.</p></div>';
+            '<div style="color: #ff6b6b;"><p>Error loading article list.</p></div>';
     });
 }
 
@@ -227,7 +227,7 @@ function loadComments(term = null) {
     commentsSection.innerHTML = '';
     
     // Añadir un mensaje de carga temporal
-    commentsSection.innerHTML = '<p style="text-align: center; color: #94a3b8; padding: 2rem 0;">Cargando comentarios...</p>';
+    commentsSection.innerHTML = '<p style="text-align: center; color: #94a3b8; padding: 2rem 0;">Loading comments...</p>';
     
     // Crear el script de Giscus dinámicamente
     const script = document.createElement('script');
@@ -257,7 +257,7 @@ function loadComments(term = null) {
     
     // Manejar errores de carga
     script.onerror = function() {
-        commentsSection.innerHTML = '<p style="text-align: center; color: #ff6b6b; padding: 2rem 0;">Error al cargar los comentarios. Por favor, recarga la página.</p>';
+        commentsSection.innerHTML = '<p style="text-align: center; color: #ff6b6b; padding: 2rem 0;">Error loading comments. Please reload the page.</p>';
         console.error('Error al cargar el script de Giscus');
     };
     
@@ -304,7 +304,7 @@ function generateTableOfContents() {
     
     const tocContainer = document.createElement('div');
     tocContainer.className = 'toc-container';
-    tocContainer.innerHTML = '<div class="toc-title"><i class="fas fa-list"></i> Contenido</div><ul class="toc-list"></ul>';
+    tocContainer.innerHTML = '<div class="toc-title"><i class="fas fa-list"></i> Contents</div><ul class="toc-list"></ul>';
     const tocList = tocContainer.querySelector('.toc-list');
     
     headings.forEach((heading, index) => {
@@ -368,7 +368,7 @@ function displayReadingTime() {
     const readingTimeDiv = document.createElement('div');
     readingTimeDiv.className = 'article-reading-time';
     readingTimeDiv.style.marginBottom = '2rem';
-    readingTimeDiv.innerHTML = `<i class="fas fa-clock"></i> ${minutes} min de lectura`;
+    readingTimeDiv.innerHTML = `<i class="fas fa-clock"></i> ${minutes} min read`;
     
     const articleHeader = document.querySelector('.article-header');
     if (articleHeader) {
