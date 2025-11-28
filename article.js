@@ -158,13 +158,20 @@ function loadArticleFromURL() {
                 document.getElementById('article-content').innerHTML = articleHTML;
                 document.title = `${loadedArticle.title} | Kuruchy`;
                 
+                // Generate TOC and reading time after content is rendered
+                setTimeout(() => {
+                    generateTableOfContents();
+                    displayReadingTime();
+                    setupArticleSmoothScroll();
+                }, 200);
+                
                 // Cargar comentarios de Giscus después de renderizar el Markdown
                 // Usar un pequeño delay para asegurar que el DOM esté completamente renderizado
                 setTimeout(() => {
                     // Usar el nombre del archivo como term para comentarios únicos por artículo
                     const articleId = loadedArticle.filename.replace(/[^a-zA-Z0-9]/g, '-');
                     loadComments(articleId);
-                }, 100);
+                }, 300);
             })
             .catch(error => {
                 console.error('Error completo:', error);
@@ -269,93 +276,309 @@ function goBackFromArticle() {
 // Hacer la función global para que funcione desde el onclick
 window.goBackFromArticle = goBackFromArticle;
 
+// Reading progress indicator
+function setupReadingProgress() {
+    const progressBar = document.createElement('div');
+    progressBar.className = 'reading-progress';
+    document.body.appendChild(progressBar);
+    
+    function updateProgress() {
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+        progressBar.style.width = scrollPercent + '%';
+    }
+    
+    window.addEventListener('scroll', updateProgress);
+    updateProgress();
+}
+
+// Table of Contents generator
+function generateTableOfContents() {
+    const articleContent = document.querySelector('.article-content');
+    if (!articleContent) return;
+    
+    const headings = articleContent.querySelectorAll('h2, h3');
+    if (headings.length === 0) return;
+    
+    const tocContainer = document.createElement('div');
+    tocContainer.className = 'toc-container';
+    tocContainer.innerHTML = '<div class="toc-title"><i class="fas fa-list"></i> Contenido</div><ul class="toc-list"></ul>';
+    const tocList = tocContainer.querySelector('.toc-list');
+    
+    headings.forEach((heading, index) => {
+        const id = `heading-${index}`;
+        heading.id = id;
+        
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = `#${id}`;
+        a.textContent = heading.textContent;
+        a.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.getElementById(id);
+            if (target) {
+                const offsetTop = target.offsetTop - 100;
+                window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+            }
+        });
+        li.appendChild(a);
+        tocList.appendChild(li);
+    });
+    
+    // Insert TOC before article content
+    const articleView = document.querySelector('.article-view');
+    if (articleView) {
+        const articleContentWrapper = articleContent.parentElement;
+        articleContentWrapper.insertBefore(tocContainer, articleContent);
+    }
+    
+    // Update active TOC item on scroll
+    function updateActiveTOC() {
+        const scrollPos = window.pageYOffset + 150;
+        const tocLinks = tocList.querySelectorAll('a');
+        
+        headings.forEach((heading, index) => {
+            const headingTop = heading.offsetTop;
+            const headingBottom = headingTop + heading.offsetHeight;
+            const tocLink = tocLinks[index];
+            
+            if (scrollPos >= headingTop && scrollPos < headingBottom) {
+                tocLinks.forEach(link => link.classList.remove('active'));
+                if (tocLink) tocLink.classList.add('active');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', updateActiveTOC);
+    updateActiveTOC();
+}
+
+// Calculate and display reading time
+function displayReadingTime() {
+    const articleContent = document.querySelector('.article-content');
+    if (!articleContent) return;
+    
+    const text = articleContent.textContent || articleContent.innerText || '';
+    const wordsPerMinute = 200;
+    const words = text.split(/\s+/).length;
+    const minutes = Math.ceil(words / wordsPerMinute);
+    
+    const readingTimeDiv = document.createElement('div');
+    readingTimeDiv.className = 'article-reading-time';
+    readingTimeDiv.style.marginBottom = '2rem';
+    readingTimeDiv.innerHTML = `<i class="fas fa-clock"></i> ${minutes} min de lectura`;
+    
+    const articleHeader = document.querySelector('.article-header');
+    if (articleHeader) {
+        articleHeader.appendChild(readingTimeDiv);
+    }
+}
+
+// Enhanced back to top for article page
+function setupArticleBackToTop() {
+    const backToTop = document.createElement('div');
+    backToTop.className = 'back-to-top';
+    backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    document.body.appendChild(backToTop);
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    });
+}
+
+// Smooth scroll for anchor links in article
+function setupArticleSmoothScroll() {
+    document.querySelectorAll('.article-content a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                const offsetTop = target.offsetTop - 100;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
 // Inicializar cuando el DOM esté listo
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadArticleFromURL);
+    document.addEventListener('DOMContentLoaded', () => {
+        loadArticleFromURL();
+        setupReadingProgress();
+        setupArticleBackToTop();
+    });
 } else {
     loadArticleFromURL();
+    setupReadingProgress();
+    setupArticleBackToTop();
 }
 
-// ANIMACIÓN DE FONDO (mismo código que index.html)
+// TOC and reading time are now generated after article content is loaded in loadArticleFromURL
+
+// ANIMACIÓN DE FONDO (Enhanced - same as index.html)
 const canvas = document.getElementById('bg-animation');
-const ctx = canvas.getContext('2d');
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particlesArray;
-
-window.addEventListener('resize', () => {
+if (canvas) {
+    const ctx = canvas.getContext('2d');
+    
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    init();
-});
-
-class Particle {
-    constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.directionX = (Math.random() * 0.4) - 0.2;
-        this.directionY = (Math.random() * 0.4) - 0.2;
-        this.size = Math.random() * 2;
-        this.color = '#f97316';
-    }
-    update() {
-        if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
-        if (this.y > canvas.height || this.y < 0) this.directionY = -this.directionY;
+    
+    let particlesArray = [];
+    let mouse = { x: null, y: null };
+    let mouseRadius = 150;
+    
+    window.addEventListener('mousemove', (e) => {
+        mouse.x = e.x;
+        mouse.y = e.y;
+    });
+    
+    window.addEventListener('mouseout', () => {
+        mouse.x = null;
+        mouse.y = null;
+    });
+    
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        init();
+    });
+    
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.directionX = (Math.random() * 0.5) - 0.25;
+            this.directionY = (Math.random() * 0.5) - 0.25;
+            this.size = Math.random() * 2.5 + 0.5;
+            this.baseColor = { r: 249, g: 115, b: 22 };
+            this.opacity = Math.random() * 0.5 + 0.3;
+            this.pulseSpeed = Math.random() * 0.02 + 0.01;
+            this.pulsePhase = Math.random() * Math.PI * 2;
+        }
         
-        this.x += this.directionX;
-        this.y += this.directionY;
-        this.draw();
-    }
-    draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = this.color;
-        ctx.fill();
-    }
-}
-
-function init() {
-    particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 15000;
-    for (let i = 0; i < numberOfParticles; i++) {
-        particlesArray.push(new Particle());
-    }
-}
-
-function animate() {
-    requestAnimationFrame(animate);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (let i = 0; i < particlesArray.length; i++) {
-        particlesArray[i].update();
-    }
-    connect();
-}
-
-function connect() {
-    let opacityValue = 1;
-    for (let a = 0; a < particlesArray.length; a++) {
-        for (let b = a; b < particlesArray.length; b++) {
-            let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x))
-            + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+        update() {
+            if (mouse.x !== null && mouse.y !== null) {
+                const dx = mouse.x - this.x;
+                const dy = mouse.y - this.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < mouseRadius) {
+                    const force = (mouseRadius - distance) / mouseRadius;
+                    this.directionX -= (dx / distance) * force * 0.05;
+                    this.directionY -= (dy / distance) * force * 0.05;
+                }
+            }
             
-            if (distance < (canvas.width/7) * (canvas.height/7)) {
-                opacityValue = 1 - (distance / 20000);
-                ctx.strokeStyle = 'rgba(249, 115, 22,' + opacityValue + ')';
-                ctx.lineWidth = 1;
-                ctx.beginPath();
-                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
-                ctx.stroke();
+            if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
+            if (this.y > canvas.height || this.y < 0) this.directionY = -this.directionY;
+            
+            this.x += this.directionX;
+            this.y += this.directionY;
+            
+            this.pulsePhase += this.pulseSpeed;
+            const pulse = Math.sin(this.pulsePhase) * 0.3 + 0.7;
+            this.opacity = (Math.random() * 0.3 + 0.4) * pulse;
+            
+            this.draw();
+        }
+        
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+            ctx.fillStyle = `rgba(${this.baseColor.r}, ${this.baseColor.g}, ${this.baseColor.b}, ${this.opacity})`;
+            ctx.fill();
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = `rgba(${this.baseColor.r}, ${this.baseColor.g}, ${this.baseColor.b}, 0.8)`;
+        }
+    }
+    
+    function init() {
+        particlesArray = [];
+        let numberOfParticles = Math.floor((canvas.height * canvas.width) / 12000);
+        for (let i = 0; i < numberOfParticles; i++) {
+            particlesArray.push(new Particle());
+        }
+    }
+    
+    function animate() {
+        requestAnimationFrame(animate);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = 'rgba(5, 5, 17, 0.1)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        for (let i = 0; i < particlesArray.length; i++) {
+            particlesArray[i].update();
+        }
+        connect();
+    }
+    
+    function connect() {
+        ctx.shadowBlur = 0;
+        for (let a = 0; a < particlesArray.length; a++) {
+            for (let b = a + 1; b < particlesArray.length; b++) {
+                const dx = particlesArray[a].x - particlesArray[b].x;
+                const dy = particlesArray[a].y - particlesArray[b].y;
+                const distance = dx * dx + dy * dy;
+                const maxDistance = (canvas.width / 6) * (canvas.height / 6);
+                
+                if (distance < maxDistance) {
+                    const opacity = 1 - (distance / maxDistance);
+                    const gradient = ctx.createLinearGradient(
+                        particlesArray[a].x, particlesArray[a].y,
+                        particlesArray[b].x, particlesArray[b].y
+                    );
+                    
+                    let r1 = 249, g1 = 115, b1 = 22;
+                    let r2 = 251, g2 = 191, b2 = 36;
+                    
+                    if (mouse.x !== null && mouse.y !== null) {
+                        const distA = Math.sqrt(
+                            Math.pow(particlesArray[a].x - mouse.x, 2) +
+                            Math.pow(particlesArray[a].y - mouse.y, 2)
+                        );
+                        const distB = Math.sqrt(
+                            Math.pow(particlesArray[b].x - mouse.x, 2) +
+                            Math.pow(particlesArray[b].y - mouse.y, 2)
+                        );
+                        
+                        if (distA < mouseRadius || distB < mouseRadius) {
+                            r1 = 251; g1 = 191; b1 = 36;
+                            r2 = 234; g2 = 88; b2 = 12;
+                        }
+                    }
+                    
+                    gradient.addColorStop(0, `rgba(${r1}, ${g1}, ${b1}, ${opacity * 0.6})`);
+                    gradient.addColorStop(1, `rgba(${r2}, ${g2}, ${b2}, ${opacity * 0.6})`);
+                    
+                    ctx.strokeStyle = gradient;
+                    ctx.lineWidth = opacity * 1.5;
+                    ctx.beginPath();
+                    ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                    ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                    ctx.stroke();
+                }
             }
         }
     }
+    
+    init();
+    animate();
 }
-
-init();
-animate();
 
 // MENÚ MÓVIL
 const burger = document.querySelector('.burger');
