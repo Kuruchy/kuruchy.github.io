@@ -14,6 +14,21 @@
     "filename": "articles/new-blog.md"
   },
   {
+    "id": "2804e48b-1fa0-4c4a-9264-7de5572b1a1a",
+    "created_time": "2022-02-09T18:30:00.000Z",
+    "last_edited_time": "2025-11-28T11:16:00.000Z",
+    "title": "Droidcon Berlin 2021 Day One",
+    "ready": true,
+    "category": [
+      "Android",
+      "Conference"
+    ],
+    "published_date": "2021-10-20",
+    "published": true,
+    "excerpt": "All the day one talks were fascinating, but these are the ones I liked the most...",
+    "filename": "articles/droidcon-berlin-2021-day-one.md"
+  },
+  {
     "id": "2b242b55-6dc1-8082-9f3d-f59aa4d46281",
     "created_time": "2025-11-21T17:24:00.000Z",
     "last_edited_time": "2025-11-28T08:55:00.000Z",
@@ -26,6 +41,80 @@
     "published": true,
     "excerpt": "I want to revamp the Blog. Let’s see how it goes this time!",
     "filename": "articles/new-era.md"
+  },
+  {
+    "id": "2e87175b-7e86-4baa-b6cb-f5f630100052",
+    "created_time": "2022-04-11T20:22:00.000Z",
+    "last_edited_time": "2025-11-28T11:16:00.000Z",
+    "title": "My German Journey",
+    "ready": true,
+    "category": [
+      "Engineering",
+      "Communication"
+    ],
+    "published_date": "2022-05-03",
+    "published": true,
+    "excerpt": "One of the things I keep telling me over and over again, is how lucky I am. What impact had in my german adventure?",
+    "filename": "articles/my-german-journey.md"
+  },
+  {
+    "id": "48122e70-3dfa-45f2-ab53-ab60cb26f072",
+    "created_time": "2022-02-09T18:30:00.000Z",
+    "last_edited_time": "2025-11-28T11:16:00.000Z",
+    "title": "Droidcon Berlin 2021 Day Two",
+    "ready": true,
+    "category": [
+      "Android",
+      "Conference"
+    ],
+    "published_date": "2021-10-24",
+    "published": true,
+    "excerpt": "Day two was great, and day three came full of surprises!",
+    "filename": "articles/droidcon-berlin-2021-day-two.md"
+  },
+  {
+    "id": "7b43739b-20ce-4f1c-bafd-88cc22b2d033",
+    "created_time": "2022-04-13T12:12:00.000Z",
+    "last_edited_time": "2025-11-28T11:16:00.000Z",
+    "title": "Auto Clean View Binding",
+    "ready": true,
+    "category": [
+      "Android"
+    ],
+    "published_date": "2022-04-14",
+    "published": true,
+    "excerpt": "I bring to you a solution to automatically clean  the binding reference without using boilerplate.",
+    "filename": "articles/auto-clean-view-binding.md"
+  },
+  {
+    "id": "7c442ec3-8872-4024-8f57-e23f1f69af92",
+    "created_time": "2022-02-08T10:40:00.000Z",
+    "last_edited_time": "2025-11-28T11:16:00.000Z",
+    "title": "**Passive-active Finger Strength Training**",
+    "ready": true,
+    "category": [
+      "Climbing"
+    ],
+    "published_date": "2022-02-09",
+    "published": true,
+    "excerpt": "Finger strength is a complex topic in climbing. It is also the hardest to improve. I bring here my latest training!",
+    "filename": "articles/passive-active-finger-strength-training.md"
+  },
+  {
+    "id": "a87c0456-6dd0-4423-9ef4-b0211653f212",
+    "created_time": "2022-02-09T18:30:00.000Z",
+    "last_edited_time": "2025-11-28T11:16:00.000Z",
+    "title": "Android Studio Actions",
+    "ready": true,
+    "category": [
+      "Efficiency",
+      "Tips & Tricks",
+      "Android"
+    ],
+    "published_date": "2021-09-03",
+    "published": true,
+    "excerpt": "Did you always want to add new buttons to Android Studio to perform some actions that are not there? I will show you how easy it is!",
+    "filename": "articles/android-studio-actions.md"
   },
   {
     "id": "bd20e22c-4050-4c76-8b19-164983cb4dc9",
@@ -41,5 +130,49 @@
     "published": true,
     "excerpt": "Do you want to know why Android succeeded and how? Join me on my review of Androids - The Team That Built the Android Operating System.",
     "filename": "articles/androids-book-review.md"
+  },
+  {
+    "id": "c6e41593-1c96-4ce7-bc1f-436cf5bb29c4",
+    "created_time": "2022-02-09T18:30:00.000Z",
+    "last_edited_time": "2025-11-28T11:16:00.000Z",
+    "title": "Droidcon Berlin 2021",
+    "ready": true,
+    "category": [
+      "Android",
+      "Conference"
+    ],
+    "published_date": "2021-10-19",
+    "published": true,
+    "excerpt": "I made it, I am back to conferences after the global pandemic. Last time I was in a Conference was in...",
+    "filename": "articles/droidcon-berlin-2021.md"
+  },
+  {
+    "id": "ceb36744-322a-4afa-98ee-31538c28f861",
+    "created_time": "2022-02-09T18:30:00.000Z",
+    "last_edited_time": "2025-11-28T11:16:00.000Z",
+    "title": "Android Studio Logcat Color",
+    "ready": true,
+    "category": [
+      "Android",
+      "Tips & Tricks"
+    ],
+    "published_date": "2021-09-08",
+    "published": true,
+    "excerpt": "Do you want your plain Logcat to be able to show different colors for each message type? I will show you how easy it is!",
+    "filename": "articles/android-studio-logcat-color.md"
+  },
+  {
+    "id": "f0cda504-ae56-4d4e-b269-50b6403c37dd",
+    "created_time": "2022-01-22T15:10:00.000Z",
+    "last_edited_time": "2025-11-28T11:16:00.000Z",
+    "title": "My Blog Automation with Notion",
+    "ready": true,
+    "category": [
+      "Automation"
+    ],
+    "published_date": "2022-01-22",
+    "published": true,
+    "excerpt": "If this post reaches my blog, this means the automation with GitHub Actions and Notion works!",
+    "filename": "articles/my-blog-automation-with-notion.md"
   }
 ]
