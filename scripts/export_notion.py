@@ -598,30 +598,66 @@ def query_database(database_id: str, client: Client) -> List[Dict[str, Any]]:
     
     print(f"🔍 Querying database: {database_id}")
     
-    while True:
-        try:
-            if cursor:
-                response = client.databases.query(
-                    database_id=database_id,
-                    start_cursor=cursor
-                )
-            else:
-                response = client.databases.query(database_id=database_id)
-            
-            results = response.get("results", [])
-            pages.extend(results)
-            
-            if not response.get("has_more"):
+    # Check if query method exists first
+    if not hasattr(client.databases, 'query'):
+        print(f"⚠️  'query' method not available on databases endpoint")
+        print(f"💡 Using search API as fallback to find pages in database...")
+        # Use search API to find pages in the database
+        search_cursor = None
+        while True:
+            try:
+                if search_cursor:
+                    search_response = client.search(
+                        filter={"property": "object", "value": "page"},
+                        page_size=100,
+                        start_cursor=search_cursor
+                    )
+                else:
+                    search_response = client.search(
+                        filter={"property": "object", "value": "page"},
+                        page_size=100
+                    )
+                
+                # Filter pages that belong to this database
+                for page in search_response.get("results", []):
+                    parent = page.get("parent", {})
+                    if parent.get("type") == "database_id" and parent.get("database_id") == database_id:
+                        pages.append(page)
+                
+                if not search_response.get("has_more"):
+                    break
+                search_cursor = search_response.get("next_cursor")
+            except Exception as e:
+                print(f"⚠️  Error using search API: {e}")
+                import traceback
+                traceback.print_exc()
                 break
-            cursor = response.get("next_cursor")
-            
-        except Exception as e:
-            print(f"⚠️  Error querying database: {e}")
-            print(f"💡 Make sure:")
-            print(f"   1. The database ID is correct")
-            print(f"   2. The database is shared with your Notion integration")
-            print(f"   3. Your NOTION_TOKEN has access to the database")
-            break
+    else:
+        # Use the query method if available
+        while True:
+            try:
+                query_params = {"database_id": database_id}
+                if cursor:
+                    query_params["start_cursor"] = cursor
+                
+                response = client.databases.query(**query_params)
+                
+                results = response.get("results", [])
+                pages.extend(results)
+                
+                if not response.get("has_more"):
+                    break
+                cursor = response.get("next_cursor")
+                
+            except Exception as e:
+                print(f"⚠️  Error querying database: {e}")
+                import traceback
+                traceback.print_exc()
+                print(f"💡 Make sure:")
+                print(f"   1. The database ID is correct")
+                print(f"   2. The database is shared with your Notion integration")
+                print(f"   3. Your NOTION_TOKEN has access to the database")
+                break
     
     print(f"✓ Found {len(pages)} page(s) in database")
     return pages
