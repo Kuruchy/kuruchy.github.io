@@ -6,18 +6,22 @@ Exports each child page of a parent page as individual Markdown files to the art
 
 import os
 import re
+import json
 import hashlib
 import requests
 from pathlib import Path
 from urllib.parse import urlparse, unquote
 from notion_client import Client
 from typing import Dict, List, Any, Optional, Tuple
+from datetime import datetime
 
 # Configuration
 OUTPUT_DIR = Path(__file__).parent.parent / "articles"
 OUTPUT_DIR.mkdir(exist_ok=True)
 IMAGES_DIR = Path(__file__).parent.parent / "images"
 IMAGES_DIR.mkdir(exist_ok=True)
+METADATA_FILE = Path(__file__).parent.parent / "data" / "articles_metadata.json"
+METADATA_FILE.parent.mkdir(exist_ok=True)
 
 
 def get_notion_client() -> Client:
@@ -236,14 +240,111 @@ def get_page_title(page: Dict[str, Any]) -> str:
     return "Untitled"
 
 
-def export_page_to_markdown(page_id: str, client: Client, output_path: Path, notion_token: str = "") -> Optional[str]:
-    """Export a Notion page to Markdown file. Returns the filename if successful, None otherwise."""
+def extract_property_value(prop_data: Dict[str, Any]) -> Any:
+    """Extract value from a Notion property"""
+    prop_type = prop_data.get("type")
+    
+    if prop_type == "title":
+        rich_text = prop_data.get("title", [])
+        return convert_rich_text_to_markdown(rich_text).strip()
+    elif prop_type == "rich_text":
+        rich_text = prop_data.get("rich_text", [])
+        return convert_rich_text_to_markdown(rich_text).strip()
+    elif prop_type == "select":
+        select = prop_data.get("select")
+        return select.get("name") if select else None
+    elif prop_type == "multi_select":
+        multi_select = prop_data.get("multi_select", [])
+        return [item.get("name") for item in multi_select]
+    elif prop_type == "date":
+        date_obj = prop_data.get("date")
+        if date_obj:
+            return date_obj.get("start")
+        return None
+    elif prop_type == "checkbox":
+        return prop_data.get("checkbox", False)
+    elif prop_type == "number":
+        return prop_data.get("number")
+    elif prop_type == "url":
+        return prop_data.get("url")
+    elif prop_type == "email":
+        return prop_data.get("email")
+    elif prop_type == "phone_number":
+        return prop_data.get("phone_number")
+    elif prop_type == "created_time":
+        return prop_data.get("created_time")
+    elif prop_type == "last_edited_time":
+        return prop_data.get("last_edited_time")
+    else:
+        return None
+
+
+def extract_page_metadata(page: Dict[str, Any]) -> Dict[str, Any]:
+    """Extract metadata from a Notion database page - specifically Title, Category, Published, Excerpt"""
+    metadata = {
+        "id": page.get("id"),
+        "created_time": page.get("created_time"),
+        "last_edited_time": page.get("last_edited_time"),
+    }
+    
+    # Extract all properties
+    properties = page.get("properties", {})
+    
+    # Extract Title (from title property)
+    for prop_name, prop_data in properties.items():
+        if prop_data.get("type") == "title":
+            title = extract_property_value(prop_data)
+            if title:
+                metadata["title"] = title
+            break
+    
+    # Extract specific fields: Category, Published, Excerpt
+    for prop_name, prop_data in properties.items():
+        prop_type = prop_data.get("type")
+        prop_lower = prop_name.lower()
+        
+        # Extract Category (can be select or multi_select)
+        if "category" in prop_lower and prop_type in ["select", "multi_select"]:
+            value = extract_property_value(prop_data)
+            if value:
+                metadata["category"] = value
+        
+        # Extract Published (checkbox or date)
+        elif "published" in prop_lower:
+            if prop_type == "checkbox":
+                metadata["published"] = extract_property_value(prop_data)
+            elif prop_type == "date":
+                date_value = extract_property_value(prop_data)
+                metadata["published"] = date_value is not None
+                if date_value:
+                    metadata["published_date"] = date_value
+        
+        # Extract Excerpt (rich_text or text)
+        elif "excerpt" in prop_lower and prop_type in ["rich_text", "text"]:
+            value = extract_property_value(prop_data)
+            if value:
+                metadata["excerpt"] = value
+    
+    # Fallback: if no title found, use get_page_title
+    if "title" not in metadata or not metadata["title"]:
+        metadata["title"] = get_page_title(page)
+    
+    return metadata
+
+
+def export_page_to_markdown(page_id: str, client: Client, output_path: Path, notion_token: str = "", extract_metadata: bool = False) -> Tuple[Optional[str], Optional[Dict[str, Any]]]:
+    """Export a Notion page to Markdown file. Returns (filename, metadata) if successful, (None, None) otherwise."""
     try:
         # Get page metadata
         page = client.pages.retrieve(page_id=page_id)
         page_title = get_page_title(page)
         
         print(f"📄 Exporting: {page_title}")
+        
+        # Extract metadata if requested
+        metadata = None
+        if extract_metadata:
+            metadata = extract_page_metadata(page)
         
         # Get all blocks
         all_blocks = []
@@ -288,13 +389,18 @@ def export_page_to_markdown(page_id: str, client: Client, output_path: Path, not
             f.write(markdown_content)
         
         print(f"✅ Exported to: {output_file}")
-        return f"{safe_filename}.md"
+        
+        # Add filename to metadata if available
+        if metadata:
+            metadata["filename"] = f"articles/{safe_filename}.md"
+        
+        return f"{safe_filename}.md", metadata
         
     except Exception as e:
         print(f"❌ Error exporting page {page_id}: {e}")
         import traceback
         traceback.print_exc()
-        return None
+        return None, None
 
 
 def find_child_pages(parent_page_id: str, client: Client) -> List[str]:
@@ -386,55 +492,140 @@ def find_child_pages(parent_page_id: str, client: Client) -> List[str]:
     return child_page_ids
 
 
+def query_database(database_id: str, client: Client) -> List[Dict[str, Any]]:
+    """Query a Notion database and return all pages"""
+    pages = []
+    cursor = None
+    
+    print(f"🔍 Querying database: {database_id}")
+    
+    while True:
+        try:
+            if cursor:
+                response = client.databases.query(
+                    database_id=database_id,
+                    start_cursor=cursor
+                )
+            else:
+                response = client.databases.query(database_id=database_id)
+            
+            results = response.get("results", [])
+            pages.extend(results)
+            
+            if not response.get("has_more"):
+                break
+            cursor = response.get("next_cursor")
+            
+        except Exception as e:
+            print(f"⚠️  Error querying database: {e}")
+            break
+    
+    print(f"✓ Found {len(pages)} page(s) in database")
+    return pages
+
+
 def main():
     """Main function"""
     print("📚 Notion Blog Exporter starting...")
     
-    # Get page ID(s) from environment variable
+    # Get database ID or page ID(s) from environment variable
+    database_id = os.getenv("DATABASE_ID", "").strip()
     page_ids_str = os.getenv("PAGE_ID", "").strip()
-    if not page_ids_str:
-        raise ValueError("PAGE_ID environment variable is required (parent Blog page ID or comma-separated child page IDs)")
     
     # Initialize Notion client
     client = get_notion_client()
     notion_token = os.getenv("NOTION_TOKEN", "")
     
-    # Check if multiple page IDs are provided (comma-separated)
-    page_ids_list = [pid.strip() for pid in page_ids_str.split(",") if pid.strip()]
+    page_ids_to_export = []
+    is_database = False
+    all_metadata = []
     
-    if len(page_ids_list) > 1:
-        # Multiple page IDs provided - export them directly
-        print(f"📋 Found {len(page_ids_list)} page ID(s) to export directly")
-        child_page_ids = page_ids_list
+    # Check if we're using a database
+    if database_id:
+        is_database = True
+        print(f"📊 Using Notion Database: {database_id}")
+        pages = query_database(database_id, client)
+        
+        # Always filter by Published checkbox property - only export if Published is checked
+        print(f"🔍 Filtering for published articles only (Published checkbox = true)...")
+        for page in pages:
+            metadata = extract_page_metadata(page)
+            # Only export if Published checkbox is checked (true)
+            if metadata.get("published", False):
+                page_ids_to_export.append(metadata.get("id"))
+                all_metadata.append(metadata)
+            else:
+                print(f"  ⏭️  Skipping unpublished article: {metadata.get('title', 'Untitled')}")
+        
+        print(f"✓ Found {len(page_ids_to_export)} published article(s) to export")
+    elif page_ids_str:
+        # Check if multiple page IDs are provided (comma-separated)
+        page_ids_list = [pid.strip() for pid in page_ids_str.split(",") if pid.strip()]
+        
+        if len(page_ids_list) > 1:
+            # Multiple page IDs provided - export them directly
+            print(f"📋 Found {len(page_ids_list)} page ID(s) to export directly")
+            page_ids_to_export = page_ids_list
+        else:
+            # Single page ID - treat as parent and find children
+            parent_page_id = page_ids_list[0]
+            print(f"🔍 Finding child pages of parent page: {parent_page_id}")
+            
+            # Find all child pages
+            page_ids_to_export = find_child_pages(parent_page_id, client)
+            
+            if not page_ids_to_export:
+                print("⚠️  No child pages found.")
+                print("💡 Tip: If you want to export specific pages, provide comma-separated page IDs in PAGE_ID")
+                return
     else:
-        # Single page ID - treat as parent and find children
-        parent_page_id = page_ids_list[0]
-        print(f"🔍 Finding child pages of parent page: {parent_page_id}")
-        
-        # Find all child pages
-        child_page_ids = find_child_pages(parent_page_id, client)
-        
-        if not child_page_ids:
-            print("⚠️  No child pages found.")
-            print("💡 Tip: If you want to export specific pages, provide comma-separated page IDs in PAGE_ID")
-            return
+        raise ValueError("Either DATABASE_ID or PAGE_ID environment variable is required")
     
-    if not child_page_ids:
+    if not page_ids_to_export:
         print("❌ No pages found to export")
         return
     
-    print(f"\n📋 Exporting {len(child_page_ids)} page(s)...")
+    print(f"\n📋 Exporting {len(page_ids_to_export)} page(s)...")
     
     # Export each page
     exported_files = []
-    for page_id in child_page_ids:
+    
+    # If we already have metadata (from database query), use it
+    # Otherwise, extract it during export
+    metadata_map = {meta.get("id"): meta for meta in all_metadata} if all_metadata else {}
+    
+    for page_id in page_ids_to_export:
         try:
-            filename = export_page_to_markdown(page_id, client, OUTPUT_DIR, notion_token)
+            filename, export_metadata = export_page_to_markdown(
+                page_id, 
+                client, 
+                OUTPUT_DIR, 
+                notion_token, 
+                extract_metadata=is_database and not metadata_map
+            )
             if filename:
                 exported_files.append(filename)
+                # Use pre-extracted metadata if available, otherwise use export metadata
+                if page_id in metadata_map:
+                    metadata_map[page_id]["filename"] = filename
+                elif export_metadata:
+                    export_metadata["filename"] = filename
+                    metadata_map[page_id] = export_metadata
         except Exception as e:
             print(f"❌ Failed to export page {page_id}: {e}")
             continue
+    
+    # Convert metadata map back to list
+    all_metadata = list(metadata_map.values())
+    
+    # Save metadata to JSON file if we have any
+    if all_metadata:
+        try:
+            with open(METADATA_FILE, "w", encoding="utf-8") as f:
+                json.dump(all_metadata, f, indent=2, ensure_ascii=False)
+            print(f"✅ Saved metadata to: {METADATA_FILE}")
+        except Exception as e:
+            print(f"⚠️  Warning: Could not save metadata: {e}")
     
     print(f"\n✅ Export complete! {len(exported_files)} file(s) saved to: {OUTPUT_DIR}")
     if exported_files:

@@ -2,14 +2,17 @@
 """
 Generate Article Metadata - Automatically generates article metadata for JavaScript files
 Scans the articles directory and updates article.js and script.js with article information
+Now supports Notion metadata from JSON file
 """
 
 import re
+import json
 from pathlib import Path
 from typing import Dict, List, Optional
 
 # Configuration
 ARTICLES_DIR = Path(__file__).parent.parent / "articles"
+METADATA_FILE = Path(__file__).parent.parent / "data" / "articles_metadata.json"
 ARTICLE_JS = Path(__file__).parent.parent / "article.js"
 SCRIPT_JS = Path(__file__).parent.parent / "script.js"
 
@@ -171,6 +174,46 @@ def get_icon_for_article(title: str, filename: str) -> str:
     return ICON_MAPPING['default']
 
 
+def load_notion_metadata() -> Dict[str, Dict[str, any]]:
+    """Load metadata from Notion JSON file"""
+    metadata_map = {}
+    
+    if METADATA_FILE.exists():
+        try:
+            with open(METADATA_FILE, 'r', encoding='utf-8') as f:
+                metadata_list = json.load(f)
+            
+            for item in metadata_list:
+                filename = item.get('filename', '')
+                if filename:
+                    # Remove 'articles/' prefix if present
+                    if filename.startswith('articles/'):
+                        filename = filename[9:]
+                    metadata_map[filename] = item
+            
+            print(f"✓ Loaded metadata for {len(metadata_map)} article(s) from Notion")
+        except Exception as e:
+            print(f"⚠️  Warning: Could not load Notion metadata: {e}")
+    
+    return metadata_map
+
+
+def get_category_icon(category: str) -> str:
+    """Get icon based on category"""
+    category_lower = (category or "").lower()
+    
+    if 'ai' in category_lower or 'artificial' in category_lower or 'intelligence' in category_lower:
+        return 'fas fa-brain'
+    elif 'poker' in category_lower or 'game' in category_lower:
+        return 'fas fa-dice'
+    elif 'invest' in category_lower or 'trading' in category_lower or 'finance' in category_lower:
+        return 'fas fa-chart-line'
+    elif 'android' in category_lower or 'mobile' in category_lower or 'ios' in category_lower:
+        return 'fas fa-mobile-alt'
+    else:
+        return 'fas fa-file-alt'
+
+
 def scan_articles() -> List[Dict[str, str]]:
     """Scan articles directory and extract metadata"""
     articles = []
@@ -179,30 +222,71 @@ def scan_articles() -> List[Dict[str, str]]:
         print(f"⚠️  Articles directory not found: {ARTICLES_DIR}")
         return articles
     
+    # Load Notion metadata if available
+    notion_metadata = load_notion_metadata()
+    
     # Get all markdown files
     md_files = sorted(ARTICLES_DIR.glob("*.md"), key=lambda p: p.stat().st_mtime, reverse=True)
     
     for md_file in md_files:
         try:
-            # Read markdown content
-            with open(md_file, 'r', encoding='utf-8') as f:
-                content = f.read()
+            # Check if we have Notion metadata for this file
+            file_key = md_file.name
+            notion_data = notion_metadata.get(file_key, {})
             
-            # Extract title and description
-            title, description = extract_title_and_description(content)
+            # Use Title and Excerpt from Notion metadata
+            title = notion_data.get('title')
+            description = notion_data.get('excerpt')  # Use 'excerpt' instead of 'description'
+            
+            # Fallback: extract from markdown if Notion metadata not available
+            if not title or not description:
+                with open(md_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                extracted_title, extracted_description = extract_title_and_description(content)
+                title = title or extracted_title
+                description = description or extracted_description
             
             # Get relative filename
             filename = f"articles/{md_file.name}"
             
-            # Determine icon
-            icon = get_icon_for_article(title, md_file.name)
+            # Determine icon - prefer category from Notion, fallback to title/filename
+            icon = 'fas fa-file-alt'
+            category = notion_data.get('category') or notion_data.get('categories')
+            if category:
+                if isinstance(category, list):
+                    category = category[0] if category else None
+                icon = get_category_icon(category)
+            else:
+                icon = get_icon_for_article(title, md_file.name)
             
-            articles.append({
+            # Build article object
+            article = {
                 'filename': filename,
                 'title': title,
                 'description': description,
                 'icon': icon
-            })
+            }
+            
+            # Add category if available
+            if category:
+                article['category'] = category if isinstance(category, str) else (category[0] if category else None)
+            
+            # Add published status
+            if notion_data.get('published') is not None:
+                article['published'] = notion_data['published']
+            
+            # Add published_date if available
+            if notion_data.get('published_date'):
+                article['published_date'] = notion_data['published_date']
+            
+            # Add other metadata fields that might be useful
+            if notion_data.get('created_time'):
+                article['created_time'] = notion_data['created_time']
+            if notion_data.get('last_edited_time'):
+                article['last_edited_time'] = notion_data['last_edited_time']
+            
+            articles.append(article)
             
             print(f"✓ Processed: {md_file.name} -> {title}")
             
@@ -239,6 +323,24 @@ def generate_js_array(articles: List[Dict[str, str]]) -> str:
         lines.append(f"        title: '{escape_js_string(article['title'])}', ")
         lines.append(f"        description: '{escape_js_string(article['description'])}', ")
         lines.append(f"        icon: '{escape_js_string(article['icon'])}'")
+        
+        # Add optional fields
+        if article.get('category'):
+            lines.append(f", ")
+            lines.append(f"        category: '{escape_js_string(article['category'])}'")
+        if article.get('published') is not None:
+            lines.append(f", ")
+            lines.append(f"        published: {str(article['published']).lower()}")
+        if article.get('published_date'):
+            lines.append(f", ")
+            lines.append(f"        published_date: '{escape_js_string(article['published_date'])}'")
+        if article.get('created_time'):
+            lines.append(f", ")
+            lines.append(f"        created_time: '{escape_js_string(article['created_time'])}'")
+        if article.get('last_edited_time'):
+            lines.append(f", ")
+            lines.append(f"        last_edited_time: '{escape_js_string(article['last_edited_time'])}'")
+        
         lines.append(f"    }}{comma}")
     lines.append("]")
     
