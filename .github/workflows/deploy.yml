@@ -31,6 +31,7 @@ jobs:
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           DATABASE_ID: ${{ secrets.DATABASE_ID }}
+          PAGE_ID: ${{ secrets.PAGE_ID }}
         run: |
           python scripts/export_notion.py
       
