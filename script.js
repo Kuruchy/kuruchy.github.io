@@ -108,6 +108,12 @@ function getArticlesByCategory(category) {
                    articleCategory.includes('portfolio');
         }
         
+        if (categoryLower === 'climbing' || categoryLower === 'bouldering') {
+            return articleCategory.includes('climbing') || 
+                   articleCategory.includes('bouldering') ||
+                   articleCategory.includes('climb');
+        }
+        
         return false;
     });
 }
@@ -147,12 +153,12 @@ function formatDate(dateString) {
     const diffTime = Math.abs(now - date);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     
-    if (diffDays === 1) return 'Hoy';
-    if (diffDays === 2) return 'Ayer';
-    if (diffDays < 7) return `Hace ${diffDays} días`;
-    if (diffDays < 30) return `Hace ${Math.floor(diffDays / 7)} semanas`;
-    if (diffDays < 365) return `Hace ${Math.floor(diffDays / 30)} meses`;
-    return `Hace ${Math.floor(diffDays / 365)} años`;
+    if (diffDays === 1) return 'Today';
+    if (diffDays === 2) return 'Yesterday';
+    if (diffDays < 7) return `${diffDays} days ago`;
+    if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
+    if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`;
+    return `${Math.floor(diffDays / 365)} years ago`;
 }
 
 // Función para mostrar artículos como cards
@@ -188,7 +194,7 @@ function displayArticleCards() {
     if (sortedArticles.length === 0) {
         articlesContainer.innerHTML = `
             <div class="card glass" style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
-                <p style="color: #94a3b8;">No hay artículos listos para mostrar.</p>
+                <p style="color: #94a3b8;">No articles ready to display.</p>
             </div>
         `;
         return;
@@ -208,13 +214,13 @@ function displayArticleCards() {
         cardElement.innerHTML = `
             <div class="card-header">
                 <i class="${article.icon} icon-tech"></i>
-                <span>${Array.isArray(article.category) ? article.category[0] : (article.category || 'Artículo')}</span>
+                <span>${Array.isArray(article.category) ? article.category[0] : (article.category || 'Article')}</span>
             </div>
             <div class="card-content">
                 ${dateFormatted ? `<div class="article-date-badge">${dateFormatted}</div>` : ''}
                 <h3>${article.title}</h3>
                 <p>${article.description}</p>
-                ${readingTime > 0 ? `<div class="article-reading-time"><i class="fas fa-clock"></i> ${readingTime} min lectura</div>` : ''}
+                ${readingTime > 0 ? `<div class="article-reading-time"><i class="fas fa-clock"></i> ${readingTime} min read</div>` : ''}
             </div>
         `;
         
@@ -240,7 +246,7 @@ function initialize() {
         if (articlesContainer) {
             articlesContainer.innerHTML = `
                 <div class="card glass" style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
-                    <p style="color: #ff6b6b;">Error al cargar los artículos. Por favor, recarga la página.</p>
+                    <p style="color: #ff6b6b;">Error loading articles. Please reload the page.</p>
                 </div>
             `;
         }
@@ -411,7 +417,7 @@ function loadAICurator() {
                     curatorContent.innerHTML = '<p class="typing-indicator">Esperando primera actualización del AI Curator...<span class="blink">_</span></p>';
                 }
             } else {
-                curatorContent.innerHTML = '<p class="typing-indicator">No hay noticias disponibles aún<span class="blink">_</span></p>';
+                curatorContent.innerHTML = '<p class="typing-indicator">No news available yet<span class="blink">_</span></p>';
             }
         })
         .catch(error => {
@@ -589,7 +595,7 @@ function loadPokerPuzzle() {
                 <div class="card glass">
                     <div class="card-content" style="text-align: center; padding: 3rem;">
                         <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem; display: block; color: #ff6b6b;"></i>
-                        <p style="color: #94a3b8;">No hay puzzle disponible aún. El primer puzzle se generará mañana.</p>
+                        <p style="color: #94a3b8;">No puzzle available yet. The first puzzle will be generated tomorrow.</p>
                     </div>
                 </div>
             `;
@@ -777,7 +783,7 @@ function loadPokerPuzzleComments(puzzleId) {
     
     // Manejar errores de carga
     script.onerror = function() {
-        commentsSection.innerHTML = '<p style="text-align: center; color: #94a3b8; padding: 1rem 0;">Error al cargar los comentarios.</p>';
+        commentsSection.innerHTML = '<p style="text-align: center; color: #94a3b8; padding: 1rem 0;">Error loading comments.</p>';
         console.error('Error al cargar el script de Giscus');
     };
     
@@ -796,7 +802,7 @@ function renderFeaturedArticles(sectionId, category, container) {
         container.innerHTML = `
             <div class="card glass">
                 <div class="card-content" style="text-align: center; padding: 2rem;">
-                    <p style="color: #94a3b8;">No hay artículos disponibles aún en esta categoría.</p>
+                    <p style="color: #94a3b8;">No articles available yet in this category.</p>
                 </div>
             </div>
         `;
@@ -819,13 +825,13 @@ function renderFeaturedArticles(sectionId, category, container) {
         cardElement.innerHTML = `
             <div class="card-header">
                 <i class="${article.icon} icon-tech"></i>
-                <span>${Array.isArray(article.category) ? article.category[0] : (article.category || 'Artículo')}</span>
+                <span>${Array.isArray(article.category) ? article.category[0] : (article.category || 'Article')}</span>
             </div>
             <div class="card-content">
                 ${dateFormatted ? `<div class="article-date-badge">${dateFormatted}</div>` : ''}
                 <h3>${article.title}</h3>
                 <p>${article.description}</p>
-                ${readingTime > 0 ? `<div class="article-reading-time"><i class="fas fa-clock"></i> ${readingTime} min lectura</div>` : ''}
+                ${readingTime > 0 ? `<div class="article-reading-time"><i class="fas fa-clock"></i> ${readingTime} min read</div>` : ''}
             </div>
         `;
         
@@ -851,8 +857,8 @@ function updateFeaturedSections() {
                 aiSection.id = 'ai-articles-section';
                 aiSection.className = 'container';
                 aiSection.innerHTML = `
-                    <h2>Artículos de IA</h2>
-                    <p class="subtitle">Últimos artículos sobre Inteligencia Artificial</p>
+                    <h2>AI Articles</h2>
+                    <p class="subtitle">Latest articles about Artificial Intelligence</p>
                     <div id="ai-articles-container" class="grid-3"></div>
                 `;
                 // Insert after portfolio section
@@ -876,6 +882,12 @@ function updateFeaturedSections() {
     const pokerContainer = document.querySelector('#poker .grid-3');
     if (pokerContainer) {
         renderFeaturedArticles('poker', 'poker', pokerContainer);
+    }
+
+    // Climbing section
+    const climbingContainer = document.querySelector('#climbing .grid-3');
+    if (climbingContainer) {
+        renderFeaturedArticles('climbing', 'climbing', climbingContainer);
     }
 }
 
