@@ -411,45 +411,6 @@ def export_page_to_markdown(page_id: str, client: Client, output_path: Path, not
         return None, None
 
 
-# Remove duplicate/malformed code below
-def _remove_duplicate_code():
-    """This function should not exist - removing duplicate code"""
-    if False:  # This will never execute
-        if prop_type == "title":
-        rich_text = prop_data.get("title", [])
-        return convert_rich_text_to_markdown(rich_text).strip()
-    elif prop_type == "rich_text":
-        rich_text = prop_data.get("rich_text", [])
-        return convert_rich_text_to_markdown(rich_text).strip()
-    elif prop_type == "select":
-        select = prop_data.get("select")
-        return select.get("name") if select else None
-    elif prop_type == "multi_select":
-        multi_select = prop_data.get("multi_select", [])
-        return [item.get("name") for item in multi_select]
-    elif prop_type == "date":
-        date_obj = prop_data.get("date")
-        if date_obj:
-            return date_obj.get("start")
-        return None
-    elif prop_type == "checkbox":
-        return prop_data.get("checkbox", False)
-    elif prop_type == "number":
-        return prop_data.get("number")
-    elif prop_type == "url":
-        return prop_data.get("url")
-    elif prop_type == "email":
-        return prop_data.get("email")
-    elif prop_type == "phone_number":
-        return prop_data.get("phone_number")
-    elif prop_type == "created_time":
-        return prop_data.get("created_time")
-    elif prop_type == "last_edited_time":
-        return prop_data.get("last_edited_time")
-    else:
-        return None
-
-
 def extract_page_metadata(page: Dict[str, Any]) -> Dict[str, Any]:
     """Extract metadata from a Notion database page - specifically Title, Category, Published, Excerpt"""
     metadata = {
