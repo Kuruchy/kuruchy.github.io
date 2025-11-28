@@ -1,0 +1,45 @@
+[
+  {
+    "id": "1bcc3c79-57c0-4a95-9402-3b08eb1a3d74",
+    "created_time": "2022-02-09T18:30:00.000Z",
+    "last_edited_time": "2025-11-28T08:55:00.000Z",
+    "title": "New Blog",
+    "ready": true,
+    "category": [
+      "Communication"
+    ],
+    "published_date": "2021-08-20",
+    "published": true,
+    "excerpt": "I always had this idea in mind writing down my experiences, tips, ideas and so on in a personal Blog. I have tried once in the past, unsuccessfully, to create a blog where I wrote about tech in general. But I think I did not succeed because the topic was too broad. Or in other words, not so specific, which in the end made me try to create a post about things I did not like.",
+    "filename": "articles/new-blog.md"
+  },
+  {
+    "id": "2b242b55-6dc1-8082-9f3d-f59aa4d46281",
+    "created_time": "2025-11-21T17:24:00.000Z",
+    "last_edited_time": "2025-11-28T08:55:00.000Z",
+    "title": "New Era!",
+    "ready": true,
+    "category": [
+      "Communication"
+    ],
+    "published_date": "2025-12-11",
+    "published": true,
+    "excerpt": "I want to revamp the Blog. Let’s see how it goes this time!",
+    "filename": "articles/new-era.md"
+  },
+  {
+    "id": "bd20e22c-4050-4c76-8b19-164983cb4dc9",
+    "created_time": "2022-02-09T18:30:00.000Z",
+    "last_edited_time": "2025-11-28T08:55:00.000Z",
+    "title": "Androids Book Review",
+    "ready": true,
+    "category": [
+      "Android",
+      "Books"
+    ],
+    "published_date": "2021-09-19",
+    "published": true,
+    "excerpt": "Do you want to know why Android succeeded and how? Join me on my review of Androids - The Team That Built the Android Operating System.",
+    "filename": "articles/androids-book-review.md"
+  }
+]
