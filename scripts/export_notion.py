@@ -407,64 +407,6 @@ def export_page_to_markdown(page_id: str, client: Client, output_path: Path, not
         return None, None
 
 
-def extract_page_metadata(page: Dict[str, Any]) -> Dict[str, Any]:
-    """Extract metadata from a Notion database page - specifically Title, Category, Published, Excerpt"""
-    metadata = {
-        "id": page.get("id"),
-        "created_time": page.get("created_time"),
-        "last_edited_time": page.get("last_edited_time"),
-    }
-    
-    # Extract all properties
-    properties = page.get("properties", {})
-    
-    # Extract Title (from title property)
-    for prop_name, prop_data in properties.items():
-        if prop_data.get("type") == "title":
-            title = extract_property_value(prop_data)
-            if title:
-                metadata["title"] = title
-            break
-    
-    # Extract specific fields: Category, Published, Excerpt
-    for prop_name, prop_data in properties.items():
-        prop_type = prop_data.get("type")
-        prop_lower = prop_name.lower()
-        
-        # Extract Category (can be select or multi_select)
-        if "category" in prop_lower and prop_type in ["select", "multi_select"]:
-            value = extract_property_value(prop_data)
-            if value:
-                metadata["category"] = value
-        
-        # Extract Published (date property)
-        elif "published" in prop_lower and prop_type == "date":
-            date_value = extract_property_value(prop_data)
-            if date_value:
-                metadata["published_date"] = date_value
-                metadata["published"] = True  # Mark as published if date exists
-            else:
-                metadata["published"] = False
-        
-        # Extract Ready (checkbox property) - this controls whether to export
-        elif "ready" in prop_lower and prop_type == "checkbox":
-            checkbox_value = extract_property_value(prop_data)
-            metadata["ready"] = checkbox_value
-        
-        # Extract Excerpt (rich_text or text)
-        elif "excerpt" in prop_lower and prop_type in ["rich_text", "text"]:
-            value = extract_property_value(prop_data)
-            if value:
-                metadata["excerpt"] = value
-    
-    # Fallback: if no title found, use get_page_title
-    if "title" not in metadata or not metadata["title"]:
-        metadata["title"] = get_page_title(page)
-    
-    return metadata
-
-
-
 
 def find_child_pages(parent_page_id: str, client: Client) -> List[str]:
     """Find all child pages of a parent page"""
@@ -598,91 +540,91 @@ def query_database(database_id: str, client: Client) -> List[Dict[str, Any]]:
     
     print(f"🔍 Querying database: {database_id}")
     
-    # Try to use the query method - it should exist in notion-client
-    # The method name might be different or accessed differently
+    # Try to use the query method - this is the standard Notion API method
     try:
-        # Check what methods are available
-        available_methods = [method for method in dir(client.databases) if not method.startswith('_')]
-        print(f"  🔍 Available methods on databases endpoint: {', '.join(available_methods)}")
-        
-        # Try different possible method names
-        query_method = None
-        if hasattr(client.databases, 'query'):
-            query_method = 'query'
-        elif hasattr(client.databases, 'list'):
-            query_method = 'list'
-        elif hasattr(client.databases, 'retrieve'):
-            query_method = 'retrieve'
-        
-        if query_method:
-            print(f"  ✓ Using method: {query_method}")
-            cursor = None
-            while True:
-                try:
-                    method = getattr(client.databases, query_method)
-                    if cursor:
-                        response = method(database_id=database_id, start_cursor=cursor)
-                    else:
-                        response = method(database_id=database_id)
-                    
-                    results = response.get("results", [])
-                    pages.extend(results)
-                    
-                    if not response.get("has_more"):
-                        break
-                    cursor = response.get("next_cursor")
-                except Exception as e:
-                    print(f"  ⚠️  Error calling {query_method}: {e}")
-                    break
-        else:
-            raise AttributeError("No suitable query method found")
-    except AttributeError as e:
-        print(f"⚠️  'query' method not available on databases endpoint")
-        print(f"💡 Using search API as fallback to find pages in database...")
-        # Use search API to find pages in the database
-        search_cursor = None
-        total_searched = 0
+        # Directly try to use the query method
+        print(f"  🔍 Attempting to use databases.query() method...")
+        cursor = None
         while True:
             try:
-                if search_cursor:
-                    search_response = client.search(
-                        filter={"property": "object", "value": "page"},
-                        page_size=100,
-                        start_cursor=search_cursor
+                if cursor:
+                    response = client.databases.query(
+                        database_id=database_id,
+                        start_cursor=cursor
                     )
                 else:
-                    search_response = client.search(
-                        filter={"property": "object", "value": "page"},
-                        page_size=100
-                    )
+                    response = client.databases.query(database_id=database_id)
                 
-                search_results = search_response.get("results", [])
-                total_searched += len(search_results)
+                results = response.get("results", [])
+                pages.extend(results)
                 
-                # Filter pages that belong to this database
-                for page in search_results:
-                    parent = page.get("parent", {})
-                    parent_type = parent.get("type")
-                    if parent_type == "database_id":
-                        parent_db_id = parent.get("database_id")
-                        # Debug: print first few database IDs found
-                        if total_searched <= 5:
-                            print(f"  🔍 Checking page '{get_page_title(page)}' - parent DB: {parent_db_id[:8]}...")
-                        if parent_db_id == database_id:
-                            pages.append(page)
-                            print(f"  ✓ Found page in database: {get_page_title(page)}")
-                
-                if not search_response.get("has_more"):
+                if not response.get("has_more"):
                     break
-                search_cursor = search_response.get("next_cursor")
+                cursor = response.get("next_cursor")
+                
+            except AttributeError as e:
+                # If query method doesn't exist, fall through to search API
+                print(f"  ⚠️  databases.query() method not available: {e}")
+                break
             except Exception as e:
-                print(f"⚠️  Error using search API: {e}")
+                print(f"  ⚠️  Error calling databases.query(): {e}")
                 import traceback
                 traceback.print_exc()
                 break
         
-        print(f"  🔍 Searched {total_searched} pages, found {len(pages)} in database")
+        # If we successfully got pages using query, return them
+        if pages:
+            print(f"  ✓ Successfully queried database using query() method")
+            print(f"✓ Found {len(pages)} page(s) in database")
+            return pages
+            
+    except Exception as e:
+        print(f"  ⚠️  Error with query method: {e}")
     
+    # Fallback: Use search API to find pages in the database
+    print(f"💡 Using search API as fallback to find pages in database...")
+    search_cursor = None
+    total_searched = 0
+    while True:
+        try:
+            if search_cursor:
+                search_response = client.search(
+                    filter={"property": "object", "value": "page"},
+                    page_size=100,
+                    start_cursor=search_cursor
+                )
+            else:
+                search_response = client.search(
+                    filter={"property": "object", "value": "page"},
+                    page_size=100
+                )
+            
+            search_results = search_response.get("results", [])
+            total_searched += len(search_results)
+            
+            # Filter pages that belong to this database
+            for page in search_results:
+                parent = page.get("parent", {})
+                parent_type = parent.get("type")
+                if parent_type == "database_id":
+                    parent_db_id = parent.get("database_id")
+                    # Debug: print first few database IDs found
+                    if total_searched <= 5:
+                        print(f"  🔍 Checking page '{get_page_title(page)}' - parent DB: {parent_db_id[:8]}...")
+                    if parent_db_id == database_id:
+                        pages.append(page)
+                        print(f"  ✓ Found page in database: {get_page_title(page)}")
+            
+            if not search_response.get("has_more"):
+                break
+            search_cursor = search_response.get("next_cursor")
+        except Exception as e:
+            print(f"⚠️  Error using search API: {e}")
+            import traceback
+            traceback.print_exc()
+            break
+    
+    print(f"  🔍 Searched {total_searched} pages, found {len(pages)} in database")
     print(f"✓ Found {len(pages)} page(s) in database")
     return pages
 
