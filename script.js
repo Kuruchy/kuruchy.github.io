@@ -583,7 +583,7 @@ class Particle {
         this.directionX = (Math.random() * 0.4) - 0.2; // Movimiento lento
         this.directionY = (Math.random() * 0.4) - 0.2;
         this.size = Math.random() * 2;
-        this.color = '#a855f7'; // Color base (morado)
+        this.color = '#f97316'; // Color base (naranja)
     }
     update() {
         // Rebotar en bordes
@@ -630,7 +630,7 @@ function connect() {
             
             if (distance < (canvas.width/7) * (canvas.height/7)) {
                 opacityValue = 1 - (distance / 20000);
-                ctx.strokeStyle = 'rgba(168, 85, 247,' + opacityValue + ')'; // Líneas moradas
+                ctx.strokeStyle = 'rgba(249, 115, 22,' + opacityValue + ')'; // Líneas naranjas
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
