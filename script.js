@@ -1,100 +1,77 @@
 // 1. CONFIGURACIÓN DEL BLOG MARKDOWN
-// Cargar automáticamente los últimos 5 artículos
+// Cargar automáticamente los artículos desde el archivo JSON de metadata
 const articlesContainer = document.getElementById('articles-container');
 
-// Lista de artículos (ordenados del más reciente al más antiguo)
-const articles = [
-    { 
-        filename: 'articles/new-era.md', 
-        title: 'New Era!', 
-        description: 'I am revamping my blog to include some of the new tools I’ve recently learned and new/forgotten hobbies.', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/my-german-journey.md', 
-        title: 'My German Journey', 
-        description: 'One of the things I keep telling me over and over again, is how lucky I am...', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/auto-clean-view-binding.md', 
-        title: 'Auto Clean View Binding', 
-        description: 'View Binding is the recommended way to access your views —in case you are still not using compose 😉— without using Kotlin synthetics, which you should have already stop using.', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/passive-active-finger-strength-training.md', 
-        title: '**Passive-active Finger Strength Training**', 
-        description: 'In climbing, the skills needed could be split into three well-defined pillars...', 
-        icon: 'fas fa-brain'
-    },
-    { 
-        filename: 'articles/my-blog-automation-with-notion.md', 
-        title: 'My Blog Automation with Notion', 
-        description: 'Lately I have been using Notion for almost any task that needs me to write something, and every new day I use it for something new.', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/droidcon-berlin-2021-day-two.md', 
-        title: 'Droidcon Berlin 2021 Day Two', 
-        description: 'We were warned that, due to the speakers not being able to travel, some talks would be remote. I attended some of them on the second and the third day.', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/droidcon-berlin-2021-day-one.md', 
-        title: 'Droidcon Berlin 2021 Day One', 
-        description: 'Finally, the day arrived. One week before I had no plans to be in Berlin, nor to attend the event.', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/droidcon-berlin-2021.md', 
-        title: 'Droidcon Berlin 2021', 
-        description: 'I made it, I am back to conferences after the global pandemic. Last time I was in a Conference was in Copenhagen, December 2019, for the Kotlin Conf.', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/androids-book-review.md', 
-        title: 'Androids Book Review', 
-        description: 'In 2004, there were two people who wanted to build software for cameras. But they couldn\'t get investors interested.', 
-        icon: 'fas fa-mobile-alt'
-    },
-    { 
-        filename: 'articles/android-studio-logcat-color.md', 
-        title: 'Android Studio Logcat Color', 
-        description: 'We can add new colors to the Logcat messages by going to: Preferences → Editor → Color Scheme → Andoid Logcat And adjusting the Scheme to your needs.', 
-        icon: 'fas fa-mobile-alt'
-    },
-    { 
-        filename: 'articles/android-studio-actions.md', 
-        title: 'Android Studio Actions', 
-        description: 'One cool feature, I’ve recently found, is the possibility to add custom action buttons to almost anywhere in the Android Studio toolbars.', 
-        icon: 'fas fa-mobile-alt'
-    },
-    { 
-        filename: 'articles/new-blog.md', 
-        title: 'New Blog', 
-        description: 'I always had this idea in mind writing down my experiences, tips, ideas and so on in a personal Blog.', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/ai.md', 
-        title: 'Inteligencia Artificial: El Presente y Futuro', 
-        description: 'La Inteligencia Artificial ha dejado de ser ciencia ficción. Desde ChatGPT hasta Midjourney, las herramientas de IA están transformando cómo trabajamos, creamos y pensamos...', 
-        icon: 'fas fa-brain'
-    },
-    { 
-        filename: 'articles/compose-multiplatform.md', 
-        title: 'Compose Multiplatform: El Futuro del Desarrollo Móvil', 
-        description: 'Compose Multiplatform es el framework de JetBrains que permite compartir código de UI entre Android, iOS, Desktop y Web usando Kotlin.', 
-        icon: 'fas fa-mobile-alt'
-    },
-    { 
-        filename: 'articles/poker-drills-ranges.md', 
-        title: 'Poker Drills y Análisis de Rangos: Mejora Tu Juego', 
-        description: 'Los drills de poker son ejercicios estructurados que mejoran tu toma de decisiones bajo presión...', 
-        icon: 'fas fa-dice'
+// Variable global para almacenar los artículos cargados
+let articles = [];
+
+// Función para cargar artículos desde el archivo JSON
+function loadArticles() {
+    return fetch('data/articles_metadata.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Verificar que los datos sean un array válido
+            if (data && Array.isArray(data)) {
+                // Mapear los datos de Notion a nuestro formato
+                articles = data.map(item => {
+                    // Determinar el icono basado en la categoría o título
+                    const icon = getIconForArticle(item.title || '', item.filename || '', item.category || '');
+                    
+                    return {
+                        filename: item.filename || '',
+                        title: item.title || 'Untitled',
+                        description: item.excerpt || item.description || '',
+                        category: item.category || '',
+                        icon: icon,
+                        ready: item.ready !== undefined ? item.ready : true,
+                        published_date: item.published_date || null,
+                        last_edited_time: item.last_edited_time || null,
+                        created_time: item.created_time || null
+                    };
+                });
+                
+                console.log(`✓ Loaded ${articles.length} article(s) from metadata`);
+                return articles;
+            } else {
+                console.warn('Invalid metadata format, expected array');
+                articles = [];
+                return [];
+            }
+        })
+        .catch(error => {
+            console.error('Error loading articles:', error);
+            articles = [];
+            return [];
+        });
+}
+
+// Función para determinar el icono basado en título, filename o categoría
+function getIconForArticle(title, filename, category) {
+    const searchText = `${title} ${filename} ${category}`.toLowerCase();
+    
+    if (searchText.includes('ai') || searchText.includes('artificial') || searchText.includes('intelligence') || searchText.includes('machine learning')) {
+        return 'fas fa-brain';
     }
-]
+    if (searchText.includes('poker') || searchText.includes('game theory') || searchText.includes('gto')) {
+        return 'fas fa-dice';
+    }
+    if (searchText.includes('android') || searchText.includes('ios') || searchText.includes('mobile') || searchText.includes('compose')) {
+        return 'fas fa-mobile-alt';
+    }
+    if (searchText.includes('trading') || searchText.includes('investment') || searchText.includes('finance') || searchText.includes('portfolio')) {
+        return 'fas fa-chart-line';
+    }
+    if (searchText.includes('climbing') || searchText.includes('bouldering')) {
+        return 'fas fa-mountain';
+    }
+    
+    return 'fas fa-file-alt';
+}
 
 // Helper function to get articles by category
 function getArticlesByCategory(category) {
@@ -160,6 +137,16 @@ function displayArticleCards() {
 
     articlesContainer.innerHTML = '';
     
+    // Si no hay artículos cargados, mostrar mensaje
+    if (!articles || articles.length === 0) {
+        articlesContainer.innerHTML = `
+            <div class="card glass" style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
+                <p style="color: #94a3b8;">No hay artículos disponibles aún.</p>
+            </div>
+        `;
+        return;
+    }
+    
     // Filter to only ready articles (Ready checkbox must be true)
     const readyArticles = articles.filter(article => {
         // Only include if ready field is true
@@ -173,6 +160,15 @@ function displayArticleCards() {
         const timeB = b.published_date || b.last_edited_time || b.created_time || '';
         return timeB.localeCompare(timeA); // Most recent first
     });
+    
+    if (sortedArticles.length === 0) {
+        articlesContainer.innerHTML = `
+            <div class="card glass" style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
+                <p style="color: #94a3b8;">No hay artículos listos para mostrar.</p>
+            </div>
+        `;
+        return;
+    }
     
     sortedArticles.forEach((article) => {
         const cardElement = document.createElement('div');
@@ -200,17 +196,36 @@ function displayArticleCards() {
     });
 }
 
-// Inicializar
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
+// Inicializar - cargar artículos primero, luego mostrar
+function initialize() {
+    // Cargar artículos y luego mostrar
+    loadArticles().then(() => {
         displayArticleCards();
-        loadAICurator();
-        loadPokerPuzzle();
+        // También actualizar las secciones destacadas después de cargar
+        setTimeout(() => {
+            updateFeaturedSections();
+        }, 100);
+    }).catch(error => {
+        console.error('Error initializing articles:', error);
+        if (articlesContainer) {
+            articlesContainer.innerHTML = `
+                <div class="card glass" style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
+                    <p style="color: #ff6b6b;">Error al cargar los artículos. Por favor, recarga la página.</p>
+                </div>
+            `;
+        }
     });
-} else {
-    displayArticleCards();
+    
+    // Cargar otros componentes
     loadAICurator();
     loadPokerPuzzle();
+}
+
+// Inicializar cuando el DOM esté listo
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initialize);
+} else {
+    initialize();
 }
 
 // 4. AI TECH CURATOR - Cargar y mostrar noticias
@@ -656,50 +671,47 @@ function renderFeaturedArticles(sectionId, category, container) {
     });
 }
 
-// Initialize featured sections when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    // Wait for articles to be loaded, then render featured sections
-    setTimeout(() => {
-        // Portfolio section - AI articles (after AI Curator)
-        const portfolioContainer = document.querySelector('#portfolio .grid-3');
-        if (portfolioContainer) {
-            const aiArticles = getFeaturedArticles('ai', 3);
-            if (aiArticles.length > 0) {
-                // Create a new section for AI articles
-                let aiSection = document.getElementById('ai-articles-section');
-                if (!aiSection) {
-                    aiSection = document.createElement('section');
-                    aiSection.id = 'ai-articles-section';
-                    aiSection.className = 'container';
-                    aiSection.innerHTML = `
-                        <h2>Artículos de IA</h2>
-                        <p class="subtitle">Últimos artículos sobre Inteligencia Artificial</p>
-                        <div id="ai-articles-container" class="grid-3"></div>
-                    `;
-                    // Insert after portfolio section
-                    const portfolioSection = document.getElementById('portfolio');
-                    portfolioSection.parentNode.insertBefore(aiSection, portfolioSection.nextSibling);
-                }
-                const aiContainer = document.getElementById('ai-articles-container');
-                if (aiContainer) {
-                    renderFeaturedArticles('portfolio', 'ai', aiContainer);
-                }
+// Función para actualizar las secciones destacadas
+function updateFeaturedSections() {
+    // Portfolio section - AI articles (after AI Curator)
+    const portfolioContainer = document.querySelector('#portfolio .grid-3');
+    if (portfolioContainer) {
+        const aiArticles = getFeaturedArticles('ai', 3);
+        if (aiArticles.length > 0) {
+            // Create a new section for AI articles
+            let aiSection = document.getElementById('ai-articles-section');
+            if (!aiSection) {
+                aiSection = document.createElement('section');
+                aiSection.id = 'ai-articles-section';
+                aiSection.className = 'container';
+                aiSection.innerHTML = `
+                    <h2>Artículos de IA</h2>
+                    <p class="subtitle">Últimos artículos sobre Inteligencia Artificial</p>
+                    <div id="ai-articles-container" class="grid-3"></div>
+                `;
+                // Insert after portfolio section
+                const portfolioSection = document.getElementById('portfolio');
+                portfolioSection.parentNode.insertBefore(aiSection, portfolioSection.nextSibling);
+            }
+            const aiContainer = document.getElementById('ai-articles-container');
+            if (aiContainer) {
+                renderFeaturedArticles('portfolio', 'ai', aiContainer);
             }
         }
+    }
 
-        // Investment section
-        const investmentContainer = document.querySelector('#investments .grid-3');
-        if (investmentContainer) {
-            renderFeaturedArticles('investments', 'investing', investmentContainer);
-        }
+    // Investment section
+    const investmentContainer = document.querySelector('#investments .grid-3');
+    if (investmentContainer) {
+        renderFeaturedArticles('investments', 'investing', investmentContainer);
+    }
 
-        // Poker section
-        const pokerContainer = document.querySelector('#poker .grid-3');
-        if (pokerContainer) {
-            renderFeaturedArticles('poker', 'poker', pokerContainer);
-        }
-    }, 100);
-});
+    // Poker section
+    const pokerContainer = document.querySelector('#poker .grid-3');
+    if (pokerContainer) {
+        renderFeaturedArticles('poker', 'poker', pokerContainer);
+    }
+}
 
 // 2. ANIMACIÓN DE FONDO (Red Neuronal / Constelación)
 const canvas = document.getElementById('bg-animation');

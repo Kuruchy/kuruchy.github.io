@@ -1,96 +1,74 @@
 // Script para cargar artículos en article.html
-const articles = [
-    { 
-        filename: 'articles/new-era.md', 
-        title: 'New Era!', 
-        description: 'I am revamping my blog to include some of the new tools I’ve recently learned and new/forgotten hobbies.', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/my-german-journey.md', 
-        title: 'My German Journey', 
-        description: 'One of the things I keep telling me over and over again, is how lucky I am...', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/auto-clean-view-binding.md', 
-        title: 'Auto Clean View Binding', 
-        description: 'View Binding is the recommended way to access your views —in case you are still not using compose 😉— without using Kotlin synthetics, which you should have already stop using.', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/passive-active-finger-strength-training.md', 
-        title: '**Passive-active Finger Strength Training**', 
-        description: 'In climbing, the skills needed could be split into three well-defined pillars...', 
-        icon: 'fas fa-brain'
-    },
-    { 
-        filename: 'articles/my-blog-automation-with-notion.md', 
-        title: 'My Blog Automation with Notion', 
-        description: 'Lately I have been using Notion for almost any task that needs me to write something, and every new day I use it for something new.', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/droidcon-berlin-2021-day-two.md', 
-        title: 'Droidcon Berlin 2021 Day Two', 
-        description: 'We were warned that, due to the speakers not being able to travel, some talks would be remote. I attended some of them on the second and the third day.', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/droidcon-berlin-2021-day-one.md', 
-        title: 'Droidcon Berlin 2021 Day One', 
-        description: 'Finally, the day arrived. One week before I had no plans to be in Berlin, nor to attend the event.', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/droidcon-berlin-2021.md', 
-        title: 'Droidcon Berlin 2021', 
-        description: 'I made it, I am back to conferences after the global pandemic. Last time I was in a Conference was in Copenhagen, December 2019, for the Kotlin Conf.', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/androids-book-review.md', 
-        title: 'Androids Book Review', 
-        description: 'In 2004, there were two people who wanted to build software for cameras. But they couldn\'t get investors interested.', 
-        icon: 'fas fa-mobile-alt'
-    },
-    { 
-        filename: 'articles/android-studio-logcat-color.md', 
-        title: 'Android Studio Logcat Color', 
-        description: 'We can add new colors to the Logcat messages by going to: Preferences → Editor → Color Scheme → Andoid Logcat And adjusting the Scheme to your needs.', 
-        icon: 'fas fa-mobile-alt'
-    },
-    { 
-        filename: 'articles/android-studio-actions.md', 
-        title: 'Android Studio Actions', 
-        description: 'One cool feature, I’ve recently found, is the possibility to add custom action buttons to almost anywhere in the Android Studio toolbars.', 
-        icon: 'fas fa-mobile-alt'
-    },
-    { 
-        filename: 'articles/new-blog.md', 
-        title: 'New Blog', 
-        description: 'I always had this idea in mind writing down my experiences, tips, ideas and so on in a personal Blog.', 
-        icon: 'fas fa-file-alt'
-    },
-    { 
-        filename: 'articles/ai.md', 
-        title: 'Inteligencia Artificial: El Presente y Futuro', 
-        description: 'La Inteligencia Artificial ha dejado de ser ciencia ficción. Desde ChatGPT hasta Midjourney, las herramientas de IA están transformando cómo trabajamos, creamos y pensamos...', 
-        icon: 'fas fa-brain'
-    },
-    { 
-        filename: 'articles/compose-multiplatform.md', 
-        title: 'Compose Multiplatform: El Futuro del Desarrollo Móvil', 
-        description: 'Compose Multiplatform es el framework de JetBrains que permite compartir código de UI entre Android, iOS, Desktop y Web usando Kotlin.', 
-        icon: 'fas fa-mobile-alt'
-    },
-    { 
-        filename: 'articles/poker-drills-ranges.md', 
-        title: 'Poker Drills y Análisis de Rangos: Mejora Tu Juego', 
-        description: 'Los drills de poker son ejercicios estructurados que mejoran tu toma de decisiones bajo presión...', 
-        icon: 'fas fa-dice'
+// Variable global para almacenar los artículos cargados
+let articles = [];
+
+// Función para cargar artículos desde el archivo JSON
+function loadArticles() {
+    return fetch('data/articles_metadata.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Verificar que los datos sean un array válido
+            if (data && Array.isArray(data)) {
+                // Mapear los datos de Notion a nuestro formato
+                articles = data.map(item => {
+                    // Determinar el icono basado en la categoría o título
+                    const icon = getIconForArticle(item.title || '', item.filename || '', item.category || '');
+                    
+                    return {
+                        filename: item.filename || '',
+                        title: item.title || 'Untitled',
+                        description: item.excerpt || item.description || '',
+                        category: item.category || '',
+                        icon: icon,
+                        ready: item.ready !== undefined ? item.ready : true,
+                        published_date: item.published_date || null,
+                        last_edited_time: item.last_edited_time || null,
+                        created_time: item.created_time || null
+                    };
+                });
+                
+                console.log(`✓ Loaded ${articles.length} article(s) from metadata`);
+                return articles;
+            } else {
+                console.warn('Invalid metadata format, expected array');
+                articles = [];
+                return [];
+            }
+        })
+        .catch(error => {
+            console.error('Error loading articles:', error);
+            articles = [];
+            return [];
+        });
+}
+
+// Función para determinar el icono basado en título, filename o categoría
+function getIconForArticle(title, filename, category) {
+    const searchText = `${title} ${filename} ${category}`.toLowerCase();
+    
+    if (searchText.includes('ai') || searchText.includes('artificial') || searchText.includes('intelligence') || searchText.includes('machine learning')) {
+        return 'fas fa-brain';
     }
-]
+    if (searchText.includes('poker') || searchText.includes('game theory') || searchText.includes('gto')) {
+        return 'fas fa-dice';
+    }
+    if (searchText.includes('android') || searchText.includes('ios') || searchText.includes('mobile') || searchText.includes('compose')) {
+        return 'fas fa-mobile-alt';
+    }
+    if (searchText.includes('trading') || searchText.includes('investment') || searchText.includes('finance') || searchText.includes('portfolio')) {
+        return 'fas fa-chart-line';
+    }
+    if (searchText.includes('climbing') || searchText.includes('bouldering')) {
+        return 'fas fa-mountain';
+    }
+    
+    return 'fas fa-file-alt';
+}
 
 // Función para cargar un artículo completo
 function loadArticle(article) {
@@ -123,98 +101,104 @@ function loadArticleFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
     const articleFile = urlParams.get('file');
     
-    console.log('Parámetro file de URL:', articleFile);
-    console.log('Artículos disponibles:', articles.map(a => a.filename));
-    
     if (!articleFile) {
         document.getElementById('article-content').innerHTML = 
             '<p style="color: #ff6b6b;">No se especificó ningún artículo.</p>';
         return;
     }
 
-    // Decodificar el parámetro en caso de que esté codificado
-    const decodedFile = decodeURIComponent(articleFile);
-    console.log('Archivo decodificado:', decodedFile);
-    
-    const article = articles.find(a => a.filename === decodedFile || a.filename === articleFile);
-    if (!article) {
-        document.getElementById('article-content').innerHTML = 
-            `<div style="color: #ff6b6b;">
-                <p>Artículo no encontrado.</p>
-                <p style="font-size: 0.9em;">Buscado: ${decodedFile}</p>
-                <p style="font-size: 0.9em;">Disponibles: ${articles.map(a => a.filename).join(', ')}</p>
-            </div>`;
-        return;
-    }
-    
-    console.log('Artículo encontrado:', article);
-
-    loadArticle(article)
-        .then(loadedArticle => {
-            // Remove the first h1 from markdown content if it matches the article title
-            let processedContent = loadedArticle.content;
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = processedContent;
-            const firstH1 = tempDiv.querySelector('h1');
-            if (firstH1 && firstH1.textContent.trim() === loadedArticle.title.trim()) {
-                firstH1.remove();
-                processedContent = tempDiv.innerHTML;
-            }
-            
-            // Crear un header atractivo para el artículo
-            const articleHTML = `
-                <div class="article-header">
-                    <div class="article-title-row">
-                        <h1>${loadedArticle.title}</h1>
-                        <div class="article-type-badge">
-                            <i class="${loadedArticle.icon}"></i>
-                            <span>Artículo</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="article-content">
-                    ${processedContent}
-                </div>
-            `;
-            document.getElementById('article-content').innerHTML = articleHTML;
-            document.title = `${loadedArticle.title} | Kuruchy`;
-            
-            // Cargar comentarios de Giscus después de renderizar el Markdown
-            // Usar un pequeño delay para asegurar que el DOM esté completamente renderizado
-            setTimeout(() => {
-                // Usar el nombre del archivo como term para comentarios únicos por artículo
-                const articleId = loadedArticle.filename.replace(/[^a-zA-Z0-9]/g, '-');
-                loadComments(articleId);
-            }, 100);
-        })
-        .catch(error => {
-            console.error('Error completo:', error);
-            const errorMsg = error.message || 'Error desconocido';
-            const isFileProtocol = window.location.protocol === 'file:';
-            
-            let helpText = '';
-            if (isFileProtocol) {
-                helpText = `
-                    <p style="font-size: 0.9em; margin-top: 1rem; color: #ffd700;">
-                        <strong>⚠️ Estás abriendo el archivo directamente desde el sistema de archivos.</strong><br>
-                        Los navegadores bloquean las peticiones fetch() con el protocolo file:// por seguridad.<br>
-                        <strong>Solución:</strong> Usa un servidor local. Ejemplos:<br>
-                        • Python: <code>python3 -m http.server 8000</code><br>
-                        • Node.js: <code>npx http-server</code><br>
-                        • VS Code: Instala la extensión "Live Server"
-                    </p>
-                `;
-            }
-            
+    // Primero cargar los artículos desde el JSON, luego buscar el artículo
+    loadArticles().then(() => {
+        // Decodificar el parámetro en caso de que esté codificado
+        const decodedFile = decodeURIComponent(articleFile);
+        console.log('Parámetro file de URL:', articleFile);
+        console.log('Archivo decodificado:', decodedFile);
+        console.log('Artículos disponibles:', articles.map(a => a.filename));
+        
+        const article = articles.find(a => a.filename === decodedFile || a.filename === articleFile);
+        if (!article) {
             document.getElementById('article-content').innerHTML = 
                 `<div style="color: #ff6b6b;">
-                    <p><strong>Error al cargar el artículo</strong></p>
-                    <p>${errorMsg}</p>
-                    <p style="font-size: 0.9em; margin-top: 1rem;">Archivo: ${article.filename}</p>
-                    <p style="font-size: 0.9em;">Protocolo: ${window.location.protocol}</p>
-                    ${helpText}
+                    <p>Artículo no encontrado.</p>
+                    <p style="font-size: 0.9em;">Buscado: ${decodedFile}</p>
+                    <p style="font-size: 0.9em;">Disponibles: ${articles.length > 0 ? articles.map(a => a.filename).join(', ') : 'Ninguno'}</p>
                 </div>`;
-        });
+            return;
+        }
+        
+        console.log('Artículo encontrado:', article);
+
+        loadArticle(article)
+            .then(loadedArticle => {
+                // Remove the first h1 from markdown content if it matches the article title
+                let processedContent = loadedArticle.content;
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = processedContent;
+                const firstH1 = tempDiv.querySelector('h1');
+                if (firstH1 && firstH1.textContent.trim() === loadedArticle.title.trim()) {
+                    firstH1.remove();
+                    processedContent = tempDiv.innerHTML;
+                }
+                
+                // Crear un header atractivo para el artículo
+                const articleHTML = `
+                    <div class="article-header">
+                        <div class="article-title-row">
+                            <h1>${loadedArticle.title}</h1>
+                            <div class="article-type-badge">
+                                <i class="${loadedArticle.icon}"></i>
+                                <span>Artículo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        ${processedContent}
+                    </div>
+                `;
+                document.getElementById('article-content').innerHTML = articleHTML;
+                document.title = `${loadedArticle.title} | Kuruchy`;
+                
+                // Cargar comentarios de Giscus después de renderizar el Markdown
+                // Usar un pequeño delay para asegurar que el DOM esté completamente renderizado
+                setTimeout(() => {
+                    // Usar el nombre del archivo como term para comentarios únicos por artículo
+                    const articleId = loadedArticle.filename.replace(/[^a-zA-Z0-9]/g, '-');
+                    loadComments(articleId);
+                }, 100);
+            })
+            .catch(error => {
+                console.error('Error completo:', error);
+                const errorMsg = error.message || 'Error desconocido';
+                const isFileProtocol = window.location.protocol === 'file:';
+                
+                let helpText = '';
+                if (isFileProtocol) {
+                    helpText = `
+                        <p style="font-size: 0.9em; margin-top: 1rem; color: #ffd700;">
+                            <strong>⚠️ Estás abriendo el archivo directamente desde el sistema de archivos.</strong><br>
+                            Los navegadores bloquean las peticiones fetch() con el protocolo file:// por seguridad.<br>
+                            <strong>Solución:</strong> Usa un servidor local. Ejemplos:<br>
+                            • Python: <code>python3 -m http.server 8000</code><br>
+                            • Node.js: <code>npx http-server</code><br>
+                            • VS Code: Instala la extensión "Live Server"
+                        </p>
+                    `;
+                }
+                
+                document.getElementById('article-content').innerHTML = 
+                    `<div style="color: #ff6b6b;">
+                        <p><strong>Error al cargar el artículo</strong></p>
+                        <p>${errorMsg}</p>
+                        <p style="font-size: 0.9em; margin-top: 1rem;">Archivo: ${article.filename}</p>
+                        <p style="font-size: 0.9em;">Protocolo: ${window.location.protocol}</p>
+                        ${helpText}
+                    </div>`;
+            });
+    }).catch(error => {
+        console.error('Error loading articles:', error);
+        document.getElementById('article-content').innerHTML = 
+            '<div style="color: #ff6b6b;"><p>Error al cargar la lista de artículos.</p></div>';
+    });
 }
 
 // Función para cargar comentarios de Giscus
