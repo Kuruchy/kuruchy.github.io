@@ -532,9 +532,6 @@ def main():
     database_id = os.getenv("DATABASE_ID", "").strip()
     page_ids_str = os.getenv("PAGE_ID", "").strip()
     
-    # Get filter published option
-    filter_published = os.getenv("FILTER_PUBLISHED", "true").lower() == "true"
-    
     # Initialize Notion client
     client = get_notion_client()
     notion_token = os.getenv("NOTION_TOKEN", "")
@@ -549,20 +546,18 @@ def main():
         print(f"📊 Using Notion Database: {database_id}")
         pages = query_database(database_id, client)
         
-        # Extract metadata for all pages and filter by published if requested
-        if filter_published:
-            print(f"🔍 Filtering for published articles only...")
-            for page in pages:
-                metadata = extract_page_metadata(page)
-                if metadata.get("published", False):
-                    page_ids_to_export.append(metadata.get("id"))
-                    all_metadata.append(metadata)
-            print(f"✓ Found {len(page_ids_to_export)} published article(s)")
-        else:
-            page_ids_to_export = [page.get("id") for page in pages]
-            # Extract metadata for all pages
-            for page in pages:
-                all_metadata.append(extract_page_metadata(page))
+        # Always filter by Published checkbox property - only export if Published is checked
+        print(f"🔍 Filtering for published articles only (Published checkbox = true)...")
+        for page in pages:
+            metadata = extract_page_metadata(page)
+            # Only export if Published checkbox is checked (true)
+            if metadata.get("published", False):
+                page_ids_to_export.append(metadata.get("id"))
+                all_metadata.append(metadata)
+            else:
+                print(f"  ⏭️  Skipping unpublished article: {metadata.get('title', 'Untitled')}")
+        
+        print(f"✓ Found {len(page_ids_to_export)} published article(s) to export")
     elif page_ids_str:
         # Check if multiple page IDs are provided (comma-separated)
         page_ids_list = [pid.strip() for pid in page_ids_str.split(",") if pid.strip()]
