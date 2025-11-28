@@ -789,10 +789,19 @@ def main():
             if filename:
                 exported_files.append(filename)
                 # Use pre-extracted metadata if available, otherwise use export metadata
+                # Ensure filename includes 'articles/' prefix for JavaScript to load correctly
+                filename_with_path = f"articles/{filename}" if not filename.startswith("articles/") else filename
                 if page_id in metadata_map:
-                    metadata_map[page_id]["filename"] = filename
+                    # Update existing metadata with correct filename path
+                    metadata_map[page_id]["filename"] = filename_with_path
                 elif export_metadata:
-                    export_metadata["filename"] = filename
+                    # export_page_to_markdown already sets filename with 'articles/' prefix in metadata
+                    # But if it's missing, set it here
+                    if "filename" not in export_metadata:
+                        export_metadata["filename"] = filename_with_path
+                    # Ensure it has the correct prefix (in case it was set incorrectly)
+                    elif not export_metadata["filename"].startswith("articles/"):
+                        export_metadata["filename"] = filename_with_path
                     metadata_map[page_id] = export_metadata
         except Exception as e:
             print(f"❌ Failed to export page {page_id}: {e}")

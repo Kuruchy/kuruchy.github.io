@@ -45,5 +45,5 @@ jobs:
           author_name: Bruno Retolaza
           author_email: bruno.retolaza@gmail.com
           message: 'Update articles from Notion'
-          add: "['articles', 'images', 'article.js', 'script.js']"
+          add: "['articles', 'images', 'data/articles_metadata.json', 'article.js', 'script.js']"
           pull: '--autostash'
