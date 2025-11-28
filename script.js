@@ -131,17 +131,43 @@ function getFeaturedArticles(category, limit = 3) {
     return sorted.slice(0, limit);
 }
 
+// Helper function to calculate reading time
+function calculateReadingTime(text) {
+    const wordsPerMinute = 200;
+    const words = text.split(/\s+/).length;
+    const minutes = Math.ceil(words / wordsPerMinute);
+    return minutes;
+}
+
+// Helper function to format date
+function formatDate(dateString) {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffTime = Math.abs(now - date);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (diffDays === 1) return 'Hoy';
+    if (diffDays === 2) return 'Ayer';
+    if (diffDays < 7) return `Hace ${diffDays} días`;
+    if (diffDays < 30) return `Hace ${Math.floor(diffDays / 7)} semanas`;
+    if (diffDays < 365) return `Hace ${Math.floor(diffDays / 30)} meses`;
+    return `Hace ${Math.floor(diffDays / 365)} años`;
+}
+
 // Función para mostrar artículos como cards
 function displayArticleCards() {
     if (!articlesContainer) return;
 
     articlesContainer.innerHTML = '';
     
-    // Si no hay artículos cargados, mostrar mensaje
+    // Si no hay artículos cargados, mostrar skeleton loaders
     if (!articles || articles.length === 0) {
         articlesContainer.innerHTML = `
-            <div class="card glass" style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
-                <p style="color: #94a3b8;">No hay artículos disponibles aún.</p>
+            <div class="card glass skeleton-card" style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-line"></div>
+                <div class="skeleton skeleton-line short"></div>
             </div>
         `;
         return;
@@ -149,8 +175,6 @@ function displayArticleCards() {
     
     // Filter to only ready articles (Ready checkbox must be true)
     const readyArticles = articles.filter(article => {
-        // Only include if ready field is true
-        // If ready field doesn't exist, don't include (safety - only show explicitly ready articles)
         return article.ready === true;
     });
     
@@ -170,25 +194,31 @@ function displayArticleCards() {
         return;
     }
     
-    sortedArticles.forEach((article) => {
+    sortedArticles.forEach((article, index) => {
         const cardElement = document.createElement('div');
-        cardElement.className = 'card glass clickable-card';
+        cardElement.className = 'card glass clickable-card article-item';
         cardElement.setAttribute('data-type', 'article');
         cardElement.setAttribute('data-id', article.filename);
+        cardElement.style.animationDelay = `${index * 0.1}s`;
+        
+        const dateBadge = article.published_date || article.last_edited_time || article.created_time;
+        const dateFormatted = dateBadge ? formatDate(dateBadge) : '';
+        const readingTime = calculateReadingTime(article.description || '');
         
         cardElement.innerHTML = `
             <div class="card-header">
                 <i class="${article.icon} icon-tech"></i>
-                <span>${article.category || 'Artículo'}</span>
+                <span>${Array.isArray(article.category) ? article.category[0] : (article.category || 'Artículo')}</span>
             </div>
             <div class="card-content">
+                ${dateFormatted ? `<div class="article-date-badge">${dateFormatted}</div>` : ''}
                 <h3>${article.title}</h3>
                 <p>${article.description}</p>
+                ${readingTime > 0 ? `<div class="article-reading-time"><i class="fas fa-clock"></i> ${readingTime} min lectura</div>` : ''}
             </div>
         `;
         
         cardElement.addEventListener('click', () => {
-            // Navegar a la página del artículo
             window.location.href = `article.html?file=${encodeURIComponent(article.filename)}`;
         });
         
@@ -221,11 +251,140 @@ function initialize() {
     loadPokerPuzzle();
 }
 
+// Navigation scroll indicators and active section tracking
+function setupNavigationScroll() {
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sections = document.querySelectorAll('section[id]');
+    
+    function updateActiveNav() {
+        let current = '';
+        const scrollY = window.pageYOffset;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.offsetHeight;
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav();
+}
+
+// Navbar scroll behavior
+function setupNavbarScroll() {
+    const navbar = document.querySelector('.navbar');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        lastScroll = currentScroll;
+    });
+}
+
+// Smooth scroll for anchor links
+function setupSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#' || href === '#home') {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                return;
+            }
+            
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                const offsetTop = target.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                const nav = document.querySelector('.nav-links');
+                if (nav && window.innerWidth <= 768) {
+                    nav.classList.remove('active');
+                }
+            }
+        });
+    });
+}
+
+// Back to top button
+function setupBackToTop() {
+    const backToTop = document.createElement('div');
+    backToTop.className = 'back-to-top';
+    backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    document.body.appendChild(backToTop);
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    });
+}
+
+// Enhanced mobile menu
+function setupMobileMenu() {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    
+    if (burger && nav) {
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.style.transform = nav.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !burger.contains(e.target)) {
+                nav.classList.remove('active');
+                burger.style.transform = 'rotate(0deg)';
+            }
+        });
+    }
+}
+
 // Inicializar cuando el DOM esté listo
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initialize);
+    document.addEventListener('DOMContentLoaded', () => {
+        initialize();
+        setupNavigationScroll();
+        setupNavbarScroll();
+        setupSmoothScroll();
+        setupBackToTop();
+        setupMobileMenu();
+    });
 } else {
     initialize();
+    setupNavigationScroll();
+    setupNavbarScroll();
+    setupSmoothScroll();
+    setupBackToTop();
+    setupMobileMenu();
 }
 
 // 4. AI TECH CURATOR - Cargar y mostrar noticias
@@ -646,20 +805,27 @@ function renderFeaturedArticles(sectionId, category, container) {
     
     // Clear container and create grid
     container.innerHTML = '';
-    featuredArticles.forEach((article) => {
+    featuredArticles.forEach((article, index) => {
         const cardElement = document.createElement('div');
-        cardElement.className = 'card glass clickable-card';
+        cardElement.className = 'card glass clickable-card article-item';
         cardElement.setAttribute('data-type', 'article');
         cardElement.setAttribute('data-id', article.filename);
+        cardElement.style.animationDelay = `${index * 0.1}s`;
+        
+        const dateBadge = article.published_date || article.last_edited_time || article.created_time;
+        const dateFormatted = dateBadge ? formatDate(dateBadge) : '';
+        const readingTime = calculateReadingTime(article.description || '');
         
         cardElement.innerHTML = `
             <div class="card-header">
                 <i class="${article.icon} icon-tech"></i>
-                <span>${article.category || 'Artículo'}</span>
+                <span>${Array.isArray(article.category) ? article.category[0] : (article.category || 'Artículo')}</span>
             </div>
             <div class="card-content">
+                ${dateFormatted ? `<div class="article-date-badge">${dateFormatted}</div>` : ''}
                 <h3>${article.title}</h3>
                 <p>${article.description}</p>
+                ${readingTime > 0 ? `<div class="article-reading-time"><i class="fas fa-clock"></i> ${readingTime} min lectura</div>` : ''}
             </div>
         `;
         
@@ -713,103 +879,167 @@ function updateFeaturedSections() {
     }
 }
 
-// 2. ANIMACIÓN DE FONDO (Red Neuronal / Constelación)
+// 2. ANIMACIÓN DE FONDO (Red Neuronal / Constelación) - Enhanced
 const canvas = document.getElementById('bg-animation');
-const ctx = canvas.getContext('2d');
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particlesArray;
-
-// Manejo del redimensionamiento
-window.addEventListener('resize', () => {
+if (canvas) {
+    const ctx = canvas.getContext('2d');
+    
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    init();
-});
-
-// Crear partículas
-class Particle {
-    constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.directionX = (Math.random() * 0.4) - 0.2; // Movimiento lento
-        this.directionY = (Math.random() * 0.4) - 0.2;
-        this.size = Math.random() * 2;
-        this.color = '#f97316'; // Color base (naranja)
-    }
-    update() {
-        // Rebotar en bordes
-        if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
-        if (this.y > canvas.height || this.y < 0) this.directionY = -this.directionY;
+    
+    let particlesArray = [];
+    let mouse = { x: null, y: null };
+    let mouseRadius = 150;
+    
+    // Mouse tracking
+    window.addEventListener('mousemove', (e) => {
+        mouse.x = e.x;
+        mouse.y = e.y;
+    });
+    
+    window.addEventListener('mouseout', () => {
+        mouse.x = null;
+        mouse.y = null;
+    });
+    
+    // Manejo del redimensionamiento
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        init();
+    });
+    
+    // Crear partículas mejoradas
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.directionX = (Math.random() * 0.5) - 0.25;
+            this.directionY = (Math.random() * 0.5) - 0.25;
+            this.size = Math.random() * 2.5 + 0.5;
+            this.baseColor = { r: 249, g: 115, b: 22 };
+            this.color = `rgb(${this.baseColor.r}, ${this.baseColor.g}, ${this.baseColor.b})`;
+            this.opacity = Math.random() * 0.5 + 0.3;
+            this.pulseSpeed = Math.random() * 0.02 + 0.01;
+            this.pulsePhase = Math.random() * Math.PI * 2;
+        }
         
-        this.x += this.directionX;
-        this.y += this.directionY;
-        this.draw();
-    }
-    draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = this.color;
-        ctx.fill();
-    }
-}
-
-function init() {
-    particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 15000; // Densidad
-    for (let i = 0; i < numberOfParticles; i++) {
-        particlesArray.push(new Particle());
-    }
-}
-
-function animate() {
-    requestAnimationFrame(animate);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (let i = 0; i < particlesArray.length; i++) {
-        particlesArray[i].update();
-    }
-    connect();
-}
-
-// Dibujar líneas entre partículas cercanas (Efecto Red Neuronal)
-function connect() {
-    let opacityValue = 1;
-    for (let a = 0; a < particlesArray.length; a++) {
-        for (let b = a; b < particlesArray.length; b++) {
-            let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x))
-            + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+        update() {
+            // Interacción con el mouse
+            if (mouse.x !== null && mouse.y !== null) {
+                const dx = mouse.x - this.x;
+                const dy = mouse.y - this.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < mouseRadius) {
+                    const force = (mouseRadius - distance) / mouseRadius;
+                    this.directionX -= (dx / distance) * force * 0.05;
+                    this.directionY -= (dy / distance) * force * 0.05;
+                }
+            }
             
-            if (distance < (canvas.width/7) * (canvas.height/7)) {
-                opacityValue = 1 - (distance / 20000);
-                ctx.strokeStyle = 'rgba(249, 115, 22,' + opacityValue + ')'; // Líneas naranjas
-                ctx.lineWidth = 1;
-                ctx.beginPath();
-                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
-                ctx.stroke();
+            // Rebotar en bordes
+            if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
+            if (this.y > canvas.height || this.y < 0) this.directionY = -this.directionY;
+            
+            this.x += this.directionX;
+            this.y += this.directionY;
+            
+            // Pulse effect
+            this.pulsePhase += this.pulseSpeed;
+            const pulse = Math.sin(this.pulsePhase) * 0.3 + 0.7;
+            this.opacity = (Math.random() * 0.3 + 0.4) * pulse;
+            
+            this.draw();
+        }
+        
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+            ctx.fillStyle = `rgba(${this.baseColor.r}, ${this.baseColor.g}, ${this.baseColor.b}, ${this.opacity})`;
+            ctx.fill();
+            
+            // Glow effect
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = `rgba(${this.baseColor.r}, ${this.baseColor.g}, ${this.baseColor.b}, 0.8)`;
+        }
+    }
+    
+    function init() {
+        particlesArray = [];
+        let numberOfParticles = Math.floor((canvas.height * canvas.width) / 12000);
+        for (let i = 0; i < numberOfParticles; i++) {
+            particlesArray.push(new Particle());
+        }
+    }
+    
+    function animate() {
+        requestAnimationFrame(animate);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Fade effect
+        ctx.fillStyle = 'rgba(5, 5, 17, 0.1)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        for (let i = 0; i < particlesArray.length; i++) {
+            particlesArray[i].update();
+        }
+        connect();
+    }
+    
+    // Dibujar líneas entre partículas cercanas (Efecto Red Neuronal mejorado)
+    function connect() {
+        ctx.shadowBlur = 0;
+        for (let a = 0; a < particlesArray.length; a++) {
+            for (let b = a + 1; b < particlesArray.length; b++) {
+                const dx = particlesArray[a].x - particlesArray[b].x;
+                const dy = particlesArray[a].y - particlesArray[b].y;
+                const distance = dx * dx + dy * dy;
+                const maxDistance = (canvas.width / 6) * (canvas.height / 6);
+                
+                if (distance < maxDistance) {
+                    const opacity = 1 - (distance / maxDistance);
+                    const gradient = ctx.createLinearGradient(
+                        particlesArray[a].x, particlesArray[a].y,
+                        particlesArray[b].x, particlesArray[b].y
+                    );
+                    
+                    // Color gradient based on mouse proximity
+                    let r1 = 249, g1 = 115, b1 = 22;
+                    let r2 = 251, g2 = 191, b2 = 36;
+                    
+                    if (mouse.x !== null && mouse.y !== null) {
+                        const distA = Math.sqrt(
+                            Math.pow(particlesArray[a].x - mouse.x, 2) +
+                            Math.pow(particlesArray[a].y - mouse.y, 2)
+                        );
+                        const distB = Math.sqrt(
+                            Math.pow(particlesArray[b].x - mouse.x, 2) +
+                            Math.pow(particlesArray[b].y - mouse.y, 2)
+                        );
+                        
+                        if (distA < mouseRadius || distB < mouseRadius) {
+                            r1 = 251; g1 = 191; b1 = 36;
+                            r2 = 234; g2 = 88; b2 = 12;
+                        }
+                    }
+                    
+                    gradient.addColorStop(0, `rgba(${r1}, ${g1}, ${b1}, ${opacity * 0.6})`);
+                    gradient.addColorStop(1, `rgba(${r2}, ${g2}, ${b2}, ${opacity * 0.6})`);
+                    
+                    ctx.strokeStyle = gradient;
+                    ctx.lineWidth = opacity * 1.5;
+                    ctx.beginPath();
+                    ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                    ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                    ctx.stroke();
+                }
             }
         }
     }
+    
+    init();
+    animate();
 }
 
-init();
-animate();
-
-// 3. MENÚ MÓVIL (Igual que antes)
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav-links');
-burger.addEventListener('click', () => {
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    if(nav.style.display === 'flex') {
-        nav.style.flexDirection = 'column';
-        nav.style.position = 'absolute';
-        nav.style.top = '70px';
-        nav.style.right = '0';
-        nav.style.background = 'rgba(5,5,17,0.95)';
-        nav.style.width = '100%';
-        nav.style.padding = '2rem';
-    }
-});
+// Mobile menu is now handled by setupMobileMenu() function above
