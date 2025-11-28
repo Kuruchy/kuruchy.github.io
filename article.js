@@ -151,17 +151,29 @@ function loadArticleFromURL() {
 
     loadArticle(article)
         .then(loadedArticle => {
+            // Remove the first h1 from markdown content if it matches the article title
+            let processedContent = loadedArticle.content;
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = processedContent;
+            const firstH1 = tempDiv.querySelector('h1');
+            if (firstH1 && firstH1.textContent.trim() === loadedArticle.title.trim()) {
+                firstH1.remove();
+                processedContent = tempDiv.innerHTML;
+            }
+            
             // Crear un header atractivo para el artículo
             const articleHTML = `
                 <div class="article-header">
-                    <h1>${loadedArticle.title}</h1>
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem; opacity: 0.7;">
-                        <i class="${loadedArticle.icon}" style="font-size: 1.5rem; color: var(--accent-primary);"></i>
-                        <span style="color: #94a3b8; font-size: 0.95rem;">Artículo</span>
+                    <div class="article-title-row">
+                        <h1>${loadedArticle.title}</h1>
+                        <div class="article-type-badge">
+                            <i class="${loadedArticle.icon}"></i>
+                            <span>Artículo</span>
+                        </div>
                     </div>
                 </div>
                 <div class="article-content">
-                    ${loadedArticle.content}
+                    ${processedContent}
                 </div>
             `;
             document.getElementById('article-content').innerHTML = articleHTML;
@@ -302,7 +314,7 @@ class Particle {
         this.directionX = (Math.random() * 0.4) - 0.2;
         this.directionY = (Math.random() * 0.4) - 0.2;
         this.size = Math.random() * 2;
-        this.color = '#a855f7';
+        this.color = '#f97316';
     }
     update() {
         if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
@@ -347,7 +359,7 @@ function connect() {
             
             if (distance < (canvas.width/7) * (canvas.height/7)) {
                 opacityValue = 1 - (distance / 20000);
-                ctx.strokeStyle = 'rgba(168, 85, 247,' + opacityValue + ')';
+                ctx.strokeStyle = 'rgba(249, 115, 22,' + opacityValue + ')';
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);

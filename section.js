@@ -196,7 +196,7 @@ class Particle {
         this.directionX = (Math.random() * 0.4) - 0.2;
         this.directionY = (Math.random() * 0.4) - 0.2;
         this.size = Math.random() * 2;
-        this.color = '#a855f7';
+        this.color = '#f97316';
     }
     update() {
         if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
@@ -241,7 +241,7 @@ function connect() {
             
             if (distance < (canvas.width/7) * (canvas.height/7)) {
                 opacityValue = 1 - (distance / 20000);
-                ctx.strokeStyle = 'rgba(168, 85, 247,' + opacityValue + ')';
+                ctx.strokeStyle = 'rgba(249, 115, 22,' + opacityValue + ')';
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
