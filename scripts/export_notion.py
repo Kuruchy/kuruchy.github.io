@@ -540,46 +540,63 @@ def query_database(database_id: str, client: Client) -> List[Dict[str, Any]]:
     
     print(f"🔍 Querying database: {database_id}")
     
-    # Try to use the query method - this is the standard Notion API method
+    # Try to use the query method - make direct HTTP request to Notion API
     try:
-        # Directly try to use the query method
-        print(f"  🔍 Attempting to use databases.query() method...")
+        print(f"  🔍 Attempting to query database using direct API call...")
+        notion_token = os.getenv("NOTION_TOKEN", "")
+        if not notion_token:
+            raise ValueError("NOTION_TOKEN not available for direct API call")
+        
         cursor = None
         while True:
             try:
-                if cursor:
-                    response = client.databases.query(
-                        database_id=database_id,
-                        start_cursor=cursor
-                    )
-                else:
-                    response = client.databases.query(database_id=database_id)
+                # Make direct POST request to Notion API
+                # Endpoint: POST https://api.notion.com/v1/databases/{database_id}/query
+                url = f"https://api.notion.com/v1/databases/{database_id}/query"
+                headers = {
+                    "Authorization": f"Bearer {notion_token}",
+                    "Notion-Version": "2022-06-28",  # Use a stable API version
+                    "Content-Type": "application/json"
+                }
                 
-                results = response.get("results", [])
+                payload = {}
+                if cursor:
+                    payload["start_cursor"] = cursor
+                
+                response = requests.post(url, headers=headers, json=payload, timeout=30)
+                response.raise_for_status()
+                
+                data = response.json()
+                results = data.get("results", [])
                 pages.extend(results)
                 
-                if not response.get("has_more"):
+                if not data.get("has_more"):
                     break
-                cursor = response.get("next_cursor")
+                cursor = data.get("next_cursor")
                 
-            except AttributeError as e:
-                # If query method doesn't exist, fall through to search API
-                print(f"  ⚠️  databases.query() method not available: {e}")
+            except requests.exceptions.RequestException as e:
+                print(f"  ⚠️  Error making API request: {e}")
+                if hasattr(e, 'response') and e.response is not None:
+                    try:
+                        error_data = e.response.json()
+                        print(f"  ⚠️  API Error: {error_data}")
+                    except:
+                        print(f"  ⚠️  HTTP Status: {e.response.status_code}")
                 break
             except Exception as e:
-                print(f"  ⚠️  Error calling databases.query(): {e}")
+                print(f"  ⚠️  Error calling database query: {e}")
                 import traceback
                 traceback.print_exc()
                 break
         
         # If we successfully got pages using query, return them
         if pages:
-            print(f"  ✓ Successfully queried database using query() method")
+            print(f"  ✓ Successfully queried database using direct API call")
             print(f"✓ Found {len(pages)} page(s) in database")
             return pages
             
     except Exception as e:
-        print(f"  ⚠️  Error with query method: {e}")
+        print(f"  ⚠️  Error with direct API call: {e}")
     
     # Fallback: Use search API to find pages in the database
     print(f"💡 Using search API as fallback to find pages in database...")
