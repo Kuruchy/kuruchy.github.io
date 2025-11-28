@@ -1,8 +1,8 @@
 :root {
   --bg-color: #050511; /* Espacio profundo */
   --text-color: #e0e6ed;
-  --accent-primary: #f97316; /* Naranja cálido */
-  --accent-secondary: #fb923c; /* Naranja secundario */
+  --accent-primary: #ea580c; /* Naranja profundo */
+  --accent-secondary: #fbbf24; /* Ámbar dorado para gradiente cálido */
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
 }
