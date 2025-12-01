@@ -85,6 +85,7 @@ function loadArticle(article) {
         .then(text => {
             if (!text || text.trim() === '') {
                 throw new Error('The file is empty');
+                throw new Error('The file is empty');
             }
             const htmlContent = marked.parse(text);
             return { ...article, content: htmlContent };
@@ -122,6 +123,9 @@ function loadArticleFromURL() {
                     <p>Article not found.</p>
                     <p style="font-size: 0.9em;">Searched: ${decodedFile}</p>
                     <p style="font-size: 0.9em;">Available: ${articles.length > 0 ? articles.map(a => a.filename).join(', ') : 'None'}</p>
+                    <p>Article not found.</p>
+                    <p style="font-size: 0.9em;">Searched: ${decodedFile}</p>
+                    <p style="font-size: 0.9em;">Available: ${articles.length > 0 ? articles.map(a => a.filename).join(', ') : 'None'}</p>
                 </div>`;
             return;
         }
@@ -148,6 +152,7 @@ function loadArticleFromURL() {
                             <div class="article-type-badge">
                                 <i class="${loadedArticle.icon}"></i>
                                 <span>Article</span>
+                                <span>Article</span>
                             </div>
                         </div>
                     </div>
@@ -165,11 +170,11 @@ function loadArticleFromURL() {
                     setupArticleSmoothScroll();
                 }, 200);
                 
-                // Cargar comentarios de Giscus después de renderizar el Markdown
+                // Cargar comentarios después de renderizar el Markdown
                 // Usar un pequeño delay para asegurar que el DOM esté completamente renderizado
                 setTimeout(() => {
-                    // Usar el nombre del archivo como term para comentarios únicos por artículo
-                    const articleId = loadedArticle.filename.replace(/[^a-zA-Z0-9]/g, '-');
+                    // Generar ID único para el artículo basado en el filename
+                    const articleId = getArticleId(loadedArticle.filename);
                     loadComments(articleId);
                 }, 300);
             })
@@ -195,6 +200,7 @@ function loadArticleFromURL() {
                 document.getElementById('article-content').innerHTML = 
                     `<div style="color: #ff6b6b;">
                         <p><strong>Error loading article</strong></p>
+                        <p><strong>Error loading article</strong></p>
                         <p>${errorMsg}</p>
                         <p style="font-size: 0.9em; margin-top: 1rem;">Archivo: ${article.filename}</p>
                         <p style="font-size: 0.9em;">Protocolo: ${window.location.protocol}</p>
@@ -205,66 +211,226 @@ function loadArticleFromURL() {
         console.error('Error loading articles:', error);
         document.getElementById('article-content').innerHTML = 
             '<div style="color: #ff6b6b;"><p>Error loading article list.</p></div>';
+            '<div style="color: #ff6b6b;"><p>Error loading article list.</p></div>';
     });
 }
 
-// Función para cargar comentarios de Giscus
-// term: ID único para identificar el hilo de comentarios (opcional, si no se proporciona usa pathname)
-function loadComments(term = null) {
+// Self-hosted commenting system
+// Comments are stored in data/comments/{articleId}.json
+
+// Función para generar un ID único para el artículo basado en el filename
+function getArticleId(filename) {
+    if (!filename) return null;
+    // Convertir "articles/my-article.md" a "my-article"
+    return filename
+        .replace(/^articles\//, '')
+        .replace(/\.md$/, '')
+        .replace(/[^a-zA-Z0-9-]/g, '-')
+        .toLowerCase();
+}
+
+// Función para cargar comentarios desde JSON
+function loadComments(articleId) {
     const commentsSection = document.getElementById('comments-section');
     if (!commentsSection) {
         console.error('No se encontró el contenedor #comments-section');
         return;
     }
     
-    // Limpiar cualquier script previo de Giscus
-    const existingScript = document.querySelector('script[src="https://giscus.app/client.js"]');
-    if (existingScript) {
-        existingScript.remove();
+    if (!articleId) {
+        commentsSection.innerHTML = '<p style="text-align: center; color: #94a3b8; padding: 2rem 0;">Unable to load comments: article ID not found.</p>';
+        return;
     }
     
-    // Limpiar el contenedor antes de añadir el nuevo script
-    commentsSection.innerHTML = '';
-    
-    // Añadir un mensaje de carga temporal
+    // Limpiar el contenedor
     commentsSection.innerHTML = '<p style="text-align: center; color: #94a3b8; padding: 2rem 0;">Loading comments...</p>';
     
-    // Crear el script de Giscus dinámicamente
-    const script = document.createElement('script');
-    script.src = 'https://giscus.app/client.js';
-    script.setAttribute('data-repo', 'kuruchy/kuruchy.github.io');
-    script.setAttribute('data-repo-id', 'R_kgDOGPIhoQ');
-    script.setAttribute('data-category', 'General');
-    script.setAttribute('data-category-id', 'DIC_kwDOGPIhoc4CyDKy');
+    // Cargar comentarios desde el archivo JSON
+    const commentsFile = `data/comments/${articleId}.json`;
     
-    // Si se proporciona un term, usar data-term con mapping 'specific'
-    // Si no, usar pathname como antes
-    if (term) {
-        script.setAttribute('data-mapping', 'specific');
-        script.setAttribute('data-term', term);
+    fetch(commentsFile)
+        .then(response => {
+            if (!response.ok) {
+                if (response.status === 404) {
+                    // No hay comentarios aún, mostrar formulario vacío
+                    return { comments: [] };
+                }
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            const comments = data.comments || [];
+            renderComments(comments, articleId);
+        })
+        .catch(error => {
+            console.error('Error loading comments:', error);
+            // Mostrar formulario incluso si hay error cargando comentarios
+            renderComments([], articleId);
+        });
+}
+
+// Función para renderizar comentarios
+function renderComments(comments, articleId) {
+    const commentsSection = document.getElementById('comments-section');
+    if (!commentsSection) return;
+    
+    let html = '<div class="comments-container">';
+    html += '<h3 class="comments-title"><i class="fas fa-comments"></i> Comments</h3>';
+    
+    // Mostrar lista de comentarios
+    if (comments.length === 0) {
+        html += '<p class="no-comments">No comments yet. Be the first to comment!</p>';
     } else {
-        script.setAttribute('data-mapping', 'pathname');
+        html += '<div class="comments-list">';
+        comments.forEach(comment => {
+            if (!comment.approved) return; // Solo mostrar comentarios aprobados
+            
+            const date = new Date(comment.date);
+            const formattedDate = date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            
+            html += `
+                <div class="comment-item">
+                    <div class="comment-header">
+                        <span class="comment-author">${escapeHtml(comment.author || 'Anonymous')}</span>
+                        <span class="comment-date">${formattedDate}</span>
+                    </div>
+                    <div class="comment-content">${formatCommentText(comment.text)}</div>
+                </div>
+            `;
+        });
+        html += '</div>';
     }
     
-    script.setAttribute('data-strict', '0');
-    script.setAttribute('data-reactions-enabled', '1');
-    script.setAttribute('data-emit-metadata', '0');
-    script.setAttribute('data-input-position', 'bottom');
-    script.setAttribute('data-theme', 'preferred_color_scheme');
-    script.setAttribute('data-lang', 'es');
-    script.setAttribute('crossorigin', 'anonymous');
-    script.async = true;
+    // Añadir formulario de comentarios
+    html += `
+        <div class="comment-form-container">
+            <h4><i class="fas fa-pencil-alt"></i> Leave a Comment</h4>
+            <form id="comment-form" class="comment-form">
+                <div class="form-group">
+                    <label for="comment-author">Name (optional)</label>
+                    <input type="text" id="comment-author" name="author" placeholder="Your name" maxlength="100">
+                </div>
+                <div class="form-group">
+                    <label for="comment-email">Email (optional, for notifications)</label>
+                    <input type="email" id="comment-email" name="email" placeholder="your.email@example.com" maxlength="200">
+                </div>
+                <div class="form-group">
+                    <label for="comment-text">Comment *</label>
+                    <textarea id="comment-text" name="text" rows="5" placeholder="Write your comment here..." required maxlength="5000"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit-comment">
+                        <i class="fas fa-paper-plane"></i> Submit Comment
+                    </button>
+                </div>
+                <p class="form-note">
+                    <i class="fas fa-info-circle"></i> 
+                    Comments are submitted via GitHub Issues and will appear after approval.
+                </p>
+            </form>
+            <div id="comment-form-message" class="form-message"></div>
+        </div>
+    `;
     
-    // Manejar errores de carga
-    script.onerror = function() {
-        commentsSection.innerHTML = '<p style="text-align: center; color: #ff6b6b; padding: 2rem 0;">Error loading comments. Please reload the page.</p>';
-        console.error('Error al cargar el script de Giscus');
-    };
+    commentsSection.innerHTML = html;
     
-    // Añadir el script al contenedor de comentarios
-    commentsSection.appendChild(script);
+    // Configurar el formulario
+    const form = document.getElementById('comment-form');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            submitComment(articleId);
+        });
+    }
+}
+
+// Función para formatear texto del comentario (soporte básico de markdown)
+function formatCommentText(text) {
+    if (!text) return '';
+    // Escapar HTML primero
+    let formatted = escapeHtml(text);
+    // Convertir saltos de línea a <br>
+    formatted = formatted.replace(/\n/g, '<br>');
+    // URLs simples a enlaces
+    formatted = formatted.replace(
+        /(https?:\/\/[^\s]+)/g,
+        '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+    );
+    return formatted;
+}
+
+// Función para escapar HTML
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+// Función para enviar comentario
+function submitComment(articleId) {
+    const form = document.getElementById('comment-form');
+    const messageDiv = document.getElementById('comment-form-message');
+    const submitBtn = form.querySelector('button[type="submit"]');
     
-    console.log(`Giscus script añadido al contenedor${term ? ` con term: ${term}` : ' usando pathname'}`);
+    const author = document.getElementById('comment-author').value.trim() || 'Anonymous';
+    const email = document.getElementById('comment-email').value.trim();
+    const text = document.getElementById('comment-text').value.trim();
+    
+    if (!text) {
+        showMessage('Please enter a comment.', 'error');
+        return;
+    }
+    
+    // Deshabilitar botón durante el envío
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+    messageDiv.innerHTML = '';
+    
+    // Crear un issue en GitHub
+    // Nota: Esto requiere un token de GitHub. Para producción, deberías usar GitHub Actions
+    // o un servidor backend. Por ahora, redirigimos a crear un issue manualmente.
+    const issueTitle = `Comment on: ${articleId}`;
+    const issueBody = `**Article:** ${articleId}\n\n**Author:** ${author}${email ? `\n**Email:** ${email}` : ''}\n\n**Comment:**\n${text}\n\n---\n*This comment was submitted via the website comment form.*`;
+    
+    // URL para crear un issue en GitHub
+    const repo = 'kuruchy/kuruchy.github.io';
+    const issueUrl = `https://github.com/${repo}/issues/new?title=${encodeURIComponent(issueTitle)}&body=${encodeURIComponent(issueBody)}&labels=comment`;
+    
+    // Abrir en nueva pestaña
+    window.open(issueUrl, '_blank');
+    
+    // Mostrar mensaje de éxito
+    showMessage('Opening GitHub to submit your comment. After you create the issue, it will be reviewed and added to the article.', 'success');
+    
+    // Limpiar formulario
+    form.reset();
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Comment';
+}
+
+// Función para mostrar mensajes
+function showMessage(message, type = 'info') {
+    const messageDiv = document.getElementById('comment-form-message');
+    if (!messageDiv) return;
+    
+    const icon = type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle';
+    messageDiv.className = `form-message ${type}`;
+    messageDiv.innerHTML = `<i class="fas fa-${icon}"></i> ${message}`;
+    
+    // Auto-ocultar después de 5 segundos (excepto errores)
+    if (type !== 'error') {
+        setTimeout(() => {
+            messageDiv.innerHTML = '';
+            messageDiv.className = 'form-message';
+        }, 5000);
+    }
 }
 
 // Función para volver atrás
@@ -304,6 +470,7 @@ function generateTableOfContents() {
     
     const tocContainer = document.createElement('div');
     tocContainer.className = 'toc-container';
+    tocContainer.innerHTML = '<div class="toc-title"><i class="fas fa-list"></i> Contents</div><ul class="toc-list"></ul>';
     tocContainer.innerHTML = '<div class="toc-title"><i class="fas fa-list"></i> Contents</div><ul class="toc-list"></ul>';
     const tocList = tocContainer.querySelector('.toc-list');
     
@@ -368,6 +535,7 @@ function displayReadingTime() {
     const readingTimeDiv = document.createElement('div');
     readingTimeDiv.className = 'article-reading-time';
     readingTimeDiv.style.marginBottom = '2rem';
+    readingTimeDiv.innerHTML = `<i class="fas fa-clock"></i> ${minutes} min read`;
     readingTimeDiv.innerHTML = `<i class="fas fa-clock"></i> ${minutes} min read`;
     
     const articleHeader = document.querySelector('.article-header');
