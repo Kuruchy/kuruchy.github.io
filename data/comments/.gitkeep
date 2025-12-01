@@ -1,0 +1,18 @@
+# This directory stores comment JSON files
+# Each article has its own JSON file: {article-id}.json
+# Format:
+# {
+#   "article_id": "article-slug",
+#   "comments": [
+#     {
+#       "id": "comment-123",
+#       "issue_number": 123,
+#       "author": "John Doe",
+#       "email": "john@example.com",
+#       "text": "Great article!",
+#       "date": "2025-01-15T10:30:00Z",
+#       "approved": true
+#     }
+#   ]
+# }
+
