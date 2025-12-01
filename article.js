@@ -85,6 +85,7 @@ function loadArticle(article) {
         .then(text => {
             if (!text || text.trim() === '') {
                 throw new Error('The file is empty');
+                throw new Error('The file is empty');
             }
             const htmlContent = marked.parse(text);
             return { ...article, content: htmlContent };
@@ -122,6 +123,9 @@ function loadArticleFromURL() {
                     <p>Article not found.</p>
                     <p style="font-size: 0.9em;">Searched: ${decodedFile}</p>
                     <p style="font-size: 0.9em;">Available: ${articles.length > 0 ? articles.map(a => a.filename).join(', ') : 'None'}</p>
+                    <p>Article not found.</p>
+                    <p style="font-size: 0.9em;">Searched: ${decodedFile}</p>
+                    <p style="font-size: 0.9em;">Available: ${articles.length > 0 ? articles.map(a => a.filename).join(', ') : 'None'}</p>
                 </div>`;
             return;
         }
@@ -147,6 +151,7 @@ function loadArticleFromURL() {
                             <h1>${loadedArticle.title}</h1>
                             <div class="article-type-badge">
                                 <i class="${loadedArticle.icon}"></i>
+                                <span>Article</span>
                                 <span>Article</span>
                             </div>
                         </div>
@@ -195,6 +200,7 @@ function loadArticleFromURL() {
                 document.getElementById('article-content').innerHTML = 
                     `<div style="color: #ff6b6b;">
                         <p><strong>Error loading article</strong></p>
+                        <p><strong>Error loading article</strong></p>
                         <p>${errorMsg}</p>
                         <p style="font-size: 0.9em; margin-top: 1rem;">Archivo: ${article.filename}</p>
                         <p style="font-size: 0.9em;">Protocolo: ${window.location.protocol}</p>
@@ -204,6 +210,7 @@ function loadArticleFromURL() {
     }).catch(error => {
         console.error('Error loading articles:', error);
         document.getElementById('article-content').innerHTML = 
+            '<div style="color: #ff6b6b;"><p>Error loading article list.</p></div>';
             '<div style="color: #ff6b6b;"><p>Error loading article list.</p></div>';
     });
 }
@@ -464,6 +471,7 @@ function generateTableOfContents() {
     const tocContainer = document.createElement('div');
     tocContainer.className = 'toc-container';
     tocContainer.innerHTML = '<div class="toc-title"><i class="fas fa-list"></i> Contents</div><ul class="toc-list"></ul>';
+    tocContainer.innerHTML = '<div class="toc-title"><i class="fas fa-list"></i> Contents</div><ul class="toc-list"></ul>';
     const tocList = tocContainer.querySelector('.toc-list');
     
     headings.forEach((heading, index) => {
@@ -527,6 +535,7 @@ function displayReadingTime() {
     const readingTimeDiv = document.createElement('div');
     readingTimeDiv.className = 'article-reading-time';
     readingTimeDiv.style.marginBottom = '2rem';
+    readingTimeDiv.innerHTML = `<i class="fas fa-clock"></i> ${minutes} min read`;
     readingTimeDiv.innerHTML = `<i class="fas fa-clock"></i> ${minutes} min read`;
     
     const articleHeader = document.querySelector('.article-header');
