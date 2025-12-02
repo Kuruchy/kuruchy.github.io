@@ -1,27 +1,27 @@
 [
   {
-    "title": "Search tool that only returns content created before ChatGPT's public release",
+    "title": "What will enter the public domain in 2026?",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://tegabrain.com/Slop-Evader"
+    "link": "https://publicdomainreview.org/features/entering-the-public-domain/2026/"
   },
   {
-    "title": "Advent of Code 2025",
+    "title": "Apple Releases Open Weights Video Model",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://adventofcode.com/2025/about"
+    "link": "https://starflow-v.github.io"
   },
   {
-    "title": "SmartTube Compromised",
+    "title": "Rootless Pings in Rust",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.aftvnews.com/smarttubes-official-apk-was-compromised-with-malware-what-you-should-do-if-you-use-it/"
+    "link": "https://bou.ke/blog/rust-ping/"
   },
   {
-    "title": "A Love Letter to FreeBSD",
+    "title": "Beej's Guide to Learning Computer Science",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.tara.sh/posts/2025/2025-11-25_freebsd_letter/"
+    "link": "https://beej.us/guide/bglcs/"
   },
   {
-    "title": "Advent of Sysadmin 2025",
+    "title": "DeepSeek-v3.2: Pushing the frontier of open large language models [pdf]",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://sadservers.com/advent"
+    "link": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2/resolve/main/assets/paper.pdf"
   }
 ]
