@@ -1,27 +1,27 @@
 [
   {
-    "title": "Accepting US car standards would risk European lives",
+    "title": "Ghostty is now non-profit",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://etsc.eu/accepting-us-car-standards-would-risk-european-lives-warn-cities-and-civil-society/"
+    "link": "https://mitchellh.com/writing/ghostty-non-profit"
   },
   {
-    "title": "Anthropic acquires Bun",
+    "title": "Valve reveals it’s the architect behind a push to bring Windows games to Arm",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://bun.com/blog/bun-joins-anthropic"
+    "link": "https://www.theverge.com/report/820656/valve-interview-arm-gaming-steamos-pierre-loup-griffais"
   },
   {
-    "title": "IBM CEO says there is 'no way' spending on AI data centers will pay off",
+    "title": "Average DRAM price in USD over last 18 months",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.businessinsider.com/ibm-ceo-big-tech-ai-capex-data-center-spending-2025-12"
+    "link": "https://pcpartpicker.com/trends/price/memory/"
   },
   {
-    "title": "AI agents break rules under everyday pressure",
+    "title": "Uncloud - Tool for deploying containerised apps across servers without k8s",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://spectrum.ieee.org/ai-agents-safety"
+    "link": "https://uncloud.run/"
   },
   {
-    "title": "Quad9 DOH HTTP/1.1 Retirement, December 15, 2025",
+    "title": "Reverse engineering a $1B Legal AI tool exposed 100k+ confidential files",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://quad9.net/news/blog/doh-http-1-1-retirement/"
+    "link": "https://alexschapiro.com/security/vulnerability/2025/12/02/filevine-api-100k"
   }
 ]
