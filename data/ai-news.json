@@ -1,27 +1,27 @@
 [
   {
-    "title": "Ghostty is now non-profit",
+    "title": "UniFi 5G",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://mitchellh.com/writing/ghostty-non-profit"
+    "link": "https://blog.ui.com/article/introducing-unifi-5g"
   },
   {
-    "title": "Valve reveals it’s the architect behind a push to bring Windows games to Arm",
+    "title": "Netflix’s AV1 Journey: From Android to TVs and Beyond",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.theverge.com/report/820656/valve-interview-arm-gaming-steamos-pierre-loup-griffais"
+    "link": "https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80"
   },
   {
-    "title": "Average DRAM price in USD over last 18 months",
+    "title": "BMW PHEV: Safety fuse replacement is extremely expensive",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://pcpartpicker.com/trends/price/memory/"
+    "link": "https://evclinic.eu/2025/12/04/2021-phev-bmw-ibmucp-21f37e-post-crash-recovery-when-eu-engineering-becomes-a-synonym-for-unrepairable-generating-waste/"
   },
   {
-    "title": "Uncloud - Tool for deploying containerised apps across servers without k8s",
+    "title": "I have been writing a niche history blog for 15 years",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://uncloud.run/"
+    "link": "https://resobscura.substack.com/p/why-i-have-been-writing-a-niche-history"
   },
   {
-    "title": "Reverse engineering a $1B Legal AI tool exposed 100k+ confidential files",
+    "title": "Show HN: Tacopy – Tail Call Optimization for Python",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://alexschapiro.com/security/vulnerability/2025/12/02/filevine-api-100k"
+    "link": "https://github.com/raaidrt/tacopy"
   }
 ]
