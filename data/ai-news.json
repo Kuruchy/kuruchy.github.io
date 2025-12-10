@@ -1,27 +1,27 @@
 [
   {
-    "title": "The closer we look at time, the stranger it gets",
+    "title": "Rust in the kernel is no longer experimental",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.sciencefocus.com/science/the-closer-we-look-at-time-the-stranger-it-gets"
+    "link": "https://lwn.net/Articles/1049831/"
   },
   {
-    "title": "The universal weight subspace hypothesis",
+    "title": "Show HN: Gemini Pro 3 hallucinates the HN front page 10 years from now",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://arxiv.org/abs/2512.05117"
+    "link": "https://dosaygo-studio.github.io/hn-front-page-2035/news"
   },
   {
-    "title": "Icons in Menus Everywhere – Send Help",
+    "title": "Revisiting \"Let's Build a Compiler\"",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://blog.jim-nielsen.com/2025/icons-in-menus/"
+    "link": "https://eli.thegreenplace.net/2025/revisiting-lets-build-a-compiler/"
   },
   {
-    "title": "Manual: Spaces",
+    "title": "PeerTube is recognized as a digital public good by Digital Public Goods Alliance",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://type.today/en/journal/spaces"
+    "link": "https://www.digitalpublicgoods.net/r/peertube"
   },
   {
-    "title": "Kroger acknowledges that its bet on robotics went too far",
+    "title": "Django: what’s new in 6.0",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.grocerydive.com/news/kroger-ocado-close-automated-fulfillment-centers-robotics-grocery-ecommerce/805931/"
+    "link": "https://adamj.eu/tech/2025/12/03/django-whats-new-6.0/"
   }
 ]
