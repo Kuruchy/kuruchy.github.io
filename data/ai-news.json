@@ -1,27 +1,27 @@
 [
   {
-    "title": "Rust in the kernel is no longer experimental",
+    "title": "Size of Life",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://lwn.net/Articles/1049831/"
+    "link": "https://neal.fun/size-of-life/"
   },
   {
-    "title": "Show HN: Gemini Pro 3 hallucinates the HN front page 10 years from now",
+    "title": "The Cost of a Closure in C",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://dosaygo-studio.github.io/hn-front-page-2035/news"
+    "link": "https://thephd.dev/the-cost-of-a-closure-in-c-c2y"
   },
   {
-    "title": "Revisiting \"Let's Build a Compiler\"",
+    "title": "Getting a Gemini API key is an exercise in frustration",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://eli.thegreenplace.net/2025/revisiting-lets-build-a-compiler/"
+    "link": "https://ankursethi.com/blog/gemini-api-key-frustration/"
   },
   {
-    "title": "PeerTube is recognized as a digital public good by Digital Public Goods Alliance",
+    "title": "Patterns.dev",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.digitalpublicgoods.net/r/peertube"
+    "link": "https://www.patterns.dev/"
   },
   {
-    "title": "Django: what’s new in 6.0",
+    "title": "Australia begins enforcing world-first teen social media ban",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://adamj.eu/tech/2025/12/03/django-whats-new-6.0/"
+    "link": "https://www.reuters.com/legal/litigation/australia-social-media-ban-takes-effect-world-first-2025-12-09/"
   }
 ]
