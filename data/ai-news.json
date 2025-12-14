@@ -1,27 +1,27 @@
 [
   {
-    "title": "OpenAI are quietly adopting skills, now available in ChatGPT and Codex CLI",
+    "title": "Linux Sandboxes and Fil-C",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://simonwillison.net/2025/Dec/12/openai-skills/"
+    "link": "https://fil-c.org/seccomp"
   },
   {
-    "title": "macOS 26.2 enables fast AI clusters with RDMA over Thunderbolt",
+    "title": "Recovering Anthony Bourdain's Li.st's",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://developer.apple.com/documentation/macos-release-notes/macos-26_2-release-notes#RDMA-over-Thunderbolt"
+    "link": "https://sandyuraz.com/blogs/bourdain/"
   },
   {
-    "title": "GNU Unifont",
+    "title": "Using E-Ink tablet as monitor for Linux",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://unifoundry.com/unifont/index.html"
+    "link": "https://alavi.me/blog/e-ink-tablet-as-monitor-linux/"
   },
   {
-    "title": "Beautiful Abelian Sandpiles",
+    "title": "I fed 24 years of my blog posts to a Markov model",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://eavan.blog/posts/beautiful-sandpiles.html"
+    "link": "https://susam.net/fed-24-years-of-posts-to-markov-model.html"
   },
   {
-    "title": "1300 Still Images from the Animated Films of Hayao Miyazaki's Studio Ghibli (2023)",
+    "title": "Closures as Win32 Window Procedures",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.ghibli.jp/info/013772/"
+    "link": "https://nullprogram.com/blog/2025/12/12/"
   }
 ]
