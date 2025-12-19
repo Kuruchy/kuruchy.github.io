@@ -1,27 +1,27 @@
 [
   {
-    "title": "What is an elliptic curve? (2019)",
+    "title": "Beginning January 2026, all ACM publications will be made open access",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.johndcook.com/blog/2019/02/21/what-is-an-elliptic-curve/"
+    "link": "https://dl.acm.org/openaccess"
   },
   {
-    "title": "Egyptian Hieroglyphs: Lesson 1",
+    "title": "Getting bitten by Intel's poor naming schemes",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.egyptianhieroglyphs.net/egyptian-hieroglyphs/lesson-1/"
+    "link": "https://lorendb.dev/posts/getting-bitten-by-poor-naming-schemes/"
   },
   {
-    "title": "Gemini 3 Flash: Frontier intelligence built for speed",
+    "title": "1.5 TB of VRAM on Mac Studio – RDMA over Thunderbolt 5",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://blog.google/products/gemini/gemini-3-flash/"
+    "link": "https://www.jeffgeerling.com/blog/2025/15-tb-vram-on-mac-studio-rdma-over-thunderbolt-5"
   },
   {
-    "title": "Coursera to combine with Udemy",
+    "title": "History LLMs: Models trained exclusively on pre-1913 texts",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://investor.coursera.com/news/news-details/2025/Coursera-to-Combine-with-Udemy-to-Empower-the-Global-Workforce-with-Skills-for-the-AI-Era/default.aspx"
+    "link": "https://github.com/DGoettlich/history-llms"
   },
   {
-    "title": "'Ghost jobs' are on the rise – and so are calls to ban them",
+    "title": "We pwned X, Vercel, Cursor, and Discord through a supply-chain attack",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.bbc.com/news/articles/clyzvpp8g3vo"
+    "link": "https://gist.github.com/hackermondev/5e2cdc32849405fff6b46957747a2d28"
   }
 ]
