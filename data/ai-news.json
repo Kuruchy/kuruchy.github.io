@@ -1,27 +1,27 @@
 [
   {
-    "title": "Beginning January 2026, all ACM publications will be made open access",
+    "title": "Charles Proxy",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://dl.acm.org/openaccess"
+    "link": "https://www.charlesproxy.com/"
   },
   {
-    "title": "Getting bitten by Intel's poor naming schemes",
+    "title": "CSS Grid Lanes",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://lorendb.dev/posts/getting-bitten-by-poor-naming-schemes/"
+    "link": "https://webkit.org/blog/17660/introducing-css-grid-lanes/"
   },
   {
-    "title": "1.5 TB of VRAM on Mac Studio – RDMA over Thunderbolt 5",
+    "title": "Privacy doesn't mean anything anymore, anonymity does",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.jeffgeerling.com/blog/2025/15-tb-vram-on-mac-studio-rdma-over-thunderbolt-5"
+    "link": "https://servury.com/blog/privacy-is-marketing-anonymity-is-architecture/"
   },
   {
-    "title": "History LLMs: Models trained exclusively on pre-1913 texts",
+    "title": "Mistral OCR 3",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/DGoettlich/history-llms"
+    "link": "https://mistral.ai/news/mistral-ocr-3"
   },
   {
-    "title": "We pwned X, Vercel, Cursor, and Discord through a supply-chain attack",
+    "title": "Data Bank – Nuforc – Latest UFO Sightings",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://gist.github.com/hackermondev/5e2cdc32849405fff6b46957747a2d28"
+    "link": "https://nuforc.org/databank/"
   }
 ]
