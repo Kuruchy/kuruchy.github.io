@@ -1,27 +1,27 @@
 [
   {
-    "title": "A guide to local coding models",
+    "title": "Show HN: CineCLI – Browse and torrent movies directly from your terminal",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.aiforswes.com/p/you-dont-need-to-spend-100mo-on-claude"
+    "link": "https://github.com/eyeblech/cinecli"
   },
   {
-    "title": "Deliberate Internet Shutdowns",
+    "title": "Snitch – A friendlier ss/netstat",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.schneier.com/blog/archives/2025/12/deliberate-internet-shutdowns.html"
+    "link": "https://github.com/karol-broda/snitch"
   },
   {
-    "title": "Build Android apps using Rust and Iced",
+    "title": "It's Always TCP_NODELAY",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/ibaryshnikov/android-iced-example"
+    "link": "https://brooker.co.za/blog/2024/05/09/nagle.html"
   },
   {
-    "title": "Webb observes exoplanet that may have an exotic helium and carbon atmosphere",
+    "title": "The Illustrated Transformer",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://science.nasa.gov/missions/webb/nasas-webb-observes-exoplanet-whose-composition-defies-explanation/"
+    "link": "https://jalammar.github.io/illustrated-transformer/"
   },
   {
-    "title": "I'm just having fun",
+    "title": "The Polyglot NixOS",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://jyn.dev/i-m-just-having-fun/"
+    "link": "https://x86.lol/generic/2025/12/19/polyglot.html"
   }
 ]
