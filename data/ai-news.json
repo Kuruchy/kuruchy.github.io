@@ -1,27 +1,27 @@
 [
   {
-    "title": "Show HN: CineCLI – Browse and torrent movies directly from your terminal",
+    "title": "Fabrice Bellard Releases MicroQuickJS",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/eyeblech/cinecli"
+    "link": "https://github.com/bellard/mquickjs/blob/main/README.md"
   },
   {
-    "title": "Snitch – A friendlier ss/netstat",
+    "title": "X-ray: a Python library for finding bad redactions in PDF documents",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/karol-broda/snitch"
+    "link": "https://github.com/freelawproject/x-ray"
   },
   {
-    "title": "It's Always TCP_NODELAY",
+    "title": "Some Epstein file redactions are being undone with hacks",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://brooker.co.za/blog/2024/05/09/nagle.html"
+    "link": "https://www.theguardian.com/us-news/2025/dec/23/epstein-unredacted-files-social-media"
   },
   {
-    "title": "The Illustrated Transformer",
+    "title": "Unifi Travel Router",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://jalammar.github.io/illustrated-transformer/"
+    "link": "https://blog.ui.com/article/travel-in-style-unifi-style-unifi-travel-router"
   },
   {
-    "title": "The Polyglot NixOS",
+    "title": "Texas app store age verification law blocked by federal judge",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://x86.lol/generic/2025/12/19/polyglot.html"
+    "link": "https://www.macrumors.com/2025/12/23/texas-app-store-law-blocked/"
   }
 ]
