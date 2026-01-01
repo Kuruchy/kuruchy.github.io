@@ -1,27 +1,27 @@
 [
   {
-    "title": "Animated AI",
+    "title": "2025: The Year in LLMs",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://animatedai.github.io/"
+    "link": "https://simonwillison.net/2025/Dec/31/the-year-in-llms/"
   },
   {
-    "title": "A faster heart for F-Droid",
+    "title": "I canceled my book deal",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://f-droid.org/2025/12/30/a-faster-heart-for-f-droid.html"
+    "link": "https://austinhenley.com/blog/canceledbookdeal.html"
   },
   {
-    "title": "Readings in Database Systems (5th Edition)",
+    "title": "Flow5 released to open source",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "http://www.redbook.io/"
+    "link": "https://flow5.tech/docs/releasenotes.html"
   },
   {
-    "title": "FediMeteo: A €4 FreeBSD VPS Became a Global Weather Service",
+    "title": "Resistance training load does not determine hypertrophy",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://it-notes.dragas.net/2025/02/26/fedimeteo-how-a-tiny-freebsd-vps-became-a-global-weather-service-for-thousands/"
+    "link": "https://physoc.onlinelibrary.wiley.com/doi/10.1113/JP289684"
   },
   {
-    "title": "Show HN: 22 GB of Hacker News in SQLite",
+    "title": "Show HN: BusterMQ, Thread-per-core NATS server in Zig with io_uring",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://hackerbook.dosaygo.com"
+    "link": "https://bustermq.sh/"
   }
 ]
