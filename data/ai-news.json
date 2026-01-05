@@ -1,27 +1,27 @@
 [
   {
-    "title": "Neural Networks: Zero to Hero",
+    "title": "Decorative Cryptography",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://karpathy.ai/zero-to-hero.html"
+    "link": "https://www.dlp.rip/decorative-cryptography"
   },
   {
-    "title": "Total monthly number of StackOverflow questions over time",
+    "title": "Databases in 2025: A Year in Review",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://data.stackexchange.com/stackoverflow/query/1926661#graph"
+    "link": "https://www.cs.cmu.edu/~pavlo/blog/2026/01/2025-databases-retrospective.html"
   },
   {
-    "title": "The suck is why we're here",
+    "title": "Building a Rust-style static analyzer for C++ with AI",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://nik.art/the-suck-is-why-were-here/"
+    "link": "http://mpaxos.com/blog/rusty-cpp.html"
   },
   {
-    "title": "GDI Effects from the PC cracking scene",
+    "title": "Lessons from 14 years at Google",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://gdimayhem.temari.fr/index.php?p=all"
+    "link": "https://addyosmani.com/blog/21-lessons/"
   },
   {
-    "title": "The Most Popular Blogs of Hacker News in 2025",
+    "title": "A spider web unlike any seen before (2025)",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://refactoringenglish.com/blog/2025-hn-top-5/"
+    "link": "https://www.nytimes.com/2025/11/08/science/biggest-spiderweb-sulfur-cave.html"
   }
 ]
