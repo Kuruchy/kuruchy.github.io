@@ -1,27 +1,27 @@
 [
   {
-    "title": "The creator of Claude Code's Claude setup",
+    "title": "Project Patchouli: Open-source electromagnetic drawing tablet hardware",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://twitter.com/bcherny/status/2007179832300581177"
+    "link": "https://patchouli.readthedocs.io/en/latest/"
   },
   {
-    "title": "Sergey Brin's Unretirement",
+    "title": "A closer look at a BGP anomaly in Venezuela",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.inc.com/jessica-stillman/google-co-founder-sergey-brins-unretirement-is-a-lesson-for-the-rest-of-us/91280208"
+    "link": "https://blog.cloudflare.com/bgp-route-leak-venezuela/"
   },
   {
-    "title": "Stop Doom Scrolling, Start Doom Coding: Build via the terminal from your phone",
+    "title": "The Napoleon Technique: Postponing Things to Increase Productivity",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/rberg27/doom-coding"
+    "link": "https://effectiviology.com/napoleon/"
   },
   {
-    "title": "Electronic nose for indoor mold detection and identification",
+    "title": "Kernel bugs hide for 2 years on average. Some hide for 20",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adsr.202500124"
+    "link": "https://pebblebed.com/blog/kernel-bugs"
   },
   {
-    "title": "Opus 4.5 is not the normal AI agent experience that I have had thus far",
+    "title": "Open Infrastructure Map",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://burkeholland.github.io/posts/opus-4-5-change-everything/"
+    "link": "https://openinframap.org"
   }
 ]
