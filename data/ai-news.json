@@ -1,27 +1,27 @@
 [
   {
-    "title": "“Erdos problem #728 was solved more or less autonomously by AI”",
+    "title": "The Concise TypeScript Book",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://mathstodon.xyz/@tao/115855840223258103"
+    "link": "https://github.com/gibbok/typescript-book"
   },
   {
-    "title": "Changes to Android Open Source Project",
+    "title": "Vojtux – Unofficial Linux Distribution Aimed at Visually Impaired Users",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://source.android.com/"
+    "link": "https://github.com/vojtapolasek/vojtux"
   },
   {
-    "title": "The Performance Revolution in JavaScript Tooling",
+    "title": "Show HN: Ferrite – Markdown editor in Rust with native Mermaid diagram rendering",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://blog.appsignal.com/2025/12/03/the-performance-revolution-in-javascript-tooling.html"
+    "link": "https://github.com/OlaProeis/Ferrite"
   },
   {
-    "title": "JavaScript Demos in 140 Characters",
+    "title": "C++ std::move doesn't move anything: A deep dive into Value Categories",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://beta.dwitter.net"
+    "link": "https://0xghost.dev/blog/std-move-deep-dive/"
   },
   {
-    "title": "Oh My Zsh adds bloat",
+    "title": "'Bandersnatch': The Works That Inspired the 'Black Mirror' Interactive Feature (2019)",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://rushter.com/blog/zsh-shell/"
+    "link": "https://www.hollywoodreporter.com/tv/tv-news/black-mirror-bandersnatch-real-life-works-influences-1173330/"
   }
 ]
