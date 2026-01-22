@@ -1,27 +1,27 @@
 [
   {
-    "title": "Anthropic's original take home assignment open sourced",
+    "title": "Show HN: Sweep, Open-weights 1.5B model for next-edit autocomplete",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/anthropics/original_performance_takehome"
+    "link": "https://huggingface.co/sweepai/sweep-next-edit-1.5B"
   },
   {
-    "title": "The Agentic AI Handbook: Production-Ready Patterns",
+    "title": "Doctors in Brazil using tilapia fish skin to treat burn victims",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.nibzard.com/agentic-handbook"
+    "link": "https://www.pbs.org/newshour/health/brazilian-city-uses-tilapia-fish-skin-treat-burn-victims"
   },
   {
-    "title": "cURL removes bug bounties",
+    "title": "From stealth blackout to whitelisting: Inside the Iranian shutdown",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://etn.se/index.php/nyheter/72808-curl-removes-bug-bounties.html"
+    "link": "https://www.kentik.com/blog/from-stealth-blackout-to-whitelisting-inside-the-iranian-shutdown/"
   },
   {
-    "title": "200 MB RAM FreeBSD Desktop",
+    "title": "Threat actors expand abuse of Microsoft Visual Studio Code",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://vermaden.wordpress.com/2026/01/18/200-mb-ram-freebsd-desktop/"
+    "link": "https://www.jamf.com/blog/threat-actors-expand-abuse-of-visual-studio-code/"
   },
   {
-    "title": "A 26,000-year astronomical monument hidden in plain sight (2019)",
+    "title": "Gathering Linux Syscall Numbers in a C Table",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://longnow.org/ideas/the-26000-year-astronomical-monument-hidden-in-plain-sight/"
+    "link": "https://t-cadet.github.io/programming-wisdom/#2026-01-17-gathering-linux-syscall-numbers"
   }
 ]
