@@ -1,27 +1,27 @@
 [
   {
-    "title": "Defeating a 40-year-old copy protection dongle",
+    "title": "Floppinux – An Embedded Linux on a Single Floppy, 2025 Edition",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://dmitrybrant.com/2026/02/01/defeating-a-40-year-old-copy-protection-dongle"
+    "link": "https://krzysztofjankowski.com/floppinux/floppinux-2025.html"
   },
   {
-    "title": "Apple's MacBook Pro DFU port documentation is wrong",
+    "title": "The Codex App",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://lapcatsoftware.com/articles/2026/2/1.html"
+    "link": "https://openai.com/index/introducing-the-codex-app/"
   },
   {
-    "title": "My iPhone 16 Pro Max produces garbage output when running MLX LLMs",
+    "title": "How does misalignment scale with model intelligence and task complexity?",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://journal.rafaelcosta.me/my-thousand-dollar-iphone-cant-do-math/"
+    "link": "https://alignment.anthropic.com/2026/hot-mess-of-ai/"
   },
   {
-    "title": "Show HN: NanoClaw – “Clawdbot” in 500 lines of TS with Apple container isolation",
+    "title": "Coding assistants are solving the wrong problem",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/gavrielc/nanoclaw"
+    "link": "https://www.bicameral-ai.com/blog/introducing-bicameral"
   },
   {
-    "title": "Show HN: Wikipedia as a doomscrollable social media feed",
+    "title": "Anki ownership transferred to AnkiHub",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://xikipedia.org"
+    "link": "https://forums.ankiweb.net/t/ankis-growing-up/68610"
   }
 ]
