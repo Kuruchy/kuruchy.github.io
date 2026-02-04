@@ -1,27 +1,27 @@
 [
   {
-    "title": "Floppinux – An Embedded Linux on a Single Floppy, 2025 Edition",
+    "title": "I miss thinking hard",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://krzysztofjankowski.com/floppinux/floppinux-2025.html"
+    "link": "https://www.jernesto.com/articles/thinking_hard"
   },
   {
-    "title": "The Codex App",
+    "title": "Lessons learned shipping 500 units of my first hardware product",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://openai.com/index/introducing-the-codex-app/"
+    "link": "https://www.simonberens.com/p/lessons-learned-shipping-500-units"
   },
   {
-    "title": "How does misalignment scale with model intelligence and task complexity?",
+    "title": "Data centers in space makes no sense",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://alignment.anthropic.com/2026/hot-mess-of-ai/"
+    "link": "https://civai.org/blog/space-data-centers"
   },
   {
-    "title": "Coding assistants are solving the wrong problem",
+    "title": "How watercolor brushes are made",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.bicameral-ai.com/blog/introducing-bicameral"
+    "link": "https://www.handprint.com/HP/WCL/brush1.html"
   },
   {
-    "title": "Anki ownership transferred to AnkiHub",
+    "title": "Show HN: Craftplan – I built my wife a production management tool for her bakery",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://forums.ankiweb.net/t/ankis-growing-up/68610"
+    "link": "https://github.com/puemos/craftplan"
   }
 ]
