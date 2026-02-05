@@ -1,27 +1,27 @@
 [
   {
-    "title": "I miss thinking hard",
+    "title": "Don't rent the cloud, own instead",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.jernesto.com/articles/thinking_hard"
+    "link": "https://blog.comma.ai/datacenter/"
   },
   {
-    "title": "Lessons learned shipping 500 units of my first hardware product",
+    "title": "When internal hostnames are leaked to the clown",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.simonberens.com/p/lessons-learned-shipping-500-units"
+    "link": "https://rachelbythebay.com/w/2026/02/03/badnas/"
   },
   {
-    "title": "Data centers in space makes no sense",
+    "title": "Voxtral Transcribe 2",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://civai.org/blog/space-data-centers"
+    "link": "https://mistral.ai/news/voxtral-transcribe-2"
   },
   {
-    "title": "How watercolor brushes are made",
+    "title": "Postgres Postmaster does not scale",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.handprint.com/HP/WCL/brush1.html"
+    "link": "https://www.recall.ai/blog/postgres-postmaster-does-not-scale"
   },
   {
-    "title": "Show HN: Craftplan – I built my wife a production management tool for her bakery",
+    "title": "Wirth's Revenge",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/puemos/craftplan"
+    "link": "https://jmoiron.net/blog/wirths-revenge/"
   }
 ]
