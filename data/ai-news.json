@@ -1,27 +1,27 @@
 [
   {
-    "title": "Don't rent the cloud, own instead",
+    "title": "Claude Opus 4.6",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://blog.comma.ai/datacenter/"
+    "link": "https://www.anthropic.com/news/claude-opus-4-6"
   },
   {
-    "title": "When internal hostnames are leaked to the clown",
+    "title": "Things Unix can do atomically (2010)",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://rachelbythebay.com/w/2026/02/03/badnas/"
+    "link": "https://rcrowley.org/2010/01/06/things-unix-can-do-atomically.html"
   },
   {
-    "title": "Voxtral Transcribe 2",
+    "title": "Systems Thinking",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://mistral.ai/news/voxtral-transcribe-2"
+    "link": "http://theprogrammersparadox.blogspot.com/2026/02/systems-thinking.html"
   },
   {
-    "title": "Postgres Postmaster does not scale",
+    "title": "GPT-5.3-Codex",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.recall.ai/blog/postgres-postmaster-does-not-scale"
+    "link": "https://openai.com/index/introducing-gpt-5-3-codex/"
   },
   {
-    "title": "Wirth's Revenge",
+    "title": "Show HN: Artifact Keeper – Open-Source Artifactory/Nexus Alternative in Rust",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://jmoiron.net/blog/wirths-revenge/"
+    "link": "https://github.com/artifact-keeper"
   }
 ]
