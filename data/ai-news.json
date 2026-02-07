@@ -1,27 +1,27 @@
 [
   {
-    "title": "Claude Opus 4.6",
+    "title": "OpenCiv3: Open-source, cross-platform reimagining of Civilization III",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.anthropic.com/news/claude-opus-4-6"
+    "link": "https://openciv3.org/"
   },
   {
-    "title": "Things Unix can do atomically (2010)",
+    "title": "The Waymo World Model",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://rcrowley.org/2010/01/06/things-unix-can-do-atomically.html"
+    "link": "https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation"
   },
   {
-    "title": "Systems Thinking",
+    "title": "How we made geo joins 400× faster with H3 indexes",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "http://theprogrammersparadox.blogspot.com/2026/02/systems-thinking.html"
+    "link": "https://floedb.ai/blog/how-we-made-geo-joins-400-faster-with-h3-indexes"
   },
   {
-    "title": "GPT-5.3-Codex",
+    "title": "What Is Ruliology?",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://openai.com/index/introducing-gpt-5-3-codex/"
+    "link": "https://writings.stephenwolfram.com/2026/01/what-is-ruliology/"
   },
   {
-    "title": "Show HN: Artifact Keeper – Open-Source Artifactory/Nexus Alternative in Rust",
+    "title": "Unseen Footage of Atari Battlezone Arcade Cabinet Production",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/artifact-keeper"
+    "link": "https://arcadeblogger.com/2026/02/02/unseen-footage-of-atari-battlezone-cabinet-production/"
   }
 ]
