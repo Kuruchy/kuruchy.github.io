@@ -1,27 +1,27 @@
 [
   {
-    "title": "OpenCiv3: Open-source, cross-platform reimagining of Civilization III",
+    "title": "Show HN: LocalGPT – A local-first AI assistant in Rust with persistent memory",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://openciv3.org/"
+    "link": "https://github.com/localgpt-app/localgpt"
   },
   {
-    "title": "The Waymo World Model",
+    "title": "Haskell for all: Beyond agentic coding",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation"
+    "link": "https://haskellforall.com/2026/02/beyond-agentic-coding"
   },
   {
-    "title": "How we made geo joins 400× faster with H3 indexes",
+    "title": "SectorC: A C Compiler in 512 bytes (2023)",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://floedb.ai/blog/how-we-made-geo-joins-400-faster-with-h3-indexes"
+    "link": "https://xorvoid.com/sectorc.html"
   },
   {
-    "title": "What Is Ruliology?",
+    "title": "Roger Ebert Reviews \"The Shawshank Redemption\"",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://writings.stephenwolfram.com/2026/01/what-is-ruliology/"
+    "link": "https://www.rogerebert.com/reviews/great-movie-the-shawshank-redemption-1994"
   },
   {
-    "title": "Unseen Footage of Atari Battlezone Arcade Cabinet Production",
+    "title": "Software factories and the agentic moment",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://arcadeblogger.com/2026/02/02/unseen-footage-of-atari-battlezone-cabinet-production/"
+    "link": "https://factory.strongdm.ai/"
   }
 ]
