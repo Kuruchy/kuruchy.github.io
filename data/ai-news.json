@@ -1,27 +1,27 @@
 [
   {
-    "title": "Show HN: LocalGPT – A local-first AI assistant in Rust with persistent memory",
+    "title": "Art of Roads in Games",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/localgpt-app/localgpt"
+    "link": "https://sandboxspirit.com/blog/art-of-roads-in-games/"
   },
   {
-    "title": "Haskell for all: Beyond agentic coding",
+    "title": "Vouch",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://haskellforall.com/2026/02/beyond-agentic-coding"
+    "link": "https://github.com/mitchellh/vouch"
   },
   {
-    "title": "SectorC: A C Compiler in 512 bytes (2023)",
+    "title": "Nobody knows how the whole system works",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://xorvoid.com/sectorc.html"
+    "link": "https://surfingcomplexity.blog/2026/02/08/nobody-knows-how-the-whole-system-works/"
   },
   {
-    "title": "Roger Ebert Reviews \"The Shawshank Redemption\"",
+    "title": "LispE: Lisp Interpreter with Pattern Programming and Lazy Evaluation",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.rogerebert.com/reviews/great-movie-the-shawshank-redemption-1994"
+    "link": "https://github.com/naver/lispe"
   },
   {
-    "title": "Software factories and the agentic moment",
+    "title": "TSMC to make advanced AI semiconductors in Japan",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://factory.strongdm.ai/"
+    "link": "https://apnews.com/article/semiconductors-tsmc-japan-taiwan-ai-11256f2bfde73ca23d08331ad138d6d5"
   }
 ]
