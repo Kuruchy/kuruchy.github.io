@@ -1,27 +1,27 @@
 [
   {
-    "title": "Art of Roads in Games",
+    "title": "Frontier AI agents violate ethical constraints 30–50% of time, pressured by KPIs",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://sandboxspirit.com/blog/art-of-roads-in-games/"
+    "link": "https://arxiv.org/abs/2512.20798"
   },
   {
-    "title": "Vouch",
+    "title": "Discord will require a face scan or ID for full access next month",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/mitchellh/vouch"
+    "link": "https://www.theverge.com/tech/875309/discord-age-verification-global-roll-out"
   },
   {
-    "title": "Nobody knows how the whole system works",
+    "title": "Rust implementation of Mistral's Voxtral Mini 4B Realtime runs in your browser",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://surfingcomplexity.blog/2026/02/08/nobody-knows-how-the-whole-system-works/"
+    "link": "https://github.com/TrevorS/voxtral-mini-realtime-rs"
   },
   {
-    "title": "LispE: Lisp Interpreter with Pattern Programming and Lazy Evaluation",
+    "title": "Brutalist Southbank Centre Listed",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/naver/lispe"
+    "link": "https://www.architectsjournal.co.uk/news/brutalist-southbank-centre-finally-listed-after-35-years-of-refusals"
   },
   {
-    "title": "TSMC to make advanced AI semiconductors in Japan",
+    "title": "Pure C, CPU-only inference with Mistral Voxtral Realtime 4B speech to text model",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://apnews.com/article/semiconductors-tsmc-japan-taiwan-ai-11256f2bfde73ca23d08331ad138d6d5"
+    "link": "https://github.com/antirez/voxtral.c"
   }
 ]
