@@ -1,27 +1,27 @@
 [
   {
-    "title": "Frontier AI agents violate ethical constraints 30–50% of time, pressured by KPIs",
+    "title": "Windows Notepad App Remote Code Execution Vulnerability",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://arxiv.org/abs/2512.20798"
+    "link": "https://www.cve.org/CVERecord?id=CVE-2026-20841"
   },
   {
-    "title": "Discord will require a face scan or ID for full access next month",
+    "title": "The Feynman Lectures on Physics (1961-1964)",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.theverge.com/tech/875309/discord-age-verification-global-roll-out"
+    "link": "https://www.feynmanlectures.caltech.edu/"
   },
   {
-    "title": "Rust implementation of Mistral's Voxtral Mini 4B Realtime runs in your browser",
+    "title": "The Singularity will occur on a Tuesday",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/TrevorS/voxtral-mini-realtime-rs"
+    "link": "https://campedersen.com/singularity"
   },
   {
-    "title": "Brutalist Southbank Centre Listed",
+    "title": "Exploring a Modern SMTPE 2110 Broadcast Truck",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.architectsjournal.co.uk/news/brutalist-southbank-centre-finally-listed-after-35-years-of-refusals"
+    "link": "https://www.jeffgeerling.com/blog/2026/exploring-a-modern-smpte-2110-broadcast-truck-with-my-dad/"
   },
   {
-    "title": "Pure C, CPU-only inference with Mistral Voxtral Realtime 4B speech to text model",
+    "title": "Signy: Signed URLs for Small Devices",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/antirez/voxtral.c"
+    "link": "https://github.com/golioth/signy"
   }
 ]
