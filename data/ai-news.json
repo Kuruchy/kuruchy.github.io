@@ -1,27 +1,27 @@
 [
   {
-    "title": "Windows Notepad App Remote Code Execution Vulnerability",
+    "title": "Warcraft III Peon Voice Notifications for Claude Code",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.cve.org/CVERecord?id=CVE-2026-20841"
+    "link": "https://github.com/tonyyont/peon-ping"
   },
   {
-    "title": "The Feynman Lectures on Physics (1961-1964)",
+    "title": "Discord/Twitch/Snapchat age verification bypass",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.feynmanlectures.caltech.edu/"
+    "link": "https://age-verifier.kibty.town/"
   },
   {
-    "title": "The Singularity will occur on a Tuesday",
+    "title": "65 Lines of Markdown, a Claude Code Sensation",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://campedersen.com/singularity"
+    "link": "https://tildeweb.nl/~michiel/65-lines-of-markdown-a-claude-code-sensation.html"
   },
   {
-    "title": "Exploring a Modern SMTPE 2110 Broadcast Truck",
+    "title": "Using an engineering notebook",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.jeffgeerling.com/blog/2026/exploring-a-modern-smpte-2110-broadcast-truck-with-my-dad/"
+    "link": "https://ntietz.com/blog/using-an-engineering-notebook/"
   },
   {
-    "title": "Signy: Signed URLs for Small Devices",
+    "title": "“Nothing” is the secret to structuring your work",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/golioth/signy"
+    "link": "https://www.vangemert.dev/blog/nothing"
   }
 ]
