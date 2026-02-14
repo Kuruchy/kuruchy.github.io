@@ -1,27 +1,27 @@
 [
   {
-    "title": "Resizing windows on macOS Tahoe – the saga continues",
+    "title": "Show HN: SQL-tap – Real-time SQL traffic viewer for PostgreSQL and MySQL",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://noheger.at/blog/2026/02/12/resizing-windows-on-macos-tahoe-the-saga-continues/"
+    "link": "https://github.com/mickamy/sql-tap"
   },
   {
-    "title": "MinIO repository is no longer maintained",
+    "title": "Show HN: I spent 3 years reverse-engineering a 40 yo stock market sim from 1986",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/minio/minio/commit/7aac2a2c5b7c882e68c1ce017d8256be2feea27f"
+    "link": "https://www.wallstreetraider.com/story.html"
   },
   {
-    "title": "MMAcevedo aka Lena by qntm",
+    "title": "The Three Year Myth",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://qntm.org/mmacevedo"
+    "link": "https://green.spacedino.net/the-three-year-myth/"
   },
   {
-    "title": "GPT‑5.3‑Codex‑Spark",
+    "title": "Understanding the Go Compiler: The Linker",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://openai.com/index/introducing-gpt-5-3-codex-spark/"
+    "link": "https://internals-for-interns.com/posts/the-go-linker/"
   },
   {
-    "title": "Gemini 3 Deep Think",
+    "title": "Show HN: Data Engineering Book – An open source, community-driven guide",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/"
+    "link": "https://github.com/datascale-ai/data_engineering_book/blob/main/README_en.md"
   }
 ]
