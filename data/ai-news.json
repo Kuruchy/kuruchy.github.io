@@ -1,27 +1,27 @@
 [
   {
-    "title": "Show HN: SQL-tap – Real-time SQL traffic viewer for PostgreSQL and MySQL",
+    "title": "I love the work of the ArchWiki maintainers",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/mickamy/sql-tap"
+    "link": "https://k7r.eu/i-love-the-work-of-the-archwiki-maintainers/"
   },
   {
-    "title": "Show HN: I spent 3 years reverse-engineering a 40 yo stock market sim from 1986",
+    "title": "Flashpoint Archive – Over 200k web games and animations preserved",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.wallstreetraider.com/story.html"
+    "link": "https://flashpointarchive.org"
   },
   {
-    "title": "The Three Year Myth",
+    "title": "My smart sleep mask broadcasts users' brainwaves to an open MQTT broker",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://green.spacedino.net/the-three-year-myth/"
+    "link": "https://aimilios.bearblog.dev/reverse-engineering-sleep-mask/"
   },
   {
-    "title": "Understanding the Go Compiler: The Linker",
+    "title": "Zvec: A lightweight, fast, in-process vector database",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://internals-for-interns.com/posts/the-go-linker/"
+    "link": "https://github.com/alibaba/zvec"
   },
   {
-    "title": "Show HN: Data Engineering Book – An open source, community-driven guide",
+    "title": "Instagram's URL Blackhole",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/datascale-ai/data_engineering_book/blob/main/README_en.md"
+    "link": "https://medium.com/@shredlife/instagrams-url-blackhole-c1733e081664"
   }
 ]
