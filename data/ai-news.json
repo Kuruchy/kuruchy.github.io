@@ -1,27 +1,27 @@
 [
   {
-    "title": "I want to wash my car. The car wash is 50 meters away. Should I walk or drive?",
+    "title": "Four Column ASCII (2017)",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://mastodon.world/@knowmadd/116072773118828295"
+    "link": "https://garbagecollected.org/2017/01/31/four-column-ascii/"
   },
   {
-    "title": "I’m joining OpenAI",
+    "title": "14-year-old Miles Wu folded origami pattern that holds 10k times its own weight",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://steipete.me/posts/2026/openclaw"
+    "link": "https://www.smithsonianmag.com/innovation/this-14-year-old-is-using-origami-to-design-emergency-shelters-that-are-sturdy-cost-efficient-and-easy-to-deploy-180988179/"
   },
   {
-    "title": "Building SQLite with a small swarm",
+    "title": "Show HN: I built a tool to un-dumb Claude Code's CLI output (Local Log Viewer)",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://kiankyars.github.io/machine_learning/2026/02/12/sqlite.html"
+    "link": "https://github.com/matt1398/claude-devtools"
   },
   {
-    "title": "picol: A Tcl interpreter in 500 lines of code",
+    "title": "A deep dive into Apple's .car file format",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/antirez/picol"
+    "link": "https://dbg.re/posts/car-file-format/"
   },
   {
-    "title": "Magnus Carlsen Wins the Freestyle (Chess960) World Championship",
+    "title": "Rise of the Triforce",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.fide.com/magnus-carlsen-wins-2026-fide-freestyle-world-championship/"
+    "link": "https://dolphin-emu.org/blog/2026/02/16/rise-of-the-triforce/"
   }
 ]
