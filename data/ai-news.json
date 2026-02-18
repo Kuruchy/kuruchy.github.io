@@ -1,27 +1,27 @@
 [
   {
-    "title": "Four Column ASCII (2017)",
+    "title": "15 years later, Microsoft morged my diagram",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://garbagecollected.org/2017/01/31/four-column-ascii/"
+    "link": "https://nvie.com/posts/15-years-later/"
   },
   {
-    "title": "14-year-old Miles Wu folded origami pattern that holds 10k times its own weight",
+    "title": "Halt and Catch Fire: TV's Best Drama You've Probably Never Heard Of (2021)",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.smithsonianmag.com/innovation/this-14-year-old-is-using-origami-to-design-emergency-shelters-that-are-sturdy-cost-efficient-and-easy-to-deploy-180988179/"
+    "link": "https://www.sceneandheardnu.com/content/halt-and-catch-fire"
   },
   {
-    "title": "Show HN: I built a tool to un-dumb Claude Code's CLI output (Local Log Viewer)",
+    "title": "Terminals should generate the 256-color palette",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/matt1398/claude-devtools"
+    "link": "https://gist.github.com/jake-stewart/0a8ea46159a7da2c808e5be2177e1783"
   },
   {
-    "title": "A deep dive into Apple's .car file format",
+    "title": "Claude Sonnet 4.6",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://dbg.re/posts/car-file-format/"
+    "link": "https://www.anthropic.com/news/claude-sonnet-4-6"
   },
   {
-    "title": "Rise of the Triforce",
+    "title": "A DuckDB-based metabase alternative",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://dolphin-emu.org/blog/2026/02/16/rise-of-the-triforce/"
+    "link": "https://github.com/taleshape-com/shaper"
   }
 ]
