@@ -1,27 +1,27 @@
 [
   {
-    "title": "Sizing chaos",
+    "title": "Defer available in gcc and clang",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://pudding.cool/2026/02/womens-sizing/"
+    "link": "https://gustedt.wordpress.com/2026/02/15/defer-available-in-gcc-and-clang/"
   },
   {
-    "title": "Martial arts robots at 2026 Spring Festival Gala [video]",
+    "title": "Consistency diffusion language models: Up to 14x faster, no quality loss",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.youtube.com/watch?v=mUmlv814aJo"
+    "link": "https://www.together.ai/blog/consistency-diffusion-language-models"
   },
   {
-    "title": "27-year-old Apple iBooks can connect to Wi-Fi and download official updates",
+    "title": "Gemini 3.1 Pro",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://old.reddit.com/r/MacOS/comments/1r8900z/macos_which_officially_supports_27_year_old/"
+    "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/"
   },
   {
-    "title": "15 years of FP64 segmentation, and why the Blackwell Ultra breaks the pattern",
+    "title": "Reading the undocumented MEMS accelerometer on Apple Silicon MacBooks via iokit",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://nicolasdickenmann.com/blog/the-great-fp64-divide.html"
+    "link": "https://github.com/olvvier/apple-silicon-accelerometer"
   },
   {
-    "title": "Anthropic officially bans using subscription auth for third party use",
+    "title": "Pi for Excel: AI sidebar add-in for Excel",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://code.claude.com/docs/en/legal-and-compliance"
+    "link": "https://github.com/tmustier/pi-for-excel"
   }
 ]
