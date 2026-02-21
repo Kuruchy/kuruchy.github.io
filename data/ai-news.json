@@ -1,27 +1,27 @@
 [
   {
-    "title": "Defer available in gcc and clang",
+    "title": "Keep Android Open",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://gustedt.wordpress.com/2026/02/15/defer-available-in-gcc-and-clang/"
+    "link": "https://f-droid.org/2026/02/20/twif.html"
   },
   {
-    "title": "Consistency diffusion language models: Up to 14x faster, no quality loss",
+    "title": "Turn Dependabot off",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.together.ai/blog/consistency-diffusion-language-models"
+    "link": "https://words.filippo.io/dependabot/"
   },
   {
-    "title": "Gemini 3.1 Pro",
+    "title": "I found a Vulnerability. They found a Lawyer",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/"
+    "link": "https://dixken.de/blog/i-found-a-vulnerability-they-found-a-lawyer"
   },
   {
-    "title": "Reading the undocumented MEMS accelerometer on Apple Silicon MacBooks via iokit",
+    "title": "Facebook is cooked",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/olvvier/apple-silicon-accelerometer"
+    "link": "https://pilk.website/3/facebook-is-absolutely-cooked"
   },
   {
-    "title": "Pi for Excel: AI sidebar add-in for Excel",
+    "title": "Ggml.ai joins Hugging Face to ensure the long-term progress of Local AI",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/tmustier/pi-for-excel"
+    "link": "https://github.com/ggml-org/llama.cpp/discussions/19759"
   }
 ]
