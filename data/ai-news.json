@@ -1,27 +1,27 @@
 [
   {
-    "title": "Keep Android Open",
+    "title": "How I use Claude Code: Separation of planning and execution",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://f-droid.org/2026/02/20/twif.html"
+    "link": "https://boristane.com/blog/how-i-use-claude-code/"
   },
   {
-    "title": "Turn Dependabot off",
+    "title": "Japanese Woodblock Print Search",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://words.filippo.io/dependabot/"
+    "link": "https://ukiyo-e.org/"
   },
   {
-    "title": "I found a Vulnerability. They found a Lawyer",
+    "title": "How Taalas \"prints\" LLM onto a chip?",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://dixken.de/blog/i-found-a-vulnerability-they-found-a-lawyer"
+    "link": "https://www.anuragk.com/blog/posts/Taalas.html"
   },
   {
-    "title": "Facebook is cooked",
+    "title": "A Botnet Accidentally Destroyed I2P",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://pilk.website/3/facebook-is-absolutely-cooked"
+    "link": "https://www.sambent.com/a-botnet-accidentally-destroyed-i2p-the-full-story/"
   },
   {
-    "title": "Ggml.ai joins Hugging Face to ensure the long-term progress of Local AI",
+    "title": "Show HN: Llama 3.1 70B on a single RTX 3090 via NVMe-to-GPU bypassing the CPU",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://github.com/ggml-org/llama.cpp/discussions/19759"
+    "link": "https://github.com/xaskasdf/ntransformer"
   }
 ]
