@@ -1,27 +1,27 @@
 [
   {
-    "title": "Google API keys weren't secrets, but then Gemini changed the rules",
+    "title": "Statement from Dario Amodei on our discussions with the Department of War",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules"
+    "link": "https://www.anthropic.com/news/statement-department-of-war"
   },
   {
-    "title": "Jimi Hendrix was a systems engineer",
+    "title": "The Hunt for Dark Breakfast",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://spectrum.ieee.org/jimi-hendrix-systems-engineer"
+    "link": "https://moultano.wordpress.com/2026/02/22/the-hunt-for-dark-breakfast/"
   },
   {
-    "title": "First Website (1992)",
+    "title": "The normalization of corruption in organizations (2003) [pdf]",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://info.cern.ch"
+    "link": "https://gwern.net/doc/sociology/2003-ashforth.pdf"
   },
   {
-    "title": "Out of Light Adjust Share: Caravaggio, La Tour, and the Art of Attention",
+    "title": "Julia: Performance Tips",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://harpers.org/archive/2026/03/out-of-light-nicole-krauss-caravaggio-georges-de-la-tour/"
+    "link": "https://docs.julialang.org/en/v1/manual/performance-tips/"
   },
   {
-    "title": "How will OpenAI compete?",
+    "title": "What Claude Code chooses",
     "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://www.ben-evans.com/benedictevans/2026/2/19/how-will-openai-compete-nkg2x"
+    "link": "https://amplifying.ai/research/claude-code-picks"
   }
 ]
