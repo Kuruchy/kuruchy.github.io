@@ -496,15 +496,15 @@ function parseKeypoints(summary) {
 function renderAICurator(news, container) {
     container.innerHTML = '';
     container.className = 'ai-curator-content';
-    
+
     const newsContainer = document.createElement('div');
     newsContainer.className = 'ai-news-list';
     container.appendChild(newsContainer);
-    
+
     news.forEach((item, index) => {
         const newsItem = document.createElement('div');
         newsItem.className = 'ai-news-item';
-        
+
         // Título con número
         const titleWrapper = document.createElement('div');
         titleWrapper.className = 'ai-news-title';
@@ -515,63 +515,54 @@ function renderAICurator(news, container) {
         titleText.className = 'ai-news-title-text';
         titleWrapper.appendChild(titleNumber);
         titleWrapper.appendChild(titleText);
-        
-        // Resumen con keypoints
-        const summaryWrapper = document.createElement('div');
-        summaryWrapper.className = 'ai-news-summary';
-        const keypointsList = document.createElement('ul');
-        keypointsList.className = 'ai-keypoints-list';
-        summaryWrapper.appendChild(keypointsList);
-        
+
+        // Metadata (score + comments)
+        const metaWrapper = document.createElement('div');
+        metaWrapper.className = 'ai-news-meta';
+        metaWrapper.style.opacity = '0';
+        metaWrapper.style.transition = 'opacity 0.4s';
+
+        if (item.score !== undefined) {
+            const scoreEl = document.createElement('span');
+            scoreEl.className = 'ai-news-score';
+            scoreEl.textContent = `▲ ${item.score} pts`;
+            metaWrapper.appendChild(scoreEl);
+        }
+        if (item.comments !== undefined && item.hn_link) {
+            const commentsEl = document.createElement('a');
+            commentsEl.className = 'ai-news-comments';
+            commentsEl.href = item.hn_link;
+            commentsEl.target = '_blank';
+            commentsEl.textContent = `💬 ${item.comments} comments`;
+            metaWrapper.appendChild(commentsEl);
+        }
+
         // Link
         const linkWrapper = document.createElement('div');
         linkWrapper.className = 'ai-news-link-wrapper';
+        linkWrapper.style.opacity = '0';
+        linkWrapper.style.transition = 'opacity 0.4s';
         const linkElement = document.createElement('a');
-        linkElement.href = item.link;
+        linkElement.href = item.link || item.hn_link;
         linkElement.target = '_blank';
         linkElement.className = 'ai-news-link';
-        linkElement.textContent = '→ Leer más';
+        linkElement.textContent = '→ Read article';
         linkWrapper.appendChild(linkElement);
-        
+
         newsItem.appendChild(titleWrapper);
-        newsItem.appendChild(summaryWrapper);
+        newsItem.appendChild(metaWrapper);
         newsItem.appendChild(linkWrapper);
         newsContainer.appendChild(newsItem);
-        
-        // Parsear keypoints
-        const keypoints = parseKeypoints(item.summary);
-        
-        // Efecto typing secuencial
+
+        // Sequential typing effect
         setTimeout(() => {
-            // Typing del título
             typeText(titleText, item.title, 20, () => {
                 setTimeout(() => {
-                    // Typing de cada keypoint
-                    let keypointIndex = 0;
-                    const typeNextKeypoint = () => {
-                        if (keypointIndex < keypoints.length) {
-                            const li = document.createElement('li');
-                            li.className = 'ai-keypoint-item';
-                            const keypointText = document.createElement('span');
-                            keypointText.className = 'ai-keypoint-text';
-                            li.appendChild(keypointText);
-                            keypointsList.appendChild(li);
-                            
-                            typeText(keypointText, keypoints[keypointIndex], 10, () => {
-                                keypointIndex++;
-                                setTimeout(typeNextKeypoint, 200);
-                            });
-                        } else {
-                            // Mostrar link después de todos los keypoints
-                            setTimeout(() => {
-                                linkWrapper.style.opacity = '1';
-                            }, 300);
-                        }
-                    };
-                    typeNextKeypoint();
-                }, 300);
+                    metaWrapper.style.opacity = '1';
+                    setTimeout(() => { linkWrapper.style.opacity = '1'; }, 300);
+                }, 200);
             });
-        }, index * 2000); // Aumentado el delay para keypoints más largos
+        }, index * 1200);
     });
 }
 

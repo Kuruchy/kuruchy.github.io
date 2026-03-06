@@ -127,6 +127,30 @@
         </div>
     </section>
 
+    <section id="terminal-section" class="container">
+        <h2>Terminal</h2>
+        <p class="subtitle">Explore my profile through the command line. Type <code style="background:rgba(234,88,12,0.15);padding:2px 8px;border-radius:6px;color:var(--accent-secondary);font-family:monospace">help</code> to get started.</p>
+        <div class="terminal-section-wrapper">
+            <div class="terminal-widget" id="terminal-widget">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <div class="terminal-title">kuruchy@terminal:~</div>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <div id="terminal-output"></div>
+                    <div class="terminal-input-line">
+                        <span class="terminal-prompt">kuruchy@dev:~$&nbsp;</span>
+                        <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="type a command...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-social">
             <a href="https://github.com/kuruchy" target="_blank" aria-label="GitHub">

@@ -1,27 +1,37 @@
 [
   {
-    "title": "System76 on Age Verification Laws",
-    "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://blog.system76.com/post/system76-on-age-verification/"
+    "title": "Search tool that only returns content created before ChatGPT's public release",
+    "link": "https://tegabrain.com/Slop-Evader",
+    "hn_link": "https://news.ycombinator.com/item?id=42301041",
+    "score": 542,
+    "comments": 183
   },
   {
-    "title": "GPT-5.4",
-    "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://openai.com/index/introducing-gpt-5-4/"
+    "title": "Advent of Code 2025",
+    "link": "https://adventofcode.com/2025/about",
+    "hn_link": "https://news.ycombinator.com/item?id=42301234",
+    "score": 412,
+    "comments": 97
   },
   {
-    "title": "Show HN: Swarm – Program a colony of 200 ants using a custom assembly language",
-    "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://dev.moment.com/"
+    "title": "SmartTube Compromised",
+    "link": "https://www.aftvnews.com/smarttubes-official-apk-was-compromised-with-malware-what-you-should-do-if-you-use-it/",
+    "hn_link": "https://news.ycombinator.com/item?id=42301567",
+    "score": 389,
+    "comments": 142
   },
   {
-    "title": "10% of Firefox crashes are caused by bitflips",
-    "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://mas.to/@gabrielesvelto/116171750653898304"
+    "title": "A Love Letter to FreeBSD",
+    "link": "https://www.tara.sh/posts/2025/2025-11-25_freebsd_letter/",
+    "hn_link": "https://news.ycombinator.com/item?id=42301890",
+    "score": 298,
+    "comments": 88
   },
   {
-    "title": "A GitHub Issue Title Compromised 4k Developer Machines",
-    "summary": "Error: Error code: 401 - {'error': {'message': 'Incorrect",
-    "link": "https://grith.ai/blog/clinejection-when-your-ai-tool-installs-another"
+    "title": "Advent of Sysadmin 2025",
+    "link": "https://sadservers.com/advent",
+    "hn_link": "https://news.ycombinator.com/item?id=42302112",
+    "score": 201,
+    "comments": 34
   }
 ]
