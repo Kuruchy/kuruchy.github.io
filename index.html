@@ -29,13 +29,32 @@
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="badge-ai">AI & MOBILE ENGINEER</div>
-            <h1>Building the <span class="text-gradient">Intelligent Future</span></h1>
-            <p>Specialist in Artificial Intelligence Architectures and high-performance Cross-platform App Development.</p>
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn-primary">View Portfolio</a>
-                <a href="https://github.com/kuruchy" target="_blank" class="btn-secondary"><span><i class="fab fa-github"></i> GitHub</span></a>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="badge-ai">AI & MOBILE ENGINEER</div>
+                <h1>Building the <span class="text-gradient">Intelligent Future</span></h1>
+                <p>Specialist in Artificial Intelligence Architectures and high-performance Cross-platform App Development.</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn-primary">View Portfolio</a>
+                    <a href="https://github.com/kuruchy" target="_blank" class="btn-secondary"><span><i class="fab fa-github"></i> GitHub</span></a>
+                </div>
+            </div>
+            <div class="terminal-widget" id="terminal-widget">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <div class="terminal-title">kuruchy@terminal:~</div>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <div id="terminal-output"></div>
+                    <div class="terminal-input-line">
+                        <span class="terminal-prompt">kuruchy@dev:~$&nbsp;</span>
+                        <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="type a command...">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
