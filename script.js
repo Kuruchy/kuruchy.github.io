@@ -255,6 +255,7 @@ function initialize() {
     // Cargar otros componentes
     loadAICurator();
     loadPokerPuzzle();
+    initTerminal();
 }
 
 // Navigation scroll indicators and active section tracking
@@ -1217,3 +1218,178 @@ if (canvas) {
 }
 
 // Mobile menu is now handled by setupMobileMenu() function above
+// ================================
+// INTERACTIVE TERMINAL WIDGET
+// ================================
+
+const terminalCommands = {
+    help: () => [
+        { text: 'Available commands:', type: 'highlight' },
+        { text: '  whoami    — about me', type: 'output' },
+        { text: '  skills    — tech stack & proficiency', type: 'output' },
+        { text: '  projects  — notable projects', type: 'output' },
+        { text: '  contact   — how to reach me', type: 'output' },
+        { text: '  interests — hobbies & passions', type: 'output' },
+        { text: '  ls        — list directory', type: 'output' },
+        { text: '  date      — current date', type: 'output' },
+        { text: '  clear     — clear terminal', type: 'output' },
+        { text: '', type: 'output' },
+    ],
+    whoami: () => [
+        { text: 'Bruno Retolaza (kuruchy)', type: 'success' },
+        { text: '  Role     : AI & Mobile Engineer', type: 'output' },
+        { text: '  Focus    : LLMs, Cross-platform Apps, AI Architectures', type: 'output' },
+        { text: '  Based    : Spain', type: 'output' },
+        { text: '  Status   : Building the Intelligent Future', type: 'output' },
+        { text: '', type: 'output' },
+    ],
+    skills: () => [
+        { text: 'SYSTEM STACK :: ONLINE', type: 'highlight' },
+        { text: '  Python    \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 95%', type: 'success' },
+        { text: '  Kotlin    \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591 80%', type: 'success' },
+        { text: '  Swift     \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591 70%', type: 'success' },
+        { text: '  LLMs/AI   \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 99%', type: 'success' },
+        { text: '  JS/TS     \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591 70%', type: 'success' },
+        { text: '  Coffee    \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  %', type: 'success' },
+        { text: '', type: 'output' },
+    ],
+    projects: () => [
+        { text: 'NOTABLE PROJECTS:', type: 'highlight' },
+        { text: '  [1] AI Tech Curator    -- daily news curation bot', type: 'output' },
+        { text: '  [2] kuruchy.github.io  -- this very site', type: 'output' },
+        { text: '  [3] EcoWallet          -- green finance tracker app', type: 'output' },
+        { text: '  [4] AI Vision System   -- computer vision pipeline', type: 'output' },
+        { text: '', type: 'output' },
+        { text: '  -> github.com/kuruchy for more', type: 'output' },
+        { text: '', type: 'output' },
+    ],
+    contact: () => [
+        { text: 'REACH ME AT:', type: 'highlight' },
+        { text: '  GitHub   : github.com/kuruchy', type: 'output' },
+        { text: '  Twitter  : twitter.com/kuruchy', type: 'output' },
+        { text: '  LinkedIn : linkedin.com/in/bruno-retolaza', type: 'output' },
+        { text: '', type: 'output' },
+    ],
+    interests: () => [
+        { text: 'INTERESTS & HOBBIES:', type: 'highlight' },
+        { text: '  Poker strategy & game theory', type: 'output' },
+        { text: '  Rock climbing & bouldering', type: 'output' },
+        { text: '  Investments & market analysis', type: 'output' },
+        { text: '  AI research & LLM experiments', type: 'output' },
+        { text: '', type: 'output' },
+    ],
+    ls: () => [
+        { text: 'projects/  articles/  data/  images/  README.md', type: 'output' },
+        { text: '', type: 'output' },
+    ],
+    pwd: () => [
+        { text: '/home/kuruchy/intelligent-future', type: 'output' },
+        { text: '', type: 'output' },
+    ],
+    'cat readme.md': () => [
+        { text: '# Kuruchy', type: 'highlight' },
+        { text: 'AI & Mobile Engineer passionate about', type: 'output' },
+        { text: 'building intelligent systems and beautiful apps.', type: 'output' },
+        { text: '', type: 'output' },
+    ],
+    'sudo rm -rf /': () => [
+        { text: 'Permission denied. Nice try, hacker.', type: 'error' },
+        { text: '', type: 'output' },
+    ],
+    date: () => [
+        { text: new Date().toUTCString(), type: 'output' },
+        { text: '', type: 'output' },
+    ],
+    uname: () => [
+        { text: 'KuruchyOS 2.0 AI-Powered #LLM SMP', type: 'output' },
+        { text: '', type: 'output' },
+    ],
+};
+
+function initTerminal() {
+    const output = document.getElementById('terminal-output');
+    const input = document.getElementById('terminal-input');
+    const body = document.getElementById('terminal-body');
+    if (!output || !input || !body) return;
+
+    let commandHistory = [];
+    let historyIndex = -1;
+
+    function addLine(text, type) {
+        type = type || 'output';
+        const line = document.createElement('div');
+        line.className = (type === 'prompt')
+            ? 'terminal-line prompt-line'
+            : ('terminal-line output-line' + (type !== 'output' ? ' ' + type : ''));
+        line.textContent = text;
+        output.appendChild(line);
+        body.scrollTop = body.scrollHeight;
+    }
+
+    function addPromptLine(cmd) {
+        addLine('kuruchy@dev:~$ ' + cmd, 'prompt');
+    }
+
+    function runCommand(cmd) {
+        cmd = cmd.trim();
+        if (cmd !== '') {
+            commandHistory.unshift(cmd);
+            historyIndex = -1;
+        }
+        addPromptLine(cmd);
+        if (cmd === '') return;
+
+        if (cmd === 'clear') {
+            output.innerHTML = '';
+            return;
+        }
+
+        const fn = terminalCommands[cmd.toLowerCase()];
+        if (fn) {
+            fn().forEach(function(l) { addLine(l.text, l.type); });
+        } else {
+            addLine('command not found: ' + cmd, 'error');
+            addLine("Type 'help' for available commands.", 'output');
+            addLine('', 'output');
+        }
+    }
+
+    // Auto-type intro sequence on load
+    var intro = [
+        { delay: 500,  fn: function() { addLine('Welcome to kuruchy.terminal v2.0', 'highlight'); } },
+        { delay: 800,  fn: function() { addLine('Type "help" for available commands.', 'output'); } },
+        { delay: 1100, fn: function() { addLine('', 'output'); } },
+        { delay: 1400, fn: function() { addPromptLine('whoami'); } },
+        { delay: 1800, fn: function() { terminalCommands.whoami().forEach(function(l) { addLine(l.text, l.type); }); } },
+        { delay: 2300, fn: function() { addPromptLine('skills'); } },
+        { delay: 2700, fn: function() { terminalCommands.skills().forEach(function(l) { addLine(l.text, l.type); }); } },
+    ];
+    intro.forEach(function(item) { setTimeout(item.fn, item.delay); });
+
+    // Keyboard handling with command history
+    input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            var cmd = input.value;
+            input.value = '';
+            runCommand(cmd);
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            if (historyIndex < commandHistory.length - 1) {
+                historyIndex++;
+                input.value = commandHistory[historyIndex];
+            }
+        } else if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            if (historyIndex > 0) {
+                historyIndex--;
+                input.value = commandHistory[historyIndex];
+            } else {
+                historyIndex = -1;
+                input.value = '';
+            }
+        }
+    });
+
+    // Click anywhere in terminal body to focus input
+    body.addEventListener('click', function() { input.focus(); });
+}
