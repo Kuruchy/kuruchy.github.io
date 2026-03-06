@@ -2270,4 +2270,212 @@ footer p {
     font-size: 1rem;
     padding: 0 1rem;
   }
+
+  /* Terminal responsive — stack vertically on mobile */
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .hero-inner .hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-inner .hero-content .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-inner .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .terminal-widget {
+    flex: none;
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
+/* ================================
+   INTERACTIVE TERMINAL WIDGET
+   ================================ */
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 2rem;
+}
+
+.hero-inner .hero-content {
+  flex: 1;
+  max-width: 520px;
+  text-align: left;
+}
+
+.hero-inner .hero-content p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hero-inner .hero-content .hero-buttons {
+  justify-content: flex-start;
+}
+
+.terminal-widget {
+  flex: 0 0 460px;
+  background: rgba(5, 5, 17, 0.92);
+  border: 1px solid rgba(234, 88, 12, 0.35);
+  border-radius: 12px;
+  font-family: 'Courier New', 'Monaco', 'Lucida Console', monospace;
+  box-shadow:
+    0 0 50px rgba(234, 88, 12, 0.12),
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  user-select: none;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: default;
+}
+
+.dot-red    { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green  { background: #28c840; }
+
+.terminal-title {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.35);
+  flex: 1;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.terminal-body {
+  padding: 1.25rem;
+  height: 330px;
+  overflow-y: auto;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  cursor: text;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(234, 88, 12, 0.3) transparent;
+}
+
+.terminal-body::-webkit-scrollbar { width: 4px; }
+.terminal-body::-webkit-scrollbar-track { background: transparent; }
+.terminal-body::-webkit-scrollbar-thumb {
+  background: rgba(234, 88, 12, 0.3);
+  border-radius: 2px;
+}
+
+.terminal-line {
+  margin-bottom: 0.15rem;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.terminal-line.prompt-line {
+  color: var(--accent-secondary);
+}
+
+.terminal-line.output-line {
+  color: #7c8da0;
+}
+
+.terminal-line.output-line.success {
+  color: #4ade80;
+}
+
+.terminal-line.output-line.error {
+  color: #f87171;
+}
+
+.terminal-line.output-line.highlight {
+  color: var(--accent-secondary);
+  font-weight: 600;
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.terminal-prompt {
+  color: var(--accent-secondary);
+  white-space: nowrap;
+  font-size: 0.82rem;
+  flex-shrink: 0;
+}
+
+.terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #e0e6ed;
+  font-family: 'Courier New', 'Monaco', monospace;
+  font-size: 0.82rem;
+  outline: none;
+  caret-color: var(--accent-secondary);
+  min-width: 0;
+}
+
+.terminal-input::placeholder {
+  color: rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .hero-inner .hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-inner .hero-content .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-inner .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .terminal-widget {
+    flex: none;
+    width: 100%;
+    max-width: 480px;
+  }
 }
