@@ -1,37 +1,37 @@
 [
   {
-    "title": "Search tool that only returns content created before ChatGPT's public release",
-    "link": "https://tegabrain.com/Slop-Evader",
-    "hn_link": "https://news.ycombinator.com/item?id=42301041",
-    "score": 542,
-    "comments": 183
+    "title": "Plasma Bigscreen – 10-foot interface for KDE plasma",
+    "link": "https://plasma-bigscreen.org",
+    "hn_link": "https://news.ycombinator.com/item?id=47282736",
+    "score": 375,
+    "comments": 107
   },
   {
-    "title": "Advent of Code 2025",
-    "link": "https://adventofcode.com/2025/about",
-    "hn_link": "https://news.ycombinator.com/item?id=42301234",
-    "score": 412,
-    "comments": 97
+    "title": "UUID package coming to Go standard library",
+    "link": "https://github.com/golang/go/issues/62026",
+    "hn_link": "https://news.ycombinator.com/item?id=47283665",
+    "score": 155,
+    "comments": 82
   },
   {
-    "title": "SmartTube Compromised",
-    "link": "https://www.aftvnews.com/smarttubes-official-apk-was-compromised-with-malware-what-you-should-do-if-you-use-it/",
-    "hn_link": "https://news.ycombinator.com/item?id=42301567",
-    "score": 389,
-    "comments": 142
+    "title": "this css proves me human",
+    "link": "https://will-keleher.com/posts/this-css-makes-me-human/",
+    "hn_link": "https://news.ycombinator.com/item?id=47281593",
+    "score": 247,
+    "comments": 85
   },
   {
-    "title": "A Love Letter to FreeBSD",
-    "link": "https://www.tara.sh/posts/2025/2025-11-25_freebsd_letter/",
-    "hn_link": "https://news.ycombinator.com/item?id=42301890",
-    "score": 298,
-    "comments": 88
+    "title": "LLMs work best when the user defines their acceptance criteria first",
+    "link": "https://blog.katanaquant.com/p/your-llm-doesnt-write-correct-code",
+    "hn_link": "https://news.ycombinator.com/item?id=47283337",
+    "score": 189,
+    "comments": 152
   },
   {
-    "title": "Advent of Sysadmin 2025",
-    "link": "https://sadservers.com/advent",
-    "hn_link": "https://news.ycombinator.com/item?id=42302112",
-    "score": 201,
-    "comments": 34
+    "title": "Galileo's handwritten notes found in ancient astronomy text",
+    "link": "https://www.science.org/content/article/galileo-s-handwritten-notes-found-ancient-astronomy-text",
+    "hn_link": "https://news.ycombinator.com/item?id=47263938",
+    "score": 107,
+    "comments": 20
   }
 ]
