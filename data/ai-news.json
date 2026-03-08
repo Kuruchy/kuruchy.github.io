@@ -1,37 +1,37 @@
 [
   {
-    "title": "Plasma Bigscreen – 10-foot interface for KDE plasma",
-    "link": "https://plasma-bigscreen.org",
-    "hn_link": "https://news.ycombinator.com/item?id=47282736",
-    "score": 375,
-    "comments": 107
+    "title": "SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via CI",
+    "link": "https://arxiv.org/abs/2603.03823",
+    "hn_link": "https://news.ycombinator.com/item?id=47295537",
+    "score": 11,
+    "comments": 1
   },
   {
-    "title": "UUID package coming to Go standard library",
-    "link": "https://github.com/golang/go/issues/62026",
-    "hn_link": "https://news.ycombinator.com/item?id=47283665",
-    "score": 155,
-    "comments": 82
+    "title": "Cloud VM benchmarks 2026",
+    "link": "https://devblog.ecuadors.net/cloud-vm-benchmarks-2026-performance-price-1i1m.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47293119",
+    "score": 202,
+    "comments": 93
   },
   {
-    "title": "this css proves me human",
-    "link": "https://will-keleher.com/posts/this-css-makes-me-human/",
-    "hn_link": "https://news.ycombinator.com/item?id=47281593",
-    "score": 247,
-    "comments": 85
+    "title": "\"Warn about PyPy being unmaintained\"",
+    "link": "https://github.com/astral-sh/uv/pull/17643",
+    "hn_link": "https://news.ycombinator.com/item?id=47293415",
+    "score": 151,
+    "comments": 43
   },
   {
-    "title": "LLMs work best when the user defines their acceptance criteria first",
-    "link": "https://blog.katanaquant.com/p/your-llm-doesnt-write-correct-code",
-    "hn_link": "https://news.ycombinator.com/item?id=47283337",
-    "score": 189,
-    "comments": 152
+    "title": "From RGB to L*a*b* color space (2024)",
+    "link": "https://kaizoudou.com/from-rgb-to-lab-color-space/",
+    "hn_link": "https://news.ycombinator.com/item?id=47245061",
+    "score": 18,
+    "comments": 2
   },
   {
-    "title": "Galileo's handwritten notes found in ancient astronomy text",
-    "link": "https://www.science.org/content/article/galileo-s-handwritten-notes-found-ancient-astronomy-text",
-    "hn_link": "https://news.ycombinator.com/item?id=47263938",
-    "score": 107,
-    "comments": 20
+    "title": "CasNum",
+    "link": "https://github.com/0x0mer/CasNum",
+    "hn_link": "https://news.ycombinator.com/item?id=47291292",
+    "score": 272,
+    "comments": 36
   }
 ]
