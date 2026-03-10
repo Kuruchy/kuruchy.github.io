@@ -1,37 +1,37 @@
 [
   {
-    "title": "US Court of Appeals: TOS may be updated by email, use can imply consent [pdf]",
-    "link": "https://cdn.ca9.uscourts.gov/datastore/memoranda/2026/03/03/25-403.pdf",
-    "hn_link": "https://news.ycombinator.com/item?id=47305461",
-    "score": 121,
-    "comments": 49
+    "title": "Lotus 1-2-3 on the PC with DOS",
+    "link": "https://stonetools.ghost.io/lotus123-dos/",
+    "hn_link": "https://news.ycombinator.com/item?id=47279633",
+    "score": 62,
+    "comments": 17
   },
   {
-    "title": "Grammarly is using our identities without permission",
-    "link": "https://www.theverge.com/ai-artificial-intelligence/890921/grammarly-ai-expert-reviews",
-    "hn_link": "https://news.ycombinator.com/item?id=47306157",
-    "score": 33,
-    "comments": 2
+    "title": "Two Years of Emacs Solo",
+    "link": "https://www.rahuljuliato.com/posts/emacs-solo-two-years",
+    "hn_link": "https://news.ycombinator.com/item?id=47317616",
+    "score": 230,
+    "comments": 58
   },
   {
-    "title": "Agent Safehouse – macOS-native sandboxing for local agents",
-    "link": "https://agent-safehouse.dev/",
-    "hn_link": "https://news.ycombinator.com/item?id=47301085",
-    "score": 553,
-    "comments": 137
-  },
-  {
-    "title": "Show HN: Mcp2cli – One CLI for every API, 96-99% fewer tokens than native MCP",
-    "link": "https://github.com/knowsuchagency/mcp2cli",
-    "hn_link": "https://news.ycombinator.com/item?id=47305149",
-    "score": 46,
-    "comments": 24
-  },
-  {
-    "title": "Microscopes can see video on a laserdisc",
-    "link": "https://www.youtube.com/watch?v=qZuR-772cks",
-    "hn_link": "https://news.ycombinator.com/item?id=47291876",
-    "score": 409,
+    "title": "macOS Tahoe windows have different corner radiuses",
+    "link": "https://lapcatsoftware.com/articles/2026/3/1.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47279761",
+    "score": 89,
     "comments": 47
+  },
+  {
+    "title": "Optimizing Top K in Postgres",
+    "link": "https://www.paradedb.com/blog/optimizing-top-k",
+    "hn_link": "https://news.ycombinator.com/item?id=47302493",
+    "score": 61,
+    "comments": 7
+  },
+  {
+    "title": "No, it doesn't cost Anthropic $5k per Claude Code user",
+    "link": "https://martinalderson.com/posts/no-it-doesnt-cost-anthropic-5k-per-claude-code-user/",
+    "hn_link": "https://news.ycombinator.com/item?id=47317132",
+    "score": 172,
+    "comments": 115
   }
 ]
