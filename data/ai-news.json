@@ -1,37 +1,37 @@
 [
   {
-    "title": "Lotus 1-2-3 on the PC with DOS",
-    "link": "https://stonetools.ghost.io/lotus123-dos/",
-    "hn_link": "https://news.ycombinator.com/item?id=47279633",
-    "score": 62,
-    "comments": 17
+    "title": "Why does AI tell you to use Terminal so much?",
+    "link": "https://eclecticlight.co/2026/03/11/why-does-ai-tell-you-to-use-terminal-so-much/",
+    "hn_link": "https://news.ycombinator.com/item?id=47332939",
+    "score": 17,
+    "comments": 18
   },
   {
-    "title": "Two Years of Emacs Solo",
-    "link": "https://www.rahuljuliato.com/posts/emacs-solo-two-years",
-    "hn_link": "https://news.ycombinator.com/item?id=47317616",
-    "score": 230,
-    "comments": 58
+    "title": "Zig – Type Resolution Redesign and Language Changes",
+    "link": "https://ziglang.org/devlog/2026/#2026-03-10",
+    "hn_link": "https://news.ycombinator.com/item?id=47330836",
+    "score": 186,
+    "comments": 56
   },
   {
-    "title": "macOS Tahoe windows have different corner radiuses",
-    "link": "https://lapcatsoftware.com/articles/2026/3/1.html",
-    "hn_link": "https://news.ycombinator.com/item?id=47279761",
-    "score": 89,
-    "comments": 47
+    "title": "Create value for others and don’t worry about the returns",
+    "link": "https://geohot.github.io//blog/jekyll/update/2026/03/11/running-69-agents.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47332074",
+    "score": 266,
+    "comments": 111
   },
   {
-    "title": "Optimizing Top K in Postgres",
-    "link": "https://www.paradedb.com/blog/optimizing-top-k",
-    "hn_link": "https://news.ycombinator.com/item?id=47302493",
-    "score": 61,
-    "comments": 7
+    "title": "U+237C ⍼ Is Azimuth",
+    "link": "https://ionathan.ch/2026/02/16/angzarr.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47329605",
+    "score": 277,
+    "comments": 26
   },
   {
-    "title": "No, it doesn't cost Anthropic $5k per Claude Code user",
-    "link": "https://martinalderson.com/posts/no-it-doesnt-cost-anthropic-5k-per-claude-code-user/",
-    "hn_link": "https://news.ycombinator.com/item?id=47317132",
-    "score": 172,
-    "comments": 115
+    "title": "TADA: Fast, Reliable Speech Generation Through Text-Acoustic Synchronization",
+    "link": "https://www.hume.ai/blog/opensource-tada",
+    "hn_link": "https://news.ycombinator.com/item?id=47332054",
+    "score": 25,
+    "comments": 2
   }
 ]
