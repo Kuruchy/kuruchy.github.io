@@ -1,37 +1,37 @@
 [
   {
-    "title": "SBCL: A Sanely-Bootstrappable Common Lisp (2008) [pdf]",
-    "link": "https://research.gold.ac.uk/id/eprint/2336/1/sbcl.pdf",
-    "hn_link": "https://news.ycombinator.com/item?id=47347362",
-    "score": 22,
-    "comments": 5
+    "title": "Willingness to look stupid",
+    "link": "https://sharif.io/looking-stupid",
+    "hn_link": "https://news.ycombinator.com/item?id=47307124",
+    "score": 275,
+    "comments": 102
   },
   {
-    "title": "Show HN: s@: decentralized social networking over static sites",
-    "link": "http://satproto.org/",
-    "hn_link": "https://news.ycombinator.com/item?id=47344548",
-    "score": 249,
-    "comments": 98
+    "title": "Executing programs inside transformers with exponentially faster inference",
+    "link": "https://www.percepta.ai/blog/can-llms-be-computers",
+    "hn_link": "https://news.ycombinator.com/item?id=47348275",
+    "score": 58,
+    "comments": 6
   },
   {
-    "title": "Temporal: The 9-year journey to fix time in JavaScript",
-    "link": "https://bloomberg.github.io/js-blog/post/temporal/",
-    "hn_link": "https://news.ycombinator.com/item?id=47336989",
-    "score": 661,
-    "comments": 207
+    "title": "Malus – Clean Room as a Service",
+    "link": "https://malus.sh",
+    "hn_link": "https://news.ycombinator.com/item?id=47350424",
+    "score": 1237,
+    "comments": 447
   },
   {
-    "title": "Returning to Rails in 2026",
-    "link": "https://www.markround.com/blog/2026/03/05/returning-to-rails-in-2026/",
-    "hn_link": "https://news.ycombinator.com/item?id=47347064",
-    "score": 80,
-    "comments": 54
+    "title": "Vite 8.0 Is Out",
+    "link": "https://vite.dev/blog/announcing-vite8",
+    "hn_link": "https://news.ycombinator.com/item?id=47360730",
+    "score": 234,
+    "comments": 50
   },
   {
-    "title": "Datahäxan",
-    "link": "https://0dd.company/galleries/witches/7.html",
-    "hn_link": "https://news.ycombinator.com/item?id=47310617",
-    "score": 51,
-    "comments": 4
+    "title": "“This is not the computer for you”",
+    "link": "https://samhenri.gold/blog/20260312-this-is-not-the-computer-for-you/",
+    "hn_link": "https://news.ycombinator.com/item?id=47359744",
+    "score": 386,
+    "comments": 153
   }
 ]
