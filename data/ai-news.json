@@ -1,37 +1,37 @@
 [
   {
-    "title": "1M context is now generally available for Opus 4.6 and Sonnet 4.6",
-    "link": "https://claude.com/blog/1m-context-ga",
-    "hn_link": "https://news.ycombinator.com/item?id=47367129",
-    "score": 633,
-    "comments": 256
+    "title": "Rack-mount hydroponics",
+    "link": "https://sa.lj.am/rack-mount-hydroponics/",
+    "hn_link": "https://news.ycombinator.com/item?id=47384352",
+    "score": 127,
+    "comments": 29
   },
   {
-    "title": "A Survival Guide to a PhD (2016)",
-    "link": "http://karpathy.github.io/2016/09/07/phd/",
-    "hn_link": "https://news.ycombinator.com/item?id=47318386",
+    "title": "Why Mathematica does not simplify sinh(arccosh(x))",
+    "link": "https://www.johndcook.com/blog/2026/03/10/sinh-arccosh/",
+    "hn_link": "https://news.ycombinator.com/item?id=47335325",
+    "score": 41,
+    "comments": 6
+  },
+  {
+    "title": "Treasure hunter freed from jail after refusing to turn over shipwreck gold",
+    "link": "https://www.bbc.com/news/articles/cg4g7kn99q3o",
+    "hn_link": "https://news.ycombinator.com/item?id=47383804",
+    "score": 75,
+    "comments": 85
+  },
+  {
+    "title": "A most elegant TCP hole punching algorithm",
+    "link": "https://robertsdotpm.github.io/cryptography/tcp_hole_punching.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47384032",
     "score": 67,
-    "comments": 24
+    "comments": 11
   },
   {
-    "title": "Emacs and Vim in the Age of AI",
-    "link": "https://batsov.com/articles/2026/03/09/emacs-and-vim-in-the-age-of-ai/",
-    "hn_link": "https://news.ycombinator.com/item?id=47319071",
-    "score": 113,
-    "comments": 51
-  },
-  {
-    "title": "You gotta think outside the hypercube",
-    "link": "https://lcamtuf.substack.com/p/you-gotta-think-outside-the-hypercube",
-    "hn_link": "https://news.ycombinator.com/item?id=47323625",
-    "score": 34,
-    "comments": 3
-  },
-  {
-    "title": "Qatar helium shutdown puts chip supply chain on a two-week clock",
-    "link": "https://www.tomshardware.com/tech-industry/qatar-helium-shutdown-puts-chip-supply-chain-on-a-two-week-clock",
-    "hn_link": "https://news.ycombinator.com/item?id=47363584",
-    "score": 546,
-    "comments": 477
+    "title": "How kernel anti-cheats work",
+    "link": "https://s4dbrd.github.io/posts/how-kernel-anti-cheats-work/",
+    "hn_link": "https://news.ycombinator.com/item?id=47382791",
+    "score": 150,
+    "comments": 115
   }
 ]
