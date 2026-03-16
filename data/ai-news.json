@@ -1,37 +1,37 @@
 [
   {
-    "title": "Rack-mount hydroponics",
-    "link": "https://sa.lj.am/rack-mount-hydroponics/",
-    "hn_link": "https://news.ycombinator.com/item?id=47384352",
-    "score": 127,
-    "comments": 29
+    "title": "Canada's bill C-22 mandates mass metadata surveillance",
+    "link": "https://www.michaelgeist.ca/2026/03/a-tale-of-two-bills-lawful-access-returns-with-changes-to-warrantless-access-but-dangerous-backdoor-surveillance-risks-remains/",
+    "hn_link": "https://news.ycombinator.com/item?id=47392084",
+    "score": 669,
+    "comments": 184
   },
   {
-    "title": "Why Mathematica does not simplify sinh(arccosh(x))",
-    "link": "https://www.johndcook.com/blog/2026/03/10/sinh-arccosh/",
-    "hn_link": "https://news.ycombinator.com/item?id=47335325",
-    "score": 41,
+    "title": "The 49MB web page",
+    "link": "https://thatshubham.com/blog/news-audit",
+    "hn_link": "https://news.ycombinator.com/item?id=47390945",
+    "score": 521,
+    "comments": 236
+  },
+  {
+    "title": "How I write software with LLMs",
+    "link": "https://www.stavros.io/posts/how-i-write-software-with-llms/",
+    "hn_link": "https://news.ycombinator.com/item?id=47394022",
+    "score": 165,
+    "comments": 104
+  },
+  {
+    "title": "Chrome DevTools MCP (2025)",
+    "link": "https://developer.chrome.com/blog/chrome-devtools-mcp-debug-your-browser-session",
+    "hn_link": "https://news.ycombinator.com/item?id=47390817",
+    "score": 461,
+    "comments": 196
+  },
+  {
+    "title": "Kona EV Hacking",
+    "link": "http://techno-fandom.org/~hobbit/cars/ev/",
+    "hn_link": "https://news.ycombinator.com/item?id=47342185",
+    "score": 30,
     "comments": 6
-  },
-  {
-    "title": "Treasure hunter freed from jail after refusing to turn over shipwreck gold",
-    "link": "https://www.bbc.com/news/articles/cg4g7kn99q3o",
-    "hn_link": "https://news.ycombinator.com/item?id=47383804",
-    "score": 75,
-    "comments": 85
-  },
-  {
-    "title": "A most elegant TCP hole punching algorithm",
-    "link": "https://robertsdotpm.github.io/cryptography/tcp_hole_punching.html",
-    "hn_link": "https://news.ycombinator.com/item?id=47384032",
-    "score": 67,
-    "comments": 11
-  },
-  {
-    "title": "How kernel anti-cheats work",
-    "link": "https://s4dbrd.github.io/posts/how-kernel-anti-cheats-work/",
-    "hn_link": "https://news.ycombinator.com/item?id=47382791",
-    "score": 150,
-    "comments": 115
   }
 ]
