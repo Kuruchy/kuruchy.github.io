@@ -1,37 +1,37 @@
 [
   {
-    "title": "Canada's bill C-22 mandates mass metadata surveillance",
-    "link": "https://www.michaelgeist.ca/2026/03/a-tale-of-two-bills-lawful-access-returns-with-changes-to-warrantless-access-but-dangerous-backdoor-surveillance-risks-remains/",
-    "hn_link": "https://news.ycombinator.com/item?id=47392084",
-    "score": 669,
+    "title": "Leanstral: Open-source agent for trustworthy coding and formal proof engineering",
+    "link": "https://mistral.ai/news/leanstral",
+    "hn_link": "https://news.ycombinator.com/item?id=47404796",
+    "score": 505,
+    "comments": 99
+  },
+  {
+    "title": "The unlikely story of Teardown Multiplayer",
+    "link": "https://blog.voxagon.se/2026/03/13/teardown-multiplayer.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47366435",
+    "score": 49,
+    "comments": 7
+  },
+  {
+    "title": "Meta’s renewed commitment to jemalloc",
+    "link": "https://engineering.fb.com/2026/03/02/data-infrastructure/investing-in-infrastructure-metas-renewed-commitment-to-jemalloc/",
+    "hn_link": "https://news.ycombinator.com/item?id=47402640",
+    "score": 430,
     "comments": 184
   },
   {
-    "title": "The 49MB web page",
-    "link": "https://thatshubham.com/blog/news-audit",
-    "hn_link": "https://news.ycombinator.com/item?id=47390945",
-    "score": 521,
-    "comments": 236
+    "title": "The “small web” is bigger than you might think",
+    "link": "https://kevinboone.me/small_web_is_big.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47401879",
+    "score": 413,
+    "comments": 173
   },
   {
-    "title": "How I write software with LLMs",
-    "link": "https://www.stavros.io/posts/how-i-write-software-with-llms/",
-    "hn_link": "https://news.ycombinator.com/item?id=47394022",
-    "score": 165,
-    "comments": 104
-  },
-  {
-    "title": "Chrome DevTools MCP (2025)",
-    "link": "https://developer.chrome.com/blog/chrome-devtools-mcp-debug-your-browser-session",
-    "hn_link": "https://news.ycombinator.com/item?id=47390817",
-    "score": 461,
-    "comments": 196
-  },
-  {
-    "title": "Kona EV Hacking",
-    "link": "http://techno-fandom.org/~hobbit/cars/ev/",
-    "hn_link": "https://news.ycombinator.com/item?id=47342185",
-    "score": 30,
-    "comments": 6
+    "title": "Every layer of review makes you 10x slower",
+    "link": "https://apenwarr.ca/log/20260316",
+    "hn_link": "https://news.ycombinator.com/item?id=47408205",
+    "score": 207,
+    "comments": 99
   }
 ]
