@@ -1,37 +1,37 @@
 [
   {
-    "title": "JPEG Compression",
-    "link": "https://www.sophielwang.com/blog/jpeg",
-    "hn_link": "https://news.ycombinator.com/item?id=47372367",
-    "score": 134,
+    "title": "Cook: A simple CLI for orchestrating Claude Code",
+    "link": "https://rjcorwin.github.io/cook/",
+    "hn_link": "https://news.ycombinator.com/item?id=47434024",
+    "score": 175,
+    "comments": 41
+  },
+  {
+    "title": "Conway's Game of Life, in real life",
+    "link": "https://lcamtuf.substack.com/p/conways-game-of-life-in-real-life",
+    "hn_link": "https://news.ycombinator.com/item?id=47434732",
+    "score": 77,
     "comments": 20
   },
   {
-    "title": "Write up of my homebrew CPU build",
-    "link": "https://willwarren.com/2026/03/12/building-my-own-cpu-part-3-from-simulation-to-hardware/",
-    "hn_link": "https://news.ycombinator.com/item?id=47389696",
-    "score": 40,
-    "comments": 3
+    "title": "Nvidia greenboost: transparently extend GPU VRAM using system RAM/NVMe",
+    "link": "https://gitlab.com/IsolatedOctopi/nvidia_greenboost",
+    "hn_link": "https://news.ycombinator.com/item?id=47388658",
+    "score": 297,
+    "comments": 62
   },
   {
-    "title": "Mistral AI Releases Forge",
-    "link": "https://mistral.ai/news/forge",
-    "hn_link": "https://news.ycombinator.com/item?id=47418295",
-    "score": 409,
-    "comments": 76
+    "title": "Warranty Void If Regenerated",
+    "link": "https://nearzero.software/p/warranty-void-if-regenerated",
+    "hn_link": "https://news.ycombinator.com/item?id=47431237",
+    "score": 311,
+    "comments": 173
   },
   {
-    "title": "A Decade of Slug",
-    "link": "https://terathon.com/blog/decade-slug.html",
-    "hn_link": "https://news.ycombinator.com/item?id=47416736",
-    "score": 590,
-    "comments": 55
-  },
-  {
-    "title": "Celebrating Tony Hoare's mark on computer science",
-    "link": "https://bertrandmeyer.com/2026/03/16/celebrating-tony-hoares-mark-on-computer-science/",
-    "hn_link": "https://news.ycombinator.com/item?id=47422228",
-    "score": 13,
-    "comments": 1
+    "title": "OpenRocket",
+    "link": "https://openrocket.info/",
+    "hn_link": "https://news.ycombinator.com/item?id=47386703",
+    "score": 533,
+    "comments": 93
   }
 ]
