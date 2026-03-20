@@ -1,37 +1,37 @@
 [
   {
-    "title": "Cook: A simple CLI for orchestrating Claude Code",
-    "link": "https://rjcorwin.github.io/cook/",
-    "hn_link": "https://news.ycombinator.com/item?id=47434024",
-    "score": 175,
-    "comments": 41
+    "title": "ArXiv Declares Independence from Cornell",
+    "link": "https://www.science.org/content/article/arxiv-pioneering-preprint-server-declares-independence-cornell",
+    "hn_link": "https://news.ycombinator.com/item?id=47450478",
+    "score": 217,
+    "comments": 56
   },
   {
-    "title": "Conway's Game of Life, in real life",
-    "link": "https://lcamtuf.substack.com/p/conways-game-of-life-in-real-life",
-    "hn_link": "https://news.ycombinator.com/item?id=47434732",
-    "score": 77,
-    "comments": 20
+    "title": "FSF Threatens Anthropic over Infringed Copyright: Share Your LLMs Freel",
+    "link": "https://www.fsf.org/blogs/licensing/2026-anthropic-settlement",
+    "hn_link": "https://news.ycombinator.com/item?id=47403905",
+    "score": 75,
+    "comments": 39
   },
   {
-    "title": "Nvidia greenboost: transparently extend GPU VRAM using system RAM/NVMe",
-    "link": "https://gitlab.com/IsolatedOctopi/nvidia_greenboost",
-    "hn_link": "https://news.ycombinator.com/item?id=47388658",
-    "score": 297,
-    "comments": 62
+    "title": "Google details new 24-hour process to sideload unverified Android apps",
+    "link": "https://arstechnica.com/gadgets/2026/03/google-details-new-24-hour-process-to-sideload-unverified-android-apps/",
+    "hn_link": "https://news.ycombinator.com/item?id=47442690",
+    "score": 774,
+    "comments": 860
   },
   {
-    "title": "Warranty Void If Regenerated",
-    "link": "https://nearzero.software/p/warranty-void-if-regenerated",
-    "hn_link": "https://news.ycombinator.com/item?id=47431237",
-    "score": 311,
-    "comments": 173
+    "title": "Push events into a running session with channels",
+    "link": "https://code.claude.com/docs/en/channels",
+    "hn_link": "https://news.ycombinator.com/item?id=47448524",
+    "score": 321,
+    "comments": 181
   },
   {
-    "title": "OpenRocket",
-    "link": "https://openrocket.info/",
-    "hn_link": "https://news.ycombinator.com/item?id=47386703",
-    "score": 533,
-    "comments": 93
+    "title": "Full Disclosure: A Third (and Fourth) Azure Sign-In Log Bypass Found",
+    "link": "https://trustedsec.com/blog/full-disclosure-a-third-and-fourth-azure-sign-in-log-bypass-found",
+    "hn_link": "https://news.ycombinator.com/item?id=47448994",
+    "score": 130,
+    "comments": 26
   }
 ]
