@@ -1,37 +1,37 @@
 [
   {
-    "title": "ArXiv Declares Independence from Cornell",
-    "link": "https://www.science.org/content/article/arxiv-pioneering-preprint-server-declares-independence-cornell",
-    "hn_link": "https://news.ycombinator.com/item?id=47450478",
-    "score": 217,
-    "comments": 56
+    "title": "OpenCode – Open source AI coding agent",
+    "link": "https://opencode.ai/",
+    "hn_link": "https://news.ycombinator.com/item?id=47460525",
+    "score": 731,
+    "comments": 321
   },
   {
-    "title": "FSF Threatens Anthropic over Infringed Copyright: Share Your LLMs Freel",
-    "link": "https://www.fsf.org/blogs/licensing/2026-anthropic-settlement",
-    "hn_link": "https://news.ycombinator.com/item?id=47403905",
-    "score": 75,
-    "comments": 39
+    "title": "Mamba-3",
+    "link": "https://www.together.ai/blog/mamba-3",
+    "hn_link": "https://news.ycombinator.com/item?id=47419391",
+    "score": 93,
+    "comments": 12
   },
   {
-    "title": "Google details new 24-hour process to sideload unverified Android apps",
-    "link": "https://arstechnica.com/gadgets/2026/03/google-details-new-24-hour-process-to-sideload-unverified-android-apps/",
-    "hn_link": "https://news.ycombinator.com/item?id=47442690",
-    "score": 774,
-    "comments": 860
+    "title": "FFmpeg 101 (2024)",
+    "link": "https://blogs.igalia.com/llepage/ffmpeg-101/",
+    "hn_link": "https://news.ycombinator.com/item?id=47463547",
+    "score": 60,
+    "comments": 0
   },
   {
-    "title": "Push events into a running session with channels",
-    "link": "https://code.claude.com/docs/en/channels",
-    "hn_link": "https://news.ycombinator.com/item?id=47448524",
-    "score": 321,
-    "comments": 181
+    "title": "Molly Guard",
+    "link": "https://bookofjoe2.blogspot.com/2026/02/molly-guard.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47455138",
+    "score": 90,
+    "comments": 35
   },
   {
-    "title": "Full Disclosure: A Third (and Fourth) Azure Sign-In Log Bypass Found",
-    "link": "https://trustedsec.com/blog/full-disclosure-a-third-and-fourth-azure-sign-in-log-bypass-found",
-    "hn_link": "https://news.ycombinator.com/item?id=47448994",
-    "score": 130,
-    "comments": 26
+    "title": "A Japanese glossary of chopsticks faux pas",
+    "link": "https://www.nippon.com/en/japan-data/h01362/",
+    "hn_link": "https://news.ycombinator.com/item?id=47460452",
+    "score": 246,
+    "comments": 171
   }
 ]
