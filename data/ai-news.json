@@ -1,37 +1,37 @@
 [
   {
-    "title": "OpenCode – Open source AI coding agent",
-    "link": "https://opencode.ai/",
-    "hn_link": "https://news.ycombinator.com/item?id=47460525",
-    "score": 731,
-    "comments": 321
+    "title": "The three pillars of JavaScript bloat",
+    "link": "https://43081j.com/2026/03/three-pillars-of-javascript-bloat",
+    "hn_link": "https://news.ycombinator.com/item?id=47473718",
+    "score": 208,
+    "comments": 100
   },
   {
-    "title": "Mamba-3",
-    "link": "https://www.together.ai/blog/mamba-3",
-    "hn_link": "https://news.ycombinator.com/item?id=47419391",
-    "score": 93,
-    "comments": 12
+    "title": "Tinybox – A powerful computer for deep learning",
+    "link": "https://tinygrad.org/#tinybox",
+    "hn_link": "https://news.ycombinator.com/item?id=47470773",
+    "score": 467,
+    "comments": 275
   },
   {
-    "title": "FFmpeg 101 (2024)",
-    "link": "https://blogs.igalia.com/llepage/ffmpeg-101/",
-    "hn_link": "https://news.ycombinator.com/item?id=47463547",
-    "score": 60,
-    "comments": 0
+    "title": "Cross-Model Void Convergence: GPT-5.2 and Claude Opus 4.6 Deterministic Silence",
+    "link": "https://zenodo.org/records/18976656",
+    "hn_link": "https://news.ycombinator.com/item?id=47475155",
+    "score": 9,
+    "comments": 3
   },
   {
-    "title": "Molly Guard",
-    "link": "https://bookofjoe2.blogspot.com/2026/02/molly-guard.html",
-    "hn_link": "https://news.ycombinator.com/item?id=47455138",
-    "score": 90,
-    "comments": 35
+    "title": "My first patch to the Linux kernel",
+    "link": "https://pooladkhay.com/posts/first-kernel-patch/",
+    "hn_link": "https://news.ycombinator.com/item?id=47444909",
+    "score": 34,
+    "comments": 4
   },
   {
-    "title": "A Japanese glossary of chopsticks faux pas",
-    "link": "https://www.nippon.com/en/japan-data/h01362/",
-    "hn_link": "https://news.ycombinator.com/item?id=47460452",
-    "score": 246,
-    "comments": 171
+    "title": "Some things just take time",
+    "link": "https://lucumr.pocoo.org/2026/3/20/some-things-just-take-time/",
+    "hn_link": "https://news.ycombinator.com/item?id=47467537",
+    "score": 658,
+    "comments": 203
   }
 ]
