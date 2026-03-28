@@ -1,37 +1,37 @@
 [
   {
-    "title": "A Faster Alternative to Jq",
-    "link": "https://micahkepe.com/blog/jsongrep/",
-    "hn_link": "https://news.ycombinator.com/item?id=47539825",
-    "score": 56,
-    "comments": 29
+    "title": "Go hard on agents, not on your filesystem",
+    "link": "https://jai.scs.stanford.edu/",
+    "hn_link": "https://news.ycombinator.com/item?id=47550282",
+    "score": 307,
+    "comments": 169
   },
   {
-    "title": "Schedule tasks on the web",
-    "link": "https://code.claude.com/docs/en/web-scheduled-tasks",
-    "hn_link": "https://news.ycombinator.com/item?id=47539188",
-    "score": 128,
-    "comments": 83
+    "title": "AMD's Ryzen 9 9950X3D2 Dual Edition crams 208MB of cache into a single chip",
+    "link": "https://arstechnica.com/gadgets/2026/03/amds-ryzen-9-9950x3d2-dual-edition-crams-208mb-of-cache-into-a-single-chip/",
+    "hn_link": "https://news.ycombinator.com/item?id=47550878",
+    "score": 147,
+    "comments": 68
   },
   {
-    "title": "The European AllSky7 fireball network",
-    "link": "https://www.allsky7.net/#archive",
-    "hn_link": "https://news.ycombinator.com/item?id=47539767",
-    "score": 32,
-    "comments": 2
+    "title": "CERN uses tiny AI models burned into silicon for real-time LHC data filtering",
+    "link": "https://theopenreader.org/Journalism:CERN_Uses_Tiny_AI_Models_Burned_into_Silicon_for_Real-Time_LHC_Data_Filtering",
+    "hn_link": "https://news.ycombinator.com/item?id=47552562",
+    "score": 11,
+    "comments": 10
   },
   {
-    "title": "21,864 Yugoslavian .yu Domains",
-    "link": "https://jacobfilipp.com/yu/",
-    "hn_link": "https://news.ycombinator.com/item?id=47490871",
-    "score": 24,
-    "comments": 13
+    "title": "The bee that everyone wants to save",
+    "link": "https://naturalist.bearblog.dev/the-bee-that-everyone-wants-to-save/",
+    "hn_link": "https://news.ycombinator.com/item?id=47520599",
+    "score": 89,
+    "comments": 18
   },
   {
-    "title": "Apple discontinues the Mac Pro",
-    "link": "https://9to5mac.com/2026/03/26/apple-discontinues-the-mac-pro/",
-    "hn_link": "https://news.ycombinator.com/item?id=47535708",
-    "score": 332,
-    "comments": 265
+    "title": "Trust Signals as Sparklines for Hacker News",
+    "link": "https://hn-trustspark.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=47532717",
+    "score": 25,
+    "comments": 5
   }
 ]
