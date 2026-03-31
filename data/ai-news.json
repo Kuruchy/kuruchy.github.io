@@ -1,37 +1,37 @@
 [
   {
-    "title": "The curious case of retro demo scene graphics",
-    "link": "https://www.datagubbe.se/aipixels/",
-    "hn_link": "https://news.ycombinator.com/item?id=47570666",
-    "score": 147,
-    "comments": 28
+    "title": "Axios compromised on NPM – Malicious versions drop remote access trojan",
+    "link": "https://www.stepsecurity.io/blog/axios-compromised-on-npm-malicious-versions-drop-remote-access-trojan",
+    "hn_link": "https://news.ycombinator.com/item?id=47582220",
+    "score": 724,
+    "comments": 234
   },
   {
-    "title": "I use excalidraw to manage my diagrams for my blog",
-    "link": "https://blog.lysk.tech/excalidraw-frame-export/",
-    "hn_link": "https://news.ycombinator.com/item?id=47571376",
-    "score": 40,
-    "comments": 18
+    "title": "Ollama is now powered by MLX on Apple Silicon in preview",
+    "link": "https://ollama.com/blog/mlx",
+    "hn_link": "https://news.ycombinator.com/item?id=47582482",
+    "score": 228,
+    "comments": 102
   },
   {
-    "title": "ChatGPT won't let you type until Cloudflare reads your React state",
-    "link": "https://www.buchodi.com/chatgpt-wont-let-you-type-until-cloudflare-reads-your-react-state-i-decrypted-the-program-that-does-it/",
-    "hn_link": "https://news.ycombinator.com/item?id=47566865",
-    "score": 621,
-    "comments": 400
+    "title": "Artemis II is not safe to fly",
+    "link": "https://idlewords.com/2026/03/artemis_ii_is_not_safe_to_fly.htm",
+    "hn_link": "https://news.ycombinator.com/item?id=47582043",
+    "score": 302,
+    "comments": 189
   },
   {
-    "title": "Hamilton-Jacobi-Bellman Equation: Reinforcement Learning and Diffusion Models",
-    "link": "https://dani2442.github.io/posts/continuous-rl/",
-    "hn_link": "https://news.ycombinator.com/item?id=47571495",
-    "score": 23,
-    "comments": 7
+    "title": "Universal Claude.md – cut Claude output tokens",
+    "link": "https://github.com/drona23/claude-token-efficient",
+    "hn_link": "https://news.ycombinator.com/item?id=47581701",
+    "score": 293,
+    "comments": 114
   },
   {
-    "title": "VHDL's Crown Jewel",
-    "link": "https://www.sigasi.com/opinion/jan/vhdls-crown-jewel/",
-    "hn_link": "https://news.ycombinator.com/item?id=47570435",
-    "score": 52,
-    "comments": 23
+    "title": "Google's 200M-parameter time-series foundation model with 16k context",
+    "link": "https://github.com/google-research/timesfm",
+    "hn_link": "https://news.ycombinator.com/item?id=47583045",
+    "score": 103,
+    "comments": 50
   }
 ]
