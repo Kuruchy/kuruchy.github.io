@@ -1,37 +1,37 @@
 [
   {
-    "title": "Live: Artemis II Launch Day Updates",
-    "link": "https://www.nasa.gov/blogs/missions/2026/04/01/live-artemis-ii-launch-day-updates/",
-    "hn_link": "https://news.ycombinator.com/item?id=47603657",
-    "score": 909,
-    "comments": 776
+    "title": "Google releases Gemma 4 open models",
+    "link": "https://deepmind.google/models/gemma/gemma-4/",
+    "hn_link": "https://news.ycombinator.com/item?id=47616361",
+    "score": 1439,
+    "comments": 402
   },
   {
-    "title": "Bringing Clojure programming to Enterprise (2021)",
-    "link": "https://blogit.michelin.io/clojure-programming/",
-    "hn_link": "https://news.ycombinator.com/item?id=47611481",
-    "score": 14,
+    "title": "Decisions that eroded trust in Azure – by a former Azure Core engineer",
+    "link": "https://isolveproblems.substack.com/p/how-microsoft-vaporized-a-trillion",
+    "hn_link": "https://news.ycombinator.com/item?id=47616242",
+    "score": 733,
+    "comments": 290
+  },
+  {
+    "title": "The True Shape of Io's Steeple Mountain",
+    "link": "https://www.weareinquisitive.com/news/hidden-in-the-shadow",
+    "hn_link": "https://news.ycombinator.com/item?id=47562455",
+    "score": 38,
     "comments": 1
   },
   {
-    "title": "Email obfuscation: What works in 2026?",
-    "link": "https://spencermortensen.com/articles/email-obfuscation/",
-    "hn_link": "https://news.ycombinator.com/item?id=47609694",
-    "score": 99,
-    "comments": 23
+    "title": "ESP32-S31: 320MHz 2C RV32IMAFCP+CLIC, 512KB SRAM, GbE, 802.11ax, 61 GPIO",
+    "link": "https://www.espressif.com/en/news/ESP32_S31_Release",
+    "hn_link": "https://news.ycombinator.com/item?id=47561678",
+    "score": 17,
+    "comments": 1
   },
   {
-    "title": "Steam on Linux Use Skyrocketed Above 5% in March",
-    "link": "https://www.phoronix.com/news/Steam-On-Linux-Tops-5p",
-    "hn_link": "https://news.ycombinator.com/item?id=47609564",
-    "score": 330,
-    "comments": 134
-  },
-  {
-    "title": "Quantum computing bombshells that are not April Fools",
-    "link": "https://scottaaronson.blog/?p=9665",
-    "hn_link": "https://news.ycombinator.com/item?id=47608495",
-    "score": 154,
-    "comments": 51
+    "title": "Tailscale's new macOS home",
+    "link": "https://tailscale.com/blog/macos-notch-escape",
+    "hn_link": "https://news.ycombinator.com/item?id=47618189",
+    "score": 448,
+    "comments": 224
   }
 ]
