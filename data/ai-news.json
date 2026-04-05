@@ -1,37 +1,37 @@
 [
   {
-    "title": "Tell HN: Anthropic no longer allowing Claude Code subscriptions to use OpenClaw",
-    "link": "https://news.ycombinator.com/item?id=47633396",
-    "hn_link": "https://news.ycombinator.com/item?id=47633396",
-    "score": 630,
-    "comments": 524
+    "title": "Show HN: A game where you build a GPU",
+    "link": "https://jaso1024.com/mvidia/",
+    "hn_link": "https://news.ycombinator.com/item?id=47640728",
+    "score": 701,
+    "comments": 150
   },
   {
-    "title": "Artemis II crew take “spectacular” image of Earth",
-    "link": "https://www.bbc.com/news/articles/ce8jzr423p9o",
-    "hn_link": "https://news.ycombinator.com/item?id=47631118",
-    "score": 732,
-    "comments": 257
+    "title": "Introduction to Computer Music (2009) [pdf]",
+    "link": "https://composerprogrammer.com/introductiontocomputermusic.pdf",
+    "hn_link": "https://news.ycombinator.com/item?id=47645432",
+    "score": 138,
+    "comments": 45
   },
   {
-    "title": "Emotion concepts and their function in a large language model",
-    "link": "https://www.anthropic.com/research/emotion-concepts-function",
-    "hn_link": "https://news.ycombinator.com/item?id=47636435",
-    "score": 39,
-    "comments": 27
+    "title": "OpenScreen is an open-source alternative to Screen Studio",
+    "link": "https://github.com/siddharthvaddem/openscreen",
+    "hn_link": "https://news.ycombinator.com/item?id=47595695",
+    "score": 258,
+    "comments": 47
   },
   {
-    "title": "iNaturalist",
-    "link": "https://www.inaturalist.org/",
-    "hn_link": "https://news.ycombinator.com/item?id=47629433",
-    "score": 412,
-    "comments": 106
+    "title": "German implementation of eIDAS will require an Apple/Google account to function",
+    "link": "https://bmi.usercontent.opencode.de/eudi-wallet/wallet-development-documentation-public/latest/architecture-concept/06-mobile-devices/02-mdvm/",
+    "hn_link": "https://news.ycombinator.com/item?id=47644406",
+    "score": 215,
+    "comments": 141
   },
   {
-    "title": "Delve removed from Y Combinator",
-    "link": "https://www.ycombinator.com/companies/delve",
-    "hn_link": "https://news.ycombinator.com/item?id=47634690",
-    "score": 272,
-    "comments": 166
+    "title": "Lisette a little language inspired by Rust that compiles to Go",
+    "link": "https://lisette.run/",
+    "hn_link": "https://news.ycombinator.com/item?id=47646843",
+    "score": 15,
+    "comments": 7
   }
 ]
