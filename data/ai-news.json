@@ -1,37 +1,37 @@
 [
   {
-    "title": "Show HN: I built a tiny LLM to demystify how language models work",
-    "link": "https://github.com/arman-bd/guppylm",
-    "hn_link": "https://news.ycombinator.com/item?id=47655408",
-    "score": 434,
-    "comments": 40
+    "title": "Every GPU That Mattered",
+    "link": "https://sheets.works/data-viz/every-gpu",
+    "hn_link": "https://news.ycombinator.com/item?id=47672295",
+    "score": 21,
+    "comments": 6
   },
   {
-    "title": "Euro-Office – Your sovereign office",
-    "link": "https://github.com/Euro-Office",
-    "hn_link": "https://news.ycombinator.com/item?id=47658328",
-    "score": 13,
-    "comments": 1
+    "title": "My Experience as a Rice Farmer",
+    "link": "https://xd009642.github.io/2026/04/01/My-Experience-as-a-Rice-Farmer.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47614528",
+    "score": 132,
+    "comments": 45
   },
   {
-    "title": "France pulls last gold held in US for $15B gain",
-    "link": "https://www.mining.com/france-pulls-last-gold-held-in-us-for-15b-gain/",
-    "hn_link": "https://news.ycombinator.com/item?id=47658146",
-    "score": 51,
-    "comments": 29
+    "title": "Show HN: Ghost Pepper – Local hold-to-talk speech-to-text for macOS",
+    "link": "https://github.com/matthartman/ghost-pepper",
+    "hn_link": "https://news.ycombinator.com/item?id=47666024",
+    "score": 369,
+    "comments": 171
   },
   {
-    "title": "Gemma 4 on iPhone",
-    "link": "https://apps.apple.com/nl/app/google-ai-edge-gallery/id6749645337",
-    "hn_link": "https://news.ycombinator.com/item?id=47652561",
-    "score": 623,
-    "comments": 164
+    "title": "Solod – A subset of Go that translates to C",
+    "link": "https://github.com/solod-dev/solod",
+    "hn_link": "https://news.ycombinator.com/item?id=47669337",
+    "score": 127,
+    "comments": 33
   },
   {
-    "title": "An open-source 240-antenna array to bounce signals off the Moon",
-    "link": "https://moonrf.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=47656622",
-    "score": 94,
-    "comments": 12
+    "title": "Issue: Claude Code is unusable for complex engineering tasks with Feb updates",
+    "link": "https://github.com/anthropics/claude-code/issues/42796",
+    "hn_link": "https://news.ycombinator.com/item?id=47660925",
+    "score": 1069,
+    "comments": 591
   }
 ]
