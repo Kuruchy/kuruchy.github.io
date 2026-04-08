@@ -1,37 +1,37 @@
 [
   {
-    "title": "Every GPU That Mattered",
-    "link": "https://sheets.works/data-viz/every-gpu",
-    "hn_link": "https://news.ycombinator.com/item?id=47672295",
-    "score": 21,
-    "comments": 6
+    "title": "Revision Demoparty 2026: Razor1911 [video]",
+    "link": "https://www.youtube.com/watch?v=Lw4W9V57SKs&t=5716s",
+    "hn_link": "https://news.ycombinator.com/item?id=47685739",
+    "score": 115,
+    "comments": 39
   },
   {
-    "title": "My Experience as a Rice Farmer",
-    "link": "https://xd009642.github.io/2026/04/01/My-Experience-as-a-Rice-Farmer.html",
-    "hn_link": "https://news.ycombinator.com/item?id=47614528",
-    "score": 132,
-    "comments": 45
+    "title": "Veracrypt Project Update",
+    "link": "https://sourceforge.net/p/veracrypt/discussion/general/thread/9620d7a4b3/",
+    "hn_link": "https://news.ycombinator.com/item?id=47686549",
+    "score": 89,
+    "comments": 15
   },
   {
-    "title": "Show HN: Ghost Pepper – Local hold-to-talk speech-to-text for macOS",
-    "link": "https://github.com/matthartman/ghost-pepper",
-    "hn_link": "https://news.ycombinator.com/item?id=47666024",
-    "score": 369,
-    "comments": 171
+    "title": "Project Glasswing: Securing critical software for the AI era",
+    "link": "https://www.anthropic.com/glasswing",
+    "hn_link": "https://news.ycombinator.com/item?id=47679121",
+    "score": 1265,
+    "comments": 621
   },
   {
-    "title": "Solod – A subset of Go that translates to C",
-    "link": "https://github.com/solod-dev/solod",
-    "hn_link": "https://news.ycombinator.com/item?id=47669337",
-    "score": 127,
-    "comments": 33
+    "title": "Lunar Flyby",
+    "link": "https://www.nasa.gov/gallery/lunar-flyby/",
+    "hn_link": "https://news.ycombinator.com/item?id=47676509",
+    "score": 705,
+    "comments": 169
   },
   {
-    "title": "Issue: Claude Code is unusable for complex engineering tasks with Feb updates",
-    "link": "https://github.com/anthropics/claude-code/issues/42796",
-    "hn_link": "https://news.ycombinator.com/item?id=47660925",
-    "score": 1069,
-    "comments": 591
+    "title": "We moved Railway's frontend off Next.js. Builds went from 10+ mins to under two",
+    "link": "https://blog.railway.com/p/moving-railways-frontend-off-nextjs",
+    "hn_link": "https://news.ycombinator.com/item?id=47685945",
+    "score": 57,
+    "comments": 30
   }
 ]
