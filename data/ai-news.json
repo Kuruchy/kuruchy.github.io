@@ -1,37 +1,37 @@
 [
   {
-    "title": "Revision Demoparty 2026: Razor1911 [video]",
-    "link": "https://www.youtube.com/watch?v=Lw4W9V57SKs&t=5716s",
-    "hn_link": "https://news.ycombinator.com/item?id=47685739",
-    "score": 115,
-    "comments": 39
+    "title": "LittleSnitch for Linux",
+    "link": "https://obdev.at/products/littlesnitch-linux/index.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47697870",
+    "score": 682,
+    "comments": 200
   },
   {
-    "title": "Veracrypt Project Update",
-    "link": "https://sourceforge.net/p/veracrypt/discussion/general/thread/9620d7a4b3/",
-    "hn_link": "https://news.ycombinator.com/item?id=47686549",
-    "score": 89,
-    "comments": 15
+    "title": "Open Source Security at Astral",
+    "link": "https://astral.sh/blog/open-source-security-at-astral",
+    "hn_link": "https://news.ycombinator.com/item?id=47699181",
+    "score": 171,
+    "comments": 29
   },
   {
-    "title": "Project Glasswing: Securing critical software for the AI era",
-    "link": "https://www.anthropic.com/glasswing",
-    "hn_link": "https://news.ycombinator.com/item?id=47679121",
-    "score": 1265,
-    "comments": 621
+    "title": "I ported Mac OS X to the Nintendo Wii",
+    "link": "https://bryankeller.github.io/2026/04/08/porting-mac-os-x-nintendo-wii.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47691730",
+    "score": 1557,
+    "comments": 270
   },
   {
-    "title": "Lunar Flyby",
-    "link": "https://www.nasa.gov/gallery/lunar-flyby/",
-    "hn_link": "https://news.ycombinator.com/item?id=47676509",
-    "score": 705,
-    "comments": 169
+    "title": "Haunted Paper Toys",
+    "link": "http://ravensblight.com/papertoys.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47658950",
+    "score": 73,
+    "comments": 1
   },
   {
-    "title": "We moved Railway's frontend off Next.js. Builds went from 10+ mins to under two",
-    "link": "https://blog.railway.com/p/moving-railways-frontend-off-nextjs",
-    "hn_link": "https://news.ycombinator.com/item?id=47685945",
-    "score": 57,
-    "comments": 30
+    "title": "The Importance of Being Idle",
+    "link": "https://theamericanscholar.org/the-importance-of-being-idle/",
+    "hn_link": "https://news.ycombinator.com/item?id=47666639",
+    "score": 171,
+    "comments": 86
   }
 ]
