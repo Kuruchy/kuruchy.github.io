@@ -1,37 +1,37 @@
 [
   {
-    "title": "LittleSnitch for Linux",
-    "link": "https://obdev.at/products/littlesnitch-linux/index.html",
-    "hn_link": "https://news.ycombinator.com/item?id=47697870",
-    "score": 682,
-    "comments": 200
+    "title": "How NASA built Artemis II’s fault-tolerant computer",
+    "link": "https://cacm.acm.org/news/how-nasa-built-artemis-iis-fault-tolerant-computer/",
+    "hn_link": "https://news.ycombinator.com/item?id=47704804",
+    "score": 351,
+    "comments": 122
   },
   {
-    "title": "Open Source Security at Astral",
-    "link": "https://astral.sh/blog/open-source-security-at-astral",
-    "hn_link": "https://news.ycombinator.com/item?id=47699181",
-    "score": 171,
-    "comments": 29
+    "title": "I still prefer MCP over skills",
+    "link": "https://david.coffee/i-still-prefer-mcp-over-skills/",
+    "hn_link": "https://news.ycombinator.com/item?id=47712718",
+    "score": 149,
+    "comments": 130
   },
   {
-    "title": "I ported Mac OS X to the Nintendo Wii",
-    "link": "https://bryankeller.github.io/2026/04/08/porting-mac-os-x-nintendo-wii.html",
-    "hn_link": "https://news.ycombinator.com/item?id=47691730",
-    "score": 1557,
-    "comments": 270
+    "title": "Native Instant Space Switching on macOS",
+    "link": "https://arhan.sh/blog/native-instant-space-switching-on-macos/",
+    "hn_link": "https://news.ycombinator.com/item?id=47708818",
+    "score": 488,
+    "comments": 222
   },
   {
-    "title": "Haunted Paper Toys",
-    "link": "http://ravensblight.com/papertoys.html",
-    "hn_link": "https://news.ycombinator.com/item?id=47658950",
-    "score": 73,
-    "comments": 1
+    "title": "We've raised $17M to build what comes after Git",
+    "link": "https://blog.gitbutler.com/series-a",
+    "hn_link": "https://news.ycombinator.com/item?id=47712656",
+    "score": 113,
+    "comments": 238
   },
   {
-    "title": "The Importance of Being Idle",
-    "link": "https://theamericanscholar.org/the-importance-of-being-idle/",
-    "hn_link": "https://news.ycombinator.com/item?id=47666639",
-    "score": 171,
-    "comments": 86
+    "title": "Generative art over the years",
+    "link": "https://blog.veitheller.de/Generative_art_over_the_years.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47675906",
+    "score": 138,
+    "comments": 34
   }
 ]
