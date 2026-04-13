@@ -1,37 +1,37 @@
 [
   {
-    "title": "I run multiple $10K MRR companies on a $20/month tech stack",
-    "link": "https://stevehanov.ca/blog/how-i-run-multiple-10k-mrr-companies-on-a-20month-tech-stack",
-    "hn_link": "https://news.ycombinator.com/item?id=47736555",
-    "score": 131,
-    "comments": 74
+    "title": "All elementary functions from a single binary operator",
+    "link": "https://arxiv.org/abs/2603.21852",
+    "hn_link": "https://news.ycombinator.com/item?id=47746610",
+    "score": 391,
+    "comments": 104
   },
   {
-    "title": "Small models also found the vulnerabilities that Mythos found",
-    "link": "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier",
-    "hn_link": "https://news.ycombinator.com/item?id=47732020",
-    "score": 1064,
-    "comments": 292
+    "title": "The Economics of Software Teams: Why Most Engineering Orgs Are Flying Blind",
+    "link": "https://www.viktorcessan.com/the-economics-of-software-teams/",
+    "hn_link": "https://news.ycombinator.com/item?id=47748064",
+    "score": 137,
+    "comments": 66
   },
   {
-    "title": "The End of Eleventy",
-    "link": "https://brennan.day/the-end-of-eleventy/",
-    "hn_link": "https://news.ycombinator.com/item?id=47735535",
-    "score": 153,
-    "comments": 107
+    "title": "Taking on CUDA with ROCm: 'One Step After Another'",
+    "link": "https://www.eetimes.com/taking-on-cuda-with-rocm-one-step-after-another/",
+    "hn_link": "https://news.ycombinator.com/item?id=47745284",
+    "score": 167,
+    "comments": 126
   },
   {
-    "title": "Tofolli gates are all you need",
-    "link": "https://www.johndcook.com/blog/2026/04/06/tofolli-gates/",
-    "hn_link": "https://news.ycombinator.com/item?id=47672718",
-    "score": 37,
-    "comments": 6
+    "title": "DIY Soft Drinks",
+    "link": "https://blinry.org/diy-soft-drinks/",
+    "hn_link": "https://news.ycombinator.com/item?id=47741701",
+    "score": 448,
+    "comments": 125
   },
   {
-    "title": "US appeals court declares 158-year-old home distilling ban unconstitutional",
-    "link": "https://www.theguardian.com/law/2026/apr/11/appeals-court-ruling-home-distilling-ban-unconstitutional",
-    "hn_link": "https://news.ycombinator.com/item?id=47736298",
-    "score": 129,
-    "comments": 91
+    "title": "Bring Back Idiomatic Design (2023)",
+    "link": "https://essays.johnloeber.com/p/4-bring-back-idiomatic-design",
+    "hn_link": "https://news.ycombinator.com/item?id=47738827",
+    "score": 559,
+    "comments": 318
   }
 ]
