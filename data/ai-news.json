@@ -1,37 +1,37 @@
 [
   {
-    "title": "An AI Vibe Coding Horror Story",
-    "link": "https://www.tobru.ch/an-ai-vibe-coding-horror-story/",
-    "hn_link": "https://news.ycombinator.com/item?id=47762901",
-    "score": 57,
-    "comments": 31
+    "title": "Fixing a 20-year-old bug in Enlightenment E16",
+    "link": "https://iczelia.net/posts/e16-20-year-old-bug/",
+    "hn_link": "https://news.ycombinator.com/item?id=47774789",
+    "score": 124,
+    "comments": 27
   },
   {
-    "title": "DaVinci Resolve – Photo",
-    "link": "https://www.blackmagicdesign.com/products/davinciresolve/photo",
-    "hn_link": "https://news.ycombinator.com/item?id=47760529",
-    "score": 540,
-    "comments": 127
+    "title": "My adventure in designing API keys",
+    "link": "https://vjay15.github.io/blog/apikeys/",
+    "hn_link": "https://news.ycombinator.com/item?id=47739278",
+    "score": 53,
+    "comments": 32
   },
   {
-    "title": "A new spam policy for “back button hijacking”",
-    "link": "https://developers.google.com/search/blog/2026/04/back-button-hijacking",
-    "hn_link": "https://news.ycombinator.com/item?id=47760764",
-    "score": 333,
-    "comments": 197
+    "title": "Claude Code Routines",
+    "link": "https://code.claude.com/docs/en/routines",
+    "hn_link": "https://news.ycombinator.com/item?id=47768133",
+    "score": 601,
+    "comments": 351
   },
   {
-    "title": "Introspective Diffusion Language Models",
-    "link": "https://introspective-diffusion.github.io/",
-    "hn_link": "https://news.ycombinator.com/item?id=47762641",
-    "score": 24,
-    "comments": 5
+    "title": "Wacli – WhatsApp CLI: sync, search, send",
+    "link": "https://github.com/steipete/wacli",
+    "hn_link": "https://news.ycombinator.com/item?id=47775628",
+    "score": 80,
+    "comments": 62
   },
   {
-    "title": "Someone bought 30 WordPress plugins and planted a backdoor in all of them",
-    "link": "https://anchor.host/someone-bought-30-wordpress-plugins-and-planted-a-backdoor-in-all-of-them/",
-    "hn_link": "https://news.ycombinator.com/item?id=47755629",
-    "score": 933,
-    "comments": 263
+    "title": "My AI-Assisted Workflow",
+    "link": "https://www.maiobarbero.dev/articles/ai-assisted-workflow/",
+    "hn_link": "https://news.ycombinator.com/item?id=47775653",
+    "score": 20,
+    "comments": 11
   }
 ]
