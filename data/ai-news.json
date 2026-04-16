@@ -1,37 +1,37 @@
 [
   {
-    "title": "Fixing a 20-year-old bug in Enlightenment E16",
-    "link": "https://iczelia.net/posts/e16-20-year-old-bug/",
-    "hn_link": "https://news.ycombinator.com/item?id=47774789",
-    "score": 124,
-    "comments": 27
+    "title": "IPv6 traffic crosses the 50% mark",
+    "link": "https://www.google.com/intl/en/ipv6/statistics.html?yzh=28197",
+    "hn_link": "https://news.ycombinator.com/item?id=47777894",
+    "score": 201,
+    "comments": 107
   },
   {
-    "title": "My adventure in designing API keys",
-    "link": "https://vjay15.github.io/blog/apikeys/",
-    "hn_link": "https://news.ycombinator.com/item?id=47739278",
-    "score": 53,
-    "comments": 32
+    "title": "Darkbloom – Private inference on idle Macs",
+    "link": "https://darkbloom.dev",
+    "hn_link": "https://news.ycombinator.com/item?id=47788542",
+    "score": 227,
+    "comments": 115
   },
   {
-    "title": "Claude Code Routines",
-    "link": "https://code.claude.com/docs/en/routines",
-    "hn_link": "https://news.ycombinator.com/item?id=47768133",
-    "score": 601,
-    "comments": 351
+    "title": "FSF trying to contact Google about spammer sending 10k+ mails from Gmail account",
+    "link": "https://daedal.io/@thomzane/116410863009847575",
+    "hn_link": "https://news.ycombinator.com/item?id=47788424",
+    "score": 141,
+    "comments": 75
   },
   {
-    "title": "Wacli – WhatsApp CLI: sync, search, send",
-    "link": "https://github.com/steipete/wacli",
-    "hn_link": "https://news.ycombinator.com/item?id=47775628",
-    "score": 80,
-    "comments": 62
+    "title": "The paper computer",
+    "link": "https://jsomers.net/blog/the-paper-computer",
+    "hn_link": "https://news.ycombinator.com/item?id=47747770",
+    "score": 139,
+    "comments": 28
   },
   {
-    "title": "My AI-Assisted Workflow",
-    "link": "https://www.maiobarbero.dev/articles/ai-assisted-workflow/",
-    "hn_link": "https://news.ycombinator.com/item?id=47775653",
-    "score": 20,
-    "comments": 11
+    "title": "RedSun: System user access on Win 11/10 and Server with the April 2026 Update",
+    "link": "https://github.com/Nightmare-Eclipse/RedSun",
+    "hn_link": "https://news.ycombinator.com/item?id=47788473",
+    "score": 70,
+    "comments": 16
   }
 ]
