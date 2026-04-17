@@ -1,37 +1,37 @@
 [
   {
-    "title": "IPv6 traffic crosses the 50% mark",
-    "link": "https://www.google.com/intl/en/ipv6/statistics.html?yzh=28197",
-    "hn_link": "https://news.ycombinator.com/item?id=47777894",
-    "score": 201,
-    "comments": 107
+    "title": "Ada, Its Design, and the Language That Built the Languages",
+    "link": "https://www.iqiipi.com/the-quiet-colossus.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47803844",
+    "score": 15,
+    "comments": 3
   },
   {
-    "title": "Darkbloom – Private inference on idle Macs",
-    "link": "https://darkbloom.dev",
-    "hn_link": "https://news.ycombinator.com/item?id=47788542",
-    "score": 227,
-    "comments": 115
+    "title": "Claude Opus 4.7",
+    "link": "https://www.anthropic.com/news/claude-opus-4-7",
+    "hn_link": "https://news.ycombinator.com/item?id=47793411",
+    "score": 1740,
+    "comments": 1253
   },
   {
-    "title": "FSF trying to contact Google about spammer sending 10k+ mails from Gmail account",
-    "link": "https://daedal.io/@thomzane/116410863009847575",
-    "hn_link": "https://news.ycombinator.com/item?id=47788424",
-    "score": 141,
-    "comments": 75
+    "title": "Codex for almost everything",
+    "link": "https://openai.com/index/codex-for-almost-everything/",
+    "hn_link": "https://news.ycombinator.com/item?id=47796469",
+    "score": 866,
+    "comments": 442
   },
   {
-    "title": "The paper computer",
-    "link": "https://jsomers.net/blog/the-paper-computer",
-    "hn_link": "https://news.ycombinator.com/item?id=47747770",
-    "score": 139,
-    "comments": 28
+    "title": "FIM – Linux framebuffer image viewer",
+    "link": "https://www.nongnu.org/fbi-improved/",
+    "hn_link": "https://news.ycombinator.com/item?id=47803323",
+    "score": 31,
+    "comments": 13
   },
   {
-    "title": "RedSun: System user access on Win 11/10 and Server with the April 2026 Update",
-    "link": "https://github.com/Nightmare-Eclipse/RedSun",
-    "hn_link": "https://news.ycombinator.com/item?id=47788473",
-    "score": 70,
-    "comments": 16
+    "title": "A Python Interpreter Written in Python",
+    "link": "https://aosabook.org/en/500L/a-python-interpreter-written-in-python.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47755261",
+    "score": 58,
+    "comments": 15
   }
 ]
