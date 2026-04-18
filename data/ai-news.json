@@ -1,37 +1,37 @@
 [
   {
-    "title": "Ada, Its Design, and the Language That Built the Languages",
-    "link": "https://www.iqiipi.com/the-quiet-colossus.html",
-    "hn_link": "https://news.ycombinator.com/item?id=47803844",
-    "score": 15,
+    "title": "Category Theory Illustrated – Orders",
+    "link": "https://abuseofnotation.github.io/category-theory-illustrated/04_order/",
+    "hn_link": "https://news.ycombinator.com/item?id=47813668",
+    "score": 43,
+    "comments": 9
+  },
+  {
+    "title": "Amiga Graphics",
+    "link": "https://amiga.lychesis.net/",
+    "hn_link": "https://news.ycombinator.com/item?id=47813566",
+    "score": 35,
+    "comments": 1
+  },
+  {
+    "title": "Claude Design",
+    "link": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+    "hn_link": "https://news.ycombinator.com/item?id=47806725",
+    "score": 1027,
+    "comments": 670
+  },
+  {
+    "title": "Show HN: I made a calculator that works over disjoint sets of intervals",
+    "link": "https://victorpoughon.github.io/interval-calculator/",
+    "hn_link": "https://news.ycombinator.com/item?id=47812341",
+    "score": 139,
+    "comments": 22
+  },
+  {
+    "title": "The simple geometry behind any road",
+    "link": "https://sandboxspirit.com/blog/simple-geometry-of-roads/",
+    "hn_link": "https://news.ycombinator.com/item?id=47788207",
+    "score": 19,
     "comments": 3
-  },
-  {
-    "title": "Claude Opus 4.7",
-    "link": "https://www.anthropic.com/news/claude-opus-4-7",
-    "hn_link": "https://news.ycombinator.com/item?id=47793411",
-    "score": 1740,
-    "comments": 1253
-  },
-  {
-    "title": "Codex for almost everything",
-    "link": "https://openai.com/index/codex-for-almost-everything/",
-    "hn_link": "https://news.ycombinator.com/item?id=47796469",
-    "score": 866,
-    "comments": 442
-  },
-  {
-    "title": "FIM – Linux framebuffer image viewer",
-    "link": "https://www.nongnu.org/fbi-improved/",
-    "hn_link": "https://news.ycombinator.com/item?id=47803323",
-    "score": 31,
-    "comments": 13
-  },
-  {
-    "title": "A Python Interpreter Written in Python",
-    "link": "https://aosabook.org/en/500L/a-python-interpreter-written-in-python.html",
-    "hn_link": "https://news.ycombinator.com/item?id=47755261",
-    "score": 58,
-    "comments": 15
   }
 ]
