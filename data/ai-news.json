@@ -1,37 +1,37 @@
 [
   {
-    "title": "OpenClaw isn't fooling me. I remember MS-DOS",
-    "link": "https://www.flyingpenguin.com/build-an-openclaw-free-secure-always-on-local-ai-agent/",
-    "hn_link": "https://news.ycombinator.com/item?id=47831437",
-    "score": 77,
-    "comments": 40
+    "title": "John Ternus to become Apple CEO",
+    "link": "https://www.apple.com/newsroom/2026/04/tim-cook-to-become-apple-executive-chairman-john-ternus-to-become-apple-ceo/",
+    "hn_link": "https://news.ycombinator.com/item?id=47840219",
+    "score": 1788,
+    "comments": 942
   },
   {
-    "title": "GitHub's Fake Star Economy",
-    "link": "https://awesomeagents.ai/news/github-fake-stars-investigation/",
-    "hn_link": "https://news.ycombinator.com/item?id=47831621",
-    "score": 79,
-    "comments": 48
+    "title": "Anthropic says OpenClaw-style Claude CLI usage is allowed again",
+    "link": "https://docs.openclaw.ai/providers/anthropic",
+    "hn_link": "https://news.ycombinator.com/item?id=47844269",
+    "score": 184,
+    "comments": 109
   },
   {
-    "title": "SDF Public Access Unix System",
-    "link": "https://sdf.org/?ssh",
-    "hn_link": "https://news.ycombinator.com/item?id=47819410",
+    "title": "Louis Zocchi, inventor of the d100, has died",
+    "link": "https://icv2.com/articles/news/view/62176/r-i-p-louis-zocchi-the-godfather-dice",
+    "hn_link": "https://news.ycombinator.com/item?id=47845231",
+    "score": 43,
+    "comments": 13
+  },
+  {
+    "title": "A Roblox cheat and one AI tool brought down Vercel's platform",
+    "link": "https://webmatrices.com/post/how-a-roblox-cheat-and-one-ai-tool-brought-down-vercel-s-entire-platform",
+    "hn_link": "https://news.ycombinator.com/item?id=47844431",
+    "score": 152,
+    "comments": 67
+  },
+  {
+    "title": "The Beauty of Bonsai Styles",
+    "link": "https://longwoodgardens.org/blog/2023-05-17/beauty-bonsai-styles",
+    "hn_link": "https://news.ycombinator.com/item?id=47844539",
     "score": 68,
-    "comments": 25
-  },
-  {
-    "title": "Up to 8M Bees Are Living in an Underground Network Beneath This Cemetery",
-    "link": "https://www.discovermagazine.com/up-to-8-million-bees-are-living-in-an-underground-network-beneath-this-cemetery-48977",
-    "hn_link": "https://news.ycombinator.com/item?id=47810101",
-    "score": 48,
-    "comments": 5
-  },
-  {
-    "title": "Vercel April 2026 security incident",
-    "link": "https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/",
-    "hn_link": "https://news.ycombinator.com/item?id=47824463",
-    "score": 745,
-    "comments": 432
+    "comments": 16
   }
 ]
