@@ -1,37 +1,37 @@
 [
   {
-    "title": "John Ternus to become Apple CEO",
-    "link": "https://www.apple.com/newsroom/2026/04/tim-cook-to-become-apple-executive-chairman-john-ternus-to-become-apple-ceo/",
-    "hn_link": "https://news.ycombinator.com/item?id=47840219",
-    "score": 1788,
-    "comments": 942
+    "title": "Making RAM at Home [video]",
+    "link": "https://www.youtube.com/watch?v=h6GWikWlAQA",
+    "hn_link": "https://news.ycombinator.com/item?id=47842569",
+    "score": 311,
+    "comments": 86
   },
   {
-    "title": "Anthropic says OpenClaw-style Claude CLI usage is allowed again",
-    "link": "https://docs.openclaw.ai/providers/anthropic",
-    "hn_link": "https://news.ycombinator.com/item?id=47844269",
-    "score": 184,
-    "comments": 109
+    "title": "ChatGPT Images 2.0",
+    "link": "https://openai.com/index/introducing-chatgpt-images-2-0/",
+    "hn_link": "https://news.ycombinator.com/item?id=47852835",
+    "score": 799,
+    "comments": 616
   },
   {
-    "title": "Louis Zocchi, inventor of the d100, has died",
-    "link": "https://icv2.com/articles/news/view/62176/r-i-p-louis-zocchi-the-godfather-dice",
-    "hn_link": "https://news.ycombinator.com/item?id=47845231",
-    "score": 43,
-    "comments": 13
+    "title": "Contact Lens Uses Microfluidics to Monitor and Treat Glaucoma",
+    "link": "https://spectrum.ieee.org/smart-contact-lens-glaucoma-microfluidics",
+    "hn_link": "https://news.ycombinator.com/item?id=47823654",
+    "score": 28,
+    "comments": 0
   },
   {
-    "title": "A Roblox cheat and one AI tool brought down Vercel's platform",
-    "link": "https://webmatrices.com/post/how-a-roblox-cheat-and-one-ai-tool-brought-down-vercel-s-entire-platform",
-    "hn_link": "https://news.ycombinator.com/item?id=47844431",
-    "score": 152,
-    "comments": 67
+    "title": "Garbage Collection Without Unsafe Code",
+    "link": "https://fitzgen.com/2024/02/06/safe-gc.html",
+    "hn_link": "https://news.ycombinator.com/item?id=47821853",
+    "score": 37,
+    "comments": 4
   },
   {
-    "title": "The Beauty of Bonsai Styles",
-    "link": "https://longwoodgardens.org/blog/2023-05-17/beauty-bonsai-styles",
-    "hn_link": "https://news.ycombinator.com/item?id=47844539",
-    "score": 68,
-    "comments": 16
+    "title": "Laws of Software Engineering",
+    "link": "https://lawsofsoftwareengineering.com",
+    "hn_link": "https://news.ycombinator.com/item?id=47847179",
+    "score": 998,
+    "comments": 467
   }
 ]
