@@ -1,37 +1,37 @@
 [
   {
-    "title": "Making RAM at Home [video]",
-    "link": "https://www.youtube.com/watch?v=h6GWikWlAQA",
-    "hn_link": "https://news.ycombinator.com/item?id=47842569",
-    "score": 311,
-    "comments": 86
+    "title": "I am building a cloud",
+    "link": "https://crawshaw.io/blog/building-a-cloud",
+    "hn_link": "https://news.ycombinator.com/item?id=47872324",
+    "score": 341,
+    "comments": 162
   },
   {
-    "title": "ChatGPT Images 2.0",
-    "link": "https://openai.com/index/introducing-chatgpt-images-2-0/",
-    "hn_link": "https://news.ycombinator.com/item?id=47852835",
-    "score": 799,
-    "comments": 616
+    "title": "Alberta startup sells no-tech tractors for half price",
+    "link": "https://wheelfront.com/this-alberta-startup-sells-no-tech-tractors-for-half-price/",
+    "hn_link": "https://news.ycombinator.com/item?id=47865868",
+    "score": 1766,
+    "comments": 563
   },
   {
-    "title": "Contact Lens Uses Microfluidics to Monitor and Treat Glaucoma",
-    "link": "https://spectrum.ieee.org/smart-contact-lens-glaucoma-microfluidics",
-    "hn_link": "https://news.ycombinator.com/item?id=47823654",
-    "score": 28,
-    "comments": 0
+    "title": "Your hex editor should color-code bytes",
+    "link": "https://simonomi.dev/blog/color-code-your-bytes/",
+    "hn_link": "https://news.ycombinator.com/item?id=47846688",
+    "score": 72,
+    "comments": 10
   },
   {
-    "title": "Garbage Collection Without Unsafe Code",
-    "link": "https://fitzgen.com/2024/02/06/safe-gc.html",
-    "hn_link": "https://news.ycombinator.com/item?id=47821853",
-    "score": 37,
-    "comments": 4
+    "title": "Apple fixes bug that cops used to extract deleted chat messages from iPhones",
+    "link": "https://techcrunch.com/2026/04/22/apple-fixes-bug-that-cops-used-to-extract-deleted-chat-messages-from-iphones/",
+    "hn_link": "https://news.ycombinator.com/item?id=47868867",
+    "score": 601,
+    "comments": 147
   },
   {
-    "title": "Laws of Software Engineering",
-    "link": "https://lawsofsoftwareengineering.com",
-    "hn_link": "https://news.ycombinator.com/item?id=47847179",
-    "score": 998,
-    "comments": 467
+    "title": "We found a stable Firefox identifier linking all your private Tor identities",
+    "link": "https://fingerprint.com/blog/firefox-tor-indexeddb-privacy-vulnerability/",
+    "hn_link": "https://news.ycombinator.com/item?id=47866697",
+    "score": 696,
+    "comments": 196
   }
 ]
