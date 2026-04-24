@@ -1,37 +1,37 @@
 [
   {
-    "title": "I am building a cloud",
-    "link": "https://crawshaw.io/blog/building-a-cloud",
-    "hn_link": "https://news.ycombinator.com/item?id=47872324",
-    "score": 341,
-    "comments": 162
+    "title": "DeepSeek v4",
+    "link": "https://api-docs.deepseek.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=47884971",
+    "score": 941,
+    "comments": 581
   },
   {
-    "title": "Alberta startup sells no-tech tractors for half price",
-    "link": "https://wheelfront.com/this-alberta-startup-sells-no-tech-tractors-for-half-price/",
-    "hn_link": "https://news.ycombinator.com/item?id=47865868",
-    "score": 1766,
-    "comments": 563
+    "title": "Why I Write (1946)",
+    "link": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/why-i-write/",
+    "hn_link": "https://news.ycombinator.com/item?id=47884768",
+    "score": 164,
+    "comments": 42
   },
   {
-    "title": "Your hex editor should color-code bytes",
-    "link": "https://simonomi.dev/blog/color-code-your-bytes/",
-    "hn_link": "https://news.ycombinator.com/item?id=47846688",
-    "score": 72,
-    "comments": 10
+    "title": "Spinel: Ruby AOT Native Compiler",
+    "link": "https://github.com/matz/spinel",
+    "hn_link": "https://news.ycombinator.com/item?id=47887334",
+    "score": 31,
+    "comments": 6
   },
   {
-    "title": "Apple fixes bug that cops used to extract deleted chat messages from iPhones",
-    "link": "https://techcrunch.com/2026/04/22/apple-fixes-bug-that-cops-used-to-extract-deleted-chat-messages-from-iphones/",
-    "hn_link": "https://news.ycombinator.com/item?id=47868867",
-    "score": 601,
-    "comments": 147
+    "title": "Composition Shouldn't be this Hard",
+    "link": "https://www.cambra.dev/blog/announcement/",
+    "hn_link": "https://news.ycombinator.com/item?id=47886773",
+    "score": 48,
+    "comments": 30
   },
   {
-    "title": "We found a stable Firefox identifier linking all your private Tor identities",
-    "link": "https://fingerprint.com/blog/firefox-tor-indexeddb-privacy-vulnerability/",
-    "hn_link": "https://news.ycombinator.com/item?id=47866697",
-    "score": 696,
-    "comments": 196
+    "title": "S. Korea police arrest man over AI image of runaway wolf that misled authorities",
+    "link": "https://www.bbc.com/news/articles/c4gx1n0dl9no",
+    "hn_link": "https://news.ycombinator.com/item?id=47887683",
+    "score": 6,
+    "comments": 0
   }
 ]
