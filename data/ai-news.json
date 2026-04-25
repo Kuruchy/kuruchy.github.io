@@ -1,37 +1,37 @@
 [
   {
-    "title": "DeepSeek v4",
-    "link": "https://api-docs.deepseek.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=47884971",
-    "score": 941,
-    "comments": 581
+    "title": "New 10 GbE USB adapters are cooler, smaller, cheaper",
+    "link": "https://www.jeffgeerling.com/blog/2026/new-10-gbe-usb-adapters-cooler-smaller-cheaper/",
+    "hn_link": "https://news.ycombinator.com/item?id=47899053",
+    "score": 117,
+    "comments": 32
   },
   {
-    "title": "Why I Write (1946)",
-    "link": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/why-i-write/",
-    "hn_link": "https://news.ycombinator.com/item?id=47884768",
-    "score": 164,
-    "comments": 42
+    "title": "Google plans to invest up to $40B in Anthropic",
+    "link": "https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic",
+    "hn_link": "https://news.ycombinator.com/item?id=47892074",
+    "score": 566,
+    "comments": 551
   },
   {
-    "title": "Spinel: Ruby AOT Native Compiler",
-    "link": "https://github.com/matz/spinel",
-    "hn_link": "https://news.ycombinator.com/item?id=47887334",
-    "score": 31,
-    "comments": 6
-  },
-  {
-    "title": "Composition Shouldn't be this Hard",
-    "link": "https://www.cambra.dev/blog/announcement/",
-    "hn_link": "https://news.ycombinator.com/item?id=47886773",
-    "score": 48,
-    "comments": 30
-  },
-  {
-    "title": "S. Korea police arrest man over AI image of runaway wolf that misled authorities",
-    "link": "https://www.bbc.com/news/articles/c4gx1n0dl9no",
-    "hn_link": "https://news.ycombinator.com/item?id=47887683",
-    "score": 6,
+    "title": "Show HN: A Karpathy-style LLM wiki your agents maintain (Markdown and Git)",
+    "link": "https://github.com/nex-crm/wuphf",
+    "hn_link": "https://news.ycombinator.com/item?id=47899844",
+    "score": 1,
     "comments": 0
+  },
+  {
+    "title": "A 3D Body from Eight Questions – No Photo, No GPU",
+    "link": "https://clad.you/blog/posts/questionnaire-mlp/",
+    "hn_link": "https://news.ycombinator.com/item?id=47862541",
+    "score": 51,
+    "comments": 9
+  },
+  {
+    "title": "Paraloid B-72",
+    "link": "https://en.wikipedia.org/wiki/Paraloid_B-72",
+    "hn_link": "https://news.ycombinator.com/item?id=47858939",
+    "score": 175,
+    "comments": 34
   }
 ]
