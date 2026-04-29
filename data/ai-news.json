@@ -1,37 +1,37 @@
 [
   {
-    "title": "GTFOBins",
-    "link": "https://gtfobins.org/",
-    "hn_link": "https://news.ycombinator.com/item?id=47931035",
-    "score": 190,
-    "comments": 52
+    "title": "Ghostty is leaving GitHub",
+    "link": "https://mitchellh.com/writing/ghostty-leaving-github",
+    "hn_link": "https://news.ycombinator.com/item?id=47939579",
+    "score": 2619,
+    "comments": 766
   },
   {
-    "title": "Talkie: a 13B vintage language model from 1930",
-    "link": "https://talkie-lm.com/introducing-talkie",
-    "hn_link": "https://news.ycombinator.com/item?id=47927903",
-    "score": 372,
+    "title": "Soft launch of open-source code platform for government",
+    "link": "https://www.nldigitalgovernment.nl/news/soft-launch-for-government-open-source-code-platform/",
+    "hn_link": "https://news.ycombinator.com/item?id=47945918",
+    "score": 33,
+    "comments": 10
+  },
+  {
+    "title": "Show HN: Rip.so – a graveyard for dead internet things",
+    "link": "https://rip.so",
+    "hn_link": "https://news.ycombinator.com/item?id=47945955",
+    "score": 15,
+    "comments": 8
+  },
+  {
+    "title": "Bugs Rust won't catch",
+    "link": "https://corrode.dev/blog/bugs-rust-wont-catch/",
+    "hn_link": "https://news.ycombinator.com/item?id=47943499",
+    "score": 299,
     "comments": 128
   },
   {
-    "title": "The World's Most Complex Machine",
-    "link": "https://worksinprogress.co/issue/the-worlds-most-complex-machine/",
-    "hn_link": "https://news.ycombinator.com/item?id=47901064",
-    "score": 42,
-    "comments": 6
-  },
-  {
-    "title": "Microsoft and OpenAI end their exclusive and revenue-sharing deal",
-    "link": "https://www.bloomberg.com/news/articles/2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai",
-    "hn_link": "https://news.ycombinator.com/item?id=47921248",
-    "score": 884,
-    "comments": 760
-  },
-  {
-    "title": "Is my blue your blue?",
-    "link": "https://ismy.blue/",
-    "hn_link": "https://news.ycombinator.com/item?id=47926861",
-    "score": 546,
-    "comments": 374
+    "title": "Tell HN: An update from the new Tindie team",
+    "link": "https://news.ycombinator.com/item?id=47945522",
+    "hn_link": "https://news.ycombinator.com/item?id=47945522",
+    "score": 32,
+    "comments": 14
   }
 ]
