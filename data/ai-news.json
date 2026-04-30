@@ -1,37 +1,37 @@
 [
   {
-    "title": "Ghostty is leaving GitHub",
-    "link": "https://mitchellh.com/writing/ghostty-leaving-github",
-    "hn_link": "https://news.ycombinator.com/item?id=47939579",
-    "score": 2619,
-    "comments": 766
+    "title": "Where the goblins came from",
+    "link": "https://openai.com/index/where-the-goblins-came-from/",
+    "hn_link": "https://news.ycombinator.com/item?id=47957688",
+    "score": 617,
+    "comments": 337
   },
   {
-    "title": "Soft launch of open-source code platform for government",
-    "link": "https://www.nldigitalgovernment.nl/news/soft-launch-for-government-open-source-code-platform/",
-    "hn_link": "https://news.ycombinator.com/item?id=47945918",
-    "score": 33,
-    "comments": 10
+    "title": "Noctua releases official 3D CAD models for its cooling fans",
+    "link": "https://www.noctua.at/en/3d-cad-models",
+    "hn_link": "https://news.ycombinator.com/item?id=47927627",
+    "score": 245,
+    "comments": 49
   },
   {
-    "title": "Show HN: Rip.so – a graveyard for dead internet things",
-    "link": "https://rip.so",
-    "hn_link": "https://news.ycombinator.com/item?id=47945955",
-    "score": 15,
-    "comments": 8
+    "title": "Zed 1.0",
+    "link": "https://zed.dev/blog/zed-1-0",
+    "hn_link": "https://news.ycombinator.com/item?id=47949027",
+    "score": 1855,
+    "comments": 594
   },
   {
-    "title": "Bugs Rust won't catch",
-    "link": "https://corrode.dev/blog/bugs-rust-wont-catch/",
-    "hn_link": "https://news.ycombinator.com/item?id=47943499",
-    "score": 299,
-    "comments": 128
+    "title": "The Zig project's rationale for their anti-AI contribution policy",
+    "link": "https://simonwillison.net/2026/Apr/30/zig-anti-ai/",
+    "hn_link": "https://news.ycombinator.com/item?id=47957294",
+    "score": 285,
+    "comments": 123
   },
   {
-    "title": "Tell HN: An update from the new Tindie team",
-    "link": "https://news.ycombinator.com/item?id=47945522",
-    "hn_link": "https://news.ycombinator.com/item?id=47945522",
-    "score": 32,
-    "comments": 14
+    "title": "Mozilla's Opposition to Chrome's Prompt API",
+    "link": "https://github.com/mozilla/standards-positions/issues/1213",
+    "hn_link": "https://news.ycombinator.com/item?id=47959463",
+    "score": 71,
+    "comments": 21
   }
 ]
