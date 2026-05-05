@@ -1,37 +1,37 @@
 [
   {
-    "title": "Trademark Violation: Fake Notepad++ for Mac",
-    "link": "https://notepad-plus-plus.org/news/npp-trademark-infringement/",
-    "hn_link": "https://news.ycombinator.com/item?id=48006445",
-    "score": 66,
-    "comments": 8
+    "title": "Async Rust never left the MVP state",
+    "link": "https://tweedegolf.nl/en/blog/237/async-rust-never-left-the-mvp-state",
+    "hn_link": "https://news.ycombinator.com/item?id=48019163",
+    "score": 132,
+    "comments": 67
   },
   {
-    "title": "Using “underdrawings” for accurate text and numbers",
-    "link": "https://samcollins.blog/underdrawings/",
-    "hn_link": "https://news.ycombinator.com/item?id=47977990",
-    "score": 246,
-    "comments": 81
+    "title": "Hand Drawn QR Codes",
+    "link": "https://sethmlarson.dev/hand-drawn-qr-codes",
+    "hn_link": "https://news.ycombinator.com/item?id=48017907",
+    "score": 106,
+    "comments": 15
   },
   {
-    "title": "GameStop makes $55.5B takeover offer for eBay",
-    "link": "https://www.bbc.co.uk/news/articles/cn0p8yled1do",
-    "hn_link": "https://news.ycombinator.com/item?id=48006402",
-    "score": 31,
-    "comments": 8
+    "title": "Should I Run Plain Docker Compose in Production in 2026?",
+    "link": "https://distr.sh/blog/running-docker-in-production/",
+    "hn_link": "https://news.ycombinator.com/item?id=47962032",
+    "score": 9,
+    "comments": 3
   },
   {
-    "title": "Debunking the CIA's “magic” heartbeat sensor [video]",
-    "link": "https://www.youtube.com/watch?v=SVTPv4sI_Jc",
-    "hn_link": "https://news.ycombinator.com/item?id=48002839",
-    "score": 23,
-    "comments": 11
+    "title": "Bun is being ported from Zig to Rust",
+    "link": "https://github.com/oven-sh/bun/commit/46d3bc29f270fa881dd5730ef1549e88407701a5",
+    "hn_link": "https://news.ycombinator.com/item?id=48016880",
+    "score": 507,
+    "comments": 359
   },
   {
-    "title": "BYOMesh – New LoRa mesh radio offers 100x the bandwidth",
-    "link": "https://partyon.xyz/@nullagent/116499715071759135",
-    "hn_link": "https://news.ycombinator.com/item?id=47999636",
-    "score": 382,
-    "comments": 124
+    "title": "How OpenAI delivers low-latency voice AI at scale",
+    "link": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale/",
+    "hn_link": "https://news.ycombinator.com/item?id=48013919",
+    "score": 409,
+    "comments": 126
   }
 ]
