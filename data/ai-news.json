@@ -1,37 +1,37 @@
 [
   {
-    "title": "Async Rust never left the MVP state",
-    "link": "https://tweedegolf.nl/en/blog/237/async-rust-never-left-the-mvp-state",
-    "hn_link": "https://news.ycombinator.com/item?id=48019163",
-    "score": 132,
-    "comments": 67
+    "title": "Agents can now create Cloudflare accounts, buy domains, and deploy",
+    "link": "https://blog.cloudflare.com/agents-stripe-projects/",
+    "hn_link": "https://news.ycombinator.com/item?id=48031684",
+    "score": 334,
+    "comments": 186
   },
   {
-    "title": "Hand Drawn QR Codes",
-    "link": "https://sethmlarson.dev/hand-drawn-qr-codes",
-    "hn_link": "https://news.ycombinator.com/item?id=48017907",
-    "score": 106,
-    "comments": 15
+    "title": "StarFighter 16-Inch",
+    "link": "https://us.starlabs.systems/pages/starfighter",
+    "hn_link": "https://news.ycombinator.com/item?id=48031261",
+    "score": 345,
+    "comments": 188
   },
   {
-    "title": "Should I Run Plain Docker Compose in Production in 2026?",
-    "link": "https://distr.sh/blog/running-docker-in-production/",
-    "hn_link": "https://news.ycombinator.com/item?id=47962032",
-    "score": 9,
-    "comments": 3
+    "title": "CARA 2.0 – “I Built a Better Robot Dog”",
+    "link": "https://www.aaedmusa.com/projects/cara2",
+    "hn_link": "https://news.ycombinator.com/item?id=48005432",
+    "score": 164,
+    "comments": 20
   },
   {
-    "title": "Bun is being ported from Zig to Rust",
-    "link": "https://github.com/oven-sh/bun/commit/46d3bc29f270fa881dd5730ef1549e88407701a5",
-    "hn_link": "https://news.ycombinator.com/item?id=48016880",
-    "score": 507,
-    "comments": 359
+    "title": "Batteries Not Included, or Required, for These Smart Home Sensors",
+    "link": "https://coe.gatech.edu/news/2026/04/batteries-not-included-or-required-these-smart-home-sensors",
+    "hn_link": "https://news.ycombinator.com/item?id=47998638",
+    "score": 34,
+    "comments": 17
   },
   {
-    "title": "How OpenAI delivers low-latency voice AI at scale",
-    "link": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale/",
-    "hn_link": "https://news.ycombinator.com/item?id=48013919",
-    "score": 409,
-    "comments": 126
+    "title": "Knitting bullshit",
+    "link": "https://katedaviesdesigns.com/2026/04/29/knitting-bullshit/",
+    "hn_link": "https://news.ycombinator.com/item?id=48032461",
+    "score": 68,
+    "comments": 22
   }
 ]
