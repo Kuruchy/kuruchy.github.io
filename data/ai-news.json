@@ -1,37 +1,37 @@
 [
   {
-    "title": "Valve releases Steam Controller CAD files under Creative Commons license",
-    "link": "https://www.digitalfoundry.net/news/2026/05/valve-releases-steam-controller-cad-files-under-creative-commons-license",
-    "hn_link": "https://news.ycombinator.com/item?id=48037555",
-    "score": 1446,
-    "comments": 463
+    "title": "Canvas is down as ShinyHunters threatens to leak schools’ data",
+    "link": "https://www.theverge.com/tech/926458/canvas-shinyhunters-breach",
+    "hn_link": "https://news.ycombinator.com/item?id=48055913",
+    "score": 624,
+    "comments": 379
   },
   {
-    "title": "Appearing productive in the workplace",
-    "link": "https://nooneshappy.com/article/appearing-productive-in-the-workplace/",
-    "hn_link": "https://news.ycombinator.com/item?id=48038001",
-    "score": 1188,
-    "comments": 455
+    "title": "Maybe you shouldn't install new software for a bit",
+    "link": "https://xeiaso.net/blog/2026/abstain-from-install/",
+    "hn_link": "https://news.ycombinator.com/item?id=48056227",
+    "score": 512,
+    "comments": 267
   },
   {
-    "title": "Permacomputing Principles",
-    "link": "https://permacomputing.net/principles/",
-    "hn_link": "https://news.ycombinator.com/item?id=48044638",
-    "score": 145,
-    "comments": 67
+    "title": "Cloudflare to cut about 20% workforce",
+    "link": "https://www.reuters.com/business/world-at-work/cloudflare-cut-over-1100-jobs-2026-05-07/",
+    "hn_link": "https://news.ycombinator.com/item?id=48054423",
+    "score": 708,
+    "comments": 459
   },
   {
-    "title": "SQLite Is a Library of Congress Recommended Storage Format",
-    "link": "https://sqlite.org/locrsf.html",
-    "hn_link": "https://news.ycombinator.com/item?id=48042434",
-    "score": 259,
-    "comments": 69
+    "title": "Dirtyfrag: Universal Linux LPE",
+    "link": "https://www.openwall.com/lists/oss-security/2026/05/07/8",
+    "hn_link": "https://news.ycombinator.com/item?id=48053623",
+    "score": 631,
+    "comments": 259
   },
   {
-    "title": "Diskless Linux boot using ZFS, iSCSI and PXE",
-    "link": "https://aniket.foo/posts/20260505-netboot/",
-    "hn_link": "https://news.ycombinator.com/item?id=48045012",
-    "score": 96,
-    "comments": 47
+    "title": "ClojureScript Gets Async/Await",
+    "link": "https://clojurescript.org/news/2026-05-07-release",
+    "hn_link": "https://news.ycombinator.com/item?id=48059662",
+    "score": 42,
+    "comments": 9
   }
 ]
