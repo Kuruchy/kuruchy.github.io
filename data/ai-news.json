@@ -1,37 +1,37 @@
 [
   {
-    "title": "Canvas is down as ShinyHunters threatens to leak schools’ data",
-    "link": "https://www.theverge.com/tech/926458/canvas-shinyhunters-breach",
-    "hn_link": "https://news.ycombinator.com/item?id=48055913",
-    "score": 624,
-    "comments": 379
+    "title": "A recent experience with ChatGPT 5.5 Pro",
+    "link": "https://gowers.wordpress.com/2026/05/08/a-recent-experience-with-chatgpt-5-5-pro/",
+    "hn_link": "https://news.ycombinator.com/item?id=48071262",
+    "score": 278,
+    "comments": 141
   },
   {
-    "title": "Maybe you shouldn't install new software for a bit",
-    "link": "https://xeiaso.net/blog/2026/abstain-from-install/",
-    "hn_link": "https://news.ycombinator.com/item?id=48056227",
-    "score": 512,
-    "comments": 267
+    "title": "Google broke reCAPTCHA for de-googled Android users",
+    "link": "https://reclaimthenet.org/google-broke-recaptcha-for-de-googled-android-users",
+    "hn_link": "https://news.ycombinator.com/item?id=48067119",
+    "score": 994,
+    "comments": 328
   },
   {
-    "title": "Cloudflare to cut about 20% workforce",
-    "link": "https://www.reuters.com/business/world-at-work/cloudflare-cut-over-1100-jobs-2026-05-07/",
-    "hn_link": "https://news.ycombinator.com/item?id=48054423",
-    "score": 708,
-    "comments": 459
+    "title": "Using Claude Code: The unreasonable effectiveness of HTML",
+    "link": "https://twitter.com/trq212/status/2052809885763747935",
+    "hn_link": "https://news.ycombinator.com/item?id=48071940",
+    "score": 125,
+    "comments": 72
   },
   {
-    "title": "Dirtyfrag: Universal Linux LPE",
-    "link": "https://www.openwall.com/lists/oss-security/2026/05/07/8",
-    "hn_link": "https://news.ycombinator.com/item?id=48053623",
-    "score": 631,
-    "comments": 259
+    "title": "OpenAI’s WebRTC problem",
+    "link": "https://moq.dev/blog/webrtc-is-the-problem/",
+    "hn_link": "https://news.ycombinator.com/item?id=48051951",
+    "score": 302,
+    "comments": 76
   },
   {
-    "title": "ClojureScript Gets Async/Await",
-    "link": "https://clojurescript.org/news/2026-05-07-release",
-    "hn_link": "https://news.ycombinator.com/item?id=48059662",
-    "score": 42,
-    "comments": 9
+    "title": "Mythical Man Month",
+    "link": "https://martinfowler.com/bliki/MythicalManMonth.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48046436",
+    "score": 145,
+    "comments": 105
   }
 ]
