@@ -1,37 +1,37 @@
 [
   {
-    "title": "A recent experience with ChatGPT 5.5 Pro",
-    "link": "https://gowers.wordpress.com/2026/05/08/a-recent-experience-with-chatgpt-5-5-pro/",
-    "hn_link": "https://news.ycombinator.com/item?id=48071262",
+    "title": "Rotten Dot Com",
+    "link": "https://www.theparisreview.org/blog/2026/05/06/rotten-dot-com/",
+    "hn_link": "https://news.ycombinator.com/item?id=48082039",
+    "score": 47,
+    "comments": 27
+  },
+  {
+    "title": "Show HN: Building a web server in assembly to give my life (a lack of) meaning",
+    "link": "https://github.com/imtomt/ymawky",
+    "hn_link": "https://news.ycombinator.com/item?id=48080587",
     "score": 278,
-    "comments": 141
+    "comments": 122
   },
   {
-    "title": "Google broke reCAPTCHA for de-googled Android users",
-    "link": "https://reclaimthenet.org/google-broke-recaptcha-for-de-googled-android-users",
-    "hn_link": "https://news.ycombinator.com/item?id=48067119",
-    "score": 994,
-    "comments": 328
+    "title": "Bun's experimental Rust rewrite hits 99.8% test compatibility on Linux x64 glibc",
+    "link": "https://twitter.com/jarredsumner/status/2053047748191232310",
+    "hn_link": "https://news.ycombinator.com/item?id=48073680",
+    "score": 550,
+    "comments": 515
   },
   {
-    "title": "Using Claude Code: The unreasonable effectiveness of HTML",
-    "link": "https://twitter.com/trq212/status/2052809885763747935",
-    "hn_link": "https://news.ycombinator.com/item?id=48071940",
-    "score": 125,
-    "comments": 72
+    "title": "The One Dollar Counterfeiter",
+    "link": "https://www.amusingplanet.com/2026/05/emerich-juettner-one-dollar.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48048684",
+    "score": 118,
+    "comments": 32
   },
   {
-    "title": "OpenAI’s WebRTC problem",
-    "link": "https://moq.dev/blog/webrtc-is-the-problem/",
-    "hn_link": "https://news.ycombinator.com/item?id=48051951",
-    "score": 302,
-    "comments": 76
-  },
-  {
-    "title": "Mythical Man Month",
-    "link": "https://martinfowler.com/bliki/MythicalManMonth.html",
-    "hn_link": "https://news.ycombinator.com/item?id=48046436",
-    "score": 145,
-    "comments": 105
+    "title": "Gemini API File Search is now multimodal",
+    "link": "https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/",
+    "hn_link": "https://news.ycombinator.com/item?id=48080702",
+    "score": 90,
+    "comments": 12
   }
 ]
