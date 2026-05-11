@@ -1,37 +1,37 @@
 [
   {
-    "title": "Rotten Dot Com",
-    "link": "https://www.theparisreview.org/blog/2026/05/06/rotten-dot-com/",
-    "hn_link": "https://news.ycombinator.com/item?id=48082039",
-    "score": 47,
-    "comments": 27
+    "title": "Hardware Attestation as Monopoly Enabler",
+    "link": "https://grapheneos.social/@GrapheneOS/116550899908879585",
+    "hn_link": "https://news.ycombinator.com/item?id=48086190",
+    "score": 1655,
+    "comments": 544
   },
   {
-    "title": "Show HN: Building a web server in assembly to give my life (a lack of) meaning",
-    "link": "https://github.com/imtomt/ymawky",
-    "hn_link": "https://news.ycombinator.com/item?id=48080587",
-    "score": 278,
-    "comments": 122
+    "title": "Ratty – A terminal emulator with inline 3D graphics",
+    "link": "https://ratty-term.org/",
+    "hn_link": "https://news.ycombinator.com/item?id=48093100",
+    "score": 36,
+    "comments": 19
   },
   {
-    "title": "Bun's experimental Rust rewrite hits 99.8% test compatibility on Linux x64 glibc",
-    "link": "https://twitter.com/jarredsumner/status/2053047748191232310",
-    "hn_link": "https://news.ycombinator.com/item?id=48073680",
-    "score": 550,
-    "comments": 515
+    "title": "Local AI needs to be the norm",
+    "link": "https://unix.foo/posts/local-ai-needs-to-be-norm/",
+    "hn_link": "https://news.ycombinator.com/item?id=48085821",
+    "score": 1239,
+    "comments": 518
   },
   {
-    "title": "The One Dollar Counterfeiter",
-    "link": "https://www.amusingplanet.com/2026/05/emerich-juettner-one-dollar.html",
-    "hn_link": "https://news.ycombinator.com/item?id=48048684",
-    "score": 118,
-    "comments": 32
+    "title": "I'm going back to writing code by hand",
+    "link": "https://blog.k10s.dev/im-going-back-to-writing-code-by-hand/",
+    "hn_link": "https://news.ycombinator.com/item?id=48090029",
+    "score": 431,
+    "comments": 208
   },
   {
-    "title": "Gemini API File Search is now multimodal",
-    "link": "https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/",
-    "hn_link": "https://news.ycombinator.com/item?id=48080702",
-    "score": 90,
-    "comments": 12
+    "title": "The greatest shot in television: James Burke had one chance to nail this scene (2024)",
+    "link": "https://www.openculture.com/2024/10/the-greatest-shot-in-television.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48090521",
+    "score": 196,
+    "comments": 85
   }
 ]
