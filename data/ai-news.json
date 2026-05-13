@@ -1,37 +1,37 @@
 [
   {
-    "title": "Learning Software Architecture",
-    "link": "https://matklad.github.io/2026/05/12/software-architecture.html",
-    "hn_link": "https://news.ycombinator.com/item?id=48106024",
-    "score": 53,
-    "comments": 1
+    "title": "Deterministic Fully-Static Whole-Binary Translation Without Heuristics",
+    "link": "https://arxiv.org/abs/2605.08419",
+    "hn_link": "https://news.ycombinator.com/item?id=48117810",
+    "score": 185,
+    "comments": 46
   },
   {
-    "title": "Postmortem: TanStack NPM supply-chain compromise",
-    "link": "https://tanstack.com/blog/npm-supply-chain-compromise-postmortem",
-    "hn_link": "https://news.ycombinator.com/item?id=48100706",
-    "score": 865,
-    "comments": 348
+    "title": "Restore full BambuNetwork support for Bambu Lab printers",
+    "link": "https://github.com/FULU-Foundation/OrcaSlicer-bambulab",
+    "hn_link": "https://news.ycombinator.com/item?id=48115127",
+    "score": 443,
+    "comments": 185
   },
   {
-    "title": "Screenshots of Old Desktop OSes",
-    "link": "http://www.typewritten.org/Media/",
-    "hn_link": "https://news.ycombinator.com/item?id=48104428",
-    "score": 199,
-    "comments": 62
+    "title": "Googlebook",
+    "link": "https://googlebook.google/",
+    "hn_link": "https://news.ycombinator.com/item?id=48111545",
+    "score": 792,
+    "comments": 1302
   },
   {
-    "title": "They Live (1988) inspired Adblocker",
-    "link": "https://github.com/davmlaw/they_live_adblocker",
-    "hn_link": "https://news.ycombinator.com/item?id=48102700",
-    "score": 250,
-    "comments": 85
+    "title": "New stainless steel can survive conditions for hydrogen production in seawater",
+    "link": "https://www.sciencedaily.com/releases/2026/05/260510030950.htm",
+    "hn_link": "https://news.ycombinator.com/item?id=48089921",
+    "score": 55,
+    "comments": 22
   },
   {
-    "title": "Toxicity on Social Media – The Noisy Room",
-    "link": "https://thenoisyroom.com",
-    "hn_link": "https://news.ycombinator.com/item?id=48105297",
-    "score": 27,
-    "comments": 7
+    "title": "Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model",
+    "link": "https://github.com/cactus-compute/needle",
+    "hn_link": "https://news.ycombinator.com/item?id=48111896",
+    "score": 472,
+    "comments": 154
   }
 ]
