@@ -1,37 +1,37 @@
 [
   {
-    "title": "Claude for Small Business",
-    "link": "https://www.anthropic.com/news/claude-for-small-business",
-    "hn_link": "https://news.ycombinator.com/item?id=48130950",
-    "score": 256,
-    "comments": 190
+    "title": "RelaxAI – UK sovereign LLM inference at 80% cheaper than OpenAI/Claude",
+    "link": "https://relax.ai/docs",
+    "hn_link": "https://news.ycombinator.com/item?id=48146424",
+    "score": 42,
+    "comments": 18
   },
   {
-    "title": "Scorched Earth 2000 – Web",
-    "link": "http://www.scorch2000.com/web/",
-    "hn_link": "https://news.ycombinator.com/item?id=48129694",
-    "score": 262,
-    "comments": 99
+    "title": "Explore Wikipedia Like a Windows XP Desktop",
+    "link": "https://explorer.samismith.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=48146129",
+    "score": 55,
+    "comments": 12
   },
   {
-    "title": "Linux gaming is faster because Windows APIs are becoming Linux kernel features",
-    "link": "https://www.xda-developers.com/linux-gaming-is-getting-faster-because-windows-apis-are-becoming-linux-kernel-features/",
-    "hn_link": "https://news.ycombinator.com/item?id=48087887",
-    "score": 741,
-    "comments": 479
+    "title": "Removing the modem and GPS from my 2024 RAV4 hybrid",
+    "link": "https://arkadiyt.com/2026/05/13/removing-the-modem-and-gps-from-my-rav4/",
+    "hn_link": "https://news.ycombinator.com/item?id=48138136",
+    "score": 881,
+    "comments": 457
   },
   {
-    "title": "Classic 7 is a Windows 10 LTSC mod to look 1:1 to Windows 7",
-    "link": "https://classic7.lol/",
-    "hn_link": "https://news.ycombinator.com/item?id=48132030",
-    "score": 54,
-    "comments": 46
+    "title": "Building ML framework with Rust and Category Theory",
+    "link": "https://hghalebi.github.io/category_theory_transformer_rs/",
+    "hn_link": "https://news.ycombinator.com/item?id=48137629",
+    "score": 35,
+    "comments": 11
   },
   {
-    "title": "Setting up a free *.city.state.us locality domain (2025)",
-    "link": "https://fredchan.org/blog/locality-domains-guide/",
-    "hn_link": "https://news.ycombinator.com/item?id=48122635",
-    "score": 562,
-    "comments": 174
+    "title": "Show HN: GlycemicGPT – Open-source AI-powered diabetes management",
+    "link": "https://github.com/GlycemicGPT/GlycemicGPT",
+    "hn_link": "https://news.ycombinator.com/item?id=48144670",
+    "score": 28,
+    "comments": 11
   }
 ]
