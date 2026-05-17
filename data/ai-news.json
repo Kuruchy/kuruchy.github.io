@@ -1,37 +1,37 @@
 [
   {
-    "title": "Project Gutenberg – keeps getting better",
-    "link": "https://www.gutenberg.org/",
-    "hn_link": "https://news.ycombinator.com/item?id=48150431",
-    "score": 930,
-    "comments": 197
+    "title": "Zerostack – A Unix-inspired coding agent written in pure Rust",
+    "link": "https://crates.io/crates/zerostack/1.0.0",
+    "hn_link": "https://news.ycombinator.com/item?id=48164287",
+    "score": 390,
+    "comments": 159
   },
   {
-    "title": "Frontier AI has broken the open CTF format",
-    "link": "https://kabir.au/blog/the-ctf-scene-is-dead",
-    "hn_link": "https://news.ycombinator.com/item?id=48157559",
-    "score": 115,
-    "comments": 90
+    "title": "Mozilla to UK regulators: VPNs are essential privacy and security tools",
+    "link": "https://blog.mozilla.org/netpolicy/2026/05/15/mozilla-to-uk-regulators-vpns-are-essential-privacy-and-security-tools-and-should-not-be-undermined/",
+    "hn_link": "https://news.ycombinator.com/item?id=48166459",
+    "score": 172,
+    "comments": 47
   },
   {
-    "title": "SQL patterns I use to catch transaction fraud",
-    "link": "https://analytics.fixelsmith.com/posts/sql-fraud-patterns/",
-    "hn_link": "https://news.ycombinator.com/item?id=48155212",
-    "score": 210,
-    "comments": 66
+    "title": "Colossus: The Forbin Project",
+    "link": "https://en.wikipedia.org/wiki/Colossus:_The_Forbin_Project",
+    "hn_link": "https://news.ycombinator.com/item?id=48142115",
+    "score": 101,
+    "comments": 25
   },
   {
-    "title": "Ploopy Bean: a trackpoint for every computer",
-    "link": "https://ploopy.co/shop/bean-pointing-stick/",
-    "hn_link": "https://news.ycombinator.com/item?id=48114208",
-    "score": 95,
-    "comments": 45
+    "title": "A nicer voltmeter clock",
+    "link": "https://lcamtuf.substack.com/p/a-nicer-voltmeter-clock",
+    "hn_link": "https://news.ycombinator.com/item?id=48164432",
+    "score": 176,
+    "comments": 24
   },
   {
-    "title": "I believe there are entire companies right now under AI psychosis",
-    "link": "https://twitter.com/mitchellh/status/2055380239711457578",
-    "hn_link": "https://news.ycombinator.com/item?id=48153379",
-    "score": 1338,
-    "comments": 660
+    "title": "Hosting a website on an 8-bit microcontroller",
+    "link": "https://maurycyz.com/projects/mcusite/",
+    "hn_link": "https://news.ycombinator.com/item?id=48165295",
+    "score": 126,
+    "comments": 11
   }
 ]
