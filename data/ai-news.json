@@ -1,37 +1,37 @@
 [
   {
-    "title": "Gaussian Splat of a Strawberry",
-    "link": "https://superspl.at/scene/84df8849",
-    "hn_link": "https://news.ycombinator.com/item?id=48191602",
-    "score": 34,
-    "comments": 15
+    "title": "Everything in C is undefined behavior",
+    "link": "https://blog.habets.se/2026/05/Everything-in-C-is-undefined-behavior.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48203698",
+    "score": 209,
+    "comments": 261
   },
   {
-    "title": "I Found Ultra-Pure Quantum Crystals in an Abandoned Mine in the Atacama Desert",
-    "link": "https://medium.com/@breid.at/ultra-pure-quantum-crystals-from-an-abandoned-mine-in-a-mysterious-desert-93cc87d12314",
-    "hn_link": "https://news.ycombinator.com/item?id=48165797",
-    "score": 83,
-    "comments": 20
+    "title": "Learnings from 100K lines of Rust with AI (2025)",
+    "link": "https://zfhuang99.github.io/rust/claude%20code/codex/contracts/spec-driven%20development/2025/12/01/rust-with-ai.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48205415",
+    "score": 15,
+    "comments": 9
   },
   {
-    "title": "Polypad",
-    "link": "https://polypad.amplify.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=48166744",
-    "score": 88,
-    "comments": 8
+    "title": "Gemini 3.5 Flash",
+    "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+    "hn_link": "https://news.ycombinator.com/item?id=48196570",
+    "score": 810,
+    "comments": 562
   },
   {
-    "title": "Peter Neumann has died",
-    "link": "https://www.tuhs.org/pipermail/tuhs/2026-May/033748.html",
-    "hn_link": "https://news.ycombinator.com/item?id=48188787",
-    "score": 140,
-    "comments": 8
+    "title": "FiveThirtyEight articles on the Internet Archive",
+    "link": "https://fivethirtyeightindex.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=48201973",
+    "score": 211,
+    "comments": 51
   },
   {
-    "title": "Click (2016)",
-    "link": "https://clickclickclick.click/",
-    "hn_link": "https://news.ycombinator.com/item?id=48187054",
-    "score": 313,
-    "comments": 76
+    "title": "I’ve built a virtual museum with nearly every operating system you can think of",
+    "link": "https://virtualosmuseum.org/",
+    "hn_link": "https://news.ycombinator.com/item?id=48195009",
+    "score": 796,
+    "comments": 172
   }
 ]
