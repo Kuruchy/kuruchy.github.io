@@ -1,37 +1,37 @@
 [
   {
-    "title": "Everything in C is undefined behavior",
-    "link": "https://blog.habets.se/2026/05/Everything-in-C-is-undefined-behavior.html",
-    "hn_link": "https://news.ycombinator.com/item?id=48203698",
-    "score": 209,
-    "comments": 261
+    "title": "Show HN: Rmux – A programmable terminal multiplexer with a Playwright-style SDK",
+    "link": "https://github.com/helvesec/rmux",
+    "hn_link": "https://news.ycombinator.com/item?id=48219918",
+    "score": 59,
+    "comments": 35
   },
   {
-    "title": "Learnings from 100K lines of Rust with AI (2025)",
-    "link": "https://zfhuang99.github.io/rust/claude%20code/codex/contracts/spec-driven%20development/2025/12/01/rust-with-ai.html",
-    "hn_link": "https://news.ycombinator.com/item?id=48205415",
-    "score": 15,
-    "comments": 9
+    "title": "Google officially announces that ads will be included in AI Mode search results",
+    "link": "https://blog.google/products/ads-commerce/google-marketing-live-search-ads/",
+    "hn_link": "https://news.ycombinator.com/item?id=48220105",
+    "score": 110,
+    "comments": 98
   },
   {
-    "title": "Gemini 3.5 Flash",
-    "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
-    "hn_link": "https://news.ycombinator.com/item?id=48196570",
-    "score": 810,
-    "comments": 562
+    "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+    "link": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+    "hn_link": "https://news.ycombinator.com/item?id=48212493",
+    "score": 1210,
+    "comments": 887
   },
   {
-    "title": "FiveThirtyEight articles on the Internet Archive",
-    "link": "https://fivethirtyeightindex.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=48201973",
-    "score": 211,
-    "comments": 51
+    "title": "GitHub confirms breach of 3,800 repos via malicious VSCode extension",
+    "link": "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/",
+    "hn_link": "https://news.ycombinator.com/item?id=48207660",
+    "score": 882,
+    "comments": 367
   },
   {
-    "title": "I’ve built a virtual museum with nearly every operating system you can think of",
-    "link": "https://virtualosmuseum.org/",
-    "hn_link": "https://news.ycombinator.com/item?id=48195009",
-    "score": 796,
-    "comments": 172
+    "title": "Python 3.15: features that didn't make the headlines",
+    "link": "https://blog.changs.co.uk/python-315-features-that-didnt-make-the-headlines.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48220696",
+    "score": 3,
+    "comments": 0
   }
 ]
