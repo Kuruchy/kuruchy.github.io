@@ -1,37 +1,37 @@
 [
   {
-    "title": "Show HN: Rmux – A programmable terminal multiplexer with a Playwright-style SDK",
-    "link": "https://github.com/helvesec/rmux",
-    "hn_link": "https://news.ycombinator.com/item?id=48219918",
-    "score": 59,
-    "comments": 35
+    "title": "Project Hail Mary – Stellar Navigation Chart",
+    "link": "https://valhovey.github.io/gaia-mary/",
+    "hn_link": "https://news.ycombinator.com/item?id=48225297",
+    "score": 950,
+    "comments": 201
   },
   {
-    "title": "Google officially announces that ads will be included in AI Mode search results",
-    "link": "https://blog.google/products/ads-commerce/google-marketing-live-search-ads/",
-    "hn_link": "https://news.ycombinator.com/item?id=48220105",
-    "score": 110,
-    "comments": 98
+    "title": "Slumber a TUI HTTP Client",
+    "link": "https://slumber.lucaspickering.me",
+    "hn_link": "https://news.ycombinator.com/item?id=48231938",
+    "score": 89,
+    "comments": 31
   },
   {
-    "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
-    "link": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
-    "hn_link": "https://news.ycombinator.com/item?id=48212493",
-    "score": 1210,
-    "comments": 887
+    "title": "CODA: Rewriting Transformer Blocks as GEMM-Epilogue Programs",
+    "link": "https://arxiv.org/abs/2605.19269",
+    "hn_link": "https://news.ycombinator.com/item?id=48232118",
+    "score": 74,
+    "comments": 7
   },
   {
-    "title": "GitHub confirms breach of 3,800 repos via malicious VSCode extension",
-    "link": "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/",
-    "hn_link": "https://news.ycombinator.com/item?id=48207660",
-    "score": 882,
-    "comments": 367
+    "title": "The surprising story behind the first British person in space",
+    "link": "https://www.bbc.com/culture/article/20260518-helen-sharman-the-story-behind-the-first-british-person-in-space",
+    "hn_link": "https://news.ycombinator.com/item?id=48209691",
+    "score": 66,
+    "comments": 20
   },
   {
-    "title": "Python 3.15: features that didn't make the headlines",
-    "link": "https://blog.changs.co.uk/python-315-features-that-didnt-make-the-headlines.html",
-    "hn_link": "https://news.ycombinator.com/item?id=48220696",
-    "score": 3,
-    "comments": 0
+    "title": "Cleve Moler has died",
+    "link": "https://www.mathworks.com/company/aboutus/founders/clevemoler.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48231319",
+    "score": 118,
+    "comments": 13
   }
 ]
