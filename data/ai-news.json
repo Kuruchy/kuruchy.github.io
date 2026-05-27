@@ -1,37 +1,37 @@
 [
   {
-    "title": "Magnifica Humanitas (Encyclical Letter)",
-    "link": "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html",
-    "hn_link": "https://news.ycombinator.com/item?id=48265206",
-    "score": 128,
-    "comments": 27
+    "title": "I'm Tired of Talking to AI",
+    "link": "https://orchidfiles.com/im-tired-of-ai-generated-answers/",
+    "hn_link": "https://news.ycombinator.com/item?id=48292224",
+    "score": 146,
+    "comments": 89
   },
   {
-    "title": "Didgeridoo playing as alternative treatment for obstructive sleep apnoea (2006)",
-    "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1360393/",
-    "hn_link": "https://news.ycombinator.com/item?id=48243666",
-    "score": 166,
-    "comments": 65
+    "title": "Mini Micro Fantasy Computer",
+    "link": "https://miniscript.org/MiniMicro/index.html#about",
+    "hn_link": "https://news.ycombinator.com/item?id=48291947",
+    "score": 53,
+    "comments": 20
   },
   {
-    "title": "IBM Spins Off the First Pure-Play Quantum Chip Foundry",
-    "link": "https://futurumgroup.com/insights/2-billion-chips-act-investment-in-quantum-bets-on-ibms-300mm-superconducting-silicon/",
-    "hn_link": "https://news.ycombinator.com/item?id=48265056",
-    "score": 10,
-    "comments": 1
+    "title": "The Melancholy of Slaying Monsters",
+    "link": "https://thereader.mitpress.mit.edu/the-strange-melancholy-of-slaying-monsters/",
+    "hn_link": "https://news.ycombinator.com/item?id=48284711",
+    "score": 124,
+    "comments": 46
   },
   {
-    "title": "Show HN: Audiomass – a free, open-source multitrack audio editor for the web",
-    "link": "https://audiomass.co/?multitrack=1",
-    "hn_link": "https://news.ycombinator.com/item?id=48258015",
-    "score": 392,
-    "comments": 87
+    "title": "Raft Consensus with a Minority of Nodes",
+    "link": "https://padhye.org/raft-minority/",
+    "hn_link": "https://news.ycombinator.com/item?id=48277723",
+    "score": 43,
+    "comments": 5
   },
   {
-    "title": "Show HN: Geomatic – a command-driven geometry studio enabled with autodiff",
-    "link": "https://www.tinyvolt.com/geomatic",
-    "hn_link": "https://news.ycombinator.com/item?id=48264635",
-    "score": 25,
-    "comments": 6
+    "title": "BadHost – CVE-2026-48710: Starlette Host-Header Auth Bypass",
+    "link": "https://badhost.org/",
+    "hn_link": "https://news.ycombinator.com/item?id=48277107",
+    "score": 69,
+    "comments": 25
   }
 ]
