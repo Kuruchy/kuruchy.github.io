@@ -1,37 +1,37 @@
 [
   {
-    "title": "I'm Tired of Talking to AI",
-    "link": "https://orchidfiles.com/im-tired-of-ai-generated-answers/",
-    "hn_link": "https://news.ycombinator.com/item?id=48292224",
-    "score": 146,
-    "comments": 89
+    "title": "YouTube to automatically label AI-generated videos",
+    "link": "https://blog.youtube/news-and-events/improving-ai-labels-viewers-creators/",
+    "hn_link": "https://news.ycombinator.com/item?id=48299753",
+    "score": 946,
+    "comments": 573
   },
   {
-    "title": "Mini Micro Fantasy Computer",
-    "link": "https://miniscript.org/MiniMicro/index.html#about",
-    "hn_link": "https://news.ycombinator.com/item?id=48291947",
-    "score": 53,
-    "comments": 20
+    "title": "A Eureka machine that thinks like nature and explores what AI cannot",
+    "link": "https://iisc.ac.in/a-eureka-machine-that-thinks-like-nature-and-explores-what-ai-cannot/",
+    "hn_link": "https://news.ycombinator.com/item?id=48305446",
+    "score": 85,
+    "comments": 28
   },
   {
-    "title": "The Melancholy of Slaying Monsters",
-    "link": "https://thereader.mitpress.mit.edu/the-strange-melancholy-of-slaying-monsters/",
-    "hn_link": "https://news.ycombinator.com/item?id=48284711",
-    "score": 124,
-    "comments": 46
+    "title": "I analysed 20 years of my chats",
+    "link": "https://drobinin.com/posts/am-i-a-bad-friend/",
+    "hn_link": "https://news.ycombinator.com/item?id=48302220",
+    "score": 156,
+    "comments": 56
   },
   {
-    "title": "Raft Consensus with a Minority of Nodes",
-    "link": "https://padhye.org/raft-minority/",
-    "hn_link": "https://news.ycombinator.com/item?id=48277723",
-    "score": 43,
-    "comments": 5
+    "title": "I think Anthropic and OpenAI have found product-market fit",
+    "link": "https://simonwillison.net/2026/May/27/product-market-fit/",
+    "hn_link": "https://news.ycombinator.com/item?id=48296794",
+    "score": 906,
+    "comments": 1020
   },
   {
-    "title": "BadHost – CVE-2026-48710: Starlette Host-Header Auth Bypass",
-    "link": "https://badhost.org/",
-    "hn_link": "https://news.ycombinator.com/item?id=48277107",
-    "score": 69,
-    "comments": 25
+    "title": "Hallucinate – Massively Multiplayer Online Rave",
+    "link": "https://hallucinate.site",
+    "hn_link": "https://news.ycombinator.com/item?id=48304260",
+    "score": 231,
+    "comments": 97
   }
 ]
