@@ -1,37 +1,37 @@
 [
   {
-    "title": "Claude Opus 4.8",
-    "link": "https://www.anthropic.com/news/claude-opus-4-8",
-    "hn_link": "https://news.ycombinator.com/item?id=48311647",
-    "score": 1568,
-    "comments": 1235
+    "title": "Zig: Build System Reworked",
+    "link": "https://ziglang.org/devlog/2026/#2026-05-26",
+    "hn_link": "https://news.ycombinator.com/item?id=48334048",
+    "score": 21,
+    "comments": 1
   },
   {
-    "title": "Bricks and Minifigs Stole a Man's $200k Lego Collection",
-    "link": "https://mybricklog.com/blog/bricks-minifigs-corporate-stole-old-mans-200000-lego-collection",
-    "hn_link": "https://news.ycombinator.com/item?id=48314136",
-    "score": 1012,
-    "comments": 469
+    "title": "SQLite is all you need for durable workflows",
+    "link": "https://obeli.sk/blog/sqlite-is-all-you-need-for-durable-workflows/",
+    "hn_link": "https://news.ycombinator.com/item?id=48326802",
+    "score": 539,
+    "comments": 268
   },
   {
-    "title": "The $500K AI Film That \"Premiered at Cannes\" Was Not in the Official Festival",
-    "link": "https://firethering.com/hell-grind-ai-film-cannes-premiere-higgsfield/",
-    "hn_link": "https://news.ycombinator.com/item?id=48320985",
-    "score": 23,
-    "comments": 18
+    "title": "The Kaiser and a \"Mediocre Man\" Theory of History",
+    "link": "https://www.deadcarl.com/p/the-kaiser-and-a-mediocre-man-theory",
+    "hn_link": "https://news.ycombinator.com/item?id=48334283",
+    "score": 7,
+    "comments": 1
   },
   {
-    "title": "Real-time LLM Inference on Standard GPUs: 3k tokens/s per request",
-    "link": "https://blog.kog.ai/real-time-llm-inference-on-standard-gpus-3-000-tokens-s-per-request/",
-    "hn_link": "https://news.ycombinator.com/item?id=48321076",
-    "score": 27,
-    "comments": 24
+    "title": "Danish pension fund excludes SpaceX citing governance and valuation",
+    "link": "https://www.reuters.com/legal/transactional/danish-pension-fund-excludes-spacex-citing-governance-valuation-2026-05-29/",
+    "hn_link": "https://news.ycombinator.com/item?id=48333820",
+    "score": 100,
+    "comments": 54
   },
   {
-    "title": "I made a million dollar product from my dorm room (2025)",
-    "link": "https://nick.winans.io/blog/nice-nano/",
-    "hn_link": "https://news.ycombinator.com/item?id=48314951",
-    "score": 442,
-    "comments": 67
+    "title": "Algebraic Effects for the Rest of Us",
+    "link": "https://overreacted.io/algebraic-effects-for-the-rest-of-us/",
+    "hn_link": "https://news.ycombinator.com/item?id=48283009",
+    "score": 55,
+    "comments": 32
   }
 ]
