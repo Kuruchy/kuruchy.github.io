@@ -1,37 +1,37 @@
 [
   {
-    "title": "The Website Specification",
-    "link": "https://specification.website/",
-    "hn_link": "https://news.ycombinator.com/item?id=48343683",
-    "score": 157,
-    "comments": 51
+    "title": "When AI Crosses the Line: The Matplotlib Incident",
+    "link": "https://members.sigmazero.cc/posts/when-ai-crosses-159174096?postId=when-ai-crosses-159174096",
+    "hn_link": "https://news.ycombinator.com/item?id=48355751",
+    "score": 70,
+    "comments": 48
   },
   {
-    "title": "London's Free Roof Terraces",
-    "link": "https://diamondgeezer.blogspot.com/2026/05/londons-free-roof-terraces.html",
-    "hn_link": "https://news.ycombinator.com/item?id=48343714",
-    "score": 52,
+    "title": "A 10 year old Xeon is all you need",
+    "link": "https://point.free/blog/gemma-4-on-a-2016-xeon/",
+    "hn_link": "https://news.ycombinator.com/item?id=48353348",
+    "score": 352,
+    "comments": 147
+  },
+  {
+    "title": "NPM packages from RedHat have been compromised",
+    "link": "https://github.com/RedHatInsights/javascript-clients/issues/492",
+    "hn_link": "https://news.ycombinator.com/item?id=48356625",
+    "score": 12,
+    "comments": 0
+  },
+  {
+    "title": "Tracing HTTP Requests with Go's net/HTTP/httptrace",
+    "link": "https://blainsmith.com/articles/httptrace-with-go/",
+    "hn_link": "https://news.ycombinator.com/item?id=48311587",
+    "score": 94,
     "comments": 6
   },
   {
-    "title": "Domain expertise has always been the real moat",
-    "link": "https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/",
-    "hn_link": "https://news.ycombinator.com/item?id=48340411",
-    "score": 595,
-    "comments": 355
-  },
-  {
-    "title": "The dangerous delusion of modern warfare",
-    "link": "https://economist.com/interactive/essay/2026/05/28/the-dangerous-delusion-of-modern-warfare",
-    "hn_link": "https://news.ycombinator.com/item?id=48344016",
-    "score": 18,
-    "comments": 11
-  },
-  {
-    "title": "Shantell Sans (2023)",
-    "link": "https://shantellsans.com/process",
-    "hn_link": "https://news.ycombinator.com/item?id=48341062",
-    "score": 253,
-    "comments": 26
+    "title": "Cessation of public development of Kefir C compiler",
+    "link": "https://kefir.protopopov.lv/posts/announce2.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48354224",
+    "score": 80,
+    "comments": 23
   }
 ]
