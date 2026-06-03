@@ -1,37 +1,37 @@
 [
   {
-    "title": "Why Janet? (2023)",
-    "link": "https://ianthehenry.com/posts/why-janet/",
-    "hn_link": "https://news.ycombinator.com/item?id=48367907",
-    "score": 165,
-    "comments": 66
+    "title": "Hacking your PC using your speaker without ever touching it",
+    "link": "https://blog.nns.ee/2026/06/03/katana-badusb/",
+    "hn_link": "https://news.ycombinator.com/item?id=48382310",
+    "score": 143,
+    "comments": 32
   },
   {
-    "title": "Adafruit Receives Demand Letter from Fenwick Legal Counsel on Behalf of Flux.ai",
-    "link": "https://blog.adafruit.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=48368121",
-    "score": 126,
-    "comments": 42
+    "title": "Every Byte Matters",
+    "link": "https://fzakaria.com/2026/06/01/every-byte-matters",
+    "hn_link": "https://news.ycombinator.com/item?id=48382382",
+    "score": 62,
+    "comments": 16
   },
   {
-    "title": "CSS-Native Parallax Effect",
-    "link": "https://dan-webnotes.com/posts/2026-06-02-css-native-parallax-effect/",
-    "hn_link": "https://news.ycombinator.com/item?id=48368291",
-    "score": 37,
-    "comments": 17
+    "title": "Bun Has Been Converted to Rust. Now What?",
+    "link": "https://bytecode.news/posts/2026/06/bun-has-been-converted-to-rust-now-what",
+    "hn_link": "https://news.ycombinator.com/item?id=48383018",
+    "score": 18,
+    "comments": 7
   },
   {
-    "title": "The newest Instagram “exploit” is the goofiest I've seen",
-    "link": "https://www.0xsid.com/blog/meta-account-takeover-fiasco",
-    "hn_link": "https://news.ycombinator.com/item?id=48359102",
-    "score": 1889,
-    "comments": 429
+    "title": "Show HN: Edsger – A handwritten Clojure REPL for the reMarkable 2",
+    "link": "https://handwritten.danieljanus.pl/2026-06-01-edsger.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48374552",
+    "score": 103,
+    "comments": 19
   },
   {
-    "title": "Can the stockmarket swallow Anthropic, SpaceX and OpenAI?",
-    "link": "https://www.economist.com/finance-and-economics/2026/06/01/can-the-stockmarket-swallow-anthropic-spacex-and-openai",
-    "hn_link": "https://news.ycombinator.com/item?id=48364055",
-    "score": 431,
-    "comments": 747
+    "title": "PlayStation Architecture",
+    "link": "https://www.copetti.org/writings/consoles/playstation/",
+    "hn_link": "https://news.ycombinator.com/item?id=48382142",
+    "score": 43,
+    "comments": 6
   }
 ]
