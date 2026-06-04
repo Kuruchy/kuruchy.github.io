@@ -1,37 +1,37 @@
 [
   {
-    "title": "Hacking your PC using your speaker without ever touching it",
-    "link": "https://blog.nns.ee/2026/06/03/katana-badusb/",
-    "hn_link": "https://news.ycombinator.com/item?id=48382310",
-    "score": 143,
-    "comments": 32
+    "title": "UK media fails to disclose defence sector links in nearly 60% of cases",
+    "link": "https://aoav.org.uk/2026/military-experts-or-arms-industry-insiders-uk-media-fails-to-disclose-defence-sector-links-in-nearly-60-of-cases/",
+    "hn_link": "https://news.ycombinator.com/item?id=48395938",
+    "score": 122,
+    "comments": 89
   },
   {
-    "title": "Every Byte Matters",
-    "link": "https://fzakaria.com/2026/06/01/every-byte-matters",
-    "hn_link": "https://news.ycombinator.com/item?id=48382382",
-    "score": 62,
-    "comments": 16
+    "title": "They’re made out of weights",
+    "link": "https://maxleiter.com/blog/weights",
+    "hn_link": "https://news.ycombinator.com/item?id=48391611",
+    "score": 766,
+    "comments": 297
   },
   {
-    "title": "Bun Has Been Converted to Rust. Now What?",
-    "link": "https://bytecode.news/posts/2026/06/bun-has-been-converted-to-rust-now-what",
-    "hn_link": "https://news.ycombinator.com/item?id=48383018",
+    "title": "Show HN: Uruky (EU-based Kagi alternative) now has Image Search and URL Rewrites",
+    "link": "https://uruky.com/?il=en",
+    "hn_link": "https://news.ycombinator.com/item?id=48396004",
+    "score": 73,
+    "comments": 47
+  },
+  {
+    "title": "Gaussian Point Splatting",
+    "link": "https://momentsingraphics.de/Siggraph2026.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48396792",
     "score": 18,
-    "comments": 7
+    "comments": 3
   },
   {
-    "title": "Show HN: Edsger – A handwritten Clojure REPL for the reMarkable 2",
-    "link": "https://handwritten.danieljanus.pl/2026-06-01-edsger.html",
-    "hn_link": "https://news.ycombinator.com/item?id=48374552",
-    "score": 103,
-    "comments": 19
-  },
-  {
-    "title": "PlayStation Architecture",
-    "link": "https://www.copetti.org/writings/consoles/playstation/",
-    "hn_link": "https://news.ycombinator.com/item?id=48382142",
-    "score": 43,
-    "comments": 6
+    "title": "Failing grades soar with AI usage, dwindling math skills in Berkeley CS classes",
+    "link": "https://www.dailycal.org/news/campus/academics/failing-grades-soar-as-professors-see-greater-ai-usage-dwindling-math-skills-in-uc-berkeley/article_16fad0bf-02cb-4b8c-8d88-888ffd9f8608.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48392004",
+    "score": 363,
+    "comments": 269
   }
 ]
