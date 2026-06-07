@@ -1,37 +1,37 @@
 [
   {
-    "title": "GrapheneOS user reported to authorities for using GrapheneOS",
-    "link": "https://discuss.grapheneos.org/d/36134-grapheneos-user-reported-to-authorities-for-using-grapheneos",
-    "hn_link": "https://news.ycombinator.com/item?id=48422798",
-    "score": 146,
-    "comments": 57
+    "title": "The 29th International Obfuscated C Code Contest (IOCCC) 2025 Winners",
+    "link": "https://www.ioccc.org/2025/",
+    "hn_link": "https://news.ycombinator.com/item?id=48432199",
+    "score": 170,
+    "comments": 46
   },
   {
-    "title": "Zig Zen Update",
-    "link": "https://codeberg.org/ziglang/zig/commit/621844bde551ee1a9b8142d7d146d1fa804247a2",
-    "hn_link": "https://news.ycombinator.com/item?id=48422769",
-    "score": 30,
-    "comments": 9
+    "title": "Speculative KV coding: losslessly compressing KV cache by up to ~4×",
+    "link": "https://fergusfinn.com/blog/kv-entropy-coder/",
+    "hn_link": "https://news.ycombinator.com/item?id=48400151",
+    "score": 41,
+    "comments": 5
   },
   {
-    "title": "How LLMs work",
-    "link": "https://www.0xkato.xyz/how-llms-actually-work/",
-    "hn_link": "https://news.ycombinator.com/item?id=48389360",
-    "score": 359,
-    "comments": 103
+    "title": "Win16 Memory Management",
+    "link": "http://www.os2museum.com/wp/win16-memory-management/",
+    "hn_link": "https://news.ycombinator.com/item?id=48410844",
+    "score": 25,
+    "comments": 2
   },
   {
-    "title": "The intracies of modern camera lens repair (2024)",
-    "link": "https://salvagedcircuitry.com/sigma-45mm.html",
-    "hn_link": "https://news.ycombinator.com/item?id=48420148",
-    "score": 171,
-    "comments": 59
+    "title": "Valve P2P networking broken for more than 2 months",
+    "link": "https://github.com/ValveSoftware/GameNetworkingSockets/issues/398",
+    "hn_link": "https://news.ycombinator.com/item?id=48431461",
+    "score": 169,
+    "comments": 77
   },
   {
-    "title": "S&P 500 rejects SpaceX, also blocking entry for OpenAI and Anthropic",
-    "link": "https://arstechnica.com/tech-policy/2026/06/sp-500-blocks-fast-spacex-entry-wont-waive-rule-for-unprofitable-ai-firms/",
-    "hn_link": "https://news.ycombinator.com/item?id=48421442",
-    "score": 460,
-    "comments": 156
+    "title": "Field of clones: How horse replicas came to dominate polo",
+    "link": "https://knowablemagazine.org/content/article/technology/2026/cloned-polo-horses",
+    "hn_link": "https://news.ycombinator.com/item?id=48431286",
+    "score": 88,
+    "comments": 41
   }
 ]
