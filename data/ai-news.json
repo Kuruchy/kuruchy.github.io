@@ -1,37 +1,37 @@
 [
   {
-    "title": "Microsoft's open source tools were hacked to steal passwords of AI developers",
-    "link": "https://techcrunch.com/2026/06/08/microsofts-open-source-tools-were-hacked-to-steal-passwords-of-ai-developers/",
-    "hn_link": "https://news.ycombinator.com/item?id=48457830",
-    "score": 205,
-    "comments": 89
+    "title": "Mercedes‑Benz starts large‑scale production of electric axial flux motor",
+    "link": "https://media.mercedes-benz.com/en/article/bebac2af-acdc-465a-9538-adb0bf3d8ccf",
+    "hn_link": "https://news.ycombinator.com/item?id=48472877",
+    "score": 152,
+    "comments": 67
   },
   {
-    "title": "GentleOS – Classic operating system with a lovely retro GUI",
-    "link": "https://github.com/luke8086/gentleos32",
-    "hn_link": "https://news.ycombinator.com/item?id=48458890",
-    "score": 62,
-    "comments": 6
+    "title": "macOS Container Machines",
+    "link": "https://github.com/apple/container/blob/main/docs/container-machine.md",
+    "hn_link": "https://news.ycombinator.com/item?id=48469658",
+    "score": 842,
+    "comments": 305
   },
   {
-    "title": "OpenCV 5 Is Here: The Biggest Leap in Years for Computer Vision",
-    "link": "https://opencv.org/opencv-5/",
-    "hn_link": "https://news.ycombinator.com/item?id=48421858",
-    "score": 245,
-    "comments": 45
+    "title": "Claude Fable 5",
+    "link": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+    "hn_link": "https://news.ycombinator.com/item?id=48463808",
+    "score": 2297,
+    "comments": 1788
   },
   {
-    "title": "Forever Young: how one molecule can lock plants in a youthful state (2025)",
-    "link": "https://omnia.sas.upenn.edu/story/biologist-scott-poethig-plants-never-age",
-    "hn_link": "https://news.ycombinator.com/item?id=48458257",
-    "score": 40,
-    "comments": 20
+    "title": "Port React Compiler to Rust",
+    "link": "https://github.com/react/react/pull/36173",
+    "hn_link": "https://news.ycombinator.com/item?id=48473662",
+    "score": 63,
+    "comments": 35
   },
   {
-    "title": "The iPhone's Last Stand",
-    "link": "https://stratechery.com/2026/the-iphones-last-stand/",
-    "hn_link": "https://news.ycombinator.com/item?id=48459001",
-    "score": 15,
-    "comments": 7
+    "title": "AWS Bedrock to require sharing data with Anthropic for Mythos and future models",
+    "link": "https://news.ycombinator.com/item?id=48473166",
+    "hn_link": "https://news.ycombinator.com/item?id=48473166",
+    "score": 116,
+    "comments": 53
   }
 ]
