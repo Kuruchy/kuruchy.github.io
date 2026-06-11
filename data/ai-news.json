@@ -1,37 +1,37 @@
 [
   {
-    "title": "Mercedes‑Benz starts large‑scale production of electric axial flux motor",
-    "link": "https://media.mercedes-benz.com/en/article/bebac2af-acdc-465a-9538-adb0bf3d8ccf",
-    "hn_link": "https://news.ycombinator.com/item?id=48472877",
-    "score": 152,
-    "comments": 67
+    "title": "Pokémon Go Scans Trained the Navigation Tech for Military Drones",
+    "link": "https://dronexl.co/2026/06/09/pokemon-go-scans-niantic-vantor-military-drone-navigation/",
+    "hn_link": "https://news.ycombinator.com/item?id=48487029",
+    "score": 372,
+    "comments": 161
   },
   {
-    "title": "macOS Container Machines",
-    "link": "https://github.com/apple/container/blob/main/docs/container-machine.md",
-    "hn_link": "https://news.ycombinator.com/item?id=48469658",
-    "score": 842,
-    "comments": 305
+    "title": "AI agent runs amok in Fedora and elsewhere",
+    "link": "https://lwn.net/SubscriberLink/1077035/c7e7c14fbd60fae9/",
+    "hn_link": "https://news.ycombinator.com/item?id=48484584",
+    "score": 444,
+    "comments": 193
   },
   {
-    "title": "Claude Fable 5",
-    "link": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-    "hn_link": "https://news.ycombinator.com/item?id=48463808",
-    "score": 2297,
-    "comments": 1788
+    "title": "Cybersecurity researchers aren't happy about the guardrails on Anthropic's Fable",
+    "link": "https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/",
+    "hn_link": "https://news.ycombinator.com/item?id=48478969",
+    "score": 483,
+    "comments": 421
   },
   {
-    "title": "Port React Compiler to Rust",
-    "link": "https://github.com/react/react/pull/36173",
-    "hn_link": "https://news.ycombinator.com/item?id=48473662",
-    "score": 63,
-    "comments": 35
+    "title": "Web Browsers on Video Game Consoles",
+    "link": "https://vale.rocks/posts/game-console-browsers",
+    "hn_link": "https://news.ycombinator.com/item?id=48487897",
+    "score": 52,
+    "comments": 28
   },
   {
-    "title": "AWS Bedrock to require sharing data with Anthropic for Mythos and future models",
-    "link": "https://news.ycombinator.com/item?id=48473166",
-    "hn_link": "https://news.ycombinator.com/item?id=48473166",
-    "score": 116,
-    "comments": 53
+    "title": "Build a Basic AI Agent from Scratch: Long Task Planning",
+    "link": "https://medium.com/@rogi23696/build-a-basic-ai-agent-from-scratch-long-task-planning-14e803f9bd6d",
+    "hn_link": "https://news.ycombinator.com/item?id=48461635",
+    "score": 40,
+    "comments": 8
   }
 ]
