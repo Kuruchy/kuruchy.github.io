@@ -1,37 +1,37 @@
 [
   {
-    "title": "Honda Civics and the Evil Valet",
-    "link": "https://juniperspring.org/posts/honda-evil-valet/",
-    "hn_link": "https://news.ycombinator.com/item?id=48523080",
-    "score": 282,
-    "comments": 50
+    "title": "Salesforce to Acquire Fin (formerly Intercom) for $3.6BN",
+    "link": "https://www.salesforce.com/news/press-releases/2026/06/15/salesforce-signs-definitive-agreement-to-acquire-fin/?bc=HL",
+    "hn_link": "https://news.ycombinator.com/item?id=48540126",
+    "score": 146,
+    "comments": 91
   },
   {
-    "title": "Free SQL→ER diagram tool, runs in the browser, nothing uploaded",
-    "link": "https://sqltoerdiagram.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=48523992",
-    "score": 155,
-    "comments": 28
+    "title": "I wrote 5000 lines of assembly because I was angry",
+    "link": "https://ujjwalvivek.com/blog/log_0009_baremetal.md",
+    "hn_link": "https://news.ycombinator.com/item?id=48541222",
+    "score": 8,
+    "comments": 2
   },
   {
-    "title": "GLM 5.2 Is Out",
-    "link": "https://twitter.com/jietang/status/2065784751345287314",
-    "hn_link": "https://news.ycombinator.com/item?id=48518684",
-    "score": 600,
-    "comments": 329
+    "title": "What the Fuck Happened to Nerds",
+    "link": "https://mrmarket.lol/what-the-fuck-happened-to-nerds/",
+    "hn_link": "https://news.ycombinator.com/item?id=48538229",
+    "score": 562,
+    "comments": 339
   },
   {
-    "title": "Noise infusion banned from statistical products published by Census Bureau",
-    "link": "https://desfontain.es/blog/banning-noise.html",
-    "hn_link": "https://news.ycombinator.com/item?id=48517377",
-    "score": 828,
-    "comments": 516
+    "title": "Your ePub Is fine",
+    "link": "https://andreklein.net/your-epub-is-fine-kobo-disagrees-blame-adobe/",
+    "hn_link": "https://news.ycombinator.com/item?id=48533848",
+    "score": 764,
+    "comments": 250
   },
   {
-    "title": "Cooling in Space",
-    "link": "https://guille.site/posts/space-cooling/",
-    "hn_link": "https://news.ycombinator.com/item?id=48496156",
-    "score": 15,
-    "comments": 12
+    "title": "Apple Foundation Models",
+    "link": "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models",
+    "hn_link": "https://news.ycombinator.com/item?id=48536776",
+    "score": 294,
+    "comments": 123
   }
 ]
