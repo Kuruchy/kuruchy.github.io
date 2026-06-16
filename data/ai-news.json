@@ -1,37 +1,37 @@
 [
   {
-    "title": "Salesforce to Acquire Fin (formerly Intercom) for $3.6BN",
-    "link": "https://www.salesforce.com/news/press-releases/2026/06/15/salesforce-signs-definitive-agreement-to-acquire-fin/?bc=HL",
-    "hn_link": "https://news.ycombinator.com/item?id=48540126",
-    "score": 146,
-    "comments": 91
+    "title": "Mechanical Watch",
+    "link": "https://ciechanow.ski/mechanical-watch/",
+    "hn_link": "https://news.ycombinator.com/item?id=48553550",
+    "score": 133,
+    "comments": 21
   },
   {
-    "title": "I wrote 5000 lines of assembly because I was angry",
-    "link": "https://ujjwalvivek.com/blog/log_0009_baremetal.md",
-    "hn_link": "https://news.ycombinator.com/item?id=48541222",
-    "score": 8,
-    "comments": 2
+    "title": "SpaceX Is Buying Cursor",
+    "link": "https://www.bbc.com/news/articles/cvgd5g7d7gyo",
+    "hn_link": "https://news.ycombinator.com/item?id=48554215",
+    "score": 43,
+    "comments": 27
   },
   {
-    "title": "What the Fuck Happened to Nerds",
-    "link": "https://mrmarket.lol/what-the-fuck-happened-to-nerds/",
-    "hn_link": "https://news.ycombinator.com/item?id=48538229",
-    "score": 562,
-    "comments": 339
+    "title": "The time the x86 emulator team found code so bad they fixed it during emulation",
+    "link": "https://devblogs.microsoft.com/oldnewthing/20260615-00/?p=112419",
+    "hn_link": "https://news.ycombinator.com/item?id=48550693",
+    "score": 345,
+    "comments": 104
   },
   {
-    "title": "Your ePub Is fine",
-    "link": "https://andreklein.net/your-epub-is-fine-kobo-disagrees-blame-adobe/",
-    "hn_link": "https://news.ycombinator.com/item?id=48533848",
-    "score": 764,
-    "comments": 250
+    "title": "Correlated randomness in Slay the Spire 2",
+    "link": "https://tck.mn/blog/correlated-randomness-sts2/",
+    "hn_link": "https://news.ycombinator.com/item?id=48552844",
+    "score": 38,
+    "comments": 12
   },
   {
-    "title": "Apple Foundation Models",
-    "link": "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models",
-    "hn_link": "https://news.ycombinator.com/item?id=48536776",
-    "score": 294,
-    "comments": 123
+    "title": "A backdoor in a LinkedIn job offer",
+    "link": "https://roman.pt/posts/linkedin-backdoor/",
+    "hn_link": "https://news.ycombinator.com/item?id=48546294",
+    "score": 1311,
+    "comments": 248
   }
 ]
