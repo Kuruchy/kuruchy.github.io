@@ -1,37 +1,37 @@
 [
   {
-    "title": "GLM-5.2 is the new leading open weights model on Artificial Analysis",
-    "link": "https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index",
-    "hn_link": "https://news.ycombinator.com/item?id=48567759",
-    "score": 233,
-    "comments": 102
+    "title": "Midjourney Medical",
+    "link": "https://www.midjourney.com/medical/blogpost",
+    "hn_link": "https://news.ycombinator.com/item?id=48579650",
+    "score": 871,
+    "comments": 597
   },
   {
-    "title": "RFC 10008: The new HTTP Query Method",
-    "link": "https://www.rfc-editor.org/info/rfc10008/",
-    "hn_link": "https://news.ycombinator.com/item?id=48568502",
-    "score": 43,
-    "comments": 11
-  },
-  {
-    "title": "Show HN: High-Res Neural Cellular Automata",
-    "link": "https://cells2pixels.github.io/",
-    "hn_link": "https://news.ycombinator.com/item?id=48567877",
-    "score": 80,
+    "title": "Hospitals and universities repurposing drugs at 90% lower cost",
+    "link": "https://www.kcl.ac.uk/news/hospitals-and-universities-repurposing-drugs-at-90-lower-cost",
+    "hn_link": "https://news.ycombinator.com/item?id=48583386",
+    "score": 35,
     "comments": 8
   },
   {
-    "title": "GrapheneOS has been ported to Android 17",
-    "link": "https://discuss.grapheneos.org/d/36469-grapheneos-has-been-ported-to-android-17-and-official-releases-are-coming-soon",
-    "hn_link": "https://news.ycombinator.com/item?id=48561654",
-    "score": 836,
-    "comments": 428
+    "title": "DeepSeek Introduces Vision",
+    "link": "https://chat.deepseek.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=48581458",
+    "score": 192,
+    "comments": 84
   },
   {
-    "title": "Running local models is good now",
-    "link": "https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/",
-    "hn_link": "https://news.ycombinator.com/item?id=48555993",
-    "score": 1386,
-    "comments": 535
+    "title": "Local Qwen isn't a worse Opus, it's a different tool",
+    "link": "https://blog.alexellis.io/local-ai-is-not-opus/",
+    "hn_link": "https://news.ycombinator.com/item?id=48580209",
+    "score": 259,
+    "comments": 125
+  },
+  {
+    "title": "Lore – Open source version control system designed for scalability",
+    "link": "https://lore.org/",
+    "hn_link": "https://news.ycombinator.com/item?id=48571081",
+    "score": 1163,
+    "comments": 619
   }
 ]
