@@ -1,37 +1,37 @@
 [
   {
-    "title": "Midjourney Medical",
-    "link": "https://www.midjourney.com/medical/blogpost",
-    "hn_link": "https://news.ycombinator.com/item?id=48579650",
-    "score": 871,
-    "comments": 597
+    "title": "Project Valhalla, Explained: How a Decade of Work Arrives in JDK 28",
+    "link": "https://www.jvm-weekly.com/p/project-valhalla-explained-how-a",
+    "hn_link": "https://news.ycombinator.com/item?id=48595511",
+    "score": 215,
+    "comments": 88
   },
   {
-    "title": "Hospitals and universities repurposing drugs at 90% lower cost",
-    "link": "https://www.kcl.ac.uk/news/hospitals-and-universities-repurposing-drugs-at-90-lower-cost",
-    "hn_link": "https://news.ycombinator.com/item?id=48583386",
-    "score": 35,
-    "comments": 8
+    "title": "DuckDB Internals: Why Is DuckDB Fast? (Part 1)",
+    "link": "https://www.greybeam.ai/blog/duckdb-internals-part-1",
+    "hn_link": "https://news.ycombinator.com/item?id=48553388",
+    "score": 216,
+    "comments": 72
   },
   {
-    "title": "DeepSeek Introduces Vision",
-    "link": "https://chat.deepseek.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=48581458",
-    "score": 192,
-    "comments": 84
+    "title": "To study how chips work, MIT researchers built their own operating system",
+    "link": "https://news.mit.edu/2026/to-study-how-chips-really-work-mit-researchers-built-their-own-operating-system-0610",
+    "hn_link": "https://news.ycombinator.com/item?id=48543311",
+    "score": 211,
+    "comments": 31
   },
   {
-    "title": "Local Qwen isn't a worse Opus, it's a different tool",
-    "link": "https://blog.alexellis.io/local-ai-is-not-opus/",
-    "hn_link": "https://news.ycombinator.com/item?id=48580209",
-    "score": 259,
-    "comments": 125
+    "title": "Zen and the Art of Machine Learning Research",
+    "link": "https://blog.jxmo.io/p/zen-and-the-art-of-machine-learning",
+    "hn_link": "https://news.ycombinator.com/item?id=48549118",
+    "score": 91,
+    "comments": 27
   },
   {
-    "title": "Lore – Open source version control system designed for scalability",
-    "link": "https://lore.org/",
-    "hn_link": "https://news.ycombinator.com/item?id=48571081",
-    "score": 1163,
-    "comments": 619
+    "title": "So You Want to Define a Well-Known URI",
+    "link": "https://mnot.net/blog/2026/well_known_uris",
+    "hn_link": "https://news.ycombinator.com/item?id=48595331",
+    "score": 83,
+    "comments": 44
   }
 ]
