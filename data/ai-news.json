@@ -1,37 +1,37 @@
 [
   {
-    "title": "Project Valhalla, Explained: How a Decade of Work Arrives in JDK 28",
-    "link": "https://www.jvm-weekly.com/p/project-valhalla-explained-how-a",
-    "hn_link": "https://news.ycombinator.com/item?id=48595511",
-    "score": 215,
-    "comments": 88
+    "title": "I Stored a Website in a Favicon",
+    "link": "https://www.timwehrle.de/blog/i-stored-a-website-in-a-favicon/",
+    "hn_link": "https://news.ycombinator.com/item?id=48606619",
+    "score": 140,
+    "comments": 55
   },
   {
-    "title": "DuckDB Internals: Why Is DuckDB Fast? (Part 1)",
-    "link": "https://www.greybeam.ai/blog/duckdb-internals-part-1",
-    "hn_link": "https://news.ycombinator.com/item?id=48553388",
-    "score": 216,
-    "comments": 72
+    "title": "Where to Find the Colors Your Screen Can't Show You",
+    "link": "https://moultano.wordpress.com/2026/06/19/where-to-find-the-colors-your-screen-cant-show-you/",
+    "hn_link": "https://news.ycombinator.com/item?id=48606140",
+    "score": 139,
+    "comments": 36
   },
   {
-    "title": "To study how chips work, MIT researchers built their own operating system",
-    "link": "https://news.mit.edu/2026/to-study-how-chips-really-work-mit-researchers-built-their-own-operating-system-0610",
-    "hn_link": "https://news.ycombinator.com/item?id=48543311",
-    "score": 211,
-    "comments": 31
+    "title": "Data Compression Explained (2012)",
+    "link": "https://mattmahoney.net/dc/dce.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48562662",
+    "score": 131,
+    "comments": 17
   },
   {
-    "title": "Zen and the Art of Machine Learning Research",
-    "link": "https://blog.jxmo.io/p/zen-and-the-art-of-machine-learning",
-    "hn_link": "https://news.ycombinator.com/item?id=48549118",
-    "score": 91,
-    "comments": 27
+    "title": "There are no instances in ATProto",
+    "link": "https://overreacted.io/there-are-no-instances-in-atproto/",
+    "hn_link": "https://news.ycombinator.com/item?id=48599515",
+    "score": 453,
+    "comments": 228
   },
   {
-    "title": "So You Want to Define a Well-Known URI",
-    "link": "https://mnot.net/blog/2026/well_known_uris",
-    "hn_link": "https://news.ycombinator.com/item?id=48595331",
-    "score": 83,
-    "comments": 44
+    "title": "Can you see three trees?",
+    "link": "https://www.not-ship.com/can-you-see-three-trees/",
+    "hn_link": "https://news.ycombinator.com/item?id=48582374",
+    "score": 121,
+    "comments": 67
   }
 ]
