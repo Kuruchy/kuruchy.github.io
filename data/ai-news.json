@@ -1,37 +1,37 @@
 [
   {
-    "title": "Google Hits 50% IPv6",
-    "link": "https://blog.apnic.net/2026/04/28/google-hits-50-ipv6/",
-    "hn_link": "https://news.ycombinator.com/item?id=48616800",
-    "score": 142,
-    "comments": 134
+    "title": "Deno Desktop",
+    "link": "https://docs.deno.com/runtime/desktop/",
+    "hn_link": "https://news.ycombinator.com/item?id=48626137",
+    "score": 654,
+    "comments": 240
   },
   {
-    "title": "A 3D voxel game engine written in APL",
-    "link": "https://github.com/namgyaaal/avoxelgame",
-    "hn_link": "https://news.ycombinator.com/item?id=48616713",
-    "score": 57,
-    "comments": 7
+    "title": "window.showDirectoryPicker opens up a whole new world",
+    "link": "https://steveharrison.dev/showdirectorypicker-opens-up-a-whole-new-world/",
+    "hn_link": "https://news.ycombinator.com/item?id=48629387",
+    "score": 22,
+    "comments": 11
   },
   {
-    "title": "Developers don't understand CORS (2019)",
-    "link": "https://fosterelli.co/developers-dont-understand-cors",
-    "hn_link": "https://news.ycombinator.com/item?id=48614844",
-    "score": 221,
-    "comments": 130
+    "title": "GLM 5.2 vs. Opus",
+    "link": "https://techstackups.com/comparisons/glm-5.2-vs-opus/",
+    "hn_link": "https://news.ycombinator.com/item?id=48626866",
+    "score": 238,
+    "comments": 182
   },
   {
-    "title": "Zigzag Decoding with AVX-512",
-    "link": "https://zeux.io/2026/06/17/zigzag-decoding-avx512/",
-    "hn_link": "https://news.ycombinator.com/item?id=48573902",
-    "score": 78,
-    "comments": 12
+    "title": "Codex logging bug may write TBs to local SSDs",
+    "link": "https://github.com/openai/codex/issues/28224",
+    "hn_link": "https://news.ycombinator.com/item?id=48626930",
+    "score": 219,
+    "comments": 129
   },
   {
-    "title": "Loupe – A iOS app that raises awareness about what native apps can see",
-    "link": "https://github.com/mysk-research/loupe",
-    "hn_link": "https://news.ycombinator.com/item?id=48608645",
-    "score": 318,
-    "comments": 120
+    "title": "Help I accidentally a wigglegram",
+    "link": "https://lmao.center/blog/wiggle-accidents/",
+    "hn_link": "https://news.ycombinator.com/item?id=48605561",
+    "score": 356,
+    "comments": 76
   }
 ]
