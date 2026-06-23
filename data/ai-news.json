@@ -1,37 +1,37 @@
 [
   {
-    "title": "Deno Desktop",
-    "link": "https://docs.deno.com/runtime/desktop/",
-    "hn_link": "https://news.ycombinator.com/item?id=48626137",
-    "score": 654,
-    "comments": 240
+    "title": "Steam Machine launches today",
+    "link": "https://store.steampowered.com/news/group/45479024/view/685257114654870245",
+    "hn_link": "https://news.ycombinator.com/item?id=48632884",
+    "score": 1636,
+    "comments": 1406
   },
   {
-    "title": "window.showDirectoryPicker opens up a whole new world",
-    "link": "https://steveharrison.dev/showdirectorypicker-opens-up-a-whole-new-world/",
-    "hn_link": "https://news.ycombinator.com/item?id=48629387",
-    "score": 22,
-    "comments": 11
+    "title": "The new HTTP QUERY method explained",
+    "link": "https://kreya.app/blog/new-http-query-method-explained/",
+    "hn_link": "https://news.ycombinator.com/item?id=48640974",
+    "score": 144,
+    "comments": 83
   },
   {
-    "title": "GLM 5.2 vs. Opus",
-    "link": "https://techstackups.com/comparisons/glm-5.2-vs-opus/",
-    "hn_link": "https://news.ycombinator.com/item?id=48626866",
-    "score": 238,
-    "comments": 182
+    "title": "Crypto in 2026: Oh, This Is the Bad Place",
+    "link": "https://www.stephendiehl.com/posts/bad_place_2026/",
+    "hn_link": "https://news.ycombinator.com/item?id=48642699",
+    "score": 79,
+    "comments": 57
   },
   {
-    "title": "Codex logging bug may write TBs to local SSDs",
-    "link": "https://github.com/openai/codex/issues/28224",
-    "hn_link": "https://news.ycombinator.com/item?id=48626930",
-    "score": 219,
-    "comments": 129
+    "title": "Plotnine",
+    "link": "https://plotnine.org/",
+    "hn_link": "https://news.ycombinator.com/item?id=48596488",
+    "score": 60,
+    "comments": 15
   },
   {
-    "title": "Help I accidentally a wigglegram",
-    "link": "https://lmao.center/blog/wiggle-accidents/",
-    "hn_link": "https://news.ycombinator.com/item?id=48605561",
-    "score": 356,
-    "comments": 76
+    "title": "Polymarket has flooded social media with deceptive videos by paid creators",
+    "link": "https://www.wsj.com/business/media/polymarket-social-media-bets-prediction-market-441cdeb5?st=HhTZY2",
+    "hn_link": "https://news.ycombinator.com/item?id=48614715",
+    "score": 347,
+    "comments": 255
   }
 ]
