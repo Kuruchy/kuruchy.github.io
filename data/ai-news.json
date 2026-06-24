@@ -1,37 +1,37 @@
 [
   {
-    "title": "Steam Machine launches today",
-    "link": "https://store.steampowered.com/news/group/45479024/view/685257114654870245",
-    "hn_link": "https://news.ycombinator.com/item?id=48632884",
-    "score": 1636,
-    "comments": 1406
+    "title": "We're making Bunny DNS free: because a faster internet won't build itself",
+    "link": "https://bunny.net/blog/were-making-bunny-dns-free/",
+    "hn_link": "https://news.ycombinator.com/item?id=48657030",
+    "score": 148,
+    "comments": 42
   },
   {
-    "title": "The new HTTP QUERY method explained",
-    "link": "https://kreya.app/blog/new-http-query-method-explained/",
-    "hn_link": "https://news.ycombinator.com/item?id=48640974",
-    "score": 144,
-    "comments": 83
+    "title": "Vulnerability reports are not special anymore",
+    "link": "https://words.filippo.io/vuln-reports/",
+    "hn_link": "https://news.ycombinator.com/item?id=48653216",
+    "score": 292,
+    "comments": 157
   },
   {
-    "title": "Crypto in 2026: Oh, This Is the Bad Place",
-    "link": "https://www.stephendiehl.com/posts/bad_place_2026/",
-    "hn_link": "https://news.ycombinator.com/item?id=48642699",
-    "score": 79,
-    "comments": 57
+    "title": "Raspberry Pi Pico W as USB Wi-Fi Adapter",
+    "link": "https://gitlab.com/baiyibai/pico-usb-wifi",
+    "hn_link": "https://news.ycombinator.com/item?id=48654676",
+    "score": 149,
+    "comments": 52
   },
   {
-    "title": "Plotnine",
-    "link": "https://plotnine.org/",
-    "hn_link": "https://news.ycombinator.com/item?id=48596488",
-    "score": 60,
-    "comments": 15
+    "title": "Jerry's Map",
+    "link": "http://www.jerrysmap.com/the-map",
+    "hn_link": "https://news.ycombinator.com/item?id=48649435",
+    "score": 480,
+    "comments": 54
   },
   {
-    "title": "Polymarket has flooded social media with deceptive videos by paid creators",
-    "link": "https://www.wsj.com/business/media/polymarket-social-media-bets-prediction-market-441cdeb5?st=HhTZY2",
-    "hn_link": "https://news.ycombinator.com/item?id=48614715",
-    "score": 347,
-    "comments": 255
+    "title": "In memory of the man who put red and green squiggles under words",
+    "link": "https://devblogs.microsoft.com/oldnewthing/20260622-00/?p=112451",
+    "hn_link": "https://news.ycombinator.com/item?id=48648959",
+    "score": 403,
+    "comments": 65
   }
 ]
