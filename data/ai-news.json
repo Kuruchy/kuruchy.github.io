@@ -1,37 +1,37 @@
 [
   {
-    "title": "We're making Bunny DNS free: because a faster internet won't build itself",
-    "link": "https://bunny.net/blog/were-making-bunny-dns-free/",
-    "hn_link": "https://news.ycombinator.com/item?id=48657030",
-    "score": 148,
-    "comments": 42
+    "title": "Half-Life 2 in a Browser",
+    "link": "https://hl2.slqnt.dev/",
+    "hn_link": "https://news.ycombinator.com/item?id=48669534",
+    "score": 269,
+    "comments": 97
   },
   {
-    "title": "Vulnerability reports are not special anymore",
-    "link": "https://words.filippo.io/vuln-reports/",
-    "hn_link": "https://news.ycombinator.com/item?id=48653216",
-    "score": 292,
-    "comments": 157
+    "title": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
+    "link": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/",
+    "hn_link": "https://news.ycombinator.com/item?id=48664814",
+    "score": 439,
+    "comments": 768
   },
   {
-    "title": "Raspberry Pi Pico W as USB Wi-Fi Adapter",
-    "link": "https://gitlab.com/baiyibai/pico-usb-wifi",
-    "hn_link": "https://news.ycombinator.com/item?id=48654676",
-    "score": 149,
-    "comments": 52
+    "title": "OpenAI unveils its first custom chip, built by Broadcom",
+    "link": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/",
+    "hn_link": "https://news.ycombinator.com/item?id=48663324",
+    "score": 709,
+    "comments": 398
   },
   {
-    "title": "Jerry's Map",
-    "link": "http://www.jerrysmap.com/the-map",
-    "hn_link": "https://news.ycombinator.com/item?id=48649435",
-    "score": 480,
-    "comments": 54
+    "title": "Cloudflare launched self-managed OAuth for all",
+    "link": "https://blog.cloudflare.com/oauth-for-all/",
+    "hn_link": "https://news.ycombinator.com/item?id=48668033",
+    "score": 175,
+    "comments": 79
   },
   {
-    "title": "In memory of the man who put red and green squiggles under words",
-    "link": "https://devblogs.microsoft.com/oldnewthing/20260622-00/?p=112451",
-    "hn_link": "https://news.ycombinator.com/item?id=48648959",
-    "score": 403,
-    "comments": 65
+    "title": "Bohemia Interactive: Cold War Assault Remastered Source Code on GitHub",
+    "link": "https://github.com/BohemiaInteractive/CWR",
+    "hn_link": "https://news.ycombinator.com/item?id=48636753",
+    "score": 78,
+    "comments": 14
   }
 ]
