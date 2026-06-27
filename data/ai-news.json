@@ -1,37 +1,37 @@
 [
   {
-    "title": "We All Depend on Open Source. We Will Defend It Together",
-    "link": "https://akrites.org/letter/",
-    "hn_link": "https://news.ycombinator.com/item?id=48682737",
-    "score": 158,
-    "comments": 75
+    "title": "DeepSeek open-sources inference optimizations with 60–85% faster generation [pdf]",
+    "link": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf",
+    "hn_link": "https://news.ycombinator.com/item?id=48696585",
+    "score": 105,
+    "comments": 5
   },
   {
-    "title": "Om Malik has died",
-    "link": "https://om.co/2026/06/24/1966-2026/",
-    "hn_link": "https://news.ycombinator.com/item?id=48678852",
-    "score": 921,
-    "comments": 108
+    "title": "Previewing GPT‑5.6 Sol: a next-generation model",
+    "link": "https://openai.com/index/previewing-gpt-5-6-sol/",
+    "hn_link": "https://news.ycombinator.com/item?id=48689028",
+    "score": 1010,
+    "comments": 631
   },
   {
-    "title": "An entire Herculaneum scroll has been read for the first time",
-    "link": "https://scrollprize.org/firstscroll",
-    "hn_link": "https://news.ycombinator.com/item?id=48675179",
-    "score": 1324,
-    "comments": 280
+    "title": "Linux on Older Hardware: The Complete Revival Guide",
+    "link": "https://www.fosslinux.com/158206/linux-on-older-hardware-revival-guide.htm",
+    "hn_link": "https://news.ycombinator.com/item?id=48668747",
+    "score": 48,
+    "comments": 14
   },
   {
-    "title": "Libre Barcode Project",
-    "link": "https://graphicore.github.io/librebarcode/",
-    "hn_link": "https://news.ycombinator.com/item?id=48681949",
-    "score": 163,
-    "comments": 25
+    "title": "Long Wave radio era set to end with switch-off",
+    "link": "https://www.economist.com/britain/2026/06/25/the-bbc-switches-off-its-oldest-service",
+    "hn_link": "https://news.ycombinator.com/item?id=48677564",
+    "score": 30,
+    "comments": 50
   },
   {
-    "title": "What happened after 2k people tried to hack my AI assistant",
-    "link": "https://www.fernandoi.cl/posts/hackmyclaw/",
-    "hn_link": "https://news.ycombinator.com/item?id=48681687",
-    "score": 178,
-    "comments": 64
+    "title": "WordStar: A Writer's Word Processor (1996)",
+    "link": "https://www.sfwriter.com/wordstar.htm",
+    "hn_link": "https://news.ycombinator.com/item?id=48694853",
+    "score": 93,
+    "comments": 41
   }
 ]
