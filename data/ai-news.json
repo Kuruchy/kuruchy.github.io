@@ -1,37 +1,37 @@
 [
   {
-    "title": "DeepSeek open-sources inference optimizations with 60–85% faster generation [pdf]",
-    "link": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf",
-    "hn_link": "https://news.ycombinator.com/item?id=48696585",
-    "score": 105,
-    "comments": 5
+    "title": "Marfa Public Radio Puts You to Sleep",
+    "link": "https://www.marfapublicradio.org/podcast/marfa-public-radio-puts-you-to-sleep",
+    "hn_link": "https://news.ycombinator.com/item?id=48703759",
+    "score": 242,
+    "comments": 58
   },
   {
-    "title": "Previewing GPT‑5.6 Sol: a next-generation model",
-    "link": "https://openai.com/index/previewing-gpt-5-6-sol/",
-    "hn_link": "https://news.ycombinator.com/item?id=48689028",
-    "score": 1010,
-    "comments": 631
+    "title": "Bashblog – a single bash script to create blogs",
+    "link": "https://github.com/cfenollosa/bashblog",
+    "hn_link": "https://news.ycombinator.com/item?id=48704454",
+    "score": 53,
+    "comments": 22
   },
   {
-    "title": "Linux on Older Hardware: The Complete Revival Guide",
-    "link": "https://www.fosslinux.com/158206/linux-on-older-hardware-revival-guide.htm",
-    "hn_link": "https://news.ycombinator.com/item?id=48668747",
-    "score": 48,
-    "comments": 14
+    "title": "AMD Strix Halo RDMA Cluster Setup Guide",
+    "link": "https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md",
+    "hn_link": "https://news.ycombinator.com/item?id=48703258",
+    "score": 142,
+    "comments": 45
   },
   {
-    "title": "Long Wave radio era set to end with switch-off",
-    "link": "https://www.economist.com/britain/2026/06/25/the-bbc-switches-off-its-oldest-service",
-    "hn_link": "https://news.ycombinator.com/item?id=48677564",
-    "score": 30,
-    "comments": 50
+    "title": "Wayfinder Router: deterministic routing of queries between local and hosted LLM",
+    "link": "https://github.com/itsthelore/wayfinder-router",
+    "hn_link": "https://news.ycombinator.com/item?id=48704373",
+    "score": 69,
+    "comments": 18
   },
   {
-    "title": "WordStar: A Writer's Word Processor (1996)",
-    "link": "https://www.sfwriter.com/wordstar.htm",
-    "hn_link": "https://news.ycombinator.com/item?id=48694853",
-    "score": 93,
-    "comments": 41
+    "title": "OpenRA",
+    "link": "https://www.openra.net/",
+    "hn_link": "https://news.ycombinator.com/item?id=48697560",
+    "score": 723,
+    "comments": 135
   }
 ]
