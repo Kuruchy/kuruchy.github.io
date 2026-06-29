@@ -1,37 +1,37 @@
 [
   {
-    "title": "Marfa Public Radio Puts You to Sleep",
-    "link": "https://www.marfapublicradio.org/podcast/marfa-public-radio-puts-you-to-sleep",
-    "hn_link": "https://news.ycombinator.com/item?id=48703759",
-    "score": 242,
-    "comments": 58
+    "title": "Sandia National Labs SA3000 8085 CPU",
+    "link": "https://www.cpushack.com/2026/06/03/sandia-national-labs-sa3000-8085-cpu/",
+    "hn_link": "https://news.ycombinator.com/item?id=48717287",
+    "score": 42,
+    "comments": 4
   },
   {
-    "title": "Bashblog – a single bash script to create blogs",
-    "link": "https://github.com/cfenollosa/bashblog",
-    "hn_link": "https://news.ycombinator.com/item?id=48704454",
-    "score": 53,
-    "comments": 22
+    "title": "HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88",
+    "link": "https://danunparsed.com/p/hackerrank-open-source-ats",
+    "hn_link": "https://news.ycombinator.com/item?id=48713832",
+    "score": 605,
+    "comments": 254
   },
   {
-    "title": "AMD Strix Halo RDMA Cluster Setup Guide",
-    "link": "https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md",
-    "hn_link": "https://news.ycombinator.com/item?id=48703258",
-    "score": 142,
+    "title": "GLM 5.2 beats Claude in our benchmarks",
+    "link": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/",
+    "hn_link": "https://news.ycombinator.com/item?id=48709670",
+    "score": 919,
+    "comments": 421
+  },
+  {
+    "title": "Pollen (CEO Negus-Fancey, CTO Wright) tried to remove article, and Google helped",
+    "link": "https://blog.pragmaticengineer.com/pollen-tried-to-remove-my-article-about-callum-negus-fancey-and-google-is-assisting-to-it/",
+    "hn_link": "https://news.ycombinator.com/item?id=48716902",
+    "score": 361,
     "comments": 45
   },
   {
-    "title": "Wayfinder Router: deterministic routing of queries between local and hosted LLM",
-    "link": "https://github.com/itsthelore/wayfinder-router",
-    "hn_link": "https://news.ycombinator.com/item?id=48704373",
-    "score": 69,
-    "comments": 18
-  },
-  {
-    "title": "OpenRA",
-    "link": "https://www.openra.net/",
-    "hn_link": "https://news.ycombinator.com/item?id=48697560",
-    "score": 723,
-    "comments": 135
+    "title": "NUMA: Cores, memory, and the distance between them",
+    "link": "https://edera.dev/stories/numa-part-1-cores-memory-and-the-distance-between-them",
+    "hn_link": "https://news.ycombinator.com/item?id=48662018",
+    "score": 47,
+    "comments": 5
   }
 ]
