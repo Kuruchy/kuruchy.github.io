@@ -1,37 +1,37 @@
 [
   {
-    "title": "Sandia National Labs SA3000 8085 CPU",
-    "link": "https://www.cpushack.com/2026/06/03/sandia-national-labs-sa3000-8085-cpu/",
-    "hn_link": "https://news.ycombinator.com/item?id=48717287",
-    "score": 42,
+    "title": "Building a custom octocopter from scratch with no prior hardware experience",
+    "link": "https://karolina.mgdubiel.com/drone/",
+    "hn_link": "https://news.ycombinator.com/item?id=48704289",
+    "score": 53,
+    "comments": 13
+  },
+  {
+    "title": "European digital ID wallets are a gift to Google and Apple",
+    "link": "https://waag.org/en/article/european-digital-id-wallets-are-gift-google-and-apple/",
+    "hn_link": "https://news.ycombinator.com/item?id=48730729",
+    "score": 28,
+    "comments": 6
+  },
+  {
+    "title": "Open Source Low Tech",
+    "link": "https://opensourcelowtech.org/",
+    "hn_link": "https://news.ycombinator.com/item?id=48683098",
+    "score": 288,
+    "comments": 60
+  },
+  {
+    "title": "Antares Achieves Criticality of Mark-0 Reactor",
+    "link": "https://antaresindustries.com/updates/antares-achieves-criticality",
+    "hn_link": "https://news.ycombinator.com/item?id=48730246",
+    "score": 22,
     "comments": 4
   },
   {
-    "title": "HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88",
-    "link": "https://danunparsed.com/p/hackerrank-open-source-ats",
-    "hn_link": "https://news.ycombinator.com/item?id=48713832",
-    "score": 605,
-    "comments": 254
-  },
-  {
-    "title": "GLM 5.2 beats Claude in our benchmarks",
-    "link": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/",
-    "hn_link": "https://news.ycombinator.com/item?id=48709670",
-    "score": 919,
-    "comments": 421
-  },
-  {
-    "title": "Pollen (CEO Negus-Fancey, CTO Wright) tried to remove article, and Google helped",
-    "link": "https://blog.pragmaticengineer.com/pollen-tried-to-remove-my-article-about-callum-negus-fancey-and-google-is-assisting-to-it/",
-    "hn_link": "https://news.ycombinator.com/item?id=48716902",
-    "score": 361,
-    "comments": 45
-  },
-  {
-    "title": "NUMA: Cores, memory, and the distance between them",
-    "link": "https://edera.dev/stories/numa-part-1-cores-memory-and-the-distance-between-them",
-    "hn_link": "https://news.ycombinator.com/item?id=48662018",
-    "score": 47,
-    "comments": 5
+    "title": "Qwen 3.6 27B is the sweet spot for local development",
+    "link": "https://quesma.com/blog/qwen-36-is-awesome/",
+    "hn_link": "https://news.ycombinator.com/item?id=48721903",
+    "score": 955,
+    "comments": 624
   }
 ]
