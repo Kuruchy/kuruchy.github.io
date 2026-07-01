@@ -1,37 +1,37 @@
 [
   {
-    "title": "Building a custom octocopter from scratch with no prior hardware experience",
-    "link": "https://karolina.mgdubiel.com/drone/",
-    "hn_link": "https://news.ycombinator.com/item?id=48704289",
-    "score": 53,
+    "title": "Asahi Linux 7.1 Progress Report",
+    "link": "https://asahilinux.org/2026/06/progress-report-7-1/",
+    "hn_link": "https://news.ycombinator.com/item?id=48744518",
+    "score": 125,
+    "comments": 16
+  },
+  {
+    "title": "Claude Code is steganographically marking requests",
+    "link": "https://thereallo.dev/blog/claude-code-prompt-steganography",
+    "hn_link": "https://news.ycombinator.com/item?id=48734373",
+    "score": 2118,
+    "comments": 614
+  },
+  {
+    "title": "Newly discovered spider builds spring loaded snare to catch ants",
+    "link": "https://phys.org/news/2026-06-newly-australian-ballista-spider-snare.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48711052",
+    "score": 68,
     "comments": 13
   },
   {
-    "title": "European digital ID wallets are a gift to Google and Apple",
-    "link": "https://waag.org/en/article/european-digital-id-wallets-are-gift-google-and-apple/",
-    "hn_link": "https://news.ycombinator.com/item?id=48730729",
-    "score": 28,
-    "comments": 6
+    "title": "Claude Sonnet 5",
+    "link": "https://www.anthropic.com/news/claude-sonnet-5",
+    "hn_link": "https://news.ycombinator.com/item?id=48736605",
+    "score": 1150,
+    "comments": 681
   },
   {
-    "title": "Open Source Low Tech",
-    "link": "https://opensourcelowtech.org/",
-    "hn_link": "https://news.ycombinator.com/item?id=48683098",
-    "score": 288,
-    "comments": 60
-  },
-  {
-    "title": "Antares Achieves Criticality of Mark-0 Reactor",
-    "link": "https://antaresindustries.com/updates/antares-achieves-criticality",
-    "hn_link": "https://news.ycombinator.com/item?id=48730246",
-    "score": 22,
-    "comments": 4
-  },
-  {
-    "title": "Qwen 3.6 27B is the sweet spot for local development",
-    "link": "https://quesma.com/blog/qwen-36-is-awesome/",
-    "hn_link": "https://news.ycombinator.com/item?id=48721903",
-    "score": 955,
-    "comments": 624
+    "title": "ArXiv's Next Chapter",
+    "link": "https://blog.arxiv.org/2026/06/30/arxivs-next-chapter/",
+    "hn_link": "https://news.ycombinator.com/item?id=48741748",
+    "score": 148,
+    "comments": 44
   }
 ]
