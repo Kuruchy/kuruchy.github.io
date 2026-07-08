@@ -1,37 +1,37 @@
 [
   {
-    "title": "OpenWrt One – Open Hardware Router",
-    "link": "https://openwrt.org/toh/openwrt/one",
-    "hn_link": "https://news.ycombinator.com/item?id=48808482",
-    "score": 666,
-    "comments": 251
+    "title": "Decoding the obfuscated bash script on a Uniqlo t-shirt",
+    "link": "https://tris.sherliker.net/blog/obfuscated-self-evaluating-bash-script-by-cdn-akamai-being-supplied-to-consumers-via-retail-stores/",
+    "hn_link": "https://news.ycombinator.com/item?id=48829312",
+    "score": 108,
+    "comments": 24
   },
   {
-    "title": "CoMaps – FOSS Offline Maps",
-    "link": "https://www.comaps.app/",
-    "hn_link": "https://news.ycombinator.com/item?id=48808928",
-    "score": 600,
-    "comments": 130
+    "title": "GitLost: We Tricked GitHub's AI Agent into Leaking Private Repos",
+    "link": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/",
+    "hn_link": "https://news.ycombinator.com/item?id=48827858",
+    "score": 195,
+    "comments": 75
   },
   {
-    "title": "GLM 5.2 and the coming AI margin collapse",
-    "link": "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/",
-    "hn_link": "https://news.ycombinator.com/item?id=48809877",
-    "score": 464,
-    "comments": 280
+    "title": "How to Build a Minimal ZFS NAS Without Synology, QNAP, TrueNAS (2024)",
+    "link": "https://neil.computer/notes/how-to-setup-minimal-zfs-nas-without-truenas/",
+    "hn_link": "https://news.ycombinator.com/item?id=48827325",
+    "score": 201,
+    "comments": 121
   },
   {
-    "title": "Dolosse – a South African invention used over the world",
-    "link": "https://thisbugslife.com/2021/11/21/dolosse-a-south-african-invention-used-over-the-world/",
-    "hn_link": "https://news.ycombinator.com/item?id=48786124",
-    "score": 66,
-    "comments": 17
+    "title": "Tenda firmware (multiple versions) contains hidden authentication backdoor",
+    "link": "https://kb.cert.org/vuls/id/213560",
+    "hn_link": "https://news.ycombinator.com/item?id=48825749",
+    "score": 220,
+    "comments": 67
   },
   {
-    "title": "How to sequence your own DNA at home",
-    "link": "https://bradleywoolf.com/links-1/sequencing-my-own-dna-at-home",
-    "hn_link": "https://news.ycombinator.com/item?id=48812156",
-    "score": 246,
-    "comments": 98
+    "title": "Copy That Floppy – Cambridge guide for preserving data from fragile floppy disks",
+    "link": "https://www.digipres.org/the-floppy-guide/",
+    "hn_link": "https://news.ycombinator.com/item?id=48827092",
+    "score": 78,
+    "comments": 21
   }
 ]
