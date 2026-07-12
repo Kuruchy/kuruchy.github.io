@@ -1,37 +1,37 @@
 [
   {
-    "title": "Einstein's relativity rules chemical bonds in heavy elements, new research shows",
-    "link": "https://www.brown.edu/news/2026-07-09/chemical-bonds-relativity",
-    "hn_link": "https://news.ycombinator.com/item?id=48866134",
-    "score": 239,
-    "comments": 84
+    "title": "Show HN: Mindwalk – Replay coding-agent sessions on a 3D map of your codebase",
+    "link": "https://github.com/cosmtrek/mindwalk",
+    "hn_link": "https://news.ycombinator.com/item?id=48878682",
+    "score": 48,
+    "comments": 17
   },
   {
-    "title": "QuadRF can spot drones and see WiFi through my wall",
-    "link": "https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/",
-    "hn_link": "https://news.ycombinator.com/item?id=48861717",
-    "score": 578,
-    "comments": 192
+    "title": "Mesh LLM: distributed AI computing on iroh",
+    "link": "https://www.iroh.computer/blog/mesh-llm",
+    "hn_link": "https://news.ycombinator.com/item?id=48876505",
+    "score": 257,
+    "comments": 58
   },
   {
-    "title": "Apple sues OpenAI, accuses ex-employees of stealing trade secrets",
-    "link": "https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/",
-    "hn_link": "https://news.ycombinator.com/item?id=48865019",
-    "score": 1058,
-    "comments": 544
+    "title": "Vint Cerf, a “father of the Internet”, is retiring",
+    "link": "https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/",
+    "hn_link": "https://news.ycombinator.com/item?id=48854168",
+    "score": 64,
+    "comments": 36
   },
   {
-    "title": "The vintage beauty of Soviet control rooms (2018)",
-    "link": "https://designyoutrust.com/2018/01/vintage-beauty-soviet-control-rooms/",
-    "hn_link": "https://news.ycombinator.com/item?id=48868996",
-    "score": 96,
-    "comments": 29
+    "title": "Protobuf-py: Protobuf for Python, without compromises",
+    "link": "https://buf.build/blog/protobuf-py",
+    "hn_link": "https://news.ycombinator.com/item?id=48827058",
+    "score": 44,
+    "comments": 6
   },
   {
-    "title": "An iroh powered smart fan",
-    "link": "https://www.iroh.computer/blog/an-iroh-powered-smart-fan",
-    "hn_link": "https://news.ycombinator.com/item?id=48817539",
-    "score": 103,
-    "comments": 26
+    "title": "An agent in 100 lines of Lisp",
+    "link": "https://thebeach.dev/posts/lisp-agent/",
+    "hn_link": "https://news.ycombinator.com/item?id=48823981",
+    "score": 150,
+    "comments": 28
   }
 ]
