@@ -1,37 +1,37 @@
 [
   {
-    "title": "Zig Creator Calls Spade a Spade, Anthropic Blows Smoke",
-    "link": "https://raymyers.org/post/zed-creator-calls-spade-a-spade/",
-    "hn_link": "https://news.ycombinator.com/item?id=48889637",
-    "score": 335,
-    "comments": 168
+    "title": "Japan develops a method to recover up to 90% of lithium from used EV batteries",
+    "link": "https://tech.supercarblondie.com/japan-recovers-up-to-90-of-lithium-from-used-ev-batteries/",
+    "hn_link": "https://news.ycombinator.com/item?id=48901569",
+    "score": 481,
+    "comments": 114
   },
   {
-    "title": "The social physics of conversation: Communication patterns matter",
-    "link": "https://andiroberts.com/citizenship/the-social-physics-of-conversation-citizenship-leadership",
-    "hn_link": "https://news.ycombinator.com/item?id=48828576",
-    "score": 53,
-    "comments": 6
+    "title": "Alternative(s) to run CUDA on non-Nvidia hardware",
+    "link": "https://www.hpcwire.com/2026/07/09/spectral-compute-aims-to-set-cuda-free-will-it-succeed/",
+    "hn_link": "https://news.ycombinator.com/item?id=48903715",
+    "score": 35,
+    "comments": 12
   },
   {
-    "title": "GhostLock, a stack-UAF that has existed in all Linux distributions for 15 years",
-    "link": "https://nebusec.ai/research/ionstack-part-2/",
-    "hn_link": "https://news.ycombinator.com/item?id=48834309",
-    "score": 290,
-    "comments": 124
+    "title": "The git history command",
+    "link": "https://lalitm.com/post/git-history/",
+    "hn_link": "https://news.ycombinator.com/item?id=48901010",
+    "score": 300,
+    "comments": 171
   },
   {
-    "title": "Interrail: 6,379Km and 13 Countries over 7 weeks",
-    "link": "https://shkspr.mobi/blog/2026/07/another-ridiculous-interrail-holiday-6379km-and-13-countries-over-7-weeks/",
-    "hn_link": "https://news.ycombinator.com/item?id=48889350",
-    "score": 78,
-    "comments": 53
+    "title": "YouTrackDB is a general-use object-oriented graph database",
+    "link": "https://github.com/JetBrains/youtrackdb",
+    "hn_link": "https://news.ycombinator.com/item?id=48902026",
+    "score": 123,
+    "comments": 37
   },
   {
-    "title": "Beavis Ultrasound PnP ISA Sound Card Replica",
-    "link": "https://github.com/schlae/BeavisUltrasound",
-    "hn_link": "https://news.ycombinator.com/item?id=48888193",
-    "score": 68,
-    "comments": 23
+    "title": "Australian energy retailers must provide three hours of free daytime electricity",
+    "link": "https://lenergy.com.au/free-daytime-electricity-is-coming-heres-how-it-actually-works/",
+    "hn_link": "https://news.ycombinator.com/item?id=48902320",
+    "score": 94,
+    "comments": 121
   }
 ]
