@@ -1,37 +1,37 @@
 [
   {
-    "title": "Japan develops a method to recover up to 90% of lithium from used EV batteries",
-    "link": "https://tech.supercarblondie.com/japan-recovers-up-to-90-of-lithium-from-used-ev-batteries/",
-    "hn_link": "https://news.ycombinator.com/item?id=48901569",
-    "score": 481,
-    "comments": 114
+    "title": "Jurassic Park computers in excruciating detail",
+    "link": "https://fabiensanglard.net/jurrasic_park_computers/index.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48915709",
+    "score": 452,
+    "comments": 109
   },
   {
-    "title": "Alternative(s) to run CUDA on non-Nvidia hardware",
-    "link": "https://www.hpcwire.com/2026/07/09/spectral-compute-aims-to-set-cuda-free-will-it-succeed/",
-    "hn_link": "https://news.ycombinator.com/item?id=48903715",
-    "score": 35,
-    "comments": 12
+    "title": "RISC-V Is Inevitable: State of the Union Keynote Argues",
+    "link": "https://www.eetimes.com/risc-v-is-inevitable-state-of-the-union-keynote-argues/",
+    "hn_link": "https://news.ycombinator.com/item?id=48916805",
+    "score": 64,
+    "comments": 45
   },
   {
-    "title": "The git history command",
-    "link": "https://lalitm.com/post/git-history/",
-    "hn_link": "https://news.ycombinator.com/item?id=48901010",
-    "score": 300,
-    "comments": 171
+    "title": "Vancouver PD website features Quick Escape button that wipes itself from history",
+    "link": "https://vpd.ca/",
+    "hn_link": "https://news.ycombinator.com/item?id=48914644",
+    "score": 268,
+    "comments": 110
   },
   {
-    "title": "YouTrackDB is a general-use object-oriented graph database",
-    "link": "https://github.com/JetBrains/youtrackdb",
-    "hn_link": "https://news.ycombinator.com/item?id=48902026",
-    "score": 123,
-    "comments": 37
+    "title": "Bonsai 27B: A 27B-Class model that runs on a phone",
+    "link": "https://prismml.com/news/bonsai-27b",
+    "hn_link": "https://news.ycombinator.com/item?id=48910545",
+    "score": 598,
+    "comments": 211
   },
   {
-    "title": "Australian energy retailers must provide three hours of free daytime electricity",
-    "link": "https://lenergy.com.au/free-daytime-electricity-is-coming-heres-how-it-actually-works/",
-    "hn_link": "https://news.ycombinator.com/item?id=48902320",
-    "score": 94,
-    "comments": 121
+    "title": "TS-2026-009: Insecure argument handling in Tailscale SSH permitted root access",
+    "link": "https://tailscale.com/security-bulletins",
+    "hn_link": "https://news.ycombinator.com/item?id=48915004",
+    "score": 152,
+    "comments": 79
   }
 ]
