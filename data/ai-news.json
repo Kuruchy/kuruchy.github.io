@@ -1,37 +1,37 @@
 [
   {
-    "title": "Transcribe.cpp",
-    "link": "https://workshop.cjpais.com/projects/transcribe-cpp",
-    "hn_link": "https://news.ycombinator.com/item?id=48963879",
-    "score": 523,
-    "comments": 109
+    "title": "Exploit brokers pay $500k for WordPress RCEs. I found one with GPT5.6 and $25",
+    "link": "https://slcyber.io/research-center/exploit-brokers-pay-500000-for-a-wordpress-rce-i-found-one-with-gpt5-6/",
+    "hn_link": "https://news.ycombinator.com/item?id=48975665",
+    "score": 115,
+    "comments": 58
   },
   {
-    "title": "Qwen3.8 is launching and going open-weight soon",
-    "link": "https://twitter.com/Alibaba_Qwen/status/2078759124914098291",
-    "hn_link": "https://news.ycombinator.com/item?id=48966120",
-    "score": 113,
-    "comments": 53
+    "title": "Show HN: I replaced a $120k bowling center system with $1,600 in ESP32s",
+    "link": "https://news.ycombinator.com/item?id=48968606",
+    "hn_link": "https://news.ycombinator.com/item?id=48968606",
+    "score": 2375,
+    "comments": 259
   },
   {
-    "title": "Perforce charges $500 for training training videos.. and it's AI narrated",
-    "link": "https://training.perforce.com/learn/courses/535/p4-helix-core-user-basic",
-    "hn_link": "https://news.ycombinator.com/item?id=48965886",
-    "score": 13,
-    "comments": 29
+    "title": "Moonshine: Lets you stream games from your PC to any device running Moonlight",
+    "link": "https://github.com/hgaiser/moonshine",
+    "hn_link": "https://news.ycombinator.com/item?id=48972970",
+    "score": 200,
+    "comments": 86
   },
   {
-    "title": "Speech Recognition and TTS in less than 500kb",
-    "link": "https://github.com/moonshine-ai/moonshine/tree/main/micro",
-    "hn_link": "https://news.ycombinator.com/item?id=48911793",
-    "score": 453,
-    "comments": 59
+    "title": "Sealed tomb filled with paintings and inscriptions discovered in Egypt",
+    "link": "https://www.labrujulaverde.com/en/2026/07/sealed-tomb-of-a-high-official-or-priest-filled-with-paintings-and-inscriptions-discovered-on-luxors-west-bank/",
+    "hn_link": "https://news.ycombinator.com/item?id=48917906",
+    "score": 48,
+    "comments": 35
   },
   {
-    "title": "Better and Cheaper Than IPTV",
-    "link": "https://github.com/stupside/castor",
-    "hn_link": "https://news.ycombinator.com/item?id=48964015",
-    "score": 196,
-    "comments": 50
+    "title": "LoRA Speedrun – a public wall-clock leaderboard for fine-tuning techniques",
+    "link": "https://github.com/Saivineeth147/lora-speedrun",
+    "hn_link": "https://news.ycombinator.com/item?id=48974325",
+    "score": 88,
+    "comments": 13
   }
 ]
