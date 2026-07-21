@@ -1,37 +1,37 @@
 [
   {
-    "title": "Exploit brokers pay $500k for WordPress RCEs. I found one with GPT5.6 and $25",
-    "link": "https://slcyber.io/research-center/exploit-brokers-pay-500000-for-a-wordpress-rce-i-found-one-with-gpt5-6/",
-    "hn_link": "https://news.ycombinator.com/item?id=48975665",
-    "score": 115,
-    "comments": 58
+    "title": "Qwen-Image-3.0: Rich Content, Authentic Details, Deep Knowledge",
+    "link": "https://qwen.ai/blog?id=qwen-image-3.0",
+    "hn_link": "https://news.ycombinator.com/item?id=48989701",
+    "score": 92,
+    "comments": 51
   },
   {
-    "title": "Show HN: I replaced a $120k bowling center system with $1,600 in ESP32s",
-    "link": "https://news.ycombinator.com/item?id=48968606",
-    "hn_link": "https://news.ycombinator.com/item?id=48968606",
-    "score": 2375,
-    "comments": 259
+    "title": "Incremental – A library for incremental computations",
+    "link": "https://github.com/janestreet/incremental",
+    "hn_link": "https://news.ycombinator.com/item?id=48987822",
+    "score": 210,
+    "comments": 36
   },
   {
-    "title": "Moonshine: Lets you stream games from your PC to any device running Moonlight",
-    "link": "https://github.com/hgaiser/moonshine",
-    "hn_link": "https://news.ycombinator.com/item?id=48972970",
-    "score": 200,
-    "comments": 86
+    "title": "Who's afraid of Chinese models?",
+    "link": "https://stratechery.com/2026/whos-afraid-of-chinese-models/",
+    "hn_link": "https://news.ycombinator.com/item?id=48977128",
+    "score": 658,
+    "comments": 464
   },
   {
-    "title": "Sealed tomb filled with paintings and inscriptions discovered in Egypt",
-    "link": "https://www.labrujulaverde.com/en/2026/07/sealed-tomb-of-a-high-official-or-priest-filled-with-paintings-and-inscriptions-discovered-on-luxors-west-bank/",
-    "hn_link": "https://news.ycombinator.com/item?id=48917906",
-    "score": 48,
-    "comments": 35
+    "title": "Arduino Launches Plug-and-Play Modules for Long-Range Sensor Projects",
+    "link": "https://www.allaboutcircuits.com/news/arduino-launches-plug-and-play-modules-for-long-range-sensor-projects/",
+    "hn_link": "https://news.ycombinator.com/item?id=48954668",
+    "score": 18,
+    "comments": 1
   },
   {
-    "title": "LoRA Speedrun – a public wall-clock leaderboard for fine-tuning techniques",
-    "link": "https://github.com/Saivineeth147/lora-speedrun",
-    "hn_link": "https://news.ycombinator.com/item?id=48974325",
-    "score": 88,
-    "comments": 13
+    "title": "Linux kernel will support $ORIGIN, sort of",
+    "link": "https://fzakaria.com/2026/07/20/linux-kernel-will-support-origin-sort-of",
+    "hn_link": "https://news.ycombinator.com/item?id=48988793",
+    "score": 52,
+    "comments": 29
   }
 ]
