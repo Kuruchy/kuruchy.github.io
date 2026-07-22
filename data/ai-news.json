@@ -1,37 +1,37 @@
 [
   {
-    "title": "Qwen-Image-3.0: Rich Content, Authentic Details, Deep Knowledge",
-    "link": "https://qwen.ai/blog?id=qwen-image-3.0",
-    "hn_link": "https://news.ycombinator.com/item?id=48989701",
-    "score": 92,
-    "comments": 51
+    "title": "OpenAI and Hugging Face address security incident during model evaluation",
+    "link": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+    "hn_link": "https://news.ycombinator.com/item?id=48997548",
+    "score": 1182,
+    "comments": 819
   },
   {
-    "title": "Incremental – A library for incremental computations",
-    "link": "https://github.com/janestreet/incremental",
-    "hn_link": "https://news.ycombinator.com/item?id=48987822",
-    "score": 210,
-    "comments": 36
+    "title": "Kimi K3 Is Competitive with Fable; Kimi K3 and Fable Is SoTA",
+    "link": "https://fireworks.ai/blog/kimik3-fable",
+    "hn_link": "https://news.ycombinator.com/item?id=48999291",
+    "score": 643,
+    "comments": 348
   },
   {
-    "title": "Who's afraid of Chinese models?",
-    "link": "https://stratechery.com/2026/whos-afraid-of-chinese-models/",
-    "hn_link": "https://news.ycombinator.com/item?id=48977128",
-    "score": 658,
-    "comments": 464
+    "title": "Intel Starts Shipping High-NA EUV Silicon",
+    "link": "https://morethanmoore.substack.com/p/intel-starts-shipping-high-na-euv",
+    "hn_link": "https://news.ycombinator.com/item?id=48961698",
+    "score": 80,
+    "comments": 17
   },
   {
-    "title": "Arduino Launches Plug-and-Play Modules for Long-Range Sensor Projects",
-    "link": "https://www.allaboutcircuits.com/news/arduino-launches-plug-and-play-modules-for-long-range-sensor-projects/",
-    "hn_link": "https://news.ycombinator.com/item?id=48954668",
-    "score": 18,
-    "comments": 1
+    "title": "Original Apollo 11 Guidance Computer source code for command and lunar modules",
+    "link": "https://github.com/chrislgarry/Apollo-11",
+    "hn_link": "https://news.ycombinator.com/item?id=49002166",
+    "score": 84,
+    "comments": 24
   },
   {
-    "title": "Linux kernel will support $ORIGIN, sort of",
-    "link": "https://fzakaria.com/2026/07/20/linux-kernel-will-support-origin-sort-of",
-    "hn_link": "https://news.ycombinator.com/item?id=48988793",
-    "score": 52,
-    "comments": 29
+    "title": "Introduction to Formal Verification with Lean Part 1",
+    "link": "https://hashcloak.com/blog/tutorial-introduction-to-formal-verification-with-lean-(part-1)",
+    "hn_link": "https://news.ycombinator.com/item?id=48969200",
+    "score": 23,
+    "comments": 0
   }
 ]
