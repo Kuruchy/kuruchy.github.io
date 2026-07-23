@@ -1,37 +1,37 @@
 [
   {
-    "title": "OpenAI and Hugging Face address security incident during model evaluation",
-    "link": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
-    "hn_link": "https://news.ycombinator.com/item?id=48997548",
-    "score": 1182,
-    "comments": 819
+    "title": "Escape IntelliJ: Scala and Kotlin LSPs on Emacs Eglot",
+    "link": "https://jointhefreeworld.org/blog/articles/emacs/emacs-eglot-scala-kotlin/index.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48990219",
+    "score": 67,
+    "comments": 29
   },
   {
-    "title": "Kimi K3 Is Competitive with Fable; Kimi K3 and Fable Is SoTA",
-    "link": "https://fireworks.ai/blog/kimik3-fable",
-    "hn_link": "https://news.ycombinator.com/item?id=48999291",
-    "score": 643,
-    "comments": 348
+    "title": "Terence Tao's ChatGPT conversation about the Jacobian Conjecture counterexample",
+    "link": "https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56",
+    "hn_link": "https://news.ycombinator.com/item?id=49010345",
+    "score": 894,
+    "comments": 517
   },
   {
-    "title": "Intel Starts Shipping High-NA EUV Silicon",
-    "link": "https://morethanmoore.substack.com/p/intel-starts-shipping-high-na-euv",
-    "hn_link": "https://news.ycombinator.com/item?id=48961698",
-    "score": 80,
-    "comments": 17
+    "title": "Cruller: Bun's Zig Runtime, Continued on Zig 0.16",
+    "link": "https://ziggit.dev/t/cruller-buns-zig-runtime-continued-on-zig-0-16/16734",
+    "hn_link": "https://news.ycombinator.com/item?id=49017344",
+    "score": 60,
+    "comments": 27
   },
   {
-    "title": "Original Apollo 11 Guidance Computer source code for command and lunar modules",
-    "link": "https://github.com/chrislgarry/Apollo-11",
-    "hn_link": "https://news.ycombinator.com/item?id=49002166",
-    "score": 84,
-    "comments": 24
+    "title": "Quality non-fiction books are the antithesis of AI slop",
+    "link": "https://resobscura.substack.com/p/quality-non-fiction-books-are-the",
+    "hn_link": "https://news.ycombinator.com/item?id=49007247",
+    "score": 367,
+    "comments": 125
   },
   {
-    "title": "Introduction to Formal Verification with Lean Part 1",
-    "link": "https://hashcloak.com/blog/tutorial-introduction-to-formal-verification-with-lean-(part-1)",
-    "hn_link": "https://news.ycombinator.com/item?id=48969200",
-    "score": 23,
-    "comments": 0
+    "title": "git's –end-of-options Flag",
+    "link": "https://nesbitt.io/2026/07/21/end-of-options.html",
+    "hn_link": "https://news.ycombinator.com/item?id=48991882",
+    "score": 150,
+    "comments": 74
   }
 ]
