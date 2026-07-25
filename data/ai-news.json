@@ -1,37 +1,37 @@
 [
   {
-    "title": "Flux 3",
-    "link": "https://bfl.ai/blog/flux-3",
-    "hn_link": "https://news.ycombinator.com/item?id=49031796",
-    "score": 292,
-    "comments": 67
+    "title": "Android May Soon Restrict On-Device ADB",
+    "link": "https://kitsumed.github.io/blog/posts/android-may-soon-restrict-on-device-adb/",
+    "hn_link": "https://news.ycombinator.com/item?id=49045159",
+    "score": 192,
+    "comments": 96
   },
   {
-    "title": "Flux 3 X Mimic: The Next Generation of Video-Action Models",
-    "link": "https://bfl.ai/blog/flux-3-mimic",
-    "hn_link": "https://news.ycombinator.com/item?id=49033127",
-    "score": 34,
+    "title": "Claude Opus 5",
+    "link": "https://www.anthropic.com/news/claude-opus-5",
+    "hn_link": "https://news.ycombinator.com/item?id=49038433",
+    "score": 1553,
+    "comments": 897
+  },
+  {
+    "title": "Hannah Fry Wins the Leelavati Prize in 2026 for Mathematics Outreach",
+    "link": "https://www.maths.cam.ac.uk/features/professor-hannah-fry-wins-leelavati-prize",
+    "hn_link": "https://news.ycombinator.com/item?id=49043724",
+    "score": 212,
+    "comments": 36
+  },
+  {
+    "title": "GC and Exceptions in Wasmtime",
+    "link": "https://bytecodealliance.org/articles/wasmtime-gc",
+    "hn_link": "https://news.ycombinator.com/item?id=48981665",
+    "score": 97,
     "comments": 3
   },
   {
-    "title": "Nothing works and everyone is euphoric",
-    "link": "https://ptrchm.com/posts/nothing-works-and-everyone-is-euphoric/",
-    "hn_link": "https://news.ycombinator.com/item?id=49033004",
-    "score": 46,
-    "comments": 20
-  },
-  {
-    "title": "It's getting harder to focus every day",
-    "link": "https://glyphack.com/attention/",
-    "hn_link": "https://news.ycombinator.com/item?id=49032660",
-    "score": 28,
-    "comments": 11
-  },
-  {
-    "title": "Writing by hand is good for your brain",
-    "link": "https://nealstephenson.substack.com/p/writing-by-hand-is-good-for-your",
-    "hn_link": "https://news.ycombinator.com/item?id=49022152",
-    "score": 1322,
-    "comments": 596
+    "title": "NYC Apartment Aquaponics",
+    "link": "https://erinmurphy.dev/projects/project-2/",
+    "hn_link": "https://news.ycombinator.com/item?id=48979836",
+    "score": 44,
+    "comments": 14
   }
 ]
