@@ -1,37 +1,37 @@
 [
   {
-    "title": "Ruff v0.16.0 – Significant new updates – 413 default rules up from 59",
-    "link": "https://astral.sh/blog/ruff-v0.16.0",
-    "hn_link": "https://news.ycombinator.com/item?id=49056112",
-    "score": 19,
-    "comments": 2
+    "title": "Kimi-K3 Releases on HuggingFace 7/27",
+    "link": "https://huggingface.co/moonshotai/Kimi-K3",
+    "hn_link": "https://news.ycombinator.com/item?id=49065752",
+    "score": 416,
+    "comments": 185
   },
   {
-    "title": "A shell colon does nothing. Use it anyway",
-    "link": "https://refp.se/articles/your-shell-and-the-magic-colon",
-    "hn_link": "https://news.ycombinator.com/item?id=49047453",
-    "score": 199,
+    "title": "PGSimCity - How PostgreSQL Works",
+    "link": "https://nikolays.github.io/PGSimCity/",
+    "hn_link": "https://news.ycombinator.com/item?id=49063754",
+    "score": 667,
     "comments": 66
   },
   {
-    "title": "GrapheneOS protections against data extraction from locked devices",
-    "link": "https://discuss.grapheneos.org/d/40700-grapheneos-protections-against-data-extraction-from-locked-devices",
-    "hn_link": "https://news.ycombinator.com/item?id=49055169",
-    "score": 69,
-    "comments": 31
+    "title": "The Birth of the American 12-string Guitar",
+    "link": "https://www.harpguitars.net/history/grunewald/12-string.htm",
+    "hn_link": "https://news.ycombinator.com/item?id=49067690",
+    "score": 7,
+    "comments": 1
   },
   {
-    "title": "An ESP32 based plane radar for my desk",
-    "link": "https://blog.ktz.me/esp32-plane-radar/",
-    "hn_link": "https://news.ycombinator.com/item?id=49054107",
-    "score": 149,
-    "comments": 27
+    "title": "Show HN: Physically accurate black hole you can put in your room",
+    "link": "https://blackhole.plav.in",
+    "hn_link": "https://news.ycombinator.com/item?id=49021270",
+    "score": 349,
+    "comments": 104
   },
   {
-    "title": "The new rules of context engineering for Claude 5 generation models",
-    "link": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
-    "hn_link": "https://news.ycombinator.com/item?id=49051361",
-    "score": 330,
-    "comments": 217
+    "title": "Magnolias Are So Old That They're Pollinated by Beetles, Not Bees",
+    "link": "https://mymodernmet.com/magnolia-ancient-flowers-beetles/",
+    "hn_link": "https://news.ycombinator.com/item?id=49009706",
+    "score": 63,
+    "comments": 18
   }
 ]
