@@ -1,37 +1,37 @@
 [
   {
-    "title": "Kimi-K3 Releases on HuggingFace 7/27",
-    "link": "https://huggingface.co/moonshotai/Kimi-K3",
-    "hn_link": "https://news.ycombinator.com/item?id=49065752",
-    "score": 416,
-    "comments": 185
+    "title": "7.1 Earthquake in Japan",
+    "link": "https://www.data.jma.go.jp/multi/quake/quake_detail.html?eventID=20260728163528&lang=en",
+    "hn_link": "https://news.ycombinator.com/item?id=49080664",
+    "score": 227,
+    "comments": 54
   },
   {
-    "title": "PGSimCity - How PostgreSQL Works",
-    "link": "https://nikolays.github.io/PGSimCity/",
-    "hn_link": "https://news.ycombinator.com/item?id=49063754",
-    "score": 667,
-    "comments": 66
+    "title": "About the security content of macOS Tahoe 26.6",
+    "link": "https://support.apple.com/en-us/128067",
+    "hn_link": "https://news.ycombinator.com/item?id=49081555",
+    "score": 25,
+    "comments": 11
   },
   {
-    "title": "The Birth of the American 12-string Guitar",
-    "link": "https://www.harpguitars.net/history/grunewald/12-string.htm",
-    "hn_link": "https://news.ycombinator.com/item?id=49067690",
-    "score": 7,
-    "comments": 1
+    "title": "Our position on open-weights models",
+    "link": "https://www.anthropic.com/news/position-open-weights-models",
+    "hn_link": "https://news.ycombinator.com/item?id=49076057",
+    "score": 932,
+    "comments": 1348
   },
   {
-    "title": "Show HN: Physically accurate black hole you can put in your room",
-    "link": "https://blackhole.plav.in",
-    "hn_link": "https://news.ycombinator.com/item?id=49021270",
-    "score": 349,
-    "comments": 104
+    "title": "What Even Are Microservices?",
+    "link": "https://var0.xyz/posts/what-even-are-microservices.html",
+    "hn_link": "https://news.ycombinator.com/item?id=49081594",
+    "score": 15,
+    "comments": 24
   },
   {
-    "title": "Magnolias Are So Old That They're Pollinated by Beetles, Not Bees",
-    "link": "https://mymodernmet.com/magnolia-ancient-flowers-beetles/",
-    "hn_link": "https://news.ycombinator.com/item?id=49009706",
-    "score": 63,
-    "comments": 18
+    "title": "A $500 RL fine-tune of a 9B open model beat frontier models on catalog review",
+    "link": "https://fermisense.com/when-machines-take-the-wheel/",
+    "hn_link": "https://news.ycombinator.com/item?id=49078454",
+    "score": 199,
+    "comments": 53
   }
 ]
