@@ -1,37 +1,37 @@
 [
   {
-    "title": "7.1 Earthquake in Japan",
-    "link": "https://www.data.jma.go.jp/multi/quake/quake_detail.html?eventID=20260728163528&lang=en",
-    "hn_link": "https://news.ycombinator.com/item?id=49080664",
-    "score": 227,
-    "comments": 54
+    "title": "More Tailscale tricks for your jailbroken Kindle",
+    "link": "https://tailscale.com/blog/jailbroken-kindle-proxy-tun-modes",
+    "hn_link": "https://news.ycombinator.com/item?id=49093569",
+    "score": 191,
+    "comments": 65
   },
   {
-    "title": "About the security content of macOS Tahoe 26.6",
-    "link": "https://support.apple.com/en-us/128067",
-    "hn_link": "https://news.ycombinator.com/item?id=49081555",
-    "score": 25,
-    "comments": 11
+    "title": "User Interfaces of the Demo Scene",
+    "link": "https://www.datagubbe.se/scenegui/",
+    "hn_link": "https://news.ycombinator.com/item?id=49093434",
+    "score": 210,
+    "comments": 33
   },
   {
-    "title": "Our position on open-weights models",
-    "link": "https://www.anthropic.com/news/position-open-weights-models",
-    "hn_link": "https://news.ycombinator.com/item?id=49076057",
-    "score": 932,
-    "comments": 1348
-  },
-  {
-    "title": "What Even Are Microservices?",
-    "link": "https://var0.xyz/posts/what-even-are-microservices.html",
-    "hn_link": "https://news.ycombinator.com/item?id=49081594",
-    "score": 15,
+    "title": "SQLite in Production: Optimizing WAL Mode, Concurrency, and VFS Layers",
+    "link": "https://micrologics.org/blog/sqlite-in-production-optimizing-wal-mode-concurrency-and-vfs-layers-for-low-latency-app-servers",
+    "hn_link": "https://news.ycombinator.com/item?id=49094346",
+    "score": 71,
     "comments": 24
   },
   {
-    "title": "A $500 RL fine-tune of a 9B open model beat frontier models on catalog review",
-    "link": "https://fermisense.com/when-machines-take-the-wheel/",
-    "hn_link": "https://news.ycombinator.com/item?id=49078454",
-    "score": 199,
-    "comments": 53
+    "title": "Lisp moving Forth moving Lisp",
+    "link": "https://letoverlambda.com/textmode.cl/guest/chap8.html",
+    "hn_link": "https://news.ycombinator.com/item?id=49060363",
+    "score": 30,
+    "comments": 6
+  },
+  {
+    "title": "Codex Security",
+    "link": "https://github.com/openai/codex-security",
+    "hn_link": "https://news.ycombinator.com/item?id=49089755",
+    "score": 506,
+    "comments": 175
   }
 ]
