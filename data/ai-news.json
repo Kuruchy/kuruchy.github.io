@@ -1,37 +1,37 @@
 [
   {
-    "title": "More Tailscale tricks for your jailbroken Kindle",
-    "link": "https://tailscale.com/blog/jailbroken-kindle-proxy-tun-modes",
-    "hn_link": "https://news.ycombinator.com/item?id=49093569",
-    "score": 191,
-    "comments": 65
+    "title": "AI's top startups are barely publishing their research",
+    "link": "https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research",
+    "hn_link": "https://news.ycombinator.com/item?id=49103285",
+    "score": 484,
+    "comments": 246
   },
   {
-    "title": "User Interfaces of the Demo Scene",
-    "link": "https://www.datagubbe.se/scenegui/",
-    "hn_link": "https://news.ycombinator.com/item?id=49093434",
-    "score": 210,
-    "comments": 33
+    "title": "The coolest use for the Vision Pro",
+    "link": "https://christianselig.com/2026/07/vision-pro-house/",
+    "hn_link": "https://news.ycombinator.com/item?id=49102774",
+    "score": 682,
+    "comments": 263
   },
   {
-    "title": "SQLite in Production: Optimizing WAL Mode, Concurrency, and VFS Layers",
-    "link": "https://micrologics.org/blog/sqlite-in-production-optimizing-wal-mode-concurrency-and-vfs-layers-for-low-latency-app-servers",
-    "hn_link": "https://news.ycombinator.com/item?id=49094346",
-    "score": 71,
-    "comments": 24
+    "title": "Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac",
+    "link": "https://github.com/drumih/turbo-fieldfare",
+    "hn_link": "https://news.ycombinator.com/item?id=49098510",
+    "score": 808,
+    "comments": 284
   },
   {
-    "title": "Lisp moving Forth moving Lisp",
-    "link": "https://letoverlambda.com/textmode.cl/guest/chap8.html",
-    "hn_link": "https://news.ycombinator.com/item?id=49060363",
-    "score": 30,
-    "comments": 6
+    "title": "Superlogical",
+    "link": "https://www.superlogical.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=49098965",
+    "score": 706,
+    "comments": 414
   },
   {
-    "title": "Codex Security",
-    "link": "https://github.com/openai/codex-security",
-    "hn_link": "https://news.ycombinator.com/item?id=49089755",
-    "score": 506,
-    "comments": 175
+    "title": "LLM Honeypot",
+    "link": "https://llm2human.pages.dev/",
+    "hn_link": "https://news.ycombinator.com/item?id=49104117",
+    "score": 261,
+    "comments": 68
   }
 ]
