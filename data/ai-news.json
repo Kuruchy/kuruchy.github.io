@@ -1,37 +1,37 @@
 [
   {
-    "title": "AI's top startups are barely publishing their research",
-    "link": "https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research",
-    "hn_link": "https://news.ycombinator.com/item?id=49103285",
-    "score": 484,
-    "comments": 246
+    "title": "The session you cannot take with you",
+    "link": "https://earendil.com/posts/session-portability/",
+    "hn_link": "https://news.ycombinator.com/item?id=49118781",
+    "score": 374,
+    "comments": 87
   },
   {
-    "title": "The coolest use for the Vision Pro",
-    "link": "https://christianselig.com/2026/07/vision-pro-house/",
-    "hn_link": "https://news.ycombinator.com/item?id=49102774",
-    "score": 682,
-    "comments": 263
+    "title": "Google fixed more Chrome bugs in June than over the past two years, thanks to AI",
+    "link": "https://blog.google/security/chrome-stronger-with-every-update/",
+    "hn_link": "https://news.ycombinator.com/item?id=49120097",
+    "score": 94,
+    "comments": 101
   },
   {
-    "title": "Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac",
-    "link": "https://github.com/drumih/turbo-fieldfare",
-    "hn_link": "https://news.ycombinator.com/item?id=49098510",
-    "score": 808,
-    "comments": 284
+    "title": "JEP 401: Value Objects (Preview) merged to OpenJDK master",
+    "link": "https://github.com/openjdk/jdk/pull/31120",
+    "hn_link": "https://news.ycombinator.com/item?id=49119063",
+    "score": 121,
+    "comments": 58
   },
   {
-    "title": "Superlogical",
-    "link": "https://www.superlogical.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=49098965",
-    "score": 706,
-    "comments": 414
+    "title": "DeepSeek-V4-Flash Update",
+    "link": "https://api-docs.deepseek.com/updates/",
+    "hn_link": "https://news.ycombinator.com/item?id=49119559",
+    "score": 308,
+    "comments": 139
   },
   {
-    "title": "LLM Honeypot",
-    "link": "https://llm2human.pages.dev/",
-    "hn_link": "https://news.ycombinator.com/item?id=49104117",
-    "score": 261,
-    "comments": 68
+    "title": "Stacked PRs are now live on GitHub",
+    "link": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/",
+    "hn_link": "https://news.ycombinator.com/item?id=49112232",
+    "score": 657,
+    "comments": 230
   }
 ]
