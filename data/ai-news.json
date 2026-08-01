@@ -1,37 +1,37 @@
 [
   {
-    "title": "The session you cannot take with you",
-    "link": "https://earendil.com/posts/session-portability/",
-    "hn_link": "https://news.ycombinator.com/item?id=49118781",
-    "score": 374,
-    "comments": 87
+    "title": "RamenHaus",
+    "link": "https://ramen.haus/",
+    "hn_link": "https://news.ycombinator.com/item?id=49132460",
+    "score": 64,
+    "comments": 21
   },
   {
-    "title": "Google fixed more Chrome bugs in June than over the past two years, thanks to AI",
-    "link": "https://blog.google/security/chrome-stronger-with-every-update/",
-    "hn_link": "https://news.ycombinator.com/item?id=49120097",
-    "score": 94,
-    "comments": 101
+    "title": "AI doesn't generate working products, that's still your job",
+    "link": "https://weeraman.com/the-prototype-isnt-the-product/",
+    "hn_link": "https://news.ycombinator.com/item?id=49132130",
+    "score": 45,
+    "comments": 21
   },
   {
-    "title": "JEP 401: Value Objects (Preview) merged to OpenJDK master",
-    "link": "https://github.com/openjdk/jdk/pull/31120",
-    "hn_link": "https://news.ycombinator.com/item?id=49119063",
-    "score": 121,
-    "comments": 58
+    "title": "Elevators",
+    "link": "https://john.fun/elevators",
+    "hn_link": "https://news.ycombinator.com/item?id=49124218",
+    "score": 1301,
+    "comments": 317
   },
   {
-    "title": "DeepSeek-V4-Flash Update",
-    "link": "https://api-docs.deepseek.com/updates/",
-    "hn_link": "https://news.ycombinator.com/item?id=49119559",
-    "score": 308,
-    "comments": 139
+    "title": "Flint: A Visualization Language for the AI Era",
+    "link": "https://microsoft.github.io/flint-chart/",
+    "hn_link": "https://news.ycombinator.com/item?id=49130604",
+    "score": 122,
+    "comments": 38
   },
   {
-    "title": "Stacked PRs are now live on GitHub",
-    "link": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/",
-    "hn_link": "https://news.ycombinator.com/item?id=49112232",
-    "score": 657,
-    "comments": 230
+    "title": "Solid Queue 1.6.0 now supports fiber workers",
+    "link": "https://github.com/rails/solid_queue/releases/tag/v1.6.0",
+    "hn_link": "https://news.ycombinator.com/item?id=49132083",
+    "score": 13,
+    "comments": 1
   }
 ]
