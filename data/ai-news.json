@@ -1,37 +1,37 @@
 [
   {
-    "title": "RamenHaus",
-    "link": "https://ramen.haus/",
-    "hn_link": "https://news.ycombinator.com/item?id=49132460",
-    "score": 64,
-    "comments": 21
+    "title": "Go 1.27 Interactive Tour",
+    "link": "https://victoriametrics.com/blog/go-1-27/index.html",
+    "hn_link": "https://news.ycombinator.com/item?id=49140218",
+    "score": 214,
+    "comments": 78
   },
   {
-    "title": "AI doesn't generate working products, that's still your job",
-    "link": "https://weeraman.com/the-prototype-isnt-the-product/",
-    "hn_link": "https://news.ycombinator.com/item?id=49132130",
-    "score": 45,
-    "comments": 21
+    "title": "Show HN: I'm a 15 Year Old Wannabe Engineer, This Is a Cycloidal Gearbox I Built",
+    "link": "https://github.com/tom-ilan/cycloidal_gearbox",
+    "hn_link": "https://news.ycombinator.com/item?id=49140396",
+    "score": 165,
+    "comments": 39
   },
   {
-    "title": "Elevators",
-    "link": "https://john.fun/elevators",
-    "hn_link": "https://news.ycombinator.com/item?id=49124218",
-    "score": 1301,
-    "comments": 317
+    "title": "Seedance 2.5",
+    "link": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+    "hn_link": "https://news.ycombinator.com/item?id=49138302",
+    "score": 339,
+    "comments": 183
   },
   {
-    "title": "Flint: A Visualization Language for the AI Era",
-    "link": "https://microsoft.github.io/flint-chart/",
-    "hn_link": "https://news.ycombinator.com/item?id=49130604",
-    "score": 122,
-    "comments": 38
+    "title": "MkLinux and the pimped-out Apple Workgroup Server 9150",
+    "link": "http://oldvcr.blogspot.com/2026/08/mklinux-and-pimped-out-apple-workgroup.html",
+    "hn_link": "https://news.ycombinator.com/item?id=49140702",
+    "score": 56,
+    "comments": 2
   },
   {
-    "title": "Solid Queue 1.6.0 now supports fiber workers",
-    "link": "https://github.com/rails/solid_queue/releases/tag/v1.6.0",
-    "hn_link": "https://news.ycombinator.com/item?id=49132083",
-    "score": 13,
-    "comments": 1
+    "title": "Diátaxis",
+    "link": "https://diataxis.fr/",
+    "hn_link": "https://news.ycombinator.com/item?id=49138188",
+    "score": 353,
+    "comments": 42
   }
 ]
