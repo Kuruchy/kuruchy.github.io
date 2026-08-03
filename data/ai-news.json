@@ -1,37 +1,37 @@
 [
   {
-    "title": "Go 1.27 Interactive Tour",
-    "link": "https://victoriametrics.com/blog/go-1-27/index.html",
-    "hn_link": "https://news.ycombinator.com/item?id=49140218",
-    "score": 214,
-    "comments": 78
+    "title": "Don't be a meat proxy",
+    "link": "https://gruhn.me/blog/2026-08-03/",
+    "hn_link": "https://news.ycombinator.com/item?id=49151933",
+    "score": 715,
+    "comments": 308
   },
   {
-    "title": "Show HN: I'm a 15 Year Old Wannabe Engineer, This Is a Cycloidal Gearbox I Built",
-    "link": "https://github.com/tom-ilan/cycloidal_gearbox",
-    "hn_link": "https://news.ycombinator.com/item?id=49140396",
-    "score": 165,
-    "comments": 39
+    "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+    "link": "https://qwen.ai/blog?id=qwen3.8",
+    "hn_link": "https://news.ycombinator.com/item?id=49150470",
+    "score": 642,
+    "comments": 319
   },
   {
-    "title": "Seedance 2.5",
-    "link": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
-    "hn_link": "https://news.ycombinator.com/item?id=49138302",
-    "score": 339,
-    "comments": 183
+    "title": "Bonsai: Janestreet's UI Library",
+    "link": "https://github.com/janestreet/bonsai",
+    "hn_link": "https://news.ycombinator.com/item?id=49152842",
+    "score": 67,
+    "comments": 17
   },
   {
-    "title": "MkLinux and the pimped-out Apple Workgroup Server 9150",
-    "link": "http://oldvcr.blogspot.com/2026/08/mklinux-and-pimped-out-apple-workgroup.html",
-    "hn_link": "https://news.ycombinator.com/item?id=49140702",
-    "score": 56,
-    "comments": 2
+    "title": "What DMARC Protects You From, and What It Does Not",
+    "link": "https://senderledger.com/articles/what-dmarc-actually-protects-you-from",
+    "hn_link": "https://news.ycombinator.com/item?id=49153361",
+    "score": 24,
+    "comments": 6
   },
   {
-    "title": "Diátaxis",
-    "link": "https://diataxis.fr/",
-    "hn_link": "https://news.ycombinator.com/item?id=49138188",
-    "score": 353,
-    "comments": 42
+    "title": "Prevent cognitive debt by manually retyping LLM-generated code",
+    "link": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
+    "hn_link": "https://news.ycombinator.com/item?id=49153374",
+    "score": 83,
+    "comments": 60
   }
 ]
