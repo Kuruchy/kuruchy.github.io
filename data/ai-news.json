@@ -1,37 +1,37 @@
 [
   {
-    "title": "Don't be a meat proxy",
-    "link": "https://gruhn.me/blog/2026-08-03/",
-    "hn_link": "https://news.ycombinator.com/item?id=49151933",
-    "score": 715,
-    "comments": 308
+    "title": "FFmpeg 9.0",
+    "link": "https://github.com/FFmpeg/FFmpeg/blob/n9.0/RELEASE_NOTES",
+    "hn_link": "https://news.ycombinator.com/item?id=49166202",
+    "score": 125,
+    "comments": 11
   },
   {
-    "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
-    "link": "https://qwen.ai/blog?id=qwen3.8",
-    "hn_link": "https://news.ycombinator.com/item?id=49150470",
-    "score": 642,
-    "comments": 319
+    "title": "Bending Spoons makes first post-IPO acquisition with $1.3B Airtable deal",
+    "link": "https://live.euronext.com/en/financial-news/bending-spoons-makes-first-post-ipo-acquisition-13-billion-airtable-deal",
+    "hn_link": "https://news.ycombinator.com/item?id=49166182",
+    "score": 32,
+    "comments": 23
   },
   {
-    "title": "Bonsai: Janestreet's UI Library",
-    "link": "https://github.com/janestreet/bonsai",
-    "hn_link": "https://news.ycombinator.com/item?id=49152842",
-    "score": 67,
-    "comments": 17
+    "title": "DeepSeek V4 Flash on a Single AMD MI300X",
+    "link": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
+    "hn_link": "https://news.ycombinator.com/item?id=49166386",
+    "score": 12,
+    "comments": 0
   },
   {
-    "title": "What DMARC Protects You From, and What It Does Not",
-    "link": "https://senderledger.com/articles/what-dmarc-actually-protects-you-from",
-    "hn_link": "https://news.ycombinator.com/item?id=49153361",
-    "score": 24,
-    "comments": 6
+    "title": "LLMs reward expertise",
+    "link": "https://www.seangoedecke.com/llms-reward-expertise/",
+    "hn_link": "https://news.ycombinator.com/item?id=49161518",
+    "score": 980,
+    "comments": 414
   },
   {
-    "title": "Prevent cognitive debt by manually retyping LLM-generated code",
-    "link": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
-    "hn_link": "https://news.ycombinator.com/item?id=49153374",
-    "score": 83,
-    "comments": 60
+    "title": "Harness Engineering for Self-Improvement",
+    "link": "https://lilianweng.github.io/posts/2026-07-04-harness/",
+    "hn_link": "https://news.ycombinator.com/item?id=49164896",
+    "score": 62,
+    "comments": 7
   }
 ]
