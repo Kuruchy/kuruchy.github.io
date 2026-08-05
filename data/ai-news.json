@@ -1,37 +1,37 @@
 [
   {
-    "title": "FFmpeg 9.0",
-    "link": "https://github.com/FFmpeg/FFmpeg/blob/n9.0/RELEASE_NOTES",
-    "hn_link": "https://news.ycombinator.com/item?id=49166202",
-    "score": 125,
-    "comments": 11
+    "title": "Helsinki Hacker News Meetup",
+    "link": "https://calpaterson.com/helsinki-hn.html",
+    "hn_link": "https://news.ycombinator.com/item?id=49180407",
+    "score": 28,
+    "comments": 9
   },
   {
-    "title": "Bending Spoons makes first post-IPO acquisition with $1.3B Airtable deal",
-    "link": "https://live.euronext.com/en/financial-news/bending-spoons-makes-first-post-ipo-acquisition-13-billion-airtable-deal",
-    "hn_link": "https://news.ycombinator.com/item?id=49166182",
-    "score": 32,
-    "comments": 23
+    "title": "Stateless MCP has recaptured my interest",
+    "link": "https://simonwillison.net/2026/Jul/31/stateless-mcp/",
+    "hn_link": "https://news.ycombinator.com/item?id=49131438",
+    "score": 229,
+    "comments": 119
   },
   {
-    "title": "DeepSeek V4 Flash on a Single AMD MI300X",
-    "link": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
-    "hn_link": "https://news.ycombinator.com/item?id=49166386",
-    "score": 12,
-    "comments": 0
+    "title": "“Gravity is worth asking about”",
+    "link": "https://unsung.aresluna.org/gravity-is-worth-asking-about/",
+    "hn_link": "https://news.ycombinator.com/item?id=49105978",
+    "score": 91,
+    "comments": 52
   },
   {
-    "title": "LLMs reward expertise",
-    "link": "https://www.seangoedecke.com/llms-reward-expertise/",
-    "hn_link": "https://news.ycombinator.com/item?id=49161518",
-    "score": 980,
-    "comments": 414
+    "title": "Pi's Minimalism Is Its Advantage",
+    "link": "https://earendil.com/posts/pi-autoresearch-and-databricks/",
+    "hn_link": "https://news.ycombinator.com/item?id=49176038",
+    "score": 380,
+    "comments": 161
   },
   {
-    "title": "Harness Engineering for Self-Improvement",
-    "link": "https://lilianweng.github.io/posts/2026-07-04-harness/",
-    "hn_link": "https://news.ycombinator.com/item?id=49164896",
-    "score": 62,
-    "comments": 7
+    "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
+    "link": "https://mistral.ai/news/shieldstral/",
+    "hn_link": "https://news.ycombinator.com/item?id=49171268",
+    "score": 427,
+    "comments": 110
   }
 ]
