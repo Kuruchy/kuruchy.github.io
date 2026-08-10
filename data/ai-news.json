@@ -1,37 +1,37 @@
 [
   {
-    "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
-    "link": "https://github.com/jmarshall23/msword",
-    "hn_link": "https://news.ycombinator.com/item?id=49228663",
-    "score": 53,
-    "comments": 17
+    "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
+    "link": "https://www.docker.com/products/docker-sandboxes/",
+    "hn_link": "https://news.ycombinator.com/item?id=49239751",
+    "score": 179,
+    "comments": 117
   },
   {
-    "title": "My server is a phone now",
-    "link": "https://seg6.space/posts/phone-server/",
-    "hn_link": "https://news.ycombinator.com/item?id=49226636",
-    "score": 311,
-    "comments": 116
+    "title": "What Happened to HackerOne?",
+    "link": "https://blog.teknogeek.io/posts/what-happened-to-hackerone/",
+    "hn_link": "https://news.ycombinator.com/item?id=49238561",
+    "score": 217,
+    "comments": 94
   },
   {
-    "title": "Os8088: A powerful Mac-like OS for the IBM XT, 286, 386",
-    "link": "https://os8088.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=49226923",
-    "score": 153,
-    "comments": 77
+    "title": "Run Android ARM64 VR APKs on Apple Vision Pro",
+    "link": "https://github.com/shinyquagsire23/Klepton",
+    "hn_link": "https://news.ycombinator.com/item?id=49238818",
+    "score": 70,
+    "comments": 8
   },
   {
-    "title": "Melatonin impairs morning cognition in healthy young adults (2023)",
-    "link": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
-    "hn_link": "https://news.ycombinator.com/item?id=49227365",
-    "score": 110,
-    "comments": 65
+    "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
+    "link": "https://www.whodunnitai.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=49238851",
+    "score": 77,
+    "comments": 23
   },
   {
-    "title": "The original URL for this prediction will no longer be available in 11 years (2011)",
-    "link": "http://longbets.org/601/",
-    "hn_link": "https://news.ycombinator.com/item?id=49228458",
-    "score": 133,
-    "comments": 48
+    "title": "How I use LLMs to learn complex topics",
+    "link": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
+    "hn_link": "https://news.ycombinator.com/item?id=49234675",
+    "score": 627,
+    "comments": 379
   }
 ]
