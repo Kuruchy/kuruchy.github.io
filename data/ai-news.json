@@ -1,37 +1,37 @@
 [
   {
-    "title": "LinkedIn CringeBot 3000",
-    "link": "https://www.cringebot3000.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=49268564",
-    "score": 125,
-    "comments": 43
+    "title": "ChatGPT Desktop (Codex Desktop) for Linux",
+    "link": "https://openai.com/codex/",
+    "hn_link": "https://news.ycombinator.com/item?id=49281916",
+    "score": 92,
+    "comments": 35
   },
   {
-    "title": "The hardest working font in Manhattan (2025)",
-    "link": "https://aresluna.org/the-hardest-working-font-in-manhattan/",
-    "hn_link": "https://news.ycombinator.com/item?id=49201953",
-    "score": 197,
-    "comments": 31
+    "title": "DeepSeek V4 Pro 0813",
+    "link": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
+    "hn_link": "https://news.ycombinator.com/item?id=49274600",
+    "score": 913,
+    "comments": 373
   },
   {
-    "title": "Compression is prediction",
-    "link": "https://ngrok.com/blog/compression-is-prediction",
-    "hn_link": "https://news.ycombinator.com/item?id=49263497",
-    "score": 514,
-    "comments": 211
+    "title": "Tracking down the 16-year-old WAL-reset SQLite bug",
+    "link": "https://tailscale.com/blog/sqlite-wal-reset-bug",
+    "hn_link": "https://news.ycombinator.com/item?id=49272832",
+    "score": 1024,
+    "comments": 190
   },
   {
-    "title": "Worms: The Future of Yesterday's Worms Today",
-    "link": "https://worm.net/",
-    "hn_link": "https://news.ycombinator.com/item?id=49208693",
-    "score": 26,
-    "comments": 8
+    "title": "Qwen3.8-2.4T",
+    "link": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+    "hn_link": "https://news.ycombinator.com/item?id=49273478",
+    "score": 616,
+    "comments": 143
   },
   {
-    "title": "llama.cpp",
-    "link": "https://llama.app",
-    "hn_link": "https://news.ycombinator.com/item?id=49267928",
-    "score": 198,
-    "comments": 81
+    "title": "Delta",
+    "link": "https://zed.dev/blog/introducing-delta",
+    "hn_link": "https://news.ycombinator.com/item?id=49276574",
+    "score": 544,
+    "comments": 190
   }
 ]
