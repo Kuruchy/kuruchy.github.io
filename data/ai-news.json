@@ -1,37 +1,37 @@
 [
   {
-    "title": "The other Sean Byrne doesn't exist",
-    "link": "https://conic.al/writing/the-other-sean-byrne-doesnt-exist/",
-    "hn_link": "https://news.ycombinator.com/item?id=49307592",
-    "score": 107,
-    "comments": 35
+    "title": "What happens when an LLM never sees material beyond fifth grade?",
+    "link": "https://littlelearner-ll.github.io/",
+    "hn_link": "https://news.ycombinator.com/item?id=49317760",
+    "score": 56,
+    "comments": 33
   },
   {
-    "title": "Qwen 3.8 27B",
-    "link": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
-    "hn_link": "https://news.ycombinator.com/item?id=49299605",
-    "score": 1115,
-    "comments": 686
+    "title": "Asus Bike Booster",
+    "link": "https://www.asus.com/accessories/bike-booster/asus-oxiis/oxiis-intelligent-bike-booster/",
+    "hn_link": "https://news.ycombinator.com/item?id=49268580",
+    "score": 349,
+    "comments": 210
   },
   {
-    "title": "Going Dark, and the era of law enforcement hacking",
-    "link": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
-    "hn_link": "https://news.ycombinator.com/item?id=49304447",
-    "score": 327,
-    "comments": 145
+    "title": "Asynchronous I/O in DuckDB: Work, Thread, Work",
+    "link": "https://duckdb.org/2026/07/31/asynchronous-io",
+    "hn_link": "https://news.ycombinator.com/item?id=49243061",
+    "score": 140,
+    "comments": 10
   },
   {
-    "title": "Coin-sized device can hack a Boeing 737",
-    "link": "https://www.wired.com/story/this-coin-sized-device-can-hack-a-boeing-737/",
-    "hn_link": "https://news.ycombinator.com/item?id=49282951",
-    "score": 61,
-    "comments": 29
+    "title": "Semaglutide linked to lower predicted dementia risk",
+    "link": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/dad2.70432",
+    "hn_link": "https://news.ycombinator.com/item?id=49311651",
+    "score": 419,
+    "comments": 290
   },
   {
-    "title": "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia",
-    "link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2/executive",
-    "hn_link": "https://news.ycombinator.com/item?id=49306577",
-    "score": 184,
-    "comments": 43
+    "title": "Patterns and problems in emerging multi-agent systems",
+    "link": "https://www.anthropic.com/research/multiagent-systems",
+    "hn_link": "https://news.ycombinator.com/item?id=49316271",
+    "score": 72,
+    "comments": 28
   }
 ]
