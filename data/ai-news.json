@@ -1,37 +1,37 @@
 [
   {
-    "title": "What happens when an LLM never sees material beyond fifth grade?",
-    "link": "https://littlelearner-ll.github.io/",
-    "hn_link": "https://news.ycombinator.com/item?id=49317760",
-    "score": 56,
-    "comments": 33
+    "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
+    "link": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+    "hn_link": "https://news.ycombinator.com/item?id=49324985",
+    "score": 429,
+    "comments": 190
   },
   {
-    "title": "Asus Bike Booster",
-    "link": "https://www.asus.com/accessories/bike-booster/asus-oxiis/oxiis-intelligent-bike-booster/",
-    "hn_link": "https://news.ycombinator.com/item?id=49268580",
-    "score": 349,
-    "comments": 210
+    "title": "GIMP Development Update",
+    "link": "https://www.gimp.org/news/2026/08/16/dev-update-august-2026/",
+    "hn_link": "https://news.ycombinator.com/item?id=49326156",
+    "score": 118,
+    "comments": 53
   },
   {
-    "title": "Asynchronous I/O in DuckDB: Work, Thread, Work",
-    "link": "https://duckdb.org/2026/07/31/asynchronous-io",
-    "hn_link": "https://news.ycombinator.com/item?id=49243061",
-    "score": 140,
-    "comments": 10
+    "title": "On A.I. regulation and messaging",
+    "link": "https://twitter.com/DarioAmodei/status/2088758816376807762",
+    "hn_link": "https://news.ycombinator.com/item?id=49325789",
+    "score": 41,
+    "comments": 29
   },
   {
-    "title": "Semaglutide linked to lower predicted dementia risk",
-    "link": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/dad2.70432",
-    "hn_link": "https://news.ycombinator.com/item?id=49311651",
-    "score": 419,
-    "comments": 290
+    "title": "A third world engineer responds to “RISC-V: They should have known better”",
+    "link": "https://rvembedded.com/blog_post/12/",
+    "hn_link": "https://news.ycombinator.com/item?id=49321717",
+    "score": 495,
+    "comments": 259
   },
   {
-    "title": "Patterns and problems in emerging multi-agent systems",
-    "link": "https://www.anthropic.com/research/multiagent-systems",
-    "hn_link": "https://news.ycombinator.com/item?id=49316271",
-    "score": 72,
+    "title": "Linear algebra done right",
+    "link": "https://linear.axler.net/",
+    "hn_link": "https://news.ycombinator.com/item?id=49326816",
+    "score": 55,
     "comments": 28
   }
 ]
