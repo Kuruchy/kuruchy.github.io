@@ -1,37 +1,37 @@
 [
   {
-    "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
-    "link": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
-    "hn_link": "https://news.ycombinator.com/item?id=49324985",
-    "score": 429,
-    "comments": 190
+    "title": "How Bluesky draws its logo on screenshots",
+    "link": "https://timmarinin.net/2026/bluesky-screenshots/",
+    "hn_link": "https://news.ycombinator.com/item?id=49338459",
+    "score": 467,
+    "comments": 322
   },
   {
-    "title": "GIMP Development Update",
-    "link": "https://www.gimp.org/news/2026/08/16/dev-update-august-2026/",
-    "hn_link": "https://news.ycombinator.com/item?id=49326156",
-    "score": 118,
-    "comments": 53
+    "title": "GPT-5.6 Sol Pricing Cut by 50%",
+    "link": "https://openrouter.ai/openai/gpt-5.6-sol",
+    "hn_link": "https://news.ycombinator.com/item?id=49337602",
+    "score": 411,
+    "comments": 242
   },
   {
-    "title": "On A.I. regulation and messaging",
-    "link": "https://twitter.com/DarioAmodei/status/2088758816376807762",
-    "hn_link": "https://news.ycombinator.com/item?id=49325789",
-    "score": 41,
-    "comments": 29
+    "title": "Quake Shareware, a CD-ROM just a little too full",
+    "link": "https://fabiensanglard.net/quake_shareware_cd/index.html",
+    "hn_link": "https://news.ycombinator.com/item?id=49338328",
+    "score": 320,
+    "comments": 134
   },
   {
-    "title": "A third world engineer responds to “RISC-V: They should have known better”",
-    "link": "https://rvembedded.com/blog_post/12/",
-    "hn_link": "https://news.ycombinator.com/item?id=49321717",
-    "score": 495,
-    "comments": 259
+    "title": "Fairphone 6 and PostmarketOS working main camera",
+    "link": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
+    "hn_link": "https://news.ycombinator.com/item?id=49338285",
+    "score": 175,
+    "comments": 41
   },
   {
-    "title": "Linear algebra done right",
-    "link": "https://linear.axler.net/",
-    "hn_link": "https://news.ycombinator.com/item?id=49326816",
-    "score": 55,
-    "comments": 28
+    "title": "A Preview of DuckDB v2.0",
+    "link": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
+    "hn_link": "https://news.ycombinator.com/item?id=49330781",
+    "score": 624,
+    "comments": 112
   }
 ]
