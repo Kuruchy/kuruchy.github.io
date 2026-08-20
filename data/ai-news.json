@@ -1,37 +1,37 @@
 [
   {
-    "title": "OpenLogi",
-    "link": "https://openlogi.org/en",
-    "hn_link": "https://news.ycombinator.com/item?id=49355606",
-    "score": 534,
-    "comments": 149
+    "title": "Windows brings out the Rorschach test in everyone",
+    "link": "https://devblogs.microsoft.com/oldnewthing/20030825-00/?p=42803",
+    "hn_link": "https://news.ycombinator.com/item?id=49371006",
+    "score": 121,
+    "comments": 49
   },
   {
-    "title": "Where Human Sleep Went Wrong",
-    "link": "https://nautil.us/where-human-sleep-went-wrong-1283797",
-    "hn_link": "https://news.ycombinator.com/item?id=49358259",
-    "score": 26,
-    "comments": 7
+    "title": "Don't Paste the AI, please",
+    "link": "https://dontpastetheai.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=49371857",
+    "score": 12,
+    "comments": 0
   },
   {
-    "title": "Cerebras CS-4",
-    "link": "https://www.cerebras.ai/cs4",
-    "hn_link": "https://news.ycombinator.com/item?id=49354949",
-    "score": 255,
-    "comments": 179
+    "title": "OpenRouter is joining Stripe",
+    "link": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
+    "hn_link": "https://news.ycombinator.com/item?id=49364559",
+    "score": 828,
+    "comments": 425
   },
   {
-    "title": "Palomar: A registry of Lean verified mathematics",
-    "link": "https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/",
-    "hn_link": "https://news.ycombinator.com/item?id=49355968",
-    "score": 93,
-    "comments": 17
+    "title": "Turns are Better than Radians (2022)",
+    "link": "https://www.computerenhance.com/p/turns-are-better-than-radians",
+    "hn_link": "https://news.ycombinator.com/item?id=49369408",
+    "score": 191,
+    "comments": 83
   },
   {
-    "title": "Supersonic Trebuchet [video]",
-    "link": "https://www.youtube.com/watch?v=Co57SfcT-h0",
-    "hn_link": "https://news.ycombinator.com/item?id=49306207",
-    "score": 88,
-    "comments": 20
+    "title": "Go 1.27",
+    "link": "https://go.dev/blog/go1.27",
+    "hn_link": "https://news.ycombinator.com/item?id=49365405",
+    "score": 620,
+    "comments": 170
   }
 ]
