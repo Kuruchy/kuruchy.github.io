@@ -1,37 +1,37 @@
 [
   {
-    "title": "Windows brings out the Rorschach test in everyone",
-    "link": "https://devblogs.microsoft.com/oldnewthing/20030825-00/?p=42803",
-    "hn_link": "https://news.ycombinator.com/item?id=49371006",
-    "score": 121,
-    "comments": 49
+    "title": "The Lost Treasure of Sid Meier's Pirates",
+    "link": "https://remapradio.com/articles/the-lost-treasure-of-sid-meiers-pirates/",
+    "hn_link": "https://news.ycombinator.com/item?id=49384896",
+    "score": 40,
+    "comments": 10
   },
   {
-    "title": "Don't Paste the AI, please",
-    "link": "https://dontpastetheai.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=49371857",
-    "score": 12,
-    "comments": 0
+    "title": "We Rebuilt the Linux MicroVM Stack on Apple Silicon",
+    "link": "https://encore.dev/blog/firecracker-apple-silicon",
+    "hn_link": "https://news.ycombinator.com/item?id=49384716",
+    "score": 37,
+    "comments": 5
   },
   {
-    "title": "OpenRouter is joining Stripe",
-    "link": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
-    "hn_link": "https://news.ycombinator.com/item?id=49364559",
-    "score": 828,
-    "comments": 425
+    "title": "The August 17 outage",
+    "link": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
+    "hn_link": "https://news.ycombinator.com/item?id=49378957",
+    "score": 495,
+    "comments": 563
   },
   {
-    "title": "Turns are Better than Radians (2022)",
-    "link": "https://www.computerenhance.com/p/turns-are-better-than-radians",
-    "hn_link": "https://news.ycombinator.com/item?id=49369408",
-    "score": 191,
-    "comments": 83
+    "title": "I like 'em thick: an apology to my English teachers",
+    "link": "https://www.experimental-history.com/p/i-like-em-thick",
+    "hn_link": "https://news.ycombinator.com/item?id=49347543",
+    "score": 717,
+    "comments": 294
   },
   {
-    "title": "Go 1.27",
-    "link": "https://go.dev/blog/go1.27",
-    "hn_link": "https://news.ycombinator.com/item?id=49365405",
-    "score": 620,
-    "comments": 170
+    "title": "HTML Can Do That",
+    "link": "https://chrisburnell.com/html-can-do-that/",
+    "hn_link": "https://news.ycombinator.com/item?id=49362689",
+    "score": 777,
+    "comments": 187
   }
 ]
