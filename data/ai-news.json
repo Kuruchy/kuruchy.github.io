@@ -1,37 +1,37 @@
 [
   {
-    "title": "The Lost Treasure of Sid Meier's Pirates",
-    "link": "https://remapradio.com/articles/the-lost-treasure-of-sid-meiers-pirates/",
-    "hn_link": "https://news.ycombinator.com/item?id=49384896",
-    "score": 40,
-    "comments": 10
+    "title": "Rust Glancer: Rust LSP using 100x less RAM",
+    "link": "https://rust-glancer.github.io/blog/hello-world/",
+    "hn_link": "https://news.ycombinator.com/item?id=49393052",
+    "score": 168,
+    "comments": 34
   },
   {
-    "title": "We Rebuilt the Linux MicroVM Stack on Apple Silicon",
-    "link": "https://encore.dev/blog/firecracker-apple-silicon",
-    "hn_link": "https://news.ycombinator.com/item?id=49384716",
-    "score": 37,
-    "comments": 5
+    "title": "Felony Bench",
+    "link": "https://www.felonybench.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=49389430",
+    "score": 684,
+    "comments": 271
   },
   {
-    "title": "The August 17 outage",
-    "link": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
-    "hn_link": "https://news.ycombinator.com/item?id=49378957",
-    "score": 495,
-    "comments": 563
+    "title": "Kobo can run apps now",
+    "link": "https://bandarlabs.github.io/Cobalt/",
+    "hn_link": "https://news.ycombinator.com/item?id=49390427",
+    "score": 527,
+    "comments": 186
   },
   {
-    "title": "I like 'em thick: an apology to my English teachers",
-    "link": "https://www.experimental-history.com/p/i-like-em-thick",
-    "hn_link": "https://news.ycombinator.com/item?id=49347543",
-    "score": 717,
-    "comments": 294
+    "title": "There's no reason for software to be slow anymore",
+    "link": "https://danluu.com/perf-opt/",
+    "hn_link": "https://news.ycombinator.com/item?id=49395628",
+    "score": 368,
+    "comments": 267
   },
   {
-    "title": "HTML Can Do That",
-    "link": "https://chrisburnell.com/html-can-do-that/",
-    "hn_link": "https://news.ycombinator.com/item?id=49362689",
-    "score": 777,
-    "comments": 187
+    "title": "Felony charges for citizen deleting phone data at US Border",
+    "link": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
+    "hn_link": "https://news.ycombinator.com/item?id=49386895",
+    "score": 755,
+    "comments": 882
   }
 ]
