@@ -1,37 +1,37 @@
 [
   {
-    "title": "Apple introduces M6 and M5 Ultra",
-    "link": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
-    "hn_link": "https://news.ycombinator.com/item?id=49433292",
-    "score": 1120,
-    "comments": 1076
+    "title": "Saving 100 terabytes of memory by optimizing 1.1.1.1's DNS cache",
+    "link": "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/",
+    "hn_link": "https://news.ycombinator.com/item?id=49468083",
+    "score": 152,
+    "comments": 37
   },
   {
-    "title": "Stalking the Wily Hacker: 40 years later – Cliff Stoll [video]",
-    "link": "https://www.youtube.com/watch?v=656058JxTM0",
-    "hn_link": "https://news.ycombinator.com/item?id=49395802",
-    "score": 81,
-    "comments": 23
+    "title": "507 Mechanical Movements",
+    "link": "https://507movements.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=49465169",
+    "score": 331,
+    "comments": 47
   },
   {
-    "title": "FDA authorizes first wearable device that monitors ketone and blood sugar levels",
-    "link": "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar",
-    "hn_link": "https://news.ycombinator.com/item?id=49439017",
-    "score": 380,
-    "comments": 188
+    "title": "Small Models Have Arrived",
+    "link": "https://calv.info/small-models-have-arrived",
+    "hn_link": "https://news.ycombinator.com/item?id=49466917",
+    "score": 185,
+    "comments": 79
   },
   {
-    "title": "Harvest (IBM 7950): Supercomputer for cryptanalysis at the NSA in the Cold War",
-    "link": "https://spectrum.ieee.org/cold-war-codebreaker-nsa-ibm",
-    "hn_link": "https://news.ycombinator.com/item?id=49444232",
-    "score": 33,
+    "title": "Gemini Omni 1.1 Flash",
+    "link": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+    "hn_link": "https://news.ycombinator.com/item?id=49467922",
+    "score": 52,
     "comments": 9
   },
   {
-    "title": "Queryable Executables",
-    "link": "https://fzakaria.com/2026/08/24/actually-queryable-executables",
-    "hn_link": "https://news.ycombinator.com/item?id=49442589",
-    "score": 170,
-    "comments": 36
+    "title": "Decompiling a Nintendo 64 game in 84 days",
+    "link": "https://blog.chrislewis.au/decompiling-a-nintendo-64-game-in-84-days/",
+    "hn_link": "https://news.ycombinator.com/item?id=49466006",
+    "score": 86,
+    "comments": 27
   }
 ]
