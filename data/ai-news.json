@@ -1,37 +1,37 @@
 [
   {
-    "title": "Saving 100 terabytes of memory by optimizing 1.1.1.1's DNS cache",
-    "link": "https://blog.cloudflare.com/dns-cache-memory-optimization-1111/",
-    "hn_link": "https://news.ycombinator.com/item?id=49468083",
-    "score": 152,
-    "comments": 37
+    "title": "GUIs should be fully keyboard-driven",
+    "link": "https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html",
+    "hn_link": "https://news.ycombinator.com/item?id=49479837",
+    "score": 319,
+    "comments": 171
   },
   {
-    "title": "507 Mechanical Movements",
-    "link": "https://507movements.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=49465169",
-    "score": 331,
-    "comments": 47
+    "title": "Just the rumour of a bug is enough to find an exploit these days",
+    "link": "https://anil.recoil.org/notes/rumour-is-the-exploit",
+    "hn_link": "https://news.ycombinator.com/item?id=49480466",
+    "score": 145,
+    "comments": 51
   },
   {
-    "title": "Small Models Have Arrived",
-    "link": "https://calv.info/small-models-have-arrived",
-    "hn_link": "https://news.ycombinator.com/item?id=49466917",
-    "score": 185,
-    "comments": 79
+    "title": "Htmx 4.0",
+    "link": "https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released",
+    "hn_link": "https://news.ycombinator.com/item?id=49478178",
+    "score": 308,
+    "comments": 72
   },
   {
-    "title": "Gemini Omni 1.1 Flash",
-    "link": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
-    "hn_link": "https://news.ycombinator.com/item?id=49467922",
-    "score": 52,
-    "comments": 9
+    "title": "U.S. sanctions against the A/I Collective",
+    "link": "https://www.inventati.org/",
+    "hn_link": "https://news.ycombinator.com/item?id=49477854",
+    "score": 346,
+    "comments": 313
   },
   {
-    "title": "Decompiling a Nintendo 64 game in 84 days",
-    "link": "https://blog.chrislewis.au/decompiling-a-nintendo-64-game-in-84-days/",
-    "hn_link": "https://news.ycombinator.com/item?id=49466006",
-    "score": 86,
-    "comments": 27
+    "title": "Inception-style curved map for turn-by-turn directions",
+    "link": "https://www.orbify.eu/demo/",
+    "hn_link": "https://news.ycombinator.com/item?id=49477564",
+    "score": 318,
+    "comments": 113
   }
 ]
