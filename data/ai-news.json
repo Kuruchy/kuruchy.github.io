@@ -1,37 +1,37 @@
 [
   {
+    "title": "Iceland votes on whether to restart talks on joining EU",
+    "link": "https://www.bbc.com/news/articles/cn45vdxyvvlo",
+    "hn_link": "https://news.ycombinator.com/item?id=49489057",
+    "score": 159,
+    "comments": 173
+  },
+  {
+    "title": "Samsung's Processing-in-Memory (PIM)",
+    "link": "https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing",
+    "hn_link": "https://news.ycombinator.com/item?id=49487341",
+    "score": 148,
+    "comments": 48
+  },
+  {
     "title": "GUIs should be fully keyboard-driven",
     "link": "https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html",
     "hn_link": "https://news.ycombinator.com/item?id=49479837",
-    "score": 319,
-    "comments": 171
+    "score": 889,
+    "comments": 440
   },
   {
-    "title": "Just the rumour of a bug is enough to find an exploit these days",
-    "link": "https://anil.recoil.org/notes/rumour-is-the-exploit",
-    "hn_link": "https://news.ycombinator.com/item?id=49480466",
-    "score": 145,
-    "comments": 51
+    "title": "Boot a Virtual iPhone via Apple's Virtualization.framework",
+    "link": "https://github.com/Lakr233/vphone-cli",
+    "hn_link": "https://news.ycombinator.com/item?id=49485267",
+    "score": 316,
+    "comments": 83
   },
   {
     "title": "Htmx 4.0",
     "link": "https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released",
     "hn_link": "https://news.ycombinator.com/item?id=49478178",
-    "score": 308,
-    "comments": 72
-  },
-  {
-    "title": "U.S. sanctions against the A/I Collective",
-    "link": "https://www.inventati.org/",
-    "hn_link": "https://news.ycombinator.com/item?id=49477854",
-    "score": 346,
-    "comments": 313
-  },
-  {
-    "title": "Inception-style curved map for turn-by-turn directions",
-    "link": "https://www.orbify.eu/demo/",
-    "hn_link": "https://news.ycombinator.com/item?id=49477564",
-    "score": 318,
-    "comments": 113
+    "score": 715,
+    "comments": 177
   }
 ]
