@@ -1,37 +1,37 @@
 [
   {
-    "title": "Iceland votes on whether to restart talks on joining EU",
-    "link": "https://www.bbc.com/news/articles/cn45vdxyvvlo",
-    "hn_link": "https://news.ycombinator.com/item?id=49489057",
-    "score": 159,
-    "comments": 173
+    "title": "Hacking IKEA Furniture",
+    "link": "https://greenlightning.eu/diy/hacking-ikea-furniture/",
+    "hn_link": "https://news.ycombinator.com/item?id=49497810",
+    "score": 41,
+    "comments": 11
   },
   {
-    "title": "Samsung's Processing-in-Memory (PIM)",
-    "link": "https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing",
-    "hn_link": "https://news.ycombinator.com/item?id=49487341",
-    "score": 148,
-    "comments": 48
+    "title": "Arbitrary code execution in QubesOS via copy-to-VM error reporting backchannel",
+    "link": "https://www.qubes-os.org/news/2026/08/29/qsb-118/",
+    "hn_link": "https://news.ycombinator.com/item?id=49496918",
+    "score": 100,
+    "comments": 41
   },
   {
-    "title": "GUIs should be fully keyboard-driven",
-    "link": "https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html",
-    "hn_link": "https://news.ycombinator.com/item?id=49479837",
-    "score": 889,
-    "comments": 440
+    "title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
+    "link": "https://arxiv.org/abs/1804.07389",
+    "hn_link": "https://news.ycombinator.com/item?id=49496782",
+    "score": 126,
+    "comments": 32
   },
   {
-    "title": "Boot a Virtual iPhone via Apple's Virtualization.framework",
-    "link": "https://github.com/Lakr233/vphone-cli",
-    "hn_link": "https://news.ycombinator.com/item?id=49485267",
-    "score": 316,
-    "comments": 83
+    "title": "Casey Muratori – The Root of the Root of All Evil – BSC 2026 [video]",
+    "link": "https://www.youtube.com/watch?v=hpj6r6CjJf8",
+    "hn_link": "https://news.ycombinator.com/item?id=49463888",
+    "score": 77,
+    "comments": 12
   },
   {
-    "title": "Htmx 4.0",
-    "link": "https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released",
-    "hn_link": "https://news.ycombinator.com/item?id=49478178",
-    "score": 715,
-    "comments": 177
+    "title": "Claude Session URL appended to commit messages and PR descriptions by default",
+    "link": "https://github.com/anthropics/claude-code/issues/66504",
+    "hn_link": "https://news.ycombinator.com/item?id=49498201",
+    "score": 56,
+    "comments": 47
   }
 ]
