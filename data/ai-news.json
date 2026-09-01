@@ -1,37 +1,37 @@
 [
   {
-    "title": "Playa Phone",
-    "link": "https://playaphone.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=49510514",
-    "score": 88,
-    "comments": 28
+    "title": "AnkiDroid: Google Play no longer allowing Open Collective donation link",
+    "link": "https://github.com/ankidroid/Anki-Android/issues/21656",
+    "hn_link": "https://news.ycombinator.com/item?id=49520022",
+    "score": 312,
+    "comments": 56
   },
   {
-    "title": "OpenShot 4.0: Record, Edit, and Color Like Never Before",
-    "link": "https://www.openshot.org/blog/2026/08/30/openshot-40-record-edit-color-like-never-before/",
-    "hn_link": "https://news.ycombinator.com/item?id=49507822",
-    "score": 379,
-    "comments": 89
-  },
-  {
-    "title": "Apache Iggy, a message streaming platform in Rust, graduates to an Apache TLP",
-    "link": "https://iggy.apache.org/blogs/2026/08/24/apache-iggy-top-level-project-tlp-graduation/",
-    "hn_link": "https://news.ycombinator.com/item?id=49510540",
-    "score": 40,
-    "comments": 9
-  },
-  {
-    "title": "ChatGPT Work Tool and Skill Reference",
-    "link": "https://codex-tool-reference.simonw.chatgpt.site/",
-    "hn_link": "https://news.ycombinator.com/item?id=49510000",
-    "score": 67,
+    "title": "44% on ARC-AGI-1 in 67 cents",
+    "link": "https://mvakde.github.io/blog/44-on-arc-1/",
+    "hn_link": "https://news.ycombinator.com/item?id=49519939",
+    "score": 138,
     "comments": 36
   },
   {
-    "title": "Launch HN: Almanac (YC S26) – AI that knows your company",
-    "link": "https://usealmanac.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=49511007",
-    "score": 9,
-    "comments": 2
+    "title": "Fastpotify",
+    "link": "https://fastpotify.rocks/",
+    "hn_link": "https://news.ycombinator.com/item?id=49517448",
+    "score": 548,
+    "comments": 321
+  },
+  {
+    "title": "American Airlines' Legendary Mechanic Passes Away at 100 After 80-Year Career",
+    "link": "https://simpleflying.com/american-airlines-mechanic-passes-away-100-record-80-years/",
+    "hn_link": "https://news.ycombinator.com/item?id=49493468",
+    "score": 128,
+    "comments": 49
+  },
+  {
+    "title": "GPU World",
+    "link": "https://www.gpuworld.org/",
+    "hn_link": "https://news.ycombinator.com/item?id=49517584",
+    "score": 295,
+    "comments": 171
   }
 ]
