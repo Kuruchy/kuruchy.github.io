@@ -1,37 +1,37 @@
 [
   {
-    "title": "Commodore 64 released September 1, 1982",
-    "link": "https://dfarq.homeip.net/commodore-64-released-september-1-1982/",
-    "hn_link": "https://news.ycombinator.com/item?id=49533497",
-    "score": 152,
-    "comments": 66
+    "title": "Audacity 4.0",
+    "link": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
+    "hn_link": "https://news.ycombinator.com/item?id=49548395",
+    "score": 173,
+    "comments": 24
   },
   {
-    "title": "Claude Fable 5.1 and Claude Mythos 5.1",
-    "link": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
-    "hn_link": "https://news.ycombinator.com/item?id=49525378",
-    "score": 1306,
-    "comments": 1229
+    "title": "Pre-Release of Polars 2.0",
+    "link": "https://pola.rs/posts/announcing-polars-2/",
+    "hn_link": "https://news.ycombinator.com/item?id=49546753",
+    "score": 236,
+    "comments": 70
   },
   {
-    "title": "It's OK to hardcode feature flags (2025)",
-    "link": "https://code.mendhak.com/hardcode-feature-flags/",
-    "hn_link": "https://news.ycombinator.com/item?id=49534524",
-    "score": 20,
-    "comments": 12
+    "title": "The Browser's Main Thread Is Expensive",
+    "link": "https://kciter.so/posts/the-expensive-main-thread/en/",
+    "hn_link": "https://news.ycombinator.com/item?id=49522137",
+    "score": 175,
+    "comments": 51
   },
   {
-    "title": "The Emergent Symbolic Structure of Artificial Neural Networks",
-    "link": "https://arxiv.org/abs/2608.29530",
-    "hn_link": "https://news.ycombinator.com/item?id=49531651",
-    "score": 191,
-    "comments": 63
+    "title": "Invisible Companies",
+    "link": "https://colossus.com/article/invisible-companies/",
+    "hn_link": "https://news.ycombinator.com/item?id=49521264",
+    "score": 18,
+    "comments": 4
   },
   {
-    "title": "How accurate have Ed Zitron's AI skeptic predictions been?",
-    "link": "https://danluu.com/zitron/",
-    "hn_link": "https://news.ycombinator.com/item?id=49526069",
-    "score": 765,
-    "comments": 837
+    "title": "Muse Spark 1.3",
+    "link": "https://developer.meta.com/ai/models/muse-spark/",
+    "hn_link": "https://news.ycombinator.com/item?id=49541256",
+    "score": 618,
+    "comments": 405
   }
 ]
