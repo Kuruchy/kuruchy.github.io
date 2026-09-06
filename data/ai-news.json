@@ -1,37 +1,37 @@
 [
   {
-    "title": "Actively exploited sandbox RCE in all Chromium versions",
-    "link": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
-    "hn_link": "https://news.ycombinator.com/item?id=49570669",
-    "score": 537,
-    "comments": 286
+    "title": "Isar Aerospace reaches orbit and deploys payloads on second flight",
+    "link": "https://isaraerospace.com/press/history-for-european-spaceflight-isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight",
+    "hn_link": "https://news.ycombinator.com/item?id=49584083",
+    "score": 254,
+    "comments": 54
   },
   {
-    "title": "Discovery of a new OpenAI agent message board",
-    "link": "https://collusion.wiki/",
-    "hn_link": "https://news.ycombinator.com/item?id=49563355",
-    "score": 1762,
-    "comments": 1347
+    "title": "I Changed My License",
+    "link": "https://bergie.iki.fi/blog/eupl/",
+    "hn_link": "https://news.ycombinator.com/item?id=49585161",
+    "score": 58,
+    "comments": 57
   },
   {
-    "title": "Formalizing Fermat's Last Theorem",
-    "link": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
-    "hn_link": "https://news.ycombinator.com/item?id=49568506",
-    "score": 629,
-    "comments": 393
+    "title": "Cloud in a Bottle: making self-hosting accessible to everyone",
+    "link": "https://cloudinabottle.org/blog/launch-post",
+    "hn_link": "https://news.ycombinator.com/item?id=49582000",
+    "score": 453,
+    "comments": 222
   },
   {
-    "title": "Nitter has more working instances than before the takedowns",
-    "link": "https://codeberg.org/mv12star/shitter/wiki/Instances",
-    "hn_link": "https://news.ycombinator.com/item?id=49571634",
-    "score": 281,
-    "comments": 100
+    "title": "The revolt of the reader",
+    "link": "https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader/",
+    "hn_link": "https://news.ycombinator.com/item?id=49580939",
+    "score": 400,
+    "comments": 171
   },
   {
-    "title": "AI handles incidents, engineers lose touch with their systems",
-    "link": "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems",
-    "hn_link": "https://news.ycombinator.com/item?id=49574167",
-    "score": 174,
-    "comments": 162
+    "title": "Music Theory for Programmers",
+    "link": "https://runjs.app/blog/music-theory-for-programmers",
+    "hn_link": "https://news.ycombinator.com/item?id=49541888",
+    "score": 176,
+    "comments": 86
   }
 ]
