@@ -1,37 +1,37 @@
 [
   {
-    "title": "What algorithm did Windows XP use to choose your initial user picture?",
-    "link": "https://devblogs.microsoft.com/oldnewthing/20260909-00/?p=112683",
-    "hn_link": "https://news.ycombinator.com/item?id=49640646",
-    "score": 146,
-    "comments": 65
+    "title": "The Waymo effect: how AI is quietly making research less collaborative",
+    "link": "https://www.researchagenda.news/articles/the-waymo-effect.html",
+    "hn_link": "https://news.ycombinator.com/item?id=49656496",
+    "score": 98,
+    "comments": 58
   },
   {
-    "title": "Hitachi launches CO2 heat pump water heaters with solar-friendly tariff controls",
-    "link": "https://www.pv-magazine.com/2026/09/07/hitachi-launches-co2-heat-pump-water-heaters-with-solar-friendly-tariff-controls/",
-    "hn_link": "https://news.ycombinator.com/item?id=49627634",
-    "score": 24,
-    "comments": 16
+    "title": "RTK reports token savings, but our cost benchmarks disagree",
+    "link": "https://quesma.com/blog/does-rtk-make-ai-coding-cheaper/",
+    "hn_link": "https://news.ycombinator.com/item?id=49656471",
+    "score": 36,
+    "comments": 14
   },
   {
-    "title": "Show HN: The same nine streaming subscriptions cost $702/year more than in 2021",
-    "link": "https://honestlyranked.com/guides/streaming-price-increases/",
-    "hn_link": "https://news.ycombinator.com/item?id=49641215",
-    "score": 171,
-    "comments": 162
+    "title": "Cherenkov Radiation - traveling faster than light",
+    "link": "http://www.iaea.org/newscenter/news/what-is-cherenkov-radiation",
+    "hn_link": "https://news.ycombinator.com/item?id=49655286",
+    "score": 115,
+    "comments": 64
   },
   {
-    "title": "Stockfish 19",
-    "link": "https://stockfishchess.org/blog/2026/stockfish-19/",
-    "hn_link": "https://news.ycombinator.com/item?id=49599992",
-    "score": 108,
-    "comments": 56
+    "title": "So you want to use OpenRouter?",
+    "link": "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/",
+    "hn_link": "https://news.ycombinator.com/item?id=49621546",
+    "score": 236,
+    "comments": 42
   },
   {
-    "title": "DeepSeek v4.1 Flash",
-    "link": "https://twitter.com/deepseek_ai/status/2097930608790167907",
-    "hn_link": "https://news.ycombinator.com/item?id=49639090",
-    "score": 539,
-    "comments": 293
+    "title": "Shopify is moving from React Native back to Swift and Kotlin",
+    "link": "https://shopify.engineering/back-to-native",
+    "hn_link": "https://news.ycombinator.com/item?id=49643982",
+    "score": 1120,
+    "comments": 816
   }
 ]
