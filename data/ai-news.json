@@ -1,37 +1,37 @@
 [
   {
-    "title": "The Waymo effect: how AI is quietly making research less collaborative",
-    "link": "https://www.researchagenda.news/articles/the-waymo-effect.html",
-    "hn_link": "https://news.ycombinator.com/item?id=49656496",
-    "score": 98,
-    "comments": 58
+    "title": "IKEA made a mod for Skyrim [video]",
+    "link": "https://www.youtube.com/watch?v=iZODN0QUgjI",
+    "hn_link": "https://news.ycombinator.com/item?id=49639647",
+    "score": 244,
+    "comments": 40
   },
   {
-    "title": "RTK reports token savings, but our cost benchmarks disagree",
-    "link": "https://quesma.com/blog/does-rtk-make-ai-coding-cheaper/",
-    "hn_link": "https://news.ycombinator.com/item?id=49656471",
-    "score": 36,
-    "comments": 14
+    "title": "Retrospectively Reverse-Engineering Apple's Neural Engine",
+    "link": "https://eiln.github.io/posts/ane.html",
+    "hn_link": "https://news.ycombinator.com/item?id=49670032",
+    "score": 114,
+    "comments": 13
   },
   {
-    "title": "Cherenkov Radiation - traveling faster than light",
-    "link": "http://www.iaea.org/newscenter/news/what-is-cherenkov-radiation",
-    "hn_link": "https://news.ycombinator.com/item?id=49655286",
-    "score": 115,
-    "comments": 64
+    "title": "Fuck it, make it anyway",
+    "link": "https://www.joelotter.com/posts/2026/09/make-it-anyway/",
+    "hn_link": "https://news.ycombinator.com/item?id=49671329",
+    "score": 13,
+    "comments": 0
   },
   {
-    "title": "So you want to use OpenRouter?",
-    "link": "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/",
-    "hn_link": "https://news.ycombinator.com/item?id=49621546",
-    "score": 236,
-    "comments": 42
+    "title": "A misalignment of AI in mathematics",
+    "link": "https://mathandai.org/",
+    "hn_link": "https://news.ycombinator.com/item?id=49662371",
+    "score": 989,
+    "comments": 938
   },
   {
-    "title": "Shopify is moving from React Native back to Swift and Kotlin",
-    "link": "https://shopify.engineering/back-to-native",
-    "hn_link": "https://news.ycombinator.com/item?id=49643982",
-    "score": 1120,
-    "comments": 816
+    "title": "I spent $220 on Google app ads and 60% of the installs were robots",
+    "link": "https://dayzlegame.com/blog/google-ads-bot-farm/",
+    "hn_link": "https://news.ycombinator.com/item?id=49662990",
+    "score": 583,
+    "comments": 311
   }
 ]
