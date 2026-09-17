@@ -1,37 +1,37 @@
 [
   {
-    "title": "The Google Play app review process now regularly takes longer than a week",
-    "link": "https://gultsch.social/@daniel/117280438824908947",
-    "hn_link": "https://news.ycombinator.com/item?id=49724927",
-    "score": 91,
-    "comments": 57
+    "title": "One Year of Sponsored Servo Development",
+    "link": "https://servo.org/blog/2026/09/15/one-year-of-sponsorship/",
+    "hn_link": "https://news.ycombinator.com/item?id=49737849",
+    "score": 172,
+    "comments": 81
   },
   {
-    "title": "EU chief opens door for Canada to become 'associate member'",
-    "link": "https://www.bbc.com/news/articles/cjwyzrr9d3dko",
-    "hn_link": "https://news.ycombinator.com/item?id=49724141",
-    "score": 490,
-    "comments": 525
+    "title": "Neovim have a ~$800k Bitcoin donation sitting untouched since 2023",
+    "link": "https://news.ycombinator.com/item?id=49738879",
+    "hn_link": "https://news.ycombinator.com/item?id=49738879",
+    "score": 185,
+    "comments": 84
   },
   {
-    "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
-    "link": "https://mistral.ai/news/mistral-x-mozilla/",
-    "hn_link": "https://news.ycombinator.com/item?id=49723408",
-    "score": 182,
-    "comments": 57
+    "title": "Show HN: I built a new version of my fun spatial 3D online meeting app",
+    "link": "https://flat.social",
+    "hn_link": "https://news.ycombinator.com/item?id=49740047",
+    "score": 5,
+    "comments": 0
   },
   {
-    "title": "Salesforce Global Outage",
-    "link": "https://status.salesforce.com/products/all",
-    "hn_link": "https://news.ycombinator.com/item?id=49724488",
-    "score": 98,
-    "comments": 51
+    "title": "Nvidia announces native GPU programming in Rust",
+    "link": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+    "hn_link": "https://news.ycombinator.com/item?id=49724881",
+    "score": 776,
+    "comments": 315
   },
   {
-    "title": "Introducing System One Models and Jev",
-    "link": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
-    "hn_link": "https://news.ycombinator.com/item?id=49717558",
-    "score": 1545,
-    "comments": 433
+    "title": "Better Vector Search for Long Documents: Chunking Inside Manticore Search",
+    "link": "https://manticoresearch.com/blog/auto-chunking/",
+    "hn_link": "https://news.ycombinator.com/item?id=49738766",
+    "score": 32,
+    "comments": 2
   }
 ]
