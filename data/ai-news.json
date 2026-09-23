@@ -1,37 +1,37 @@
 [
   {
-    "title": "AI Has No Wisdom and Neither Will You",
-    "link": "https://alexn.org/blog/2026/09/22/ai-has-no-wisdom-and-neither-will-you/",
-    "hn_link": "https://news.ycombinator.com/item?id=49799965",
-    "score": 104,
-    "comments": 115
+    "title": "Claude Code reads AGENTS.md only when telemetry is on",
+    "link": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+    "hn_link": "https://news.ycombinator.com/item?id=49814947",
+    "score": 128,
+    "comments": 52
   },
   {
-    "title": "Will Open Source Survive the Agents That Replaced It?",
-    "link": "https://albertoarena.it/posts/will-open-source-survive-the-agents-that-replaced-it/",
-    "hn_link": "https://news.ycombinator.com/item?id=49799910",
-    "score": 20,
-    "comments": 36
+    "title": "Jev in 25 Lines of Python",
+    "link": "https://www.nobodywho.ai/posts/jev-in-25-lines/",
+    "hn_link": "https://news.ycombinator.com/item?id=49812769",
+    "score": 345,
+    "comments": 117
   },
   {
-    "title": "Can gzip be a language model?",
-    "link": "https://nathan.rs/posts/gzip-lm/",
-    "hn_link": "https://news.ycombinator.com/item?id=49797323",
-    "score": 229,
-    "comments": 81
+    "title": "Z80 REPL",
+    "link": "https://abagames.github.io/z80-repl/index.html",
+    "hn_link": "https://news.ycombinator.com/item?id=49814236",
+    "score": 54,
+    "comments": 5
   },
   {
-    "title": "MiMo v2.6",
-    "link": "https://mimo.xiaomi.com/mimo-v2-6",
-    "hn_link": "https://news.ycombinator.com/item?id=49792730",
-    "score": 961,
-    "comments": 434
+    "title": "What AI-Native Looks Like",
+    "link": "https://fagnerbrack.com/heres-what-ai-native-with-stable-infra-looks-like-9f17cdb61459",
+    "hn_link": "https://news.ycombinator.com/item?id=49815344",
+    "score": 12,
+    "comments": 2
   },
   {
-    "title": "AMD's random number generator can't generate a 0?",
-    "link": "https://board.flatassembler.net/topic.php?t=24261",
-    "hn_link": "https://news.ycombinator.com/item?id=49798204",
-    "score": 139,
-    "comments": 85
+    "title": "GPT-6 Sol and Luna",
+    "link": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+    "hn_link": "https://news.ycombinator.com/item?id=49805509",
+    "score": 1624,
+    "comments": 779
   }
 ]
