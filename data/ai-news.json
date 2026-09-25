@@ -1,37 +1,37 @@
 [
   {
-    "title": "Nokia Design Archive (2025)",
-    "link": "https://nokiadesignarchive.aalto.fi/index.html",
-    "hn_link": "https://news.ycombinator.com/item?id=49828385",
-    "score": 122,
-    "comments": 56
+    "title": "Dutch governments builds alternative for Microsoft based on NixOS",
+    "link": "https://www.dawo.community/en/",
+    "hn_link": "https://news.ycombinator.com/item?id=49841563",
+    "score": 506,
+    "comments": 256
   },
   {
-    "title": "Two-Tier Encryption in the UK – Identical Apple Devices, Different Protection",
-    "link": "https://macanorak.com/two-tier-encryption-in-the-uk/",
-    "hn_link": "https://news.ycombinator.com/item?id=49828731",
-    "score": 77,
-    "comments": 16
+    "title": "Platform-Independent SIMD in Go",
+    "link": "https://go.dev/blog/simd-experiment",
+    "hn_link": "https://news.ycombinator.com/item?id=49843269",
+    "score": 61,
+    "comments": 11
   },
   {
-    "title": "Linux support is coming to Snapdragon X2 Series",
-    "link": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
-    "hn_link": "https://news.ycombinator.com/item?id=49823582",
-    "score": 495,
-    "comments": 204
+    "title": "I'm Tired of Being on the Network",
+    "link": "https://matduggan.com/im-tired-of-being-on-the-network/",
+    "hn_link": "https://news.ycombinator.com/item?id=49843547",
+    "score": 29,
+    "comments": 18
   },
   {
-    "title": "Ideas on modernizing the open-source desktop",
-    "link": "https://lwn.net/SubscriberLink/1095425/2d9f411252325784/",
-    "hn_link": "https://news.ycombinator.com/item?id=49825642",
-    "score": 222,
-    "comments": 263
+    "title": "Git-bug: Distributed, offline-first bug tracker embedded in Git",
+    "link": "https://github.com/git-bug/git-bug",
+    "hn_link": "https://news.ycombinator.com/item?id=49843174",
+    "score": 52,
+    "comments": 9
   },
   {
-    "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
-    "link": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-    "hn_link": "https://news.ycombinator.com/item?id=49820134",
-    "score": 701,
-    "comments": 715
+    "title": "Pentium II at 600Mhz with Voodoo 3 Emulated on 86Box with M6 Mac Mini",
+    "link": "https://nyaa.sh/reviews/mac-mini-m6-emulation",
+    "hn_link": "https://news.ycombinator.com/item?id=49841285",
+    "score": 126,
+    "comments": 48
   }
 ]
