@@ -1,37 +1,37 @@
 [
   {
-    "title": "Dutch governments builds alternative for Microsoft based on NixOS",
-    "link": "https://www.dawo.community/en/",
-    "hn_link": "https://news.ycombinator.com/item?id=49841563",
-    "score": 506,
-    "comments": 256
+    "title": "Breaking Up with Google Play: Why Conversations Is Now Free",
+    "link": "https://gultsch.de/posts/breaking-up-with-google-play/",
+    "hn_link": "https://news.ycombinator.com/item?id=49855315",
+    "score": 137,
+    "comments": 28
   },
   {
-    "title": "Platform-Independent SIMD in Go",
-    "link": "https://go.dev/blog/simd-experiment",
-    "hn_link": "https://news.ycombinator.com/item?id=49843269",
-    "score": 61,
-    "comments": 11
-  },
-  {
-    "title": "I'm Tired of Being on the Network",
-    "link": "https://matduggan.com/im-tired-of-being-on-the-network/",
-    "hn_link": "https://news.ycombinator.com/item?id=49843547",
-    "score": 29,
-    "comments": 18
-  },
-  {
-    "title": "Git-bug: Distributed, offline-first bug tracker embedded in Git",
-    "link": "https://github.com/git-bug/git-bug",
-    "hn_link": "https://news.ycombinator.com/item?id=49843174",
-    "score": 52,
+    "title": "Fifteen years later, the Apple Cards origin story",
+    "link": "https://lexontech.org/fifteen-years-later-the-apple-cards-origin-story",
+    "hn_link": "https://news.ycombinator.com/item?id=49854693",
+    "score": 97,
     "comments": 9
   },
   {
-    "title": "Pentium II at 600Mhz with Voodoo 3 Emulated on 86Box with M6 Mac Mini",
-    "link": "https://nyaa.sh/reviews/mac-mini-m6-emulation",
-    "hn_link": "https://news.ycombinator.com/item?id=49841285",
-    "score": 126,
-    "comments": 48
+    "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
+    "link": "https://swarmtraces.org/",
+    "hn_link": "https://news.ycombinator.com/item?id=49849985",
+    "score": 533,
+    "comments": 336
+  },
+  {
+    "title": "One Month Without AI",
+    "link": "https://blog.bustikiller.com/2026/09/25/one-month-without-ai.html",
+    "hn_link": "https://news.ycombinator.com/item?id=49855018",
+    "score": 82,
+    "comments": 61
+  },
+  {
+    "title": "Floci: Locally emulating any cloud service",
+    "link": "https://floci.io",
+    "hn_link": "https://news.ycombinator.com/item?id=49854416",
+    "score": 43,
+    "comments": 5
   }
 ]
