@@ -1,37 +1,37 @@
 [
   {
-    "title": "Breaking Up with Google Play: Why Conversations Is Now Free",
-    "link": "https://gultsch.de/posts/breaking-up-with-google-play/",
-    "hn_link": "https://news.ycombinator.com/item?id=49855315",
-    "score": 137,
-    "comments": 28
+    "title": "Flip Fluid on Flip Dots",
+    "link": "https://mitxela.com/projects/flipflip",
+    "hn_link": "https://news.ycombinator.com/item?id=49854219",
+    "score": 180,
+    "comments": 12
   },
   {
-    "title": "Fifteen years later, the Apple Cards origin story",
-    "link": "https://lexontech.org/fifteen-years-later-the-apple-cards-origin-story",
-    "hn_link": "https://news.ycombinator.com/item?id=49854693",
-    "score": 97,
-    "comments": 9
+    "title": "\"As a Language Model\": Chat Template Switches LLM Self-Referential Voice",
+    "link": "https://arxiv.org/abs/2609.25021",
+    "hn_link": "https://news.ycombinator.com/item?id=49865343",
+    "score": 67,
+    "comments": 65
   },
   {
-    "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
-    "link": "https://swarmtraces.org/",
-    "hn_link": "https://news.ycombinator.com/item?id=49849985",
-    "score": 533,
-    "comments": 336
+    "title": "OpenAI Feared \"Optics\" of what might appear on Hacker News",
+    "link": "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/",
+    "hn_link": "https://news.ycombinator.com/item?id=49863864",
+    "score": 387,
+    "comments": 319
   },
   {
-    "title": "One Month Without AI",
-    "link": "https://blog.bustikiller.com/2026/09/25/one-month-without-ai.html",
-    "hn_link": "https://news.ycombinator.com/item?id=49855018",
-    "score": 82,
-    "comments": 61
+    "title": "Does Georgism work? Five years later",
+    "link": "https://www.astralcodexten.com/p/does-georgism-work-five-years-later",
+    "hn_link": "https://news.ycombinator.com/item?id=49844657",
+    "score": 403,
+    "comments": 291
   },
   {
-    "title": "Floci: Locally emulating any cloud service",
-    "link": "https://floci.io",
-    "hn_link": "https://news.ycombinator.com/item?id=49854416",
-    "score": 43,
-    "comments": 5
+    "title": "Go Concurrency Distilled",
+    "link": "https://antonz.org/go-concurrency-distilled/",
+    "hn_link": "https://news.ycombinator.com/item?id=49856988",
+    "score": 276,
+    "comments": 112
   }
 ]
