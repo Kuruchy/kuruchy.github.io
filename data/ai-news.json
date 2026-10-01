@@ -1,37 +1,37 @@
 [
   {
-    "title": "Pi.dev: You Said No MCP",
-    "link": "https://earendil.com/posts/you-said-no-mcp/",
-    "hn_link": "https://news.ycombinator.com/item?id=49906637",
-    "score": 325,
-    "comments": 163
+    "title": "StreetComplete on iOS is now in public beta",
+    "link": "https://github.com/streetcomplete/StreetComplete/issues/5421",
+    "hn_link": "https://news.ycombinator.com/item?id=49920160",
+    "score": 279,
+    "comments": 61
   },
   {
-    "title": "SDF vs. MSDF vs. Slug: GPU Text Rendering",
-    "link": "https://alphapixeldev.com/sdf-vs-msdf-vs-slug-vs-rive-gpu-text-rendering/",
-    "hn_link": "https://news.ycombinator.com/item?id=49908962",
-    "score": 12,
-    "comments": 8
-  },
-  {
-    "title": "Show HN: JBR-001 – An open-source 3D printable desktop robot",
-    "link": "https://projecthub.arduino.cc/syntheticaidata/jbr-001-a-desktop-companion-robot-powered-by-arduino-uno-q-b11c96",
-    "hn_link": "https://news.ycombinator.com/item?id=49890707",
-    "score": 70,
-    "comments": 14
-  },
-  {
-    "title": "Livenerf: Has Opus 5.5 been nerfed yet?",
-    "link": "https://github.com/ninjahawk/livenerf",
-    "hn_link": "https://news.ycombinator.com/item?id=49901736",
-    "score": 758,
-    "comments": 317
-  },
-  {
-    "title": "Upgrade your desktop: Ubuntu 26.04.1 LTS is now available",
-    "link": "https://ubuntu.com/blog/upgrade-your-desktop-ubuntu-26-04-lts",
-    "hn_link": "https://news.ycombinator.com/item?id=49908757",
-    "score": 47,
+    "title": "How to speed up the Rust compiler in September 2026",
+    "link": "https://nnethercote.github.io/2026/09/30/how-to-speed-up-the-rust-compiler-in-september-2026.html",
+    "hn_link": "https://news.ycombinator.com/item?id=49920896",
+    "score": 92,
     "comments": 33
+  },
+  {
+    "title": "Google breaks promise to provide 10 years of updates to Chromebooks",
+    "link": "https://www.osnews.com/story/146052/google-breaks-promise-to-provide-10-years-of-updates-to-chromebooks/",
+    "hn_link": "https://news.ycombinator.com/item?id=49920997",
+    "score": 210,
+    "comments": 97
+  },
+  {
+    "title": "GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
+    "link": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+    "hn_link": "https://news.ycombinator.com/item?id=49919910",
+    "score": 103,
+    "comments": 54
+  },
+  {
+    "title": "Meta Uses A.I. Data Centers to Avoid Billions in Federal Taxes",
+    "link": "https://www.nytimes.com/2026/09/30/technology/meta-ai-data-centers-taxes.html",
+    "hn_link": "https://news.ycombinator.com/item?id=49921118",
+    "score": 130,
+    "comments": 72
   }
 ]
