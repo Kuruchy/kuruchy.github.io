@@ -1,37 +1,37 @@
 [
   {
-    "title": "StreetComplete on iOS is now in public beta",
-    "link": "https://github.com/streetcomplete/StreetComplete/issues/5421",
-    "hn_link": "https://news.ycombinator.com/item?id=49920160",
-    "score": 279,
-    "comments": 61
+    "title": "The Legend of von Neumann [pdf]",
+    "link": "https://gwern.net/doc/math/1973-halmos.pdf",
+    "hn_link": "https://news.ycombinator.com/item?id=49933235",
+    "score": 32,
+    "comments": 12
   },
   {
-    "title": "How to speed up the Rust compiler in September 2026",
-    "link": "https://nnethercote.github.io/2026/09/30/how-to-speed-up-the-rust-compiler-in-september-2026.html",
-    "hn_link": "https://news.ycombinator.com/item?id=49920896",
-    "score": 92,
-    "comments": 33
+    "title": "Pi 1.0",
+    "link": "https://earendil.com/posts/pi-1-0/",
+    "hn_link": "https://news.ycombinator.com/item?id=49926069",
+    "score": 1524,
+    "comments": 501
   },
   {
-    "title": "Google breaks promise to provide 10 years of updates to Chromebooks",
-    "link": "https://www.osnews.com/story/146052/google-breaks-promise-to-provide-10-years-of-updates-to-chromebooks/",
-    "hn_link": "https://news.ycombinator.com/item?id=49920997",
-    "score": 210,
-    "comments": 97
+    "title": "Shimano Bicycle Museum Review",
+    "link": "https://inrng.com/2026/10/shimano-bicycle-museum/",
+    "hn_link": "https://news.ycombinator.com/item?id=49930047",
+    "score": 213,
+    "comments": 38
   },
   {
-    "title": "GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
-    "link": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
-    "hn_link": "https://news.ycombinator.com/item?id=49919910",
-    "score": 103,
-    "comments": 54
+    "title": "Several vulnerabilities have been discovered in the Linux kernel",
+    "link": "https://lwn.net/Articles/1097401/",
+    "hn_link": "https://news.ycombinator.com/item?id=49928121",
+    "score": 434,
+    "comments": 304
   },
   {
-    "title": "Meta Uses A.I. Data Centers to Avoid Billions in Federal Taxes",
-    "link": "https://www.nytimes.com/2026/09/30/technology/meta-ai-data-centers-taxes.html",
-    "hn_link": "https://news.ycombinator.com/item?id=49921118",
-    "score": 130,
-    "comments": 72
+    "title": "Show HN: Audionaut – an open-source cross-platform multitrack audio editor",
+    "link": "https://github.com/kvoltmer/Audionaut",
+    "hn_link": "https://news.ycombinator.com/item?id=49931031",
+    "score": 72,
+    "comments": 27
   }
 ]
