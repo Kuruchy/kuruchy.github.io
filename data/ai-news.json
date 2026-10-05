@@ -1,37 +1,37 @@
 [
   {
-    "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
-    "link": "https://github.com/Niko1221/Strata",
-    "hn_link": "https://news.ycombinator.com/item?id=49953495",
-    "score": 67,
-    "comments": 20
+    "title": "Borland Turbo Basic",
+    "link": "https://dosdays.co.uk/topics/Software/borland_turbo_basic.php",
+    "hn_link": "https://news.ycombinator.com/item?id=49965894",
+    "score": 63,
+    "comments": 32
   },
   {
-    "title": "VGHF Digital Archive passes 5000 magazines. Here's what's next",
-    "link": "https://gamehistory.org/5k-magazines/",
-    "hn_link": "https://news.ycombinator.com/item?id=49952029",
-    "score": 53,
-    "comments": 5
+    "title": "Web Search API",
+    "link": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
+    "hn_link": "https://news.ycombinator.com/item?id=49963171",
+    "score": 251,
+    "comments": 125
   },
   {
-    "title": "Glashütte Trash Clock – A 30-minute pendulum clock made from trash",
-    "link": "https://niklasroy.com/gtc/",
-    "hn_link": "https://news.ycombinator.com/item?id=49930439",
-    "score": 17,
+    "title": "Making a GTK application in Haskell, part 1",
+    "link": "https://floreal.tech/blog/2026/making-a-gtk-app-in-haskell-part-1/",
+    "hn_link": "https://news.ycombinator.com/item?id=49965308",
+    "score": 44,
     "comments": 2
   },
   {
-    "title": "Tell HN: Bob Cringely has died",
-    "link": "https://news.ycombinator.com/item?id=49949438",
-    "hn_link": "https://news.ycombinator.com/item?id=49949438",
-    "score": 581,
-    "comments": 113
+    "title": "Denmark Data Breach Exposes 8.8M People's Personal Data",
+    "link": "https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2026/okt/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger",
+    "hn_link": "https://news.ycombinator.com/item?id=49962012",
+    "score": 355,
+    "comments": 257
   },
   {
-    "title": "Why don't more developers “use the platform”?",
-    "link": "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/",
-    "hn_link": "https://news.ycombinator.com/item?id=49950554",
-    "score": 188,
-    "comments": 166
+    "title": "Mold Linker Version 3.0.0 Release – Rewritten in Rust",
+    "link": "https://github.com/rui314/mold/releases/tag/v3.0.0",
+    "hn_link": "https://news.ycombinator.com/item?id=49963385",
+    "score": 94,
+    "comments": 34
   }
 ]
