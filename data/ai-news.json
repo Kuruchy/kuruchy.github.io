@@ -1,37 +1,37 @@
 [
   {
-    "title": "Borland Turbo Basic",
-    "link": "https://dosdays.co.uk/topics/Software/borland_turbo_basic.php",
-    "hn_link": "https://news.ycombinator.com/item?id=49965894",
-    "score": 63,
-    "comments": 32
+    "title": "Mistral Large 4",
+    "link": "https://docs.mistral.ai/models/mistral-large-4-0",
+    "hn_link": "https://news.ycombinator.com/item?id=49977979",
+    "score": 512,
+    "comments": 273
   },
   {
-    "title": "Web Search API",
-    "link": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
-    "hn_link": "https://news.ycombinator.com/item?id=49963171",
-    "score": 251,
-    "comments": 125
+    "title": "Mistral Large 4: \"Le Chonk\"",
+    "link": "https://mistral.ai/news/mistral-large-4/",
+    "hn_link": "https://news.ycombinator.com/item?id=49978116",
+    "score": 238,
+    "comments": 27
   },
   {
-    "title": "Making a GTK application in Haskell, part 1",
-    "link": "https://floreal.tech/blog/2026/making-a-gtk-app-in-haskell-part-1/",
-    "hn_link": "https://news.ycombinator.com/item?id=49965308",
-    "score": 44,
-    "comments": 2
+    "title": "Release of Polars 2.0",
+    "link": "https://pola.rs/posts/release-polars-2/",
+    "hn_link": "https://news.ycombinator.com/item?id=49977177",
+    "score": 158,
+    "comments": 22
   },
   {
-    "title": "Denmark Data Breach Exposes 8.8M People's Personal Data",
-    "link": "https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2026/okt/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger",
-    "hn_link": "https://news.ycombinator.com/item?id=49962012",
-    "score": 355,
-    "comments": 257
+    "title": "Nobel Prize in Physics goes to Francis Halzen",
+    "link": "https://www.nobelprize.org/prizes/physics/2026/",
+    "hn_link": "https://news.ycombinator.com/item?id=49976265",
+    "score": 281,
+    "comments": 81
   },
   {
-    "title": "Mold Linker Version 3.0.0 Release – Rewritten in Rust",
-    "link": "https://github.com/rui314/mold/releases/tag/v3.0.0",
-    "hn_link": "https://news.ycombinator.com/item?id=49963385",
-    "score": 94,
-    "comments": 34
+    "title": "Tapo (Rust/Python library) now speaks TP-Link's TPAP protocol",
+    "link": "https://mihai.dinculescu.dev/posts/tapo-speaks-tpap/",
+    "hn_link": "https://news.ycombinator.com/item?id=49978563",
+    "score": 27,
+    "comments": 3
   }
 ]
