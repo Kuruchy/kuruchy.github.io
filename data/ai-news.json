@@ -1,37 +1,37 @@
 [
   {
-    "title": "Mistral Large 4",
-    "link": "https://docs.mistral.ai/models/mistral-large-4-0",
-    "hn_link": "https://news.ycombinator.com/item?id=49977979",
-    "score": 512,
-    "comments": 273
+    "title": "Shipping JPEG XL in Chrome",
+    "link": "https://developer.chrome.com/blog/jpeg-xl-in-chrome",
+    "hn_link": "https://news.ycombinator.com/item?id=49991227",
+    "score": 266,
+    "comments": 139
   },
   {
-    "title": "Mistral Large 4: \"Le Chonk\"",
-    "link": "https://mistral.ai/news/mistral-large-4/",
-    "hn_link": "https://news.ycombinator.com/item?id=49978116",
-    "score": 238,
-    "comments": 27
+    "title": "SynthID Detector",
+    "link": "https://synthid.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=49993188",
+    "score": 43,
+    "comments": 33
   },
   {
-    "title": "Release of Polars 2.0",
-    "link": "https://pola.rs/posts/release-polars-2/",
-    "hn_link": "https://news.ycombinator.com/item?id=49977177",
-    "score": 158,
-    "comments": 22
+    "title": "Google Playground",
+    "link": "https://labs.google/playground",
+    "hn_link": "https://news.ycombinator.com/item?id=49992774",
+    "score": 46,
+    "comments": 21
   },
   {
-    "title": "Nobel Prize in Physics goes to Francis Halzen",
-    "link": "https://www.nobelprize.org/prizes/physics/2026/",
-    "hn_link": "https://news.ycombinator.com/item?id=49976265",
-    "score": 281,
-    "comments": 81
+    "title": "A font recreated from photographs of classic Commodore 64 keycaps",
+    "link": "https://github.com/szabadkai/c64-keyboard-font/",
+    "hn_link": "https://news.ycombinator.com/item?id=49990224",
+    "score": 240,
+    "comments": 43
   },
   {
-    "title": "Tapo (Rust/Python library) now speaks TP-Link's TPAP protocol",
-    "link": "https://mihai.dinculescu.dev/posts/tapo-speaks-tpap/",
-    "hn_link": "https://news.ycombinator.com/item?id=49978563",
-    "score": 27,
-    "comments": 3
+    "title": "Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai",
+    "link": "https://www.nobelprize.org/prizes/chemistry/2026/press-release/",
+    "hn_link": "https://news.ycombinator.com/item?id=49990470",
+    "score": 179,
+    "comments": 25
   }
 ]
