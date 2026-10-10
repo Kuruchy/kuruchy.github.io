@@ -1,37 +1,37 @@
 [
   {
-    "title": "Deno Is Joining Cloudflare",
-    "link": "https://deno.com/blog/cloudflare",
-    "hn_link": "https://news.ycombinator.com/item?id=50019911",
-    "score": 390,
-    "comments": 197
+    "title": "`123456' password used in Danish CPR data breach",
+    "link": "https://cphpost.dk/2026-10-10/news/round-up/123456-password-used-in-massive-danish-cpr-data-breach/",
+    "hn_link": "https://news.ycombinator.com/item?id=50031269",
+    "score": 240,
+    "comments": 144
   },
   {
-    "title": "Our $445M Series D",
-    "link": "https://oxide.computer/blog/our-445m-series-d",
-    "hn_link": "https://news.ycombinator.com/item?id=50020014",
-    "score": 213,
-    "comments": 52
+    "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
+    "link": "https://github.com/rociiu/talorys",
+    "hn_link": "https://news.ycombinator.com/item?id=50031614",
+    "score": 85,
+    "comments": 39
   },
   {
-    "title": "Let your AI agents paint big arrows, boxes and text on your screen",
-    "link": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
-    "hn_link": "https://news.ycombinator.com/item?id=50018817",
-    "score": 212,
-    "comments": 80
+    "title": "Lobbying Is Corruption",
+    "link": "https://carette.xyz/posts/lobbying_and_corruption/",
+    "hn_link": "https://news.ycombinator.com/item?id=50032556",
+    "score": 153,
+    "comments": 65
   },
   {
-    "title": "I'm in a Meeting",
-    "link": "https://iminafleeting.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=50018088",
-    "score": 275,
-    "comments": 112
+    "title": "REA Reverse – Engineer Anything",
+    "link": "https://rea.tools/",
+    "hn_link": "https://news.ycombinator.com/item?id=50028275",
+    "score": 524,
+    "comments": 225
   },
   {
-    "title": "Nobel Peace Prize for 2026 to Navanethem \"NAVI\" Pillay",
-    "link": "https://www.nobelprize.org/prizes/peace/2026/press-release/",
-    "hn_link": "https://news.ycombinator.com/item?id=50018420",
-    "score": 222,
-    "comments": 129
+    "title": "C for Rust Programmers",
+    "link": "https://bd103.dev/blog/2026-10-07-c-for-rust-programmers/",
+    "hn_link": "https://news.ycombinator.com/item?id=50005743",
+    "score": 51,
+    "comments": 25
   }
 ]
