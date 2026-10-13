@@ -1,37 +1,37 @@
 [
   {
-    "title": "GLM-Legal",
-    "link": "https://z.ai/blog/glm-legal",
-    "hn_link": "https://news.ycombinator.com/item?id=50058507",
-    "score": 129,
-    "comments": 83
+    "title": "Apple HomeView",
+    "link": "https://www.apple.com/apple-homeview/",
+    "hn_link": "https://news.ycombinator.com/item?id=50071017",
+    "score": 292,
+    "comments": 341
   },
   {
-    "title": "A Modern Web App in C",
-    "link": "https://prophitt.me/writing/a-modern-web-app-in-c",
-    "hn_link": "https://news.ycombinator.com/item?id=50058528",
-    "score": 65,
-    "comments": 30
+    "title": "11 year old unsoundness bugs found in Rust borrow checker",
+    "link": "https://github.com/rust-lang/rust/issues/164250",
+    "hn_link": "https://news.ycombinator.com/item?id=50069499",
+    "score": 457,
+    "comments": 256
   },
   {
-    "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
-    "link": "https://news.ycombinator.com/item?id=50059096",
-    "hn_link": "https://news.ycombinator.com/item?id=50059096",
-    "score": 6,
-    "comments": 0
+    "title": "We turned EmbeddingGemma 2 into a speech-to-text model",
+    "link": "https://eg2.haku.sh/",
+    "hn_link": "https://news.ycombinator.com/item?id=50069971",
+    "score": 253,
+    "comments": 61
   },
   {
-    "title": "The Making Of Super Mario 64 – full Giles Goddard interview (2001)",
-    "link": "https://pixelatron.com/blog/the-making-of-super-mario-64-full-giles-goddard-interview-ngc/",
-    "hn_link": "https://news.ycombinator.com/item?id=50036287",
-    "score": 154,
-    "comments": 56
+    "title": "A Dynamic and Distributed Virtual GPU Cloud Built on Idle Apple Silicon Devices",
+    "link": "https://machinelearning.apple.com/research/distributed-gpu-cloud",
+    "hn_link": "https://news.ycombinator.com/item?id=50070593",
+    "score": 136,
+    "comments": 54
   },
   {
-    "title": "Turn a WiFi 7 Router into a 320Msps Software Defined Radio Receiver",
-    "link": "https://github.com/h0m3us3r/w1700k-sdr",
-    "hn_link": "https://news.ycombinator.com/item?id=50055593",
-    "score": 58,
-    "comments": 16
+    "title": "New Apple TV 4K",
+    "link": "https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/",
+    "hn_link": "https://news.ycombinator.com/item?id=50071310",
+    "score": 74,
+    "comments": 107
   }
 ]
