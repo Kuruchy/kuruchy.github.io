@@ -1,37 +1,37 @@
 [
   {
-    "title": "Apple HomeView",
-    "link": "https://www.apple.com/apple-homeview/",
-    "hn_link": "https://news.ycombinator.com/item?id=50071017",
-    "score": 292,
-    "comments": 341
+    "title": "Iosevka is an open-source, sans-serif and slab-serif, monospace font",
+    "link": "https://typeof.net/Iosevka/",
+    "hn_link": "https://news.ycombinator.com/item?id=50084240",
+    "score": 285,
+    "comments": 98
   },
   {
-    "title": "11 year old unsoundness bugs found in Rust borrow checker",
-    "link": "https://github.com/rust-lang/rust/issues/164250",
-    "hn_link": "https://news.ycombinator.com/item?id=50069499",
-    "score": 457,
-    "comments": 256
+    "title": "Pg_vectorsearch: An index that is faster than pgvector's IVFFlat and HNSW",
+    "link": "https://github.com/timescale/pg_vectorsearch",
+    "hn_link": "https://news.ycombinator.com/item?id=50086165",
+    "score": 45,
+    "comments": 14
   },
   {
-    "title": "We turned EmbeddingGemma 2 into a speech-to-text model",
-    "link": "https://eg2.haku.sh/",
-    "hn_link": "https://news.ycombinator.com/item?id=50069971",
-    "score": 253,
-    "comments": 61
+    "title": "Switzerland proposes banning profiling-based ads to minors",
+    "link": "https://www.admin.ch/en/newnsb/NMn5s24l8NjQ",
+    "hn_link": "https://news.ycombinator.com/item?id=50087328",
+    "score": 5,
+    "comments": 2
   },
   {
-    "title": "A Dynamic and Distributed Virtual GPU Cloud Built on Idle Apple Silicon Devices",
-    "link": "https://machinelearning.apple.com/research/distributed-gpu-cloud",
-    "hn_link": "https://news.ycombinator.com/item?id=50070593",
-    "score": 136,
-    "comments": 54
+    "title": "RIP Eric Binnion",
+    "link": "https://ma.tt/2026/10/rip-eric/",
+    "hn_link": "https://news.ycombinator.com/item?id=50087044",
+    "score": 10,
+    "comments": 1
   },
   {
-    "title": "New Apple TV 4K",
-    "link": "https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/",
-    "hn_link": "https://news.ycombinator.com/item?id=50071310",
-    "score": 74,
-    "comments": 107
+    "title": "Pulsar at ESUG 2026 (new Smalltalk IDE)",
+    "link": "https://blog.lorenzano.eu/pulsar-at-esug-2026/",
+    "hn_link": "https://news.ycombinator.com/item?id=50085306",
+    "score": 38,
+    "comments": 4
   }
 ]
