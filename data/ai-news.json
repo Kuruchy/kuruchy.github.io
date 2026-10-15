@@ -1,37 +1,37 @@
 [
   {
-    "title": "Iosevka is an open-source, sans-serif and slab-serif, monospace font",
-    "link": "https://typeof.net/Iosevka/",
-    "hn_link": "https://news.ycombinator.com/item?id=50084240",
-    "score": 285,
-    "comments": 98
+    "title": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
+    "link": "https://libreboot.org/news/libreboot2610.html",
+    "hn_link": "https://news.ycombinator.com/item?id=50102923",
+    "score": 17,
+    "comments": 0
   },
   {
-    "title": "Pg_vectorsearch: An index that is faster than pgvector's IVFFlat and HNSW",
-    "link": "https://github.com/timescale/pg_vectorsearch",
-    "hn_link": "https://news.ycombinator.com/item?id=50086165",
-    "score": 45,
-    "comments": 14
+    "title": "Things to know when you get cancer",
+    "link": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/",
+    "hn_link": "https://news.ycombinator.com/item?id=50093568",
+    "score": 1599,
+    "comments": 381
   },
   {
-    "title": "Switzerland proposes banning profiling-based ads to minors",
-    "link": "https://www.admin.ch/en/newnsb/NMn5s24l8NjQ",
-    "hn_link": "https://news.ycombinator.com/item?id=50087328",
-    "score": 5,
-    "comments": 2
+    "title": "Show HN: Unfenced – Land for sale that borders public land",
+    "link": "https://unfenced.land/",
+    "hn_link": "https://news.ycombinator.com/item?id=50102247",
+    "score": 42,
+    "comments": 17
   },
   {
-    "title": "RIP Eric Binnion",
-    "link": "https://ma.tt/2026/10/rip-eric/",
-    "hn_link": "https://news.ycombinator.com/item?id=50087044",
-    "score": 10,
-    "comments": 1
+    "title": "Wanted to download an ISO, ended up writing a kernel exploit",
+    "link": "https://blog.dfb.sh/blog/eap770-root-for-two-zeros/",
+    "hn_link": "https://news.ycombinator.com/item?id=50070625",
+    "score": 197,
+    "comments": 101
   },
   {
-    "title": "Pulsar at ESUG 2026 (new Smalltalk IDE)",
-    "link": "https://blog.lorenzano.eu/pulsar-at-esug-2026/",
-    "hn_link": "https://news.ycombinator.com/item?id=50085306",
-    "score": 38,
-    "comments": 4
+    "title": "OpenCode 2.0",
+    "link": "https://anoma.ly/notes/opencode-2-0/",
+    "hn_link": "https://news.ycombinator.com/item?id=50094994",
+    "score": 710,
+    "comments": 299
   }
 ]
