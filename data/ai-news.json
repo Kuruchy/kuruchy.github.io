@@ -1,37 +1,37 @@
 [
   {
-    "title": "DeepSeek: DeepSeek v4.1 Flash 1017",
-    "link": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
-    "hn_link": "https://news.ycombinator.com/item?id=50129121",
-    "score": 237,
-    "comments": 70
+    "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
+    "link": "https://api-docs.deepseek.com/guides/search/",
+    "hn_link": "https://news.ycombinator.com/item?id=50138531",
+    "score": 274,
+    "comments": 124
   },
   {
-    "title": "Ultramarine 1 Flash",
-    "link": "https://www.paperinstruments.com/ultramarine",
-    "hn_link": "https://news.ycombinator.com/item?id=50106747",
-    "score": 269,
-    "comments": 89
+    "title": "Parser Combinators",
+    "link": "https://t3.at/blog/2026-10-17-parser-combinators/",
+    "hn_link": "https://news.ycombinator.com/item?id=50139067",
+    "score": 59,
+    "comments": 29
   },
   {
-    "title": "Tesla Roadster",
-    "link": "https://www.tesla.com/roadster",
-    "hn_link": "https://news.ycombinator.com/item?id=50112657",
-    "score": 1463,
-    "comments": 2597
+    "title": "Legal experts warn Meta's new terms still grant broad scraping permissions",
+    "link": "https://www.niemanlab.org/2026/10/legal-experts-warn-metas-new-terms-still-grant-broad-scraping-permissions-despite-language-changes/",
+    "hn_link": "https://news.ycombinator.com/item?id=50139692",
+    "score": 20,
+    "comments": 4
   },
   {
-    "title": "We Still Use Paper",
-    "link": "https://humanpro.co/articles/we-still-use-paper/",
-    "hn_link": "https://news.ycombinator.com/item?id=50100440",
-    "score": 25,
-    "comments": 23
+    "title": "How the Elizabeth Holmes documentary “You Can See Everything” is deceiving",
+    "link": "https://www.readtheprofile.com/p/elizabeth-holmes-documentary-you-can-see-everything",
+    "hn_link": "https://news.ycombinator.com/item?id=50137620",
+    "score": 173,
+    "comments": 210
   },
   {
-    "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
-    "link": "https://llmspeed.dev/",
-    "hn_link": "https://news.ycombinator.com/item?id=50127979",
-    "score": 105,
-    "comments": 40
+    "title": "Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping",
+    "link": "https://sphinx-six-theta.vercel.app/",
+    "hn_link": "https://news.ycombinator.com/item?id=50137950",
+    "score": 160,
+    "comments": 47
   }
 ]
