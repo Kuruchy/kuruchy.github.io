@@ -1,37 +1,37 @@
 [
   {
-    "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
-    "link": "https://api-docs.deepseek.com/guides/search/",
-    "hn_link": "https://news.ycombinator.com/item?id=50138531",
-    "score": 274,
-    "comments": 124
+    "title": "Wine Ported to OpenBSD",
+    "link": "https://marc.info/?l=openbsd-ports&m=179236125692175",
+    "hn_link": "https://news.ycombinator.com/item?id=50152307",
+    "score": 116,
+    "comments": 15
   },
   {
-    "title": "Parser Combinators",
-    "link": "https://t3.at/blog/2026-10-17-parser-combinators/",
-    "hn_link": "https://news.ycombinator.com/item?id=50139067",
-    "score": 59,
-    "comments": 29
+    "title": "Linux 7.3 Released",
+    "link": "https://lwn.net/Articles/1101143/",
+    "hn_link": "https://news.ycombinator.com/item?id=50149392",
+    "score": 461,
+    "comments": 194
   },
   {
-    "title": "Legal experts warn Meta's new terms still grant broad scraping permissions",
-    "link": "https://www.niemanlab.org/2026/10/legal-experts-warn-metas-new-terms-still-grant-broad-scraping-permissions-despite-language-changes/",
-    "hn_link": "https://news.ycombinator.com/item?id=50139692",
-    "score": 20,
-    "comments": 4
+    "title": "Timestral: Mistral release time-series foundation models",
+    "link": "https://mistral.ai/news/timestral/",
+    "hn_link": "https://news.ycombinator.com/item?id=50150434",
+    "score": 273,
+    "comments": 45
   },
   {
-    "title": "How the Elizabeth Holmes documentary “You Can See Everything” is deceiving",
-    "link": "https://www.readtheprofile.com/p/elizabeth-holmes-documentary-you-can-see-everything",
-    "hn_link": "https://news.ycombinator.com/item?id=50137620",
-    "score": 173,
-    "comments": 210
+    "title": "Alternatives to Animal Testing Are Finally Taking Off",
+    "link": "https://spectrum.ieee.org/alternatives-to-animal-testing",
+    "hn_link": "https://news.ycombinator.com/item?id=50150927",
+    "score": 122,
+    "comments": 27
   },
   {
-    "title": "Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping",
-    "link": "https://sphinx-six-theta.vercel.app/",
-    "hn_link": "https://news.ycombinator.com/item?id=50137950",
-    "score": 160,
-    "comments": 47
+    "title": "Let's Encrypt is adding two additional remote perspectives for domain validation",
+    "link": "https://community.letsencrypt.org/t/lets-encrypt-is-adding-two-additional-remote-perspectives-for-domain-validation/252166",
+    "hn_link": "https://news.ycombinator.com/item?id=50150809",
+    "score": 123,
+    "comments": 36
   }
 ]
