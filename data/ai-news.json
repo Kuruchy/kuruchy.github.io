@@ -1,37 +1,37 @@
 [
   {
-    "title": "Wine Ported to OpenBSD",
-    "link": "https://marc.info/?l=openbsd-ports&m=179236125692175",
-    "hn_link": "https://news.ycombinator.com/item?id=50152307",
-    "score": 116,
-    "comments": 15
+    "title": "DeepSeek just open-sourced its inference engine",
+    "link": "https://github.com/deepseek-ai/DeepInfer",
+    "hn_link": "https://news.ycombinator.com/item?id=50163277",
+    "score": 939,
+    "comments": 320
   },
   {
-    "title": "Linux 7.3 Released",
-    "link": "https://lwn.net/Articles/1101143/",
-    "hn_link": "https://news.ycombinator.com/item?id=50149392",
-    "score": 461,
-    "comments": 194
+    "title": "Demographic \"Doomsday\" Misses the Mark",
+    "link": "https://www.science.org/doi/10.1126/science.ael8752",
+    "hn_link": "https://news.ycombinator.com/item?id=50165276",
+    "score": 27,
+    "comments": 22
   },
   {
-    "title": "Timestral: Mistral release time-series foundation models",
-    "link": "https://mistral.ai/news/timestral/",
-    "hn_link": "https://news.ycombinator.com/item?id=50150434",
-    "score": 273,
-    "comments": 45
+    "title": "MicroG: Free-libre re-implementation of Google's proprietary Android user space",
+    "link": "https://github.com/microg/GmsCore/wiki",
+    "hn_link": "https://news.ycombinator.com/item?id=50162177",
+    "score": 188,
+    "comments": 18
   },
   {
-    "title": "Alternatives to Animal Testing Are Finally Taking Off",
-    "link": "https://spectrum.ieee.org/alternatives-to-animal-testing",
-    "hn_link": "https://news.ycombinator.com/item?id=50150927",
-    "score": 122,
-    "comments": 27
+    "title": "Nordwand Mono – A monospace font for coders and adventurers",
+    "link": "https://github.com/tywr/Nordwand-Mono",
+    "hn_link": "https://news.ycombinator.com/item?id=50141581",
+    "score": 384,
+    "comments": 118
   },
   {
-    "title": "Let's Encrypt is adding two additional remote perspectives for domain validation",
-    "link": "https://community.letsencrypt.org/t/lets-encrypt-is-adding-two-additional-remote-perspectives-for-domain-validation/252166",
-    "hn_link": "https://news.ycombinator.com/item?id=50150809",
-    "score": 123,
-    "comments": 36
+    "title": "OpenBSD 8.0",
+    "link": "https://www.openbsd.org/80.html",
+    "hn_link": "https://news.ycombinator.com/item?id=50160494",
+    "score": 374,
+    "comments": 117
   }
 ]
