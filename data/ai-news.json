@@ -1,37 +1,37 @@
 [
   {
-    "title": "Dutch National Cyber Security Center is Offline because it uses PHP",
-    "link": "https://www.ncsc.nl/actueel",
-    "hn_link": "https://news.ycombinator.com/item?id=50179828",
-    "score": 153,
-    "comments": 50
+    "title": "CVE-2026-111943: Compromised Intermediate Certificate Authority",
+    "link": "https://nvd.nist.gov/vuln/detail/cve-2026-111943",
+    "hn_link": "https://news.ycombinator.com/item?id=50192900",
+    "score": 269,
+    "comments": 81
   },
   {
-    "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
-    "link": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
-    "hn_link": "https://news.ycombinator.com/item?id=50177916",
-    "score": 391,
-    "comments": 159
+    "title": "Jailbreaking the Switch 2",
+    "link": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
+    "hn_link": "https://news.ycombinator.com/item?id=50192536",
+    "score": 262,
+    "comments": 87
   },
   {
-    "title": "Qwen3-Coder writes less secure code when told it's for a US persona",
-    "link": "https://www.hirundo.io/blog/qwen3-coder-vulnerabilities",
-    "hn_link": "https://news.ycombinator.com/item?id=50179706",
-    "score": 71,
-    "comments": 29
+    "title": "What Is Gridifcation",
+    "link": "https://musicalform.substack.com/p/what-is-gridifcation",
+    "hn_link": "https://news.ycombinator.com/item?id=50150163",
+    "score": 78,
+    "comments": 20
   },
   {
-    "title": "Most advice is right for the person giving it",
-    "link": "https://coached.com/essays/most-advice-is-right-for-the-person-giving-it/",
-    "hn_link": "https://news.ycombinator.com/item?id=50180444",
-    "score": 12,
-    "comments": 1
+    "title": "Faster than earcut: triangulating 3.7M map polygons in 489 ms",
+    "link": "https://globus.software/blog/2026/10/16/cutting-map-polygons/",
+    "hn_link": "https://news.ycombinator.com/item?id=50193170",
+    "score": 102,
+    "comments": 19
   },
   {
-    "title": "Whatever Happened to Fire Escapes",
-    "link": "https://practical.engineering/blog/2026/10/20/whatever-happened-to-fire-escapes",
-    "hn_link": "https://news.ycombinator.com/item?id=50178455",
-    "score": 80,
-    "comments": 45
+    "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
+    "link": "https://simedw.com/2026/10/21/world-model-terminal/",
+    "hn_link": "https://news.ycombinator.com/item?id=50190363",
+    "score": 338,
+    "comments": 103
   }
 ]
