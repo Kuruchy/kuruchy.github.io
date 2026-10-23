@@ -1,37 +1,37 @@
 [
   {
-    "title": "CVE-2026-111943: Compromised Intermediate Certificate Authority",
-    "link": "https://nvd.nist.gov/vuln/detail/cve-2026-111943",
-    "hn_link": "https://news.ycombinator.com/item?id=50192900",
-    "score": 269,
-    "comments": 81
+    "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+    "link": "https://edjefferson.com/localwiki/",
+    "hn_link": "https://news.ycombinator.com/item?id=50202285",
+    "score": 629,
+    "comments": 134
   },
   {
-    "title": "Jailbreaking the Switch 2",
-    "link": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
-    "hn_link": "https://news.ycombinator.com/item?id=50192536",
-    "score": 262,
-    "comments": 87
+    "title": "OpenSSL 4.1.0",
+    "link": "https://github.com/openssl/openssl/releases/tag/openssl-4.1.0",
+    "hn_link": "https://news.ycombinator.com/item?id=50208099",
+    "score": 15,
+    "comments": 2
   },
   {
-    "title": "What Is Gridifcation",
-    "link": "https://musicalform.substack.com/p/what-is-gridifcation",
-    "hn_link": "https://news.ycombinator.com/item?id=50150163",
-    "score": 78,
-    "comments": 20
+    "title": "Swedish government offices to ban ChatGPT and Claude",
+    "link": "https://www.sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet",
+    "hn_link": "https://news.ycombinator.com/item?id=50207405",
+    "score": 112,
+    "comments": 48
   },
   {
-    "title": "Faster than earcut: triangulating 3.7M map polygons in 489 ms",
-    "link": "https://globus.software/blog/2026/10/16/cutting-map-polygons/",
-    "hn_link": "https://news.ycombinator.com/item?id=50193170",
-    "score": 102,
-    "comments": 19
+    "title": "Is this the new cyber normal?",
+    "link": "https://drew.silcock.dev/blog/is-this-the-new-cyber-normal/",
+    "hn_link": "https://news.ycombinator.com/item?id=50207115",
+    "score": 97,
+    "comments": 95
   },
   {
-    "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
-    "link": "https://simedw.com/2026/10/21/world-model-terminal/",
-    "hn_link": "https://news.ycombinator.com/item?id=50190363",
-    "score": 338,
-    "comments": 103
+    "title": "Job Loss and Cortisone Mania",
+    "link": "https://tilschuenemann.de/job-loss-cortisone-mania",
+    "hn_link": "https://news.ycombinator.com/item?id=50206840",
+    "score": 45,
+    "comments": 5
   }
 ]
