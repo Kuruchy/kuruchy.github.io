@@ -1,37 +1,37 @@
 [
   {
-    "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
-    "link": "https://edjefferson.com/localwiki/",
-    "hn_link": "https://news.ycombinator.com/item?id=50202285",
-    "score": 629,
-    "comments": 134
+    "title": "I Don't Understand Quantum Physics (2018)",
+    "link": "https://www.southampton.ac.uk/~doug/quantum_physics/index.html",
+    "hn_link": "https://news.ycombinator.com/item?id=50219666",
+    "score": 100,
+    "comments": 63
   },
   {
-    "title": "OpenSSL 4.1.0",
-    "link": "https://github.com/openssl/openssl/releases/tag/openssl-4.1.0",
-    "hn_link": "https://news.ycombinator.com/item?id=50208099",
-    "score": 15,
-    "comments": 2
+    "title": "OBS Studio 33",
+    "link": "https://github.com/obsproject/obs-studio/releases/tag/33.0.0",
+    "hn_link": "https://news.ycombinator.com/item?id=50218430",
+    "score": 208,
+    "comments": 68
   },
   {
-    "title": "Swedish government offices to ban ChatGPT and Claude",
-    "link": "https://www.sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet",
-    "hn_link": "https://news.ycombinator.com/item?id=50207405",
-    "score": 112,
-    "comments": 48
+    "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+    "link": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+    "hn_link": "https://news.ycombinator.com/item?id=50212065",
+    "score": 948,
+    "comments": 568
   },
   {
-    "title": "Is this the new cyber normal?",
-    "link": "https://drew.silcock.dev/blog/is-this-the-new-cyber-normal/",
-    "hn_link": "https://news.ycombinator.com/item?id=50207115",
-    "score": 97,
-    "comments": 95
+    "title": "Physicists trap a single antimatter particle for a month",
+    "link": "https://www.scientificamerican.com/article/physicists-trap-a-single-antimatter-particle-for-a-month/",
+    "hn_link": "https://news.ycombinator.com/item?id=50186450",
+    "score": 95,
+    "comments": 35
   },
   {
-    "title": "Job Loss and Cortisone Mania",
-    "link": "https://tilschuenemann.de/job-loss-cortisone-mania",
-    "hn_link": "https://news.ycombinator.com/item?id=50206840",
-    "score": 45,
-    "comments": 5
+    "title": "Around a dozen banking apps began specifically permitting GrapheneOS",
+    "link": "https://grapheneos.social/@GrapheneOS/117492375462459244",
+    "hn_link": "https://news.ycombinator.com/item?id=50217495",
+    "score": 204,
+    "comments": 50
   }
 ]
