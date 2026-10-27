@@ -1,37 +1,37 @@
 [
   {
-    "title": "The new iPad mini",
-    "link": "https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/",
-    "hn_link": "https://news.ycombinator.com/item?id=50243061",
-    "score": 74,
-    "comments": 39
+    "title": "Roblox downloaded 145GB models from us (including adult content) without asking",
+    "link": "https://open3dlab.com/news/roblox-downloaded-145-gb-of-models-from-our-sites/",
+    "hn_link": "https://news.ycombinator.com/item?id=50256985",
+    "score": 312,
+    "comments": 195
   },
   {
-    "title": "Fixing Tool-Call Accuracy in vLLM",
-    "link": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
-    "hn_link": "https://news.ycombinator.com/item?id=50242870",
-    "score": 57,
-    "comments": 11
+    "title": "Python's experimental JIT to be removed",
+    "link": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
+    "hn_link": "https://news.ycombinator.com/item?id=50257419",
+    "score": 137,
+    "comments": 63
   },
   {
-    "title": "Birdwatching rewires the brain and slows cognitive decline",
-    "link": "https://www.bbc.com/future/article/20261019-birdwatching-rewires-the-brain-and-slows-cognitive-decline",
-    "hn_link": "https://news.ycombinator.com/item?id=50215997",
-    "score": 260,
-    "comments": 110
+    "title": "Wikipedia's Cleanup of AI-Generated Content",
+    "link": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
+    "hn_link": "https://news.ycombinator.com/item?id=50257326",
+    "score": 128,
+    "comments": 59
   },
   {
-    "title": "Switzerland. Block by block. At 1:1 scale",
-    "link": "https://blocks.manifold3d.ch/",
-    "hn_link": "https://news.ycombinator.com/item?id=50240922",
-    "score": 334,
-    "comments": 151
+    "title": "AI promised less work. I've never worked more",
+    "link": "https://oioannou.com/blog/ai-promised-less-work/",
+    "hn_link": "https://news.ycombinator.com/item?id=50257325",
+    "score": 244,
+    "comments": 221
   },
   {
-    "title": "One of the Greatest Inventions in the History of Human Transport",
-    "link": "https://humantransit.org/2024/12/one-of-the-greatest-inventions-in-the-history-of-human-transport.html",
-    "hn_link": "https://news.ycombinator.com/item?id=50200152",
-    "score": 72,
-    "comments": 18
+    "title": "Wiz: No successful PHP2Shell exploits seen so far; exposure down 67%",
+    "link": "https://www.wiz.io/blog/php2shell-exploitation-so-far",
+    "hn_link": "https://news.ycombinator.com/item?id=50259343",
+    "score": 17,
+    "comments": 1
   }
 ]
