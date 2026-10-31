@@ -1,37 +1,37 @@
 [
   {
-    "title": "elect.horse",
-    "link": "https://elect.horse/",
-    "hn_link": "https://news.ycombinator.com/item?id=50301462",
-    "score": 365,
-    "comments": 104
+    "title": "Serbia just elected the world's brainiest parliament",
+    "link": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
+    "hn_link": "https://news.ycombinator.com/item?id=50314654",
+    "score": 468,
+    "comments": 288
   },
   {
-    "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
-    "link": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
-    "hn_link": "https://news.ycombinator.com/item?id=50300683",
-    "score": 94,
-    "comments": 294
+    "title": "Molly(Signal fork) has not been updated since 3 months and is vulnerable",
+    "link": "https://piefed.world/post/1503394",
+    "hn_link": "https://news.ycombinator.com/item?id=50314666",
+    "score": 106,
+    "comments": 68
   },
   {
-    "title": "Azure's Weakest Link – Five Full Cross-Tenant Compromises",
-    "link": "https://www.binarysecurity.no/posts/2026/10/one-root-case",
-    "hn_link": "https://news.ycombinator.com/item?id=50301854",
-    "score": 127,
-    "comments": 11
+    "title": "Prospero: A new coding harness for a more civilized age",
+    "link": "https://nullprogram.com/blog/2026/10/31/",
+    "hn_link": "https://news.ycombinator.com/item?id=50315226",
+    "score": 47,
+    "comments": 18
   },
   {
-    "title": "US Reps Lead Democratic Resolution Opposing A.I. Bubble Bailout for Big Tech",
-    "link": "https://progressives.house.gov/2026/10/reps-casar-waters-lead-democratic-resolution-opposing-a-i-bubble-bailout-for-big-tech-commit-to-protecting-american-people-instead",
-    "hn_link": "https://news.ycombinator.com/item?id=50302814",
-    "score": 270,
-    "comments": 184
+    "title": "We Took over ChatGPT Accounts",
+    "link": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+    "hn_link": "https://news.ycombinator.com/item?id=50314699",
+    "score": 106,
+    "comments": 47
   },
   {
-    "title": "Binance-hacker-1029 – $5.6B stolen from Binance",
-    "link": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
-    "hn_link": "https://news.ycombinator.com/item?id=50296470",
-    "score": 1604,
-    "comments": 1076
+    "title": "Switch Lowering in GCC",
+    "link": "https://xoranth.net/gcc-switch/",
+    "hn_link": "https://news.ycombinator.com/item?id=50314085",
+    "score": 111,
+    "comments": 23
   }
 ]
