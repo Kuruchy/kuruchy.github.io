@@ -1,37 +1,37 @@
 [
   {
-    "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
-    "link": "https://honnibal.dev/blog/astra-read-write-misleading",
-    "hn_link": "https://news.ycombinator.com/item?id=50351111",
-    "score": 537,
-    "comments": 119
+    "title": "AI is forcing us to pay off 40 years of technical debt",
+    "link": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+    "hn_link": "https://news.ycombinator.com/item?id=50364336",
+    "score": 480,
+    "comments": 334
   },
   {
-    "title": "Just a little AI resistance, as a treat",
-    "link": "https://shkspr.mobi/blog/2026/11/just-a-little-ai-resistance-as-a-treat/",
-    "hn_link": "https://news.ycombinator.com/item?id=50352257",
-    "score": 137,
-    "comments": 81
-  },
-  {
-    "title": "AI is destroying my CS degree",
-    "link": "https://lordtoots.bearblog.dev/ai-is-destroying-my-cs-degree/",
-    "hn_link": "https://news.ycombinator.com/item?id=50353300",
-    "score": 30,
+    "title": "Guerrilla Bike Lanes: San Francisco Makes Illicit Infrastructure Permanent",
+    "link": "https://99percentinvisible.org/article/guerrilla-bike-lanes-san-francisco-makes-illicit-infrastructure-permanent/",
+    "hn_link": "https://news.ycombinator.com/item?id=50366522",
+    "score": 52,
     "comments": 6
   },
   {
-    "title": "The AI Bubble Monitor",
-    "link": "https://cepr.net/publications/ai-bubble-monitor/",
-    "hn_link": "https://news.ycombinator.com/item?id=50352727",
-    "score": 34,
-    "comments": 16
+    "title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
+    "link": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop",
+    "hn_link": "https://news.ycombinator.com/item?id=50362905",
+    "score": 373,
+    "comments": 185
   },
   {
-    "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
-    "link": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
-    "hn_link": "https://news.ycombinator.com/item?id=50336918",
-    "score": 98,
-    "comments": 30
+    "title": "North Korean fake job interview led to $6.3B Binance heist",
+    "link": "https://www.theregister.com/security/2026/11/03/north-korean-fake-job-interview-led-to-63b-binance-heist/5307398",
+    "hn_link": "https://news.ycombinator.com/item?id=50365755",
+    "score": 181,
+    "comments": 105
+  },
+  {
+    "title": "Verification Is Not Knowledge: Science needs more than answers",
+    "link": "https://blog.cosmos-institute.org/p/verification-is-not-knowledge",
+    "hn_link": "https://news.ycombinator.com/item?id=50363019",
+    "score": 154,
+    "comments": 92
   }
 ]
