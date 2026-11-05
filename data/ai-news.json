@@ -1,37 +1,37 @@
 [
   {
-    "title": "AI is forcing us to pay off 40 years of technical debt",
-    "link": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
-    "hn_link": "https://news.ycombinator.com/item?id=50364336",
-    "score": 480,
-    "comments": 334
+    "title": "Sshole",
+    "link": "https://sshhole.com",
+    "hn_link": "https://news.ycombinator.com/item?id=50378228",
+    "score": 1087,
+    "comments": 309
   },
   {
-    "title": "Guerrilla Bike Lanes: San Francisco Makes Illicit Infrastructure Permanent",
-    "link": "https://99percentinvisible.org/article/guerrilla-bike-lanes-san-francisco-makes-illicit-infrastructure-permanent/",
-    "hn_link": "https://news.ycombinator.com/item?id=50366522",
-    "score": 52,
+    "title": "Alpine Linux Security advisory: OpenSSH-server password authentication bypass",
+    "link": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
+    "hn_link": "https://news.ycombinator.com/item?id=50379704",
+    "score": 112,
     "comments": 6
   },
   {
-    "title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
-    "link": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop",
-    "hn_link": "https://news.ycombinator.com/item?id=50362905",
-    "score": 373,
-    "comments": 185
+    "title": "September in Servo: <progress>, rounded rectangles, and more",
+    "link": "https://servo.org/blog/2026/11/05/september-in-servo/",
+    "hn_link": "https://news.ycombinator.com/item?id=50379576",
+    "score": 46,
+    "comments": 8
   },
   {
-    "title": "North Korean fake job interview led to $6.3B Binance heist",
-    "link": "https://www.theregister.com/security/2026/11/03/north-korean-fake-job-interview-led-to-63b-binance-heist/5307398",
-    "hn_link": "https://news.ycombinator.com/item?id=50365755",
-    "score": 181,
-    "comments": 105
+    "title": "MCP Explained",
+    "link": "https://mcp-explained.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=50379249",
+    "score": 103,
+    "comments": 44
   },
   {
-    "title": "Verification Is Not Knowledge: Science needs more than answers",
-    "link": "https://blog.cosmos-institute.org/p/verification-is-not-knowledge",
-    "hn_link": "https://news.ycombinator.com/item?id=50363019",
-    "score": 154,
-    "comments": 92
+    "title": "OpenSSH 10.6p2 Critical workaround for alpine without PAM",
+    "link": "https://www.openssh.org/releasenotes.html#10.6p2",
+    "hn_link": "https://news.ycombinator.com/item?id=50377976",
+    "score": 123,
+    "comments": 6
   }
 ]
