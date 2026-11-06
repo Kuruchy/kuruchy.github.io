@@ -1,37 +1,37 @@
 [
   {
-    "title": "Sshole",
-    "link": "https://sshhole.com",
-    "hn_link": "https://news.ycombinator.com/item?id=50378228",
-    "score": 1087,
-    "comments": 309
+    "title": "Gemini Omni 1.2 Flash",
+    "link": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+    "hn_link": "https://news.ycombinator.com/item?id=50392118",
+    "score": 136,
+    "comments": 101
   },
   {
-    "title": "Alpine Linux Security advisory: OpenSSH-server password authentication bypass",
-    "link": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
-    "hn_link": "https://news.ycombinator.com/item?id=50379704",
-    "score": 112,
-    "comments": 6
+    "title": "Dutch 'idealist' bank ASN blocks non-Google Android, including GrapheneOS",
+    "link": "https://github.com/PrivSec-dev/banking-apps-compat-report/issues/105",
+    "hn_link": "https://news.ycombinator.com/item?id=50390124",
+    "score": 449,
+    "comments": 266
   },
   {
-    "title": "September in Servo: <progress>, rounded rectangles, and more",
-    "link": "https://servo.org/blog/2026/11/05/september-in-servo/",
-    "hn_link": "https://news.ycombinator.com/item?id=50379576",
-    "score": 46,
-    "comments": 8
+    "title": "Blender's UI and Runtime: Much Faster Than GPUI",
+    "link": "https://github.com/ppmpreetham/BUI",
+    "hn_link": "https://news.ycombinator.com/item?id=50389333",
+    "score": 462,
+    "comments": 188
   },
   {
-    "title": "MCP Explained",
-    "link": "https://mcp-explained.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=50379249",
-    "score": 103,
-    "comments": 44
+    "title": "FAA Begins Retiring Decades Old Floppy Disks from Air Traffic Control",
+    "link": "https://www.faa.gov/newsroom/trumps-transportation-secretary-sean-p-duffy-begins-retiring-decades-old-floppy-disks-air",
+    "hn_link": "https://news.ycombinator.com/item?id=50393183",
+    "score": 17,
+    "comments": 10
   },
   {
-    "title": "OpenSSH 10.6p2 Critical workaround for alpine without PAM",
-    "link": "https://www.openssh.org/releasenotes.html#10.6p2",
-    "hn_link": "https://news.ycombinator.com/item?id=50377976",
-    "score": 123,
-    "comments": 6
+    "title": "Claude Code sends your email address to websites",
+    "link": "https://github.com/anthropics/claude-code/issues/107757",
+    "hn_link": "https://news.ycombinator.com/item?id=50385272",
+    "score": 1408,
+    "comments": 441
   }
 ]
