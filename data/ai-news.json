@@ -1,37 +1,37 @@
 [
   {
-    "title": "Need for Speed Underground 2 online in the browser",
-    "link": "https://nfsu2.xyz/",
-    "hn_link": "https://news.ycombinator.com/item?id=50403052",
-    "score": 286,
-    "comments": 84
+    "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+    "link": "https://github.com/synchopate/llama-modchip",
+    "hn_link": "https://news.ycombinator.com/item?id=50411961",
+    "score": 81,
+    "comments": 29
   },
   {
-    "title": "The $8 Linux Computer (2022)",
-    "link": "http://thelittleengineerthatcould.blogspot.com/2022/12/the-8-linux-computer.html",
-    "hn_link": "https://news.ycombinator.com/item?id=50404599",
-    "score": 11,
+    "title": "Porting Android 16 to my blind mother's keypad phone",
+    "link": "https://z1x.us/blog/four-hundred-bucks-of-e-waste",
+    "hn_link": "https://news.ycombinator.com/item?id=50366821",
+    "score": 40,
     "comments": 5
   },
   {
-    "title": "Libghostty 1.0",
-    "link": "https://mitchellh.com/writing/libghostty-1-0",
-    "hn_link": "https://news.ycombinator.com/item?id=50399933",
-    "score": 815,
-    "comments": 129
+    "title": "Quadrillion-parameter transformers and how to train them",
+    "link": "https://qlabs.sh/research/parameters",
+    "hn_link": "https://news.ycombinator.com/item?id=50352518",
+    "score": 22,
+    "comments": 9
   },
   {
-    "title": "Every Mac comes with an (undocumented) family member classifier",
-    "link": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
-    "hn_link": "https://news.ycombinator.com/item?id=50403097",
-    "score": 280,
-    "comments": 143
+    "title": "Person of Interest",
+    "link": "https://krthr.co/person-of-interest/",
+    "hn_link": "https://news.ycombinator.com/item?id=50412318",
+    "score": 178,
+    "comments": 115
   },
   {
-    "title": "Running a law firm on Free software",
-    "link": "https://decoded.legal/blog/2026/11/running-a-law-firm-on-free-software-2026-edition/",
-    "hn_link": "https://news.ycombinator.com/item?id=50403066",
-    "score": 57,
-    "comments": 18
+    "title": "JIT bitmap text rendering for microcontrollers",
+    "link": "https://linebender.org/blog/jit-bitmap-text/",
+    "hn_link": "https://news.ycombinator.com/item?id=50412072",
+    "score": 47,
+    "comments": 7
   }
 ]
