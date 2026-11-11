@@ -1,37 +1,37 @@
 [
   {
-    "title": "AlphaProof Code",
-    "link": "https://deepmind.google/blog/introducing-alphaproof-code/",
-    "hn_link": "https://news.ycombinator.com/item?id=50439193",
-    "score": 365,
-    "comments": 126
+    "title": "Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyramid in 72h",
+    "link": "https://pietromiotti.com/latest/maya-site/?maya",
+    "hn_link": "https://news.ycombinator.com/item?id=50452455",
+    "score": 549,
+    "comments": 211
   },
   {
-    "title": "The Hardest Tarball?",
-    "link": "https://stoppels.ch/2026/11/07/the-hardest-tarball.html",
-    "hn_link": "https://news.ycombinator.com/item?id=50441338",
-    "score": 68,
-    "comments": 1
+    "title": "Pharo in the Browser with WebAssembly",
+    "link": "https://massimo-nocentini.github.io/pharo-vm/world.html",
+    "hn_link": "https://news.ycombinator.com/item?id=50453763",
+    "score": 51,
+    "comments": 11
   },
   {
-    "title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
-    "link": "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/",
-    "hn_link": "https://news.ycombinator.com/item?id=50436640",
-    "score": 552,
-    "comments": 195
+    "title": "Atuin Threads: All your agent sessions on every machine",
+    "link": "https://blog.atuin.sh/threads-agent-sessions/",
+    "hn_link": "https://news.ycombinator.com/item?id=50453637",
+    "score": 42,
+    "comments": 17
   },
   {
-    "title": "NetBSD 11 desktop on a Raspberry Pi 4",
-    "link": "https://neongd.com/articles/netbsd11-rpi4.gmi",
-    "hn_link": "https://news.ycombinator.com/item?id=50412554",
-    "score": 70,
-    "comments": 23
+    "title": "Can a Linear Program Do Weight-Space Programming?",
+    "link": "https://nathan.rs/posts/weight-space-lp/",
+    "hn_link": "https://news.ycombinator.com/item?id=50452655",
+    "score": 123,
+    "comments": 18
   },
   {
-    "title": "Taking another shot at the cheap IP camera, part 2",
-    "link": "https://ericswpark.com/blog/2026/2026-11-09-ip-camera-pt2/",
-    "hn_link": "https://news.ycombinator.com/item?id=50426294",
-    "score": 41,
-    "comments": 16
+    "title": "Using voltage glitching to unleash the A100 in my mining card",
+    "link": "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/",
+    "hn_link": "https://news.ycombinator.com/item?id=50451903",
+    "score": 132,
+    "comments": 53
   }
 ]
