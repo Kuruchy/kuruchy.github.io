@@ -1,37 +1,37 @@
 [
   {
-    "title": "Reverse Engineering My Coway Air Purifier to Ditch the Cloud",
-    "link": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
-    "hn_link": "https://news.ycombinator.com/item?id=50474959",
-    "score": 195,
-    "comments": 43
+    "title": "Why get an expensive Pi when I have an old phone?",
+    "link": "https://so.long.thanks.fish/why-pi-when-i-have-an-old-phone/",
+    "hn_link": "https://news.ycombinator.com/item?id=50440709",
+    "score": 247,
+    "comments": 159
   },
   {
-    "title": "Doomsday: Friday, 13 November, A.D. 2026 (1960)",
-    "link": "https://www.science.org/doi/10.1126/science.132.3436.1291",
-    "hn_link": "https://news.ycombinator.com/item?id=50482379",
-    "score": 301,
-    "comments": 198
+    "title": "The Claude Delusion",
+    "link": "https://www.netmeister.org/blog/claude-delusion.html",
+    "hn_link": "https://news.ycombinator.com/item?id=50496921",
+    "score": 82,
+    "comments": 55
   },
   {
-    "title": "Why Zig over C for Systems Programming",
-    "link": "https://www.mtsoukalos.eu/2026/11/why-zig-over-c-for-systems-programming/",
-    "hn_link": "https://news.ycombinator.com/item?id=50483611",
-    "score": 84,
-    "comments": 28
+    "title": "Generative AI uses more energy on non-English text",
+    "link": "https://news.umich.edu/generative-ai-uses-more-energy-on-non-english-text/",
+    "hn_link": "https://news.ycombinator.com/item?id=50441444",
+    "score": 39,
+    "comments": 20
   },
   {
-    "title": "A technical vision for the Haskell ecosystem",
-    "link": "https://discourse.haskell.org/t/a-technical-vision-for-the-haskell-ecosystem/15078",
-    "hn_link": "https://news.ycombinator.com/item?id=50484235",
-    "score": 29,
-    "comments": 6
+    "title": "Advancing science and engineering with Antigravity's /teamwork",
+    "link": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/",
+    "hn_link": "https://news.ycombinator.com/item?id=50496811",
+    "score": 18,
+    "comments": 0
   },
   {
-    "title": "Jensen Huang resigns",
-    "link": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
-    "hn_link": "https://news.ycombinator.com/item?id=50467087",
-    "score": 3833,
-    "comments": 3300
+    "title": "Show HN: A terminal-native idle factory game, written in Rust with ratatui",
+    "link": "https://gitlab.com/snipedbywifi/terminactory",
+    "hn_link": "https://news.ycombinator.com/item?id=50497132",
+    "score": 11,
+    "comments": 0
   }
 ]
