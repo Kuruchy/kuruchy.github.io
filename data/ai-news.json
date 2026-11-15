@@ -1,37 +1,37 @@
 [
   {
-    "title": "Why get an expensive Pi when I have an old phone?",
-    "link": "https://so.long.thanks.fish/why-pi-when-i-have-an-old-phone/",
-    "hn_link": "https://news.ycombinator.com/item?id=50440709",
-    "score": 247,
-    "comments": 159
+    "title": "All AI-generated code should be Open Source",
+    "link": "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
+    "hn_link": "https://news.ycombinator.com/item?id=50507303",
+    "score": 42,
+    "comments": 14
   },
   {
-    "title": "The Claude Delusion",
-    "link": "https://www.netmeister.org/blog/claude-delusion.html",
-    "hn_link": "https://news.ycombinator.com/item?id=50496921",
-    "score": 82,
-    "comments": 55
+    "title": "The MacBook Pro's OLED PWM Problem: When a 'Better' Display Becomes Worse to Use",
+    "link": "https://macanorak.com/the-macbook-pros-oled-pwm-problem-when-a-better-display-becomes-worse-to-use/",
+    "hn_link": "https://news.ycombinator.com/item?id=50506719",
+    "score": 121,
+    "comments": 66
   },
   {
-    "title": "Generative AI uses more energy on non-English text",
-    "link": "https://news.umich.edu/generative-ai-uses-more-energy-on-non-english-text/",
-    "hn_link": "https://news.ycombinator.com/item?id=50441444",
-    "score": 39,
-    "comments": 20
+    "title": "The Hypertext Transfer Protocol Status Code 483 (I'm Not a Freezer)",
+    "link": "https://datatracker.ietf.org/doc/draft-banffy-httpbis-not-a-freezer/",
+    "hn_link": "https://news.ycombinator.com/item?id=50507206",
+    "score": 22,
+    "comments": 10
   },
   {
-    "title": "Advancing science and engineering with Antigravity's /teamwork",
-    "link": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/",
-    "hn_link": "https://news.ycombinator.com/item?id=50496811",
-    "score": 18,
+    "title": "Understanding Positional Embeddings in Modern LLMs",
+    "link": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
+    "hn_link": "https://news.ycombinator.com/item?id=50506376",
+    "score": 70,
     "comments": 0
   },
   {
-    "title": "Show HN: A terminal-native idle factory game, written in Rust with ratatui",
-    "link": "https://gitlab.com/snipedbywifi/terminactory",
-    "hn_link": "https://news.ycombinator.com/item?id=50497132",
-    "score": 11,
-    "comments": 0
+    "title": "Things That Turbo Pascal Is Smaller Than (2011)",
+    "link": "https://prog21.dadgum.com/116.html",
+    "hn_link": "https://news.ycombinator.com/item?id=50506894",
+    "score": 43,
+    "comments": 14
   }
 ]
