@@ -1,37 +1,37 @@
 [
   {
-    "title": "What is the best harness for each model?",
-    "link": "https://runta.com/blog/introducing-frontierharness-eval-v1-1/",
-    "hn_link": "https://news.ycombinator.com/item?id=50532191",
-    "score": 139,
-    "comments": 63
+    "title": "Pre-auth RCE in Nginx HTTP/2 handling",
+    "link": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities",
+    "hn_link": "https://news.ycombinator.com/item?id=50547374",
+    "score": 236,
+    "comments": 75
   },
   {
-    "title": "Show HN: Alloy CSS, dialogs, menus and tabs that work with JavaScript off",
-    "link": "https://alloyhtml.com/example.html",
-    "hn_link": "https://news.ycombinator.com/item?id=50532385",
-    "score": 78,
-    "comments": 12
+    "title": "Deutsche Bank",
+    "link": "https://www.inside-db.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=50547620",
+    "score": 163,
+    "comments": 51
   },
   {
-    "title": "New Evidence Shows School Phone Bans Are Gradually Improving Test Scores",
-    "link": "https://www.nytimes.com/2026/11/17/upshot/school-phone-bans-study-scores.html",
-    "hn_link": "https://news.ycombinator.com/item?id=50530163",
-    "score": 784,
-    "comments": 407
+    "title": "Microsoft AI: Seven new world-class models at scalable price-performance",
+    "link": "https://microsoft.ai/news/microsoft-ignite-2026/",
+    "hn_link": "https://news.ycombinator.com/item?id=50548021",
+    "score": 49,
+    "comments": 22
   },
   {
-    "title": "First Photos of the Poles of a Rod-Shaped Bacterium",
-    "link": "https://nautil.us/check-out-the-first-photos-of-the-poles-of-a-rod-shaped-bacterium-1286664",
-    "hn_link": "https://news.ycombinator.com/item?id=50518328",
-    "score": 71,
-    "comments": 16
+    "title": "Quad9 Is Leaving France: Why DNS Resolvers Are the Wrong Place to Fight Piracy",
+    "link": "https://techstackups.com/articles/quad9-leaves-france-dns-blocking/",
+    "hn_link": "https://news.ycombinator.com/item?id=50545958",
+    "score": 320,
+    "comments": 87
   },
   {
-    "title": "Carnegie Mellon is putting computer science courses on YouTube for free",
-    "link": "https://www.cs.cmu.edu/learn/",
-    "hn_link": "https://news.ycombinator.com/item?id=50522980",
-    "score": 2096,
-    "comments": 281
+    "title": "'Human' Is Cambridge Dictionary's Word of the Year 2026",
+    "link": "https://www.cam.ac.uk/news/cambridge-dictionary-reveals-word-of-the-year-2026",
+    "hn_link": "https://news.ycombinator.com/item?id=50546914",
+    "score": 107,
+    "comments": 80
   }
 ]
