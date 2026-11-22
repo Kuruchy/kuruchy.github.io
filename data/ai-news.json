@@ -1,37 +1,37 @@
 [
   {
-    "title": "Derek Lowe: Detonating a Pile of Lead Azide",
-    "link": "https://www.science.org/content/blog-post/detonating-huge-pile-lead-azide-really",
-    "hn_link": "https://news.ycombinator.com/item?id=50588982",
-    "score": 172,
-    "comments": 110
+    "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+    "link": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
+    "hn_link": "https://news.ycombinator.com/item?id=50596133",
+    "score": 870,
+    "comments": 510
   },
   {
-    "title": "Lean Verification of the Riemann Hypothesis - Joint statement by...",
+    "title": "Show HN: I built a game where you are an LLM's subagent",
+    "link": "https://github.com/gulivan/worker755",
+    "hn_link": "https://news.ycombinator.com/item?id=50599762",
+    "score": 67,
+    "comments": 17
+  },
+  {
+    "title": "A real Linux kernel, compiled to WebAssembly",
+    "link": "https://github.com/pithings/unkernel",
+    "hn_link": "https://news.ycombinator.com/item?id=50533945",
+    "score": 196,
+    "comments": 61
+  },
+  {
+    "title": "Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'",
+    "link": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
+    "hn_link": "https://news.ycombinator.com/item?id=50582069",
+    "score": 1205,
+    "comments": 262
+  },
+  {
+    "title": "Lean verification of the Riemann Hypothesis",
     "link": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
     "hn_link": "https://news.ycombinator.com/item?id=50589618",
-    "score": 120,
-    "comments": 80
-  },
-  {
-    "title": "Brazil's tax authority open-sources its tax calculator on GitHub under MIT",
-    "link": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/novembro/receita-federal-publica-primeiro-codigo-fonte-aberto-no-github-e-amplia-transparencia-da-reforma-tributaria",
-    "hn_link": "https://news.ycombinator.com/item?id=50532613",
-    "score": 349,
-    "comments": 113
-  },
-  {
-    "title": "My Monitor Was Cutting My Download Speed by 75%",
-    "link": "https://blog.tymscar.com/posts/studiodisplayethernet/",
-    "hn_link": "https://news.ycombinator.com/item?id=50587875",
-    "score": 187,
-    "comments": 75
-  },
-  {
-    "title": "Hurried Announcement: Alessandro Masullo GRH",
-    "link": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/",
-    "hn_link": "https://news.ycombinator.com/item?id=50579568",
-    "score": 2272,
-    "comments": 1076
+    "score": 1146,
+    "comments": 952
   }
 ]
