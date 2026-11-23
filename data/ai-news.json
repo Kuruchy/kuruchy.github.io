@@ -1,37 +1,37 @@
 [
   {
-    "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
-    "link": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
-    "hn_link": "https://news.ycombinator.com/item?id=50596133",
-    "score": 870,
-    "comments": 510
+    "title": "Nvidia Reinstates Jensen Huang as CEO",
+    "link": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
+    "hn_link": "https://news.ycombinator.com/item?id=50611576",
+    "score": 1351,
+    "comments": 2502
   },
   {
-    "title": "Show HN: I built a game where you are an LLM's subagent",
-    "link": "https://github.com/gulivan/worker755",
-    "hn_link": "https://news.ycombinator.com/item?id=50599762",
-    "score": 67,
-    "comments": 17
+    "title": "\"Per ARM's Request, This Site Will Be Discontinued on 4 December 2026\"",
+    "link": "https://arm.jonpalmisc.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=50617499",
+    "score": 193,
+    "comments": 31
   },
   {
-    "title": "A real Linux kernel, compiled to WebAssembly",
-    "link": "https://github.com/pithings/unkernel",
-    "hn_link": "https://news.ycombinator.com/item?id=50533945",
-    "score": 196,
-    "comments": 61
+    "title": "Ladybird is now in alpha",
+    "link": "https://ladybird.org/posts/alpha/",
+    "hn_link": "https://news.ycombinator.com/item?id=50614249",
+    "score": 843,
+    "comments": 229
   },
   {
-    "title": "Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'",
-    "link": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
-    "hn_link": "https://news.ycombinator.com/item?id=50582069",
-    "score": 1205,
-    "comments": 262
+    "title": "GLM-5.4: Toward generalized coding with our first loop transformer",
+    "link": "https://z.ai/blog/glm-5.4",
+    "hn_link": "https://news.ycombinator.com/item?id=50609685",
+    "score": 899,
+    "comments": 308
   },
   {
-    "title": "Lean verification of the Riemann Hypothesis",
-    "link": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
-    "hn_link": "https://news.ycombinator.com/item?id=50589618",
-    "score": 1146,
-    "comments": 952
+    "title": "NariQ: BF16-level Qwen3.8-27B in a 10 GB file",
+    "link": "https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF",
+    "hn_link": "https://news.ycombinator.com/item?id=50611402",
+    "score": 48,
+    "comments": 7
   }
 ]
