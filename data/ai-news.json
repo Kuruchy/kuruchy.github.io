@@ -1,37 +1,37 @@
 [
   {
-    "title": "Nvidia Reinstates Jensen Huang as CEO",
-    "link": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
-    "hn_link": "https://news.ycombinator.com/item?id=50611576",
-    "score": 1351,
-    "comments": 2502
+    "title": "Active Intrusion Campaign Against Check Point Security Management Servers",
+    "link": "https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign",
+    "hn_link": "https://news.ycombinator.com/item?id=50630594",
+    "score": 190,
+    "comments": 62
   },
   {
-    "title": "\"Per ARM's Request, This Site Will Be Discontinued on 4 December 2026\"",
-    "link": "https://arm.jonpalmisc.com/",
-    "hn_link": "https://news.ycombinator.com/item?id=50617499",
-    "score": 193,
-    "comments": 31
+    "title": "What Cloudflare Doesn't Tell You",
+    "link": "https://charlie.fish/posts/2026/11/what-cloudflare-doesnt-tell-you/",
+    "hn_link": "https://news.ycombinator.com/item?id=50632883",
+    "score": 18,
+    "comments": 6
   },
   {
-    "title": "Ladybird is now in alpha",
-    "link": "https://ladybird.org/posts/alpha/",
-    "hn_link": "https://news.ycombinator.com/item?id=50614249",
-    "score": 843,
-    "comments": 229
+    "title": "Jetty Pro",
+    "link": "http://hypercritical.co/2026/11/23/jetty-pro",
+    "hn_link": "https://news.ycombinator.com/item?id=50630462",
+    "score": 163,
+    "comments": 58
   },
   {
-    "title": "GLM-5.4: Toward generalized coding with our first loop transformer",
-    "link": "https://z.ai/blog/glm-5.4",
-    "hn_link": "https://news.ycombinator.com/item?id=50609685",
-    "score": 899,
-    "comments": 308
+    "title": "Mechanical Pencil: Spray Bottle",
+    "link": "https://mechanical-pencil.com/products/spray-bottle",
+    "hn_link": "https://news.ycombinator.com/item?id=50598555",
+    "score": 172,
+    "comments": 40
   },
   {
-    "title": "NariQ: BF16-level Qwen3.8-27B in a 10 GB file",
-    "link": "https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF",
-    "hn_link": "https://news.ycombinator.com/item?id=50611402",
-    "score": 48,
-    "comments": 7
+    "title": "OpenAI reveals they solved VP ≠ VNP before Anthropic",
+    "link": "https://github.com/openai/math/tree/main/preprints/VP-and-VNP-are-different-November-23-2026",
+    "hn_link": "https://news.ycombinator.com/item?id=50632756",
+    "score": 35,
+    "comments": 24
   }
 ]
