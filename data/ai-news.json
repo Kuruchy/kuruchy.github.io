@@ -1,37 +1,37 @@
 [
   {
-    "title": "Active Intrusion Campaign Against Check Point Security Management Servers",
-    "link": "https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign",
-    "hn_link": "https://news.ycombinator.com/item?id=50630594",
-    "score": 190,
-    "comments": 62
+    "title": "A few questions for the guy who went snorkeling in a Home Depot retention pond",
+    "link": "https://www.vox.com/down-to-earth/511999/home-depot-retention-pond-snorkel-joseph-ricketts",
+    "hn_link": "https://news.ycombinator.com/item?id=50643129",
+    "score": 300,
+    "comments": 80
   },
   {
-    "title": "What Cloudflare Doesn't Tell You",
-    "link": "https://charlie.fish/posts/2026/11/what-cloudflare-doesnt-tell-you/",
-    "hn_link": "https://news.ycombinator.com/item?id=50632883",
-    "score": 18,
-    "comments": 6
+    "title": "Investigating degraded experiences across GitHub products",
+    "link": "https://www.githubstatus.com/incidents/qn8mfv6q5hlx",
+    "hn_link": "https://news.ycombinator.com/item?id=50643720",
+    "score": 148,
+    "comments": 76
   },
   {
-    "title": "Jetty Pro",
-    "link": "http://hypercritical.co/2026/11/23/jetty-pro",
-    "hn_link": "https://news.ycombinator.com/item?id=50630462",
-    "score": 163,
-    "comments": 58
+    "title": "1Password Security Incident",
+    "link": "https://1password.com/blog/update-on-nov-2026-security-incident",
+    "hn_link": "https://news.ycombinator.com/item?id=50644817",
+    "score": 195,
+    "comments": 100
   },
   {
-    "title": "Mechanical Pencil: Spray Bottle",
-    "link": "https://mechanical-pencil.com/products/spray-bottle",
-    "hn_link": "https://news.ycombinator.com/item?id=50598555",
-    "score": 172,
-    "comments": 40
+    "title": "Google releases Cogentic papers on integer factorization, discrete logs and more",
+    "link": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers",
+    "hn_link": "https://news.ycombinator.com/item?id=50642086",
+    "score": 315,
+    "comments": 245
   },
   {
-    "title": "OpenAI reveals they solved VP ≠ VNP before Anthropic",
-    "link": "https://github.com/openai/math/tree/main/preprints/VP-and-VNP-are-different-November-23-2026",
-    "hn_link": "https://news.ycombinator.com/item?id=50632756",
-    "score": 35,
-    "comments": 24
+    "title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+    "link": "https://github.com/xoxorwr/pw-loudness-eq",
+    "hn_link": "https://news.ycombinator.com/item?id=50641171",
+    "score": 248,
+    "comments": 146
   }
 ]
