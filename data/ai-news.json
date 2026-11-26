@@ -1,37 +1,37 @@
 [
   {
-    "title": "A few questions for the guy who went snorkeling in a Home Depot retention pond",
-    "link": "https://www.vox.com/down-to-earth/511999/home-depot-retention-pond-snorkel-joseph-ricketts",
-    "hn_link": "https://news.ycombinator.com/item?id=50643129",
-    "score": 300,
-    "comments": 80
+    "title": "Tracking Diseases Cured by AI",
+    "link": "https://diseasescuredbyai.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=50657307",
+    "score": 82,
+    "comments": 31
   },
   {
-    "title": "Investigating degraded experiences across GitHub products",
-    "link": "https://www.githubstatus.com/incidents/qn8mfv6q5hlx",
-    "hn_link": "https://news.ycombinator.com/item?id=50643720",
-    "score": 148,
-    "comments": 76
+    "title": "AMD Specific Patches for Llama.cpp",
+    "link": "https://devnull.land/amd-specific-llama-cpp",
+    "hn_link": "https://news.ycombinator.com/item?id=50657265",
+    "score": 63,
+    "comments": 15
   },
   {
-    "title": "1Password Security Incident",
-    "link": "https://1password.com/blog/update-on-nov-2026-security-incident",
-    "hn_link": "https://news.ycombinator.com/item?id=50644817",
-    "score": 195,
-    "comments": 100
+    "title": "YouTube Ad Punisher – Bypass anti-adblock",
+    "link": "https://github.com/antonpictures/youtube-punisher",
+    "hn_link": "https://news.ycombinator.com/item?id=50657530",
+    "score": 26,
+    "comments": 18
   },
   {
-    "title": "Google releases Cogentic papers on integer factorization, discrete logs and more",
-    "link": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers",
-    "hn_link": "https://news.ycombinator.com/item?id=50642086",
-    "score": 315,
-    "comments": 245
+    "title": "NP_R ≠ PAR_R",
+    "link": "https://github.com/samueleverett01/bss-permanent-separations",
+    "hn_link": "https://news.ycombinator.com/item?id=50657059",
+    "score": 77,
+    "comments": 64
   },
   {
-    "title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
-    "link": "https://github.com/xoxorwr/pw-loudness-eq",
-    "hn_link": "https://news.ycombinator.com/item?id=50641171",
-    "score": 248,
-    "comments": 146
+    "title": "CTO of 'RansomwareHelp' Indicted for Wire Fraud",
+    "link": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+    "hn_link": "https://news.ycombinator.com/item?id=50657645",
+    "score": 8,
+    "comments": 1
   }
 ]
